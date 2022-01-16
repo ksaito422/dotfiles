@@ -73,7 +73,7 @@ source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
 setopt share_history
 
 # シェルスクリプト置き場のパスを追加
-PATH=$PATH:/Users/saito/bin
+PATH=$PATH:~/bin
 
 # alias
 ### ls
