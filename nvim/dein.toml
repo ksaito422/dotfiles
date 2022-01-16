@@ -1,0 +1,123 @@
+[[plugins]] # TOML形式のシンタックスハイライトを有効
+repo = 'cespare/vim-toml'
+
+[[plugins]] # :helpを日本語化
+repo = 'vim-jp/vimdoc-ja'
+
+[[plugins]] # VScode化
+repo = "neoclide/coc.nvim"
+merge = 0
+rev = "release"
+hook_add = '''
+  source ~/.config/nvim/plugins/coc.vim
+'''
+
+[[plugins]] # ファジーファインダー用プラグイン coc-fzf-previewのため
+repo = 'junegunn/fzf'
+
+[[plugins]] # カラースキーマ
+repo = 'tomasr/molokai'
+hook_add = '''
+  source ~/.config/nvim/plugins/molokai.vim
+'''
+
+[[plugins]] # status bar & tab bar
+repo = 'vim-airline/vim-airline'
+hook_add = '''
+  source ~/.config/nvim/plugins/vim-airline.vim
+'''
+
+[[plugins]] # status bar theme
+repo = 'vim-airline/vim-airline-themes'
+hook_add = '''
+  source ~/.config/nvim/plugins/vim-airline-themes.vim
+'''
+
+[[plugins]] # filer
+repo = 'lambdalisue/fern.vim'
+hook_add = '''
+  source ~/.config/nvim/plugins/fern.vim
+'''
+
+[[plugins]] # file preview
+repo = 'yuki-yano/fern-preview.vim'
+hook_add = '''
+  source ~/.config/nvim/plugins/fern-preview.vim
+'''
+
+[[plugins]] # ファイルツリーにgitの差分を表示する
+repo = 'lambdalisue/fern-git-status.vim'
+
+[[plugins]] # font & file icon
+repo = 'lambdalisue/nerdfont.vim'
+
+[[plugins]] # filerのアイコン表示
+repo = 'lambdalisue/fern-renderer-nerdfont.vim'
+hook_add = '''
+  source ~/.config/nvim/plugins/fern-renderer-nerdfont.vim
+'''
+
+[[plugins]] # ファイラーのアイコンをカラー表示
+repo = 'lambdalisue/glyph-palette.vim'
+hook_add = '''
+  source ~/.config/nvim/plugins/glyph-pallette.vim
+'''
+
+# [[plugins]] # ターミナル拡張
+# repo = 'Shougo/deol.nvim'
+# hook_add = '''
+  # source ~/.config/nvim/plugins/deol.vim
+# '''
+
+[[plugins]] # Git操作
+repo = 'lambdalisue/gina.vim'
+hook_add = '''
+  source ~/.config/nvim/plugins/gina.vim
+'''
+
+[[plugins]] # Gitの変更表示
+repo = 'airblade/vim-gitgutter'
+hook_add = '''
+  source ~/.config/nvim/plugins/vim-gitgutter.vim
+'''
+[[plugins]] # コメントアウト
+repo = 'tpope/vim-commentary'
+
+[[plugins]] # yank範囲をハイライトする
+repo = 'machakann/vim-highlightedyank'
+hook_add = '''
+  source ~/.config/nvim/plugins/vim-highlightedyank.vim
+'''
+
+[[plugins]] # シンタックスハイライトを有効化
+repo = 'nvim-treesitter/nvim-treesitter'
+
+[[plugins]] # 括弧とかを自動で閉じてくれる
+repo = 'jiangmiao/auto-pairs'
+
+[[plugins]] # 同じインデントのところに縦線を引いてくれる奴
+repo = 'Yggdroot/indentLine'
+hook_add = '''
+  source ~/.config/nvim/plugins/indentLine.vim
+'''
+
+[[plugins]] # windowのリサイズ
+repo = 'simeji/winresizer'
+
+[[plugins]] # 対応する()のカラーリング
+repo = 'luochen1990/rainbow'
+hook_add = '''
+  source ~/.config/nvim/plugins/rainbow.vim
+'''
+
+[[plugins]] # 翻訳
+repo = 'skanehira/translate.vim'
+hook_add = '''
+  source ~/.config/nvim/plugins/translate.vim
+'''
+
+[[plugins]] # チートシート
+repo = 'reireias/vim-cheatsheet'
+hook_add = '''
+  source ~/.config/nvim/plugins/cheatsheet.vim
+'''
