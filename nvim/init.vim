@@ -26,6 +26,9 @@ set pumblend=10
 set winblend=10
 hi NormalFloat guifg=#2e3440 guibg=#a3be8c
 
+"spell check
+set nospell "spelunker.vimの機能を使うためoff
+
 "Emacs Move
 imap <C-p> <Up>
 imap <C-n> <Down>

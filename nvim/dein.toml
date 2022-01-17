@@ -121,3 +121,9 @@ repo = 'reireias/vim-cheatsheet'
 hook_add = '''
   source ~/.config/nvim/plugins/cheatsheet.vim
 '''
+
+[[plugins]] # スペルチェック
+repo = 'kamykn/spelunker.vim'
+
+[[plugins]] # スペルチェック拡張のneovim対応
+repo = 'kamykn/popup-menu.nvim'
