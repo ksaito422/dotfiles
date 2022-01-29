@@ -27,6 +27,9 @@ set pumblend=10
 set winblend=10
 hi NormalFloat guifg=#2e3440 guibg=#a3be8c
 
+" タブページを常に表示
+set showtabline=2
+
 "マウス操作
 set mouse=a
 set clipboard=unnamed

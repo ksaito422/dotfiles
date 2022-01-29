@@ -54,6 +54,10 @@
 - [n]<C-r> <!-- redo -->
 
 <!-- 拡張機能系 -->
+<!-- dein -->
+- :call map(dein#check_clean(), "delete(v:val, 'rf')")
+- :call dein#recache_runtimepath()
+
 <!-- winresizer  -->
 - [n]<C-e> <!-- ウインドウリサイズモード -->
 - h j k l <!-- 左 下 上 右-->

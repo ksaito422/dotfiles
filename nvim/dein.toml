@@ -16,21 +16,15 @@ hook_add = '''
 repo = 'junegunn/fzf'
 
 [[plugins]] # カラースキーマ
-repo = 'tomasr/molokai'
+repo = 'EdenEast/nightfox.nvim'
 hook_add = '''
-  source ~/.config/nvim/plugins/molokai.vim
+  source ~/.config/nvim/plugins/colorscheme.vim
 '''
 
-[[plugins]] # status bar & tab bar
-repo = 'vim-airline/vim-airline'
+[[plugins]] # ステータスライン
+repo = 'itchyny/lightline.vim'
 hook_add = '''
-  source ~/.config/nvim/plugins/vim-airline.vim
-'''
-
-[[plugins]] # status bar theme
-repo = 'vim-airline/vim-airline-themes'
-hook_add = '''
-  source ~/.config/nvim/plugins/vim-airline-themes.vim
+  source ~/.config/nvim/plugins/lightline.vim
 '''
 
 [[plugins]] # filer
@@ -63,11 +57,11 @@ hook_add = '''
   source ~/.config/nvim/plugins/glyph-pallette.vim
 '''
 
-# [[plugins]] # ターミナル拡張
-# repo = 'Shougo/deol.nvim'
-# hook_add = '''
-  # source ~/.config/nvim/plugins/deol.vim
-# '''
+[[plugins]] # [[plugins]] # ターミナル拡張
+repo ='Shougo/deol.nvim'
+hook_add = '''
+  source ~/.config/nvim/plugins/deol.vim
+'''
 
 [[plugins]] # Git操作
 repo = 'lambdalisue/gina.vim'
@@ -91,6 +85,9 @@ hook_add = '''
 
 [[plugins]] # シンタックスハイライトを有効化
 repo = 'nvim-treesitter/nvim-treesitter'
+hook_add = '''
+  source ~/.config/nvim/plugins/treesitter.vim
+'''
 
 [[plugins]] # 括弧とかを自動で閉じてくれる
 repo = 'jiangmiao/auto-pairs'
