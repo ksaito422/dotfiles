@@ -1,6 +1,6 @@
 let g:lightline = {
   \ 'colorscheme': 'nightfox',
-  \  'enable': { 'tabline': 0 },
+  \  'enable': { 'tabline': 2 },
   \  'active': {
   \    'left': [ ['mode', 'paste'], ['readonly', 'filename', 'modified'] ],
   \    'right': [ ['percent'], ['lineinfo'], ['fileencoding', 'filetype'] ] 
@@ -9,7 +9,7 @@ let g:lightline = {
   \    'left': [ ['filename'] ],
   \    'right': [ ['percent'], ['fileencording'] ]
   \  },
-  \  'separator': { 'left': "\u2b80", 'right': "\u2b82" },
-  \  'subseparator' :{ 'left': "\u2b81", 'right': '\u2b83' },
+  \  'separator': { 'left': "\ue0c0", 'right': "\ue0c3" },
+  \  'subseparator' :{ 'left': "\uf6f6", 'right': '\ue2a2' },
   \ }
 
