@@ -124,3 +124,9 @@ repo = 'kamykn/spelunker.vim'
 
 [[plugins]] # スペルチェック拡張のneovim対応
 repo = 'kamykn/popup-menu.nvim'
+
+[[plugins]] # bufferlineにアイコンを表示
+repo = 'kyazdani42/nvim-web-devicons'
+
+[[plugins]] # buffer lineにbufferを表示
+repo = 'romgrk/barbar.nvim'

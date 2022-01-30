@@ -48,6 +48,10 @@ imap <C-h> <BS>
 imap <C-k> <Esc>D
 imap <C-u> <Esc>dd
 
+"バッファ操作
+nnoremap <silent> <C-[> :bprev <CR>
+nnoremap <silent> <c-]> :bnext <CR>
+
 let mapleader = "\<SPACE>"
 
 "ターミナルモード
