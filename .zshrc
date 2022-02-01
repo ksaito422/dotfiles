@@ -8,6 +8,7 @@ export PATH=$PATH:$ANDROID_HOME/tools/bin
 export PATH=$PATH:$ANDROID_HOME/platform-tools
 export PATH=/usr/local/opt/python@3.9/libexec/bin:$PATH
 export PATH=/usr/local/opt/gawk/bin/:$PATH
+export PATH=$HOME/.nodebrew/current/bin:$PATH
 
 # Dockerイメージを「なりすまし」と「改ざん」から保護するセキュリティ機能
 export DOCKER_CONTENT_TRUST=1
