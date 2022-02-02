@@ -8,7 +8,19 @@ nnoremap <silent> K :call CocAction('doHover')<CR>
 nnoremap <silent> <space>d :<C-u>CocList diagnostics<CR>
 nmap <leader>do <Plug>(coc-codeaction)
 
-let g:coc_global_extensions = ['coc-json', 'coc-css', 'coc-eslint', 'coc-prettier', 'coc-tsserver', 'coc-toml', 'coc-yaml', 'coc-phpls', 'coc-php-cs-fixer', 'coc-fzf-preview', 'coc_pairs']
+let g:coc_global_extensions = [
+      \'coc-json',
+      \'coc-css',
+      \'coc-eslint',
+      \'coc-prettier',
+      \'coc-tsserver',
+      \'coc-toml',
+      \'coc-yaml',
+      \'coc-phpls',
+      \'coc-php-cs-fixer',
+      \'coc-fzf-preview',
+      \'coc-pairs'
+      \]
 
 "coc-fzf-previewのデフォルトキーマップ
 nmap <Leader>f [fzf-p]
