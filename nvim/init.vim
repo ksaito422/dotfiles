@@ -12,7 +12,7 @@ set scrolloff=10 "画面端でのスクロール位置指定
 "見た目系
 set cursorline "現在の行を強調表示
 highlight CursorLine cterm=underline ctermfg=NONE ctermbg=NONE
-set cursorcolumn
+"set cursorcolumn
 set hls "検索した文字列をハイライトする
 
 "tab setting
