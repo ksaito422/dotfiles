@@ -17,9 +17,9 @@ set hls "検索した文字列をハイライトする
 
 "tab setting
 set smartindent
-set tabstop=2 "tab半角スペースの数
+set tabstop=4 "tab半角スペースの数
 set expandtab "tabを複数のspaceに置換
-set shiftwidth=2 "tabの幅
+set shiftwidth=4 "tabの幅
 
 "floating windowを半透明にする
 set termguicolors
