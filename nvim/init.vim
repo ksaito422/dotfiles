@@ -7,7 +7,7 @@ set autoindent "改行時に自動インデント
 set splitbelow "画面を水平分割時に下に表示
 set splitright "画面を垂直分割時に右に表示
 set wildmenu "コマンドモードの補完
-set scrolloff=10 "画面端でのスクロール位置指定
+set scrolloff=30 "画面端でのスクロール位置指定
 
 "見た目系
 set cursorline "現在の行を強調表示
