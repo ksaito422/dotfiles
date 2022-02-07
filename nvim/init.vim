@@ -2,6 +2,7 @@
 "edita setting
 set encoding=utf-8 "文字コードをUTF-8に設定
 set number "行番号を表示
+set relativenumber "相対行番号を表示
 set virtualedit=onemore "行末の1文字先までカーソルを移動できるように
 set autoindent "改行時に自動インデント
 set splitbelow "画面を水平分割時に下に表示
