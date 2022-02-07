@@ -1,3 +1,5 @@
 autocmd ColorScheme * highlight lineNr guifg=grey
 
-colorscheme nightfox
+if !exists('g:vscode')
+    colorscheme nightfox
+end
