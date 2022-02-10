@@ -21,11 +21,17 @@ set smartindent
 set tabstop=4 "tab半角スペースの数
 set expandtab "tabを複数のspaceに置換
 set shiftwidth=4 "tabの幅
-" ファイルタイプごとのタブ設定
+"ファイルタイプごとのタブ設定
 autocmd Filetype javascript setlocal expandtab tabstop=2 shiftwidth=2
 autocmd Filetype typescript setlocal expandtab tabstop=2 shiftwidth=2
 autocmd Filetype javascriptreact setlocal expandtab tabstop=2 shiftwidth=2
 autocmd Filetype typescriptreact setlocal expandtab tabstop=2 shiftwidth=2
+
+"全てのjsonファイルをjsoncとして扱うようにする
+"jsoncとして扱うことでcocのコメントアウト構文エラーが出力されないようにする
+augroup JsonToJsonc
+    autocmd! FileType json set filetype=jsonc
+augroup END
 
 "floating windowを半透明にする
 set termguicolors
