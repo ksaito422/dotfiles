@@ -96,3 +96,11 @@
 - y <!-- ファイルパスをコピー -->
 - z <!-- ファイル名に合わせてウインドウ幅を広げる -->
 - ! <!-- 隠しファイルを表示/非表示 -->
+
+<!-- conflict-marker -->
+- [x <!-- 前のコンフリクトへ -->
+- ]x <!-- 次のコンフリクトへ -->
+- co <!-- 自分の変更を適用 :ConflictMarkerOurselves -->
+- ct <!-- 相手の変更を適用 :ConflictMarkerThemselves -->
+- cb <!-- 両方を適用 :ConflictMarkerBoth -->
+- cn <!-- 適用なし :ConflictMarkerNone -->

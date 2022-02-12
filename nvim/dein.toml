@@ -57,7 +57,7 @@ hook_add = '''
   source ~/.config/nvim/plugins/glyph-pallette.vim
 '''
 
-[[plugins]] # [[plugins]] # ターミナル拡張
+[[plugins]] # ターミナル拡張
 repo ='Shougo/deol.nvim'
 hook_add = '''
   source ~/.config/nvim/plugins/deol.vim
@@ -74,6 +74,13 @@ repo = 'airblade/vim-gitgutter'
 hook_add = '''
   source ~/.config/nvim/plugins/vim-gitgutter.vim
 '''
+
+[[plugins]] # コンフリクトマーカー
+repo = 'rhysd/conflict-marker.vim'
+hook_add = '''
+    source ~/.config/nvim/plugins/conflict-marker.vim
+'''
+
 
 [[plugins]] # コメントアウト用 nvim-ts-context-commentstringと組み合わせる
 repo = 'numToStr/Comment.nvim'
