@@ -104,3 +104,16 @@
 - ct <!-- 相手の変更を適用 :ConflictMarkerThemselves -->
 - cb <!-- 両方を適用 :ConflictMarkerBoth -->
 - cn <!-- 適用なし :ConflictMarkerNone -->
+
+<!-- Gina -->
+- :Gina branch <!-- ブランチ一蘭表示、チェックアウト -->
+- :Gina pull origin [ブランチ名] <!-- リモートブランチを取り込み -->
+- :Gina push origin [ブランチ名] <!-- リモートリポジトリにアップロード -->
+- :Gina pull --rebase origin [ブランチ名] <!-- リモートブランチ取り込み、履歴を改変 -->
+- :Gina rebase --continue <!-- rebaseの続行 -->
+- :Gina rebase --abort <!-- rebaseの取りやめ -->
+- :Gina cherry-pick [ブランチ名] <!-- 別ブランチの特定コミットを取り込み -->
+- :Gina reset --hard HEAD@{i} <!-- コミットの取り消し（変更内容を失う） -->
+- :Gina reset --soft HEAD@{i} <!-- コミットの取り消し（変更内容はstagingに）-->
+- :Gina fetch origin [ブランチ名] <!-- リモートブランチの内容を取得（適用はしない） -->
+- :Gina merge [ブランチ名] <!-- 別ブランチの内容を取り込む -->
