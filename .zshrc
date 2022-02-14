@@ -133,3 +133,4 @@ alias gremote= 'git remote'
 alias vi='nvim'
 alias vim='nvim'
 alias nvimconf='vi ~/.config/nvim .'
+export PATH=$PATH:~/.bin

@@ -20,5 +20,13 @@
   "eslint.autoFixOnSave": true,
   "eslint.format.enable": true,
   "eslint.run": "onType",
-  "php-cs-fixer.rules": "@PSR12,ordered_imports,no_unused_imports"
+  "php-cs-fixer.rules": "@PSR12,ordered_imports,no_unused_imports",
+  "languageserver": {
+    "terraform": {
+      "command": "terraform-lsp",
+      "filetypes": ["terraform", "tf"],
+      "initializationOptions": {},
+      "settings": {}
+    }
+  }
 }
