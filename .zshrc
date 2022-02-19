@@ -11,7 +11,7 @@ export PATH=/usr/local/opt/gawk/bin/:$PATH
 export PATH=$HOME/.nodebrew/current/bin:$PATH
 
 # Dockerイメージを「なりすまし」と「改ざん」から保護するセキュリティ機能
-export DOCKER_CONTENT_TRUST=1
+export DOCKER_CONTENT_TRUST=0
 
 # Gitで開くEditorをNeoVimに設定
 export EDITOR='nvim'
