@@ -142,4 +142,4 @@ export PATH=$PATH:~/.bin
 if [ -f '/Users/saito/google-cloud-sdk/path.zsh.inc' ]; then . '/Users/saito/google-cloud-sdk/path.zsh.inc'; fi
 
 # The next line enables shell command completion for gcloud.
-if [ -f '/Users/saito/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/saito/google-cloud-sdk/completion.zsh.inc'; fi
+# if [ -f '/Users/saito/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/saito/google-cloud-sdk/completion.zsh.inc'; fi
