@@ -6,7 +6,7 @@ export PATH=$PATH:$ANDROID_HOME/emulator
 export PATH=$PATH:$ANDROID_HOME/tools
 export PATH=$PATH:$ANDROID_HOME/tools/bin
 export PATH=$PATH:$ANDROID_HOME/platform-tools
-export PATH=/usr/local/opt/python@3.9/libexec/bin:$PATH
+export PATH=/usr/local/opt/python@3.7/libexec/bin:$PATH
 export PATH=/usr/local/opt/gawk/bin/:$PATH
 export PATH=$HOME/.nodebrew/current/bin:$PATH
 
@@ -137,3 +137,9 @@ alias vi='nvim'
 alias vim='nvim'
 alias nvimconf='vi ~/.config/nvim .'
 export PATH=$PATH:~/.bin
+
+# The next line updates PATH for the Google Cloud SDK.
+if [ -f '/Users/saito/google-cloud-sdk/path.zsh.inc' ]; then . '/Users/saito/google-cloud-sdk/path.zsh.inc'; fi
+
+# The next line enables shell command completion for gcloud.
+if [ -f '/Users/saito/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/saito/google-cloud-sdk/completion.zsh.inc'; fi
