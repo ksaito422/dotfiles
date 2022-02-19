@@ -17,6 +17,9 @@ export DOCKER_CONTENT_TRUST=1
 export EDITOR='nvim'
 export VISUAL='nvim'
 
+# direnvの利用設定
+eval "$(direnv hook zsh)"
+
 # cd [tab]で以前移動したディレクトリを表示
 setopt auto_pushd
 # 直前と同じコマンドはヒストリに追加しない
@@ -90,12 +93,12 @@ alias cdp='cd ~/work/project'
 
 ### docker
 alias dockeralias='alias | grep "docker"'
-alias dcupd='docker-compose up -d'
-alias dcps='docker-compose ps'
+alias dcupd='docker compose up -d'
+alias dcps='docker compose ps'
 alias dcla='docker container ls -a'
 alias dex='docker exec -it'
-alias dcs='docker-compose stop'
-alias dcd='docker-compose down'
+alias dcs='docker compose stop'
+alias dcd='docker compose down'
 alias ds='docker stop'
 
 ### git
