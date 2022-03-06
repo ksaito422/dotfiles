@@ -143,3 +143,6 @@ if [ -f '/Users/saito/google-cloud-sdk/path.zsh.inc' ]; then . '/Users/saito/goo
 
 # The next line enables shell command completion for gcloud.
 # if [ -f '/Users/saito/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/saito/google-cloud-sdk/completion.zsh.inc'; fi
+
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+export FZF_DEFAULT_OPTS="--color=bg+:24 --height 50% --layout=reverse --border --inline-info --preview 'head -100 {}'"
