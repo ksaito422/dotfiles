@@ -62,6 +62,14 @@ imap <C-h> <BS>
 imap <C-k> <Esc>D
 imap <C-u> <Esc>dd
 
+"ターミナルの移動
+tnoremap <C-p> <Up>
+tnoremap <C-n> <Down>
+tnoremap <C-b> <Left>
+tnoremap <C-f> <Right>
+tnoremap <C-d> <Del>
+tnoremap <C-h> <BS>
+
 "バッファ操作
 nnoremap <silent> <C-[> :bprev <CR>
 nnoremap <silent> <c-]> :bnext <CR>
