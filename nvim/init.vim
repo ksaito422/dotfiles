@@ -1,5 +1,5 @@
 "基本設定
-"edita setting
+"エディター setting
 set encoding=utf-8 "文字コードをUTF-8に設定
 set number "行番号を表示
 set relativenumber "相対行番号を表示
@@ -11,8 +11,8 @@ set wildmenu "コマンドモードの補完
 set scrolloff=30 "画面端でのスクロール位置指定
 
 "見た目系
-set cursorline "現在の行を強調表示
-highlight CursorLine cterm=underline ctermfg=NONE ctermbg=NONE
+" set cursorline "現在の行を強調表示
+" highlight CursorLine cterm=underline ctermfg=NONE ctermbg=NONE
 "set cursorcolumn
 set hls "検索した文字列をハイライトする
 
