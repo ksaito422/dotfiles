@@ -54,6 +54,10 @@
 - [n]<C-r> <!-- redo -->
 
 <!-- 拡張機能系 -->
+<!-- cheat sheet -->
+- <Leader>? <!-- チートシートを開く -->
+- <Leader>f. <!-- チートシートを編集モードで開く -->
+
 <!-- dein -->
 - :call map(dein#check_clean(), "delete(v:val, 'rf')")
 - :call dein#recache_runtimepath()
@@ -69,6 +73,7 @@
 - [nnoremap] [fzf-p]gs <!-- git status -->
 - [nnoremap] [fzf-p]ga <!-- git action -->
 - [nnoremap] [fzf-p]b <!-- 開いているバッファリスト表示 -->
+- [nnoremap] [fzf-p]B <!-- 全ての開いているバッファリストを表示 -->
 
 <!-- coc-nvim -->
 - * <!-- ホバー時にlsp診断結果 or ドキュメントを表示する -->
