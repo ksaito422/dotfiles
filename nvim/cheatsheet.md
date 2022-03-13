@@ -37,7 +37,7 @@
 - :close <!-- 閉じる -->
 - <C-w>o <!-- 現在ウインドウ以外閉じる -->
 - <C-w>[J,K,H,L] <!-- ウインドウの位置を入れ替え -->
-- <C-w>w, <C-w>p <!-- 次のウインドウ, 前のウインドウ -->
+- <C-w>l, <C-w>h, <C-w>j, <C-w>k <!-- 右のウインドウ, 左のウインドウ, 下のウインドウ, 上のウインドウ -->
 - <C-=> <!-- ウインドウサイズを等しくする -->
 
 <!-- キーマップ -->
@@ -62,9 +62,16 @@
 - :call map(dein#check_clean(), "delete(v:val, 'rf')")
 - :call dein#recache_runtimepath()
 
-<!-- winresizer  -->
-- [n]<C-e> <!-- ウインドウリサイズモード -->
-- h j k l <!-- 左 下 上 右-->
+<!-- coc-nvim -->
+- * <!-- ホバー時にlsp診断結果 or ドキュメントを表示する -->
+- [n]K <!-- lsp診断結果 or ドキュメントを表示する-->
+- [n]gd <!-- coc-definition -->
+- [n]gy <!-- coc-type-definition 型定義の箇所に移動 -->
+- [n]gi <!-- coc-implementation -->
+- [n]gr <!-- coc-references 実装箇所やインターフェイスなどをリストで表示 -->
+- [n]\[g <!-- coc-diagnostics-prev ファイル内の次の診断箇所に移動 -->
+- [n]\]g <!-- coc-diagnostics-next ファイル内の前の診断箇所に移動 -->
+- <space>d <!-- CocList diagnostics 診断結果をリスト表示 -->
 
 <!-- coc-fzf-preview -->
 - <Leader>f [fzf-p]
@@ -74,17 +81,13 @@
 - [nnoremap] [fzf-p]ga <!-- git action -->
 - [nnoremap] [fzf-p]b <!-- 開いているバッファリスト表示 -->
 - [nnoremap] [fzf-p]B <!-- 全ての開いているバッファリストを表示 -->
+- [nnoremap] [fzf-p]/ <!-- フローティングウインドウを開いてファイル内の文字列検索 -->
+- [nnoremap] [fzf-p]q <!-- QuickFix -->
+- [nnoremap] [fzf-p]l <!-- LocationList -->
 
-<!-- coc-nvim -->
-- * <!-- ホバー時にlsp診断結果 or ドキュメントを表示する -->
-- [n]K <!-- lsp診断結果 or ドキュメントを表示する-->
-- [n]gd <!-- coc-definition -->
-- [n]gy <!-- coc-type-definition -->
-- [n]gi <!-- coc-implementation -->
-- [n]gr <!-- coc-references -->
-- [n]\[g <!-- coc-diagnostics-prev -->
-- [n]\]g <!-- coc-diagnostics-next -->
-- <space>d <!-- CocList diagnostics -->
+<!-- Comment.nvim -->
+- [count]gcc <!-- 1行コメントアウト -->
+- [count]gbc <!-- 複数行コメントアウト -->
 
 <!-- feen.vim -->
 - E <!-- 垂直分割してファイルを開く -->
@@ -93,7 +96,7 @@
 - K <!-- ディレクトリを新規作成 -->
 - D <!-- ファイルを削除 -->
 - m <!-- ファイルを移動 -->
-- R <!-- ファイル名へんこう -->
+- R <!-- ファイル名変更 -->
 - - <!-- ファイル選択 -->
 - C <!-- ファイルコピー -->
 - P <!-- ペースト -->
@@ -122,3 +125,20 @@
 - :Gina reset --soft HEAD@{i} <!-- コミットの取り消し（変更内容はstagingに）-->
 - :Gina fetch origin [ブランチ名] <!-- リモートブランチの内容を取得（適用はしない） -->
 - :Gina merge [ブランチ名] <!-- 別ブランチの内容を取り込む -->
+
+<!-- winresizer  -->
+- [n]<C-e> <!-- ウインドウリサイズモード -->
+- h j k l <!-- 左 下 上 右-->
+
+<!-- searchx.vim -->
+- ? <!-- 検索 -->
+- / <!-- 検索 -->
+- N <!-- 前の一致項目に移動 -->
+- n <!-- 次の一致項目に移動 -->
+
+<!-- deol.vim -->
+
+<!-- fern-preview.vim -->
+- <C-p> <!-- 自動ファイルプレビューのon/off -->
+- <C-d> <!-- ファイルプレビューのページダウン -->
+- <C-u> <!-- ファイルプレビューのページアップ -->
