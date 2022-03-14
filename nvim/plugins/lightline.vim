@@ -10,7 +10,7 @@ let g:lightline = {
   \    'right': [ ['percent'], ['fileencording'] ]
   \  },
   \  'separator': { 'left': "\ue0b0", 'right': "\ue0b2" },
-  \  'subseparator' :{ 'left': "\ue0b1", 'right': '\ue0b3' },
+  \  'subseparator' :{ 'left': "\ufb2b", 'right': '\ue0b3' },
   \  'component_function': {
   \    'gitbranch': 'gina#component#repo#branch'
   \   },
