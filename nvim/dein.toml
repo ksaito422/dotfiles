@@ -81,6 +81,11 @@ hook_add = '''
     source ~/.config/nvim/plugins/conflict-marker.vim
 '''
 
+[[plugins]] # lazygit
+repo = 'kdheepak/lazygit.nvim'
+hook_add = '''
+    source ~/.config/nvim/plugins/lazygit.vim
+'''
 
 [[plugins]] # コメントアウト用 nvim-ts-context-commentstringと組み合わせる
 repo = 'numToStr/Comment.nvim'
