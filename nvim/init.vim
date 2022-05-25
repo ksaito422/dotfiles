@@ -132,3 +132,4 @@ endfunction
 
 " 日本語入力から半角入力のノーマルモードへ抜ける。ｊｋ
 inoremap <silent> jk <C-o>:call <SID>disableIme()<CR><ESC>
+
