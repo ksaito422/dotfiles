@@ -132,11 +132,11 @@ repo = 'kamykn/spelunker.vim'
 [[plugins]] # スペルチェック拡張のneovim対応
 repo = 'kamykn/popup-menu.nvim'
 
-# [[plugins]] # bufferlineにアイコンを表示
-# repo = 'kyazdani42/nvim-web-devicons'
+[[plugins]] # bufferlineにアイコンを表示
+repo = 'kyazdani42/nvim-web-devicons'
 
-# [[plugins]] # buffer lineにbufferを表示
-# repo = 'romgrk/barbar.nvim'
+[[plugins]] # buffer lineにbufferを表示
+repo = 'romgrk/barbar.nvim'
 
 [[plugins]] # / or ? 検索のジャンプ拡張
 repo = 'hrsh7th/vim-searchx'
