@@ -2,20 +2,24 @@ let g:lightline = {
   \ 'colorscheme': 'nightfox',
   \  'enable': { 'tabline': 2 },
   \  'active': {
-  \    'left': [ ['mode', 'paste'], ['gitbranch', 'readonly', 'modified'], [ 'filename' ] ],
+  \    'left': [ ['mode', 'paste'], ['gitbranch', 'readonly', 'modified'], ['filename'] ],
   \    'right': [ ['percent'], ['lineinfo'], ['fileencoding', 'filetype'] ] 
   \  },
   \  'inactive': {
-  \    'left': [ ['filename'] ],
+  \    'left': [ ['filename_path'] ],
   \    'right': [ ['percent'], ['fileencording'] ]
   \  },
   \  'separator': { 'left': "\ue0b0", 'right': "\ue0b2" },
   \  'subseparator' :{ 'left': "\ufb2b", 'right': '\ue0b3' },
   \  'component_function': {
   \    'gitbranch': 'gina#component#repo#branch',
-  \    'filename': 'LightlineFilename'
+  \    'filename_path': 'LightlineFilename'
   \   },
   \ }
+
+let g:lightline.tabline = {
+  \ 'left': [ [ 'filename_path' ] ],
+  \	}
 
 " 現在のディレクトリからのファイルパスを表示
 " 差分がある場合、"+"表現
@@ -52,7 +56,7 @@ let s:p.inactive.right = [ [ s:yellow, s:gray ], [ s:blue, s:gray ] ]
 let s:p.inactive.middle = [ [ s:black, s:gray ] ]
 let s:p.replace.left = [ [ s:black, s:red ], [ s:red, s:gray ] ]
 let s:p.replace.right = [ [ s:black, s:red ], [ s:red, s:gray ] ]
-let s:p.tabline.left = [ [ s:blue, s:gray ] ]
+let s:p.tabline.left = [ [ s:gray, s:blue ] ]
 let s:p.tabline.tabsel = [ [ s:black, s:blue ] ]
 let s:p.tabline.middle = [ [ s:blue, s:gray ] ]
 let s:p.tabline.right = [ [ s:black, s:blue ] ]
