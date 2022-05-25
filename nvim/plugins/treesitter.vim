@@ -7,7 +7,8 @@ require'nvim-treesitter.configs'.setup {
   indent = {
     enable = true
   },
-  ensure_installed = 'all' -- one of "all", "maintained"
+  ensure_installed = 'all', -- one of "all", "maintained"
+  ignore_install = {"haskell"}
 }
 EOF
 
