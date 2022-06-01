@@ -102,25 +102,27 @@ tnoremap <Esc> <C-\><C-n>
 command! -nargs=* T split | wincmd j | resize 20 | terminal <args>
 autocmd TermOpen * startinsert
 
-"neovim && dein.vimの設定
-"プラグインをdein.toml, dein_lazy.tomlから読み込む
-if &compatible
-  set nocompatible
-endif
+if !exists('g:vscode')
+  "neovim && dein.vimの設定
+  "プラグインをdein.toml, dein_lazy.tomlから読み込む
+  if &compatible
+    set nocompatible
+  endif
 
-set runtimepath+=~/.cache/dein/repos/github.com/Shougo/dein.vim
-if dein#load_state('~/.cache/dein')
-  call dein#begin('~/.cache/dein')
-	call dein#load_toml('~/.config/nvim/dein.toml', {'lazy': 0})
-	call dein#load_toml('~/.config/nvim/dein_lazy.toml', {'lazy': 1})
-  call dein#end()
-	call dein#save_state()
-endif
-filetype plugin indent on
-syntax enable
+  set runtimepath+=~/.cache/dein/repos/github.com/Shougo/dein.vim
+  if dein#load_state('~/.cache/dein')
+    call dein#begin('~/.cache/dein')
+    call dein#load_toml('~/.config/nvim/dein.toml', {'lazy': 0})
+    call dein#load_toml('~/.config/nvim/dein_lazy.toml', {'lazy': 1})
+    call dein#end()
+    call dein#save_state()
+  endif
+  filetype plugin indent on
+  syntax enable
 
-if dein#check_install()
- call dein#install()
+  if dein#check_install()
+  call dein#install()
+  endif
 endif
 
 "ノーマルモード切り替え時に日本語入力をoffにする
