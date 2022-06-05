@@ -6,13 +6,19 @@ NeoVim 設定ファイルのリポジトリ
 
 ### 環境構築
 
+#### install
+
 ```
 // install
 brew install neovim
 nvim -version
 mkdir -p ~/.config/nvim
 touch ~/.config/nvim/init.vim
+```
 
+#### install plugin manager
+
+```
 // plugin manager
 brew install python3
 pip3 install -U neovim
@@ -24,6 +30,11 @@ curl https://raw.githubusercontent.com/Shougo/dein.vim/master/bin/installer.sh >
 sh ./installer.sh ~/.cache/dein
 ```
 
+#### install font
 https://blog.htkyama.org/vim_airline を参考に PowerLine Fonts と Nerd Fonts をインストールする
 
 使用している Font は`FuraMono Nerd Font`
+
+#### symbolic link
+`ln -s ~/.dotfiles/nvim ~/.config/nvim`
+
