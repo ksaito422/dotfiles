@@ -5,7 +5,8 @@
     "typescriptreact",
     "javascript",
     "javascriptreact",
-    "php"
+    "php",
+	"markdown"
   ],
   "prettier.printWidth": 100,
   "prettier.tabWidth": 2,
