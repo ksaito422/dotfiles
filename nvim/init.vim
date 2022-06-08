@@ -123,7 +123,7 @@ if !exists('g:vscode')
   syntax enable
 
   if dein#check_install()
-  call dein#install()
+  	call dein#install()
   endif
 endif
 

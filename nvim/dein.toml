@@ -99,11 +99,11 @@ hook_add = '''
   source ~/.config/nvim/plugins/vim-highlightedyank.vim
 '''
 
-[[plugins]] # 同じインデントのところに縦線を引いてくれる奴
-repo = 'Yggdroot/indentLine'
-hook_add = '''
-  source ~/.config/nvim/plugins/indentLine.vim
-'''
+# [[plugins]] # 同じインデントのところに縦線を引いてくれる奴
+# repo = 'Yggdroot/indentLine'
+# hook_add = '''
+#   source ~/.config/nvim/plugins/indentLine.vim
+# '''
 
 [[plugins]] # windowのリサイズ
 repo = 'simeji/winresizer'
@@ -155,3 +155,4 @@ hook_add = '''
 
 [[plugins]] # jsx,tsxコメントアウト
 repo = 'JoosepAlviste/nvim-ts-context-commentstring'
+
