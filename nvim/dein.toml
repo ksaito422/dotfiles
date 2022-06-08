@@ -156,3 +156,8 @@ hook_add = '''
 [[plugins]] # jsx,tsxコメントアウト
 repo = 'JoosepAlviste/nvim-ts-context-commentstring'
 
+[[plugins]] # indentline
+repo = 'lukas-reineke/indent-blankline.nvim'
+hook_add = '''
+  source ~/.config/nvim/plugins/indent-blackline.lua
+'''
