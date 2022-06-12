@@ -77,6 +77,9 @@ source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
 # 同時に起動したzshの間でヒストリを共有する
 setopt share_history
 
+# シンタックスハイライト brew install zsh-syntax-highlighting
+source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+
 # シェルスクリプト置き場のパスを追加
 PATH=$PATH:~/bin
 
