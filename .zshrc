@@ -72,13 +72,13 @@ HISTSIZE=1000000
 SAVEHIST=1000000
 
 # コマンド入力時に直近の履歴を表示
-source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
+source $(brew --prefix)/share/zsh-autosuggestions/zsh-autosuggestions.zsh
 
 # 同時に起動したzshの間でヒストリを共有する
 setopt share_history
 
 # シンタックスハイライト brew install zsh-syntax-highlighting
-source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+source $(brew --prefix)/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
 # シェルスクリプト置き場のパスを追加
 PATH=$PATH:~/bin
