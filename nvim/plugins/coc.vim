@@ -19,7 +19,8 @@ let g:coc_global_extensions = [
       \'coc-phpls',
       \'coc-php-cs-fixer',
       \'coc-fzf-preview',
-      \'coc-pairs'
+      \'coc-pairs',
+      \'coc-go'
       \]
 
 "coc-fzf-previewのデフォルトキーマップ
