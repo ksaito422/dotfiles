@@ -49,6 +49,9 @@ nnoremap <silent> [fzf-p]t     :<C-u>CocCommand fzf-preview.BufferTags<CR>
 nnoremap <silent> [fzf-p]q     :<C-u>CocCommand fzf-preview.QuickFix<CR>
 nnoremap <silent> [fzf-p]l     :<C-u>CocCommand fzf-preview.LocationList<CR>
 
+"install gopls GoのLSP
+nnoremap <silent> <Leader>g    :<C-u>CocCommand go.install.gopls<CR>
+
 "pritterによる自動整形
 command! -nargs=0 Format :call CocAction('format')
 
