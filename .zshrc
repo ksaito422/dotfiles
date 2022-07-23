@@ -199,9 +199,9 @@ fd() {
 }
 
 # launch tmux when start zsh
-if command -v tmux &> /dev/null && [ -z "$TMUX" ]; then
-    exec tmux
-fi
+# if command -v tmux &> /dev/null && [ -z "$TMUX" ]; then
+#     exec tmux
+# fi
 
 # tmux でControl+のショートカットを使うため
 bindkey -e
