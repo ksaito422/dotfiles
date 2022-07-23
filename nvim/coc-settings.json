@@ -6,7 +6,8 @@
     "javascript",
     "javascriptreact",
     "php",
-  	"markdown"
+  	"markdown",
+    "go"
   ],
   "prettier.printWidth": 100,
   "prettier.tabWidth": 2,
