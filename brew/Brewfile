@@ -1,0 +1,77 @@
+tap "adoptopenjdk/openjdk"
+tap "heroku/brew"
+tap "homebrew/bundle"
+tap "homebrew/cask"
+tap "homebrew/cask-fonts"
+tap "homebrew/core"
+tap "songmu/tap"
+brew "boost"
+brew "cocoapods"
+brew "direnv"
+brew "folly"
+brew "fizz"
+brew "wangle"
+brew "fbthrift"
+brew "fb303"
+brew "freetds"
+brew "gawk"
+brew "git", link: false
+brew "git-flow"
+brew "python@3.9"
+brew "glib"
+brew "go"
+brew "grep"
+brew "ios-deploy"
+brew "jq"
+brew "lazygit"
+brew "mas"
+brew "mysql"
+brew "neovim"
+brew "node"
+brew "nodebrew"
+brew "php"
+brew "php-code-sniffer"
+brew "php-cs-fixer"
+brew "php@7.3"
+brew "python@3.7"
+brew "tfenv"
+brew "tmux"
+brew "tree"
+brew "watchman"
+brew "zsh-autosuggestions"
+brew "zsh-syntax-highlighting"
+brew "heroku/brew/heroku"
+brew "songmu/tap/blogsync"
+cask "adoptopenjdk8"
+cask "alacritty"
+cask "appcleaner"
+cask "clipy"
+cask "cyberduck"
+cask "dbeaver-community"
+cask "deepl"
+cask "discord"
+cask "firefox", args: { language: "ja" }
+cask "font-hackgen"
+cask "font-hackgen-nerd"
+cask "google-chrome"
+cask "google-japanese-ime"
+cask "karabiner-elements"
+cask "keepassxc"
+cask "notion"
+cask "postman"
+cask "shiftit"
+cask "slack"
+cask "visual-studio-code"
+mas "Cloud Outliner Pro", id: 1024917449
+mas "GarageBand", id: 682658836
+mas "iMovie", id: 408981434
+mas "Keynote", id: 409183694
+mas "Kindle", id: 405399194
+mas "LINE", id: 539883307
+mas "Mail for Gmail", id: 1216244845
+mas "Numbers", id: 409203825
+mas "Pages", id: 409201541
+mas "PicGIF Lite", id: 844918735
+mas "Trello", id: 1278508951
+mas "TweetDeck", id: 485812721
+mas "Xcode", id: 497799835
