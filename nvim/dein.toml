@@ -151,7 +151,7 @@ hook_add = '''
 [[plugins]] # 対応する括弧などを補完
 repo = 'cohama/lexima.vim'
 
-[[plugins]]
+[[plugins]] # js&ts&jsx&tsx formatter linter
 repo = 'dense-analysis/ale'
 hook_add = '''
 let g:ale_fixers = {
