@@ -75,7 +75,7 @@ tnoremap <C-h> <BS>
 
 "バッファ操作
 nnoremap <silent> <C-[> :bprev <CR>
-nnoremap <silent> <c-]> :bnext <CR>
+nnoremap <silent> <C-]> :bnext <CR>
 
 let mapleader = "\<SPACE>"
 
