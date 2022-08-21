@@ -10,6 +10,10 @@ export PATH=/usr/local/opt/python@3.7/libexec/bin:$PATH
 export PATH=/usr/local/opt/gawk/bin/:$PATH
 export PATH=$HOME/.nodebrew/current/bin:$PATH
 export LANG="ja_JP.UTF-8"
+export GOPATH=$HOME/go
+export GOROOT=/usr/local/Cellar/go/1.18.3/libexec
+export GOTOOLDIR=/usr/local/Cellar/go/1.18.3/libexec/pkg/tool/darwin_amd64
+export PATH=$PATH:$GOPATH/bin
 
 # Dockerイメージを「なりすまし」と「改ざん」から保護するセキュリティ機能
 export DOCKER_CONTENT_TRUST=0
