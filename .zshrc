@@ -106,6 +106,8 @@ alias dex='docker exec -it'
 alias dcs='docker compose stop'
 alias dcd='docker compose down'
 alias ds='docker stop'
+alias dcb='docker compose build'
+alias dcl='docker compose logs'
 
 ### git
 alias gitalias='alias | grep "git"'
