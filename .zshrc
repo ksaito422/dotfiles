@@ -97,7 +97,7 @@ alias cdp='cd ~/work/project'
 
 ### docker
 alias dockeralias='alias | grep "docker"'
-alias dcup='docker compsoe up'
+alias dcup='docker compose up'
 alias dcupd='docker compose up -d'
 alias dcps='docker compose ps'
 alias dcla='docker container ls -a'
