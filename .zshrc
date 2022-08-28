@@ -97,16 +97,19 @@ alias cdp='cd ~/work/project'
 
 ### docker
 alias dockeralias='alias | grep "docker"'
+alias dcup='docker compsoe up'
 alias dcupd='docker compose up -d'
 alias dcps='docker compose ps'
 alias dcla='docker container ls -a'
 alias dex='docker exec -it'
 alias dcs='docker compose stop'
 alias dcd='docker compose down'
-alias ds='docker stop'
 alias dcb='docker compose build'
+alias ds='docker stop'
 alias dcl='docker compose logs'
 alias dnl='docker network ls'
+alias di='docker images'
+alias dri='docker rmi'
 
 ### git
 alias gitalias='alias | grep "git"'
