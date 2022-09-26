@@ -10,7 +10,7 @@ export PATH=/usr/local/opt/python@3.7/libexec/bin:$PATH
 export PATH=/usr/local/opt/gawk/bin/:$PATH
 export PATH=$HOME/.nodebrew/current/bin:$PATH
 export LANG="ja_JP.UTF-8"
-export GOPATH=$HOME/go
+export GOPATH=$(go env GOPATH)
 export PATH=$PATH:$GOPATH/bin
 
 # Dockerイメージを「なりすまし」と「改ざん」から保護するセキュリティ機能
@@ -99,13 +99,19 @@ alias cdp='cd ~/work/project'
 
 ### docker
 alias dockeralias='alias | grep "docker"'
+alias dcup='docker compose up'
 alias dcupd='docker compose up -d'
 alias dcps='docker compose ps'
 alias dcla='docker container ls -a'
 alias dex='docker exec -it'
 alias dcs='docker compose stop'
 alias dcd='docker compose down'
+alias dcb='docker compose build'
 alias ds='docker stop'
+alias dcl='docker compose logs'
+alias dnl='docker network ls'
+alias di='docker images'
+alias dri='docker rmi'
 
 ### git
 alias gitalias='alias | grep "git"'
