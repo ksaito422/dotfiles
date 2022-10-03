@@ -87,18 +87,33 @@ PATH=$PATH:~/bin
 
 # alias
 ### ls
-alias lalias='alias | grep "ls"'
-alias la='ls -a'
-alias ll='ls -l'
-alias lal='ls -al'
+# alias lalias='alias | grep "ls"'
+# alias la='ls -a'
+# alias ll='ls -l'
+# alias lal='ls -al'
 
 ### cd
-alias cdalias='alias | grep "cd"'
+alias cd-alias='alias | grep "cd"'
 alias cdw='cd ~/work/'
 alias cdp='cd ~/work/project'
 
+### exa
+alias exa-alias='alias | grep "exa"'
+alias ls='exa -1lF'
+alias la='exa -1aalF'
+alias lst='exa -lT'
+
+### bat
+alias bat-alias='alias | grep "bat"'
+alias cat='bat'
+alias cata='bat -A'
+
+### procs
+alias procs-alias='alias | grep "procs"'
+alias ps='procs'
+
 ### docker
-alias dockeralias='alias | grep "docker"'
+alias docker-alias='alias | grep "docker"'
 alias dcup='docker compose up'
 alias dcupd='docker compose up -d'
 alias dcps='docker compose ps'
@@ -114,7 +129,7 @@ alias di='docker images'
 alias dri='docker rmi'
 
 ### git
-alias gitalias='alias | grep "git"'
+alias git-alias='alias | grep "git"'
 alias ginit='git init'
 alias gadd='git add'
 alias gadda='git add -A'
