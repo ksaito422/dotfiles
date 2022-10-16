@@ -1,3 +1,10 @@
+#################################################################################################
+# LSPプラグイン
+#################################################################################################
+[[plugins]] # Neovim Builtin LSPが提供する構文を引っ張ってくる
+repo = 'Shougo/ddc-nvim-lsp'
+on_source = 'ddc.vim'
+
 [[plugins]] # 入力補完プラグイン
 repo = 'Shougo/ddc.vim'
 on_event = 'InsertEnter'
@@ -46,10 +53,6 @@ on_source = 'ddc.vim'
 
 [[plugins]] # 同じ単語を重複して補完するのを防ぐ
 repo = 'Shougo/ddc-converter_remove_overlap'
-on_source = 'ddc.vim'
-
-[[plugins]] # Neovim Builtin LSPが提供する構文を引っ張ってくる
-repo = 'Shougo/ddc-nvim-lsp'
 on_source = 'ddc.vim'
 
 [[plugins]] # スニペット
