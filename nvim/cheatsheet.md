@@ -167,3 +167,13 @@
 - nnoremap <silent> <C-s> <!-- BufferPick 任意のバッファーを開く -->
 - nnoremap <silent> <Space>bb <!-- BufferOrderByBufferNumber バッファ順に並び替え -->
 - nnoremap <silent> <Space>bw <!-- BufferOrderByWindowNumber ウインドウ順に並び替え -->
+
+### debug(dap)
+
+- <F5> debugger 起動
+- <F10> step over
+- <F11> step into
+- <F12> step out
+- <leader>b toggle breakpoint
+- <leader>d toggle debug ui
+- <leader>td debug test
