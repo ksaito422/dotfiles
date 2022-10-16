@@ -31,10 +31,16 @@ sh ./installer.sh ~/.cache/dein
 ```
 
 #### install font
+
 https://blog.htkyama.org/vim_airline を参考に PowerLine Fonts と Nerd Fonts をインストールする
 
 使用している Font は`FuraMono Nerd Font`
 
 #### symbolic link
+
 `ln -s ~/.dotfiles/nvim ~/.config/nvim`
 
+#### setup debug environment
+
+- Golang は、[delve](https://github.com/go-delve/delve)が必要なのでインストールする
+  - `go install github.com/go-delve/delve/cmd/dlv@latest`
