@@ -156,3 +156,24 @@ repo = 'dense-analysis/ale'
 hook_add = '''
   source ~/.config/nvim/plugins/ale.vim
 '''
+
+#################################################################################################
+# debug plugins
+#################################################################################################
+[[plugins]] # debug adapter protocol
+repo = 'mfussenegger/nvim-dap'
+hook_add = '''
+  source ~/.config/nvim/plugins/nvim-dap.lua
+'''
+
+[[plugins]] # debug ui
+repo = 'rcarriga/nvim-dap-ui'
+hook_add = '''
+  source ~/.config/nvim/plugins/nvim-dap-ui.lua
+'''
+
+[[plugins]] # debug for golang
+repo = 'leoluz/nvim-dap-go'
+hook_add = '''
+  source ~/.config/nvim/plugins/nvim-dap-go.lua
+'''
