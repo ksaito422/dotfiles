@@ -1,169 +1,142 @@
-<!-- 基本操作系 -->
-<!-- カーソル移動 -->
+# チートシート
 
-- [n]h, j, k, l <!-- 四方移動 -->
-- [n]gj, gk <!-- 折り返しの上下移動 -->
-- H, M, L <!-- 画面上の最上, 中央, 最下に移動 -->
-- [n]w, b <!-- 次の単語, 前の単語に移動 -->
-- [n]W, B <!-- スペース区切りの次の単語, 前の単語に移動 -->
-- 0, $ <!-- 行頭, 行末に移動 -->
-- gg, G <!-- 1行目に移動, 最後の行に移動 -->
-- [n]G <!-- n行目に移動 -->
-- % <!-- 対応する括弧に移動 -->
+## 基本操作系
 
-<!-- ページ移動 -->
+### カーソル移動
 
-- <C-d>, <C-u> <!-- 半ページ次, 半ページ前に移動 -->
+- [n]h, j, k, l 四方移動
+- [n]gj, gk 折り返しの上下移動
+- H, M, L 画面上の最上, 中央, 最下に移動
+- [n]w, b 次の単語, 前の単語に移動
+- [n]W, B スペース区切りの次の単語, 前の単語に移動
+- 0, $ 行頭, 行末に移動
+- gg, G 1 行目に移動, 最後の行に移動
+- [n]G n 行目に移動
+- % 対応する括弧に移動
 
-<!-- カット&ヤンク&ペペースト -->
+### ページ移動
 
-- [n]dd <!-- 行削除 -->
-- d0 <!-- カーソル位置から行頭まで削除 -->
-- d$ <!-- カーソル位置から行末まで削除 -->
-- dgg <!-- カーソル位置から最初まで削除 -->
-- dG <!-- カーソル位置から最後まで削除 -->
-- [n]x <!-- 文字削除 Delete -->
-- [n]X <!-- 文字削除 BackSpace -->
-- :7,20d <!-- 範囲削除 -->
+- <C-d>, <C-u> 半ページ次, 半ページ前に移動
 
-<!-- インサートモード -->
+### カット&ヤンク&ペースト
 
-- [n]gI <!-- 行等にインサートモード -->
-- [n]A <!-- 行末にインサートモード -->
-- [n]o <!-- 下の行にインサートモード -->
-- [n]O <!-- 上の行にインサートモード -->
-- <C-w> <!-- 前の単語削除 -->
-- <C-u> <!-- カーソル位置から行頭まで削除 -->
+- [n]dd 行削除
+- d0 カーソル位置から行頭まで削除
+- d$ カーソル位置から行末まで削除
+- dgg カーソル位置から最初まで削除
+- dG カーソル位置から最後まで削除
+- [n]x 文字削除 Delete
+- [n]X 文字削除 BackSpace
+- :7,20d 範囲削除
 
-<!-- ウインドウ -->
+### インサートモード
 
-- :sp, :vs <!-- ウインドウを横分割, 縦分割 -->
-- :qa <!-- 全閉じ -->
-- :close <!-- 閉じる -->
-- <C-w>o <!-- 現在ウインドウ以外閉じる -->
-- <C-w>[J,K,H,L] <!-- ウインドウの位置を入れ替え -->
-- <C-w>l, <C-w>h, <C-w>j, <C-w>k <!-- 右のウインドウ, 左のウインドウ, 下のウインドウ, 上のウインドウ -->
-- <C-=> <!-- ウインドウサイズを等しくする -->
+- [n]gI 行頭にインサートモード
+- [n]A 行末にインサートモード
+- [n]o 下の行にインサートモード
+- [n]O 上の行にインサートモード
+- <C-w> 前の単語削除
+- <C-u> カーソル位置から行頭まで削除
 
-<!-- キーマップ -->
+### ウインドウ
+
+- :sp, :vs ウインドウを横分割, 縦分割
+- :qa 全閉じ
+- :close 閉じる
+- <C-w>o 現在ウインドウ以外閉じる
+- <C-w>[J,K,H,L] ウインドウの位置を入れ替え
+- <C-w>l, <C-w>h, <C-w>j, <C-w>k 右のウインドウ, 左のウインドウ, 下のウインドウ, 上のウインドウ
+- <C-=> ウインドウサイズを等しくする
+
+### キーマップ
 
 - <Leader> space
 
-<!-- バッファ操作 -->
+### バッファ操作
 
-- :bd <!-- バッファ閉じる（vimを閉じずにファイルを閉じる） -->
-- :ls <!-- 開いているバッファを表示 -->
-- :b n <!-- 開いているファイルのバッファナンバーを開く -->
-- :%bd <!-- 開いているバッファを全て閉じる -->
+- :bd バッファ閉じる（vim を閉じずにファイルを閉じる）
+- :ls 開いているバッファを表示
+- :b n 開いているファイルのバッファナンバーを開く
+- :%bd 開いているバッファを全て閉じる
 
-<!-- 作業を戻る/進む -->
+### 作業を戻る/進む
 
-- [n]u <!-- undo -->
-- [n]<C-r> <!-- redo -->
+- [n]u undo
+- [n]<C-r> redo
 
-<!-- 拡張機能系 -->
-<!-- cheat sheet -->
+## 拡張機能系
 
-- <Leader>? <!-- チートシートを開く -->
-- <Leader>f. <!-- チートシートを編集モードで開く -->
+### cheat sheet
 
-<!-- dein -->
+- <Leader>? チートシートを開く
+- <Leader>f. チートシートを編集モードで開く
+
+### dein
 
 - :call map(dein#check_clean(), "delete(v:val, 'rf')")
 - :call dein#recache_runtimepath()
 
-<!-- coc-nvim -->
+### Comment.nvim
 
-- - <!-- ホバー時にlsp診断結果 or ドキュメントを表示する -->
-- [n]K <!-- lsp診断結果 or ドキュメントを表示する-->
-- [n]gd <!-- coc-definition -->
-- [n]gy <!-- coc-type-definition 型定義の箇所に移動 -->
-- [n]gi <!-- coc-implementation -->
-- [n]gr <!-- coc-references 実装箇所やインターフェイスなどをリストで表示 -->
-- [n]\[g <!-- coc-diagnostics-prev ファイル内の次の診断箇所に移動 -->
-- [n]\]g <!-- coc-diagnostics-next ファイル内の前の診断箇所に移動 -->
-- <space>d <!-- CocList diagnostics 診断結果をリスト表示 -->
+- [count]gcc 1 行コメントアウト
+- [count]gbc 複数行コメントアウト
 
-<!-- coc-fzf-preview -->
+### fern.vim
 
-- <Leader>f [fzf-p]
-- [nnoremap] [fzf-p]p <!-- 配下のファイル・ディレクトリ全てを表示 -->
-- [nnoremap] [fzf-p]o <!-- 配下のファイル・ディレクトリを表示 -->
-- [nnoremap] [fzf-p]gs <!-- git status -->
-- [nnoremap] [fzf-p]ga <!-- git action -->
-- [nnoremap] [fzf-p]b <!-- 開いているバッファリスト表示 -->
-- [nnoremap] [fzf-p]B <!-- 全ての開いているバッファリストを表示 -->
-- [nnoremap] [fzf-p]/ <!-- フローティングウインドウを開いてファイル内の文字列検索 -->
-- [nnoremap] [fzf-p]q <!-- QuickFix -->
-- [nnoremap] [fzf-p]l <!-- LocationList -->
+- E 垂直分割してファイルを開く
+- t 新規タブでファイルを開く
+- N ファイルを新規作成
+- K ディレクトリを新規作成
+- D ファイルを削除
+- m ファイルを移動
+- R ファイル名変更
+- - ファイル選択
+- C ファイルコピー
+- P ペースト
+- M ファイルコピーし、ペースト時に元ファイルを削除
+- y ファイルパスをコピー
+- z ファイル名に合わせてウインドウ幅を広げる
+- ! 隠しファイルを表示/非表示
 
-<!-- Comment.nvim -->
+### conflict-marker
 
-- [count]gcc <!-- 1行コメントアウト -->
-- [count]gbc <!-- 複数行コメントアウト -->
+- [x 前のコンフリクトへ
+- ]x 次のコンフリクトへ
+- co 自分の変更を適用 :ConflictMarkerOurselves
+- ct 相手の変更を適用 :ConflictMarkerThemselves
+- cb 両方を適用 :ConflictMarkerBoth
+- cn 適用なし :ConflictMarkerNone
 
-<!-- feen.vim -->
+### winresizer
 
-- E <!-- 垂直分割してファイルを開く -->
-- t <!-- 新規タブでファイルを開く -->
-- N <!-- ファイルを新規作成 -->
-- K <!-- ディレクトリを新規作成 -->
-- D <!-- ファイルを削除 -->
-- m <!-- ファイルを移動 -->
-- R <!-- ファイル名変更 -->
-- - <!-- ファイル選択 -->
-- C <!-- ファイルコピー -->
-- P <!-- ペースト -->
-- M <!-- ファイルコピーし、ペースト時に元ファイルを削除 -->
-- y <!-- ファイルパスをコピー -->
-- z <!-- ファイル名に合わせてウインドウ幅を広げる -->
-- ! <!-- 隠しファイルを表示/非表示 -->
+- [n]<C-e> ウインドウリサイズモード
+- h j k l 左 下 上 右
 
-<!-- conflict-marker -->
+### searchx.vim
 
-- [x <!-- 前のコンフリクトへ -->
-- ]x <!-- 次のコンフリクトへ -->
-- co <!-- 自分の変更を適用 :ConflictMarkerOurselves -->
-- ct <!-- 相手の変更を適用 :ConflictMarkerThemselves -->
-- cb <!-- 両方を適用 :ConflictMarkerBoth -->
-- cn <!-- 適用なし :ConflictMarkerNone -->
+- ? 検索
+- / 検索
+- N 前の一致項目に移動
+- n 次の一致項目に移動
 
-<!-- Gina -->
+### fern-preview.vim
 
-- :Gina branch <!-- ブランチ一蘭表示、チェックアウト -->
-- :Gina pull origin [ブランチ名] <!-- リモートブランチを取り込み -->
-- :Gina push origin [ブランチ名] <!-- リモートリポジトリにアップロード -->
-- :Gina pull --rebase origin [ブランチ名] <!-- リモートブランチ取り込み、履歴を改変 -->
-- :Gina rebase --continue <!-- rebaseの続行 -->
-- :Gina rebase --abort <!-- rebaseの取りやめ -->
-- :Gina cherry-pick [ブランチ名] <!-- 別ブランチの特定コミットを取り込み -->
-- :Gina reset --hard HEAD@{i} <!-- コミットの取り消し（変更内容を失う） -->
-- :Gina reset --soft HEAD@{i} <!-- コミットの取り消し（変更内容はstagingに）-->
-- :Gina fetch origin [ブランチ名] <!-- リモートブランチの内容を取得（適用はしない） -->
-- :Gina merge [ブランチ名] <!-- 別ブランチの内容を取り込む -->
+- <C-p> 自動ファイルプレビューの on/off
+- <C-d> ファイルプレビューのページダウン
+- <C-u> ファイルプレビューのページアップ
 
-<!-- winresizer  -->
+### barbar.nvim
 
-- [n]<C-e> <!-- ウインドウリサイズモード -->
-- h j k l <!-- 左 下 上 右-->
+- nnoremap <silent> <C-s> BufferPick 任意のバッファーを開く
+- nnoremap <silent> <Space>bb BufferOrderByBufferNumber バッファ順に並び替え
+- nnoremap <silent> <Space>bw BufferOrderByWindowNumber ウインドウ順に並び替え
 
-<!-- searchx.vim -->
+### debug(dap)
 
-- ? <!-- 検索 -->
-- / <!-- 検索 -->
-- N <!-- 前の一致項目に移動 -->
-- n <!-- 次の一致項目に移動 -->
-
-<!-- deol.vim -->
-
-<!-- fern-preview.vim -->
-
-- <C-p> <!-- 自動ファイルプレビューのon/off -->
-- <C-d> <!-- ファイルプレビューのページダウン -->
-- <C-u> <!-- ファイルプレビューのページアップ -->
-
-<!-- barbar.nvim -->
-
-- nnoremap <silent> <C-s> <!-- BufferPick 任意のバッファーを開く -->
-- nnoremap <silent> <Space>bb <!-- BufferOrderByBufferNumber バッファ順に並び替え -->
-- nnoremap <silent> <Space>bw <!-- BufferOrderByWindowNumber ウインドウ順に並び替え -->
+- <F5> debugger 起動
+- <F10> step over
+- <F11> step into
+- <F12> step out
+- <leader>b toggle breakpoint
+- <leader>d toggle debug ui
+- <leader>td debug test
