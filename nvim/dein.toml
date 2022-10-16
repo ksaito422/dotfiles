@@ -1,11 +1,11 @@
-[[plugins]] # TOML形式のシンタックスハイライトを有効
-repo = 'cespare/vim-toml'
-
-[[plugins]] # :helpを日本語化
-repo = 'vim-jp/vimdoc-ja'
-
-[[plugins]]
-repo = 'vim-denops/denops.vim'
+#################################################################################################
+# 見た目系プラグイン
+#################################################################################################
+[[plugins]] # シンタックスハイライトを有効化
+repo = 'nvim-treesitter/nvim-treesitter'
+hook_add = '''
+  source ~/.config/nvim/plugins/treesitter.vim
+'''
 
 [[plugins]] # カラースキーマ
 repo = 'EdenEast/nightfox.nvim'
@@ -17,18 +17,6 @@ hook_add = '''
 repo = 'itchyny/lightline.vim'
 hook_add = '''
   source ~/.config/nvim/plugins/lightline.vim
-'''
-
-[[plugins]] # filer
-repo = 'lambdalisue/fern.vim'
-hook_add = '''
-  source ~/.config/nvim/plugins/fern.vim
-'''
-
-[[plugins]] # file preview
-repo = 'yuki-yano/fern-preview.vim'
-hook_add = '''
-  source ~/.config/nvim/plugins/fern-preview.vim
 '''
 
 [[plugins]] # ファイルツリーにgitの差分を表示する
@@ -49,12 +37,45 @@ hook_add = '''
   source ~/.config/nvim/plugins/glyph-pallette.vim
 '''
 
-[[plugins]] # ターミナル拡張
-repo ='Shougo/deol.nvim'
+[[plugins]] # 対応する()のカラーリング
+repo = 'luochen1990/rainbow'
 hook_add = '''
-  source ~/.config/nvim/plugins/deol.vim
+  source ~/.config/nvim/plugins/rainbow.vim
 '''
 
+[[plugins]] # bufferlineにアイコンを表示
+repo = 'kyazdani42/nvim-web-devicons'
+
+[[plugins]] # buffer lineにbufferを表示
+repo = 'romgrk/barbar.nvim'
+hook_add = '''
+  source ~/.config/nvim/plugins/barbar.vim
+'''
+
+[[plugins]] # indentline
+repo = 'lukas-reineke/indent-blankline.nvim'
+hook_add = '''
+  source ~/.config/nvim/plugins/indent-blackline.lua
+'''
+
+[[plugins]] # TOML形式のシンタックスハイライトを有効
+repo = 'cespare/vim-toml'
+
+#################################################################################################
+# 翻訳系プラグイン
+#################################################################################################
+[[plugins]] # :helpを日本語化
+repo = 'vim-jp/vimdoc-ja'
+
+[[plugins]] # 翻訳
+repo = 'skanehira/translate.vim'
+hook_add = '''
+  source ~/.config/nvim/plugins/translate.vim
+'''
+
+#################################################################################################
+# 開発体験UP系プラグイン
+#################################################################################################
 [[plugins]] # Gitの変更表示
 repo = 'airblade/vim-gitgutter'
 hook_add = '''
@@ -79,81 +100,9 @@ hook_add = '''
   source ~/.config/nvim/plugins/comment.lua
 '''
 
-[[plugins]] # yank範囲をハイライトする
-repo = 'machakann/vim-highlightedyank'
-hook_add = '''
-  source ~/.config/nvim/plugins/vim-highlightedyank.vim
-'''
-
-[[plugins]] # windowのリサイズ
-repo = 'simeji/winresizer'
-
-[[plugins]] # 対応する()のカラーリング
-repo = 'luochen1990/rainbow'
-hook_add = '''
-  source ~/.config/nvim/plugins/rainbow.vim
-'''
-
-[[plugins]] # 翻訳
-repo = 'skanehira/translate.vim'
-hook_add = '''
-  source ~/.config/nvim/plugins/translate.vim
-'''
-
-[[plugins]] # チートシート
-repo = 'reireias/vim-cheatsheet'
-hook_add = '''
-  source ~/.config/nvim/plugins/cheatsheet.vim
-'''
-
-[[plugins]] # スペルチェック
-repo = 'kamykn/spelunker.vim'
-
-[[plugins]] # スペルチェック拡張のneovim対応
-repo = 'kamykn/popup-menu.nvim'
-
-[[plugins]] # bufferlineにアイコンを表示
-repo = 'kyazdani42/nvim-web-devicons'
-
-[[plugins]] # buffer lineにbufferを表示
-repo = 'romgrk/barbar.nvim'
-hook_add = '''
-  source ~/.config/nvim/plugins/barbar.vim
-'''
-
-[[plugins]] # / or ? 検索のジャンプ拡張
-repo = 'hrsh7th/vim-searchx'
-hook_add = '''
-  source ~/.config/nvim/plugins/searchx.vim
-'''
-
-[[plugins]] # シンタックスハイライトを有効化
-repo = 'nvim-treesitter/nvim-treesitter'
-hook_add = '''
-  source ~/.config/nvim/plugins/treesitter.vim
-'''
-
 [[plugins]] # jsx,tsxコメントアウト
 repo = 'JoosepAlviste/nvim-ts-context-commentstring'
 
-[[plugins]] # indentline
-repo = 'lukas-reineke/indent-blankline.nvim'
-hook_add = '''
-  source ~/.config/nvim/plugins/indent-blackline.lua
-'''
-
-[[plugins]] # 対応する括弧などを補完
-repo = 'cohama/lexima.vim'
-
-[[plugins]] # js&ts&jsx&tsx formatter linter
-repo = 'dense-analysis/ale'
-hook_add = '''
-  source ~/.config/nvim/plugins/ale.vim
-'''
-
-#################################################################################################
-# debug plugins
-#################################################################################################
 [[plugins]] # debug adapter protocol
 repo = 'mfussenegger/nvim-dap'
 hook_add = '''
@@ -171,3 +120,70 @@ repo = 'leoluz/nvim-dap-go'
 hook_add = '''
   source ~/.config/nvim/plugins/nvim-dap-go.lua
 '''
+
+#################################################################################################
+# 操作性UP系プラグイン
+#################################################################################################
+[[plugins]] # filer
+repo = 'lambdalisue/fern.vim'
+hook_add = '''
+  source ~/.config/nvim/plugins/fern.vim
+'''
+
+[[plugins]] # file preview
+repo = 'yuki-yano/fern-preview.vim'
+hook_add = '''
+  source ~/.config/nvim/plugins/fern-preview.vim
+'''
+
+[[plugins]] # ターミナル拡張
+repo ='Shougo/deol.nvim'
+hook_add = '''
+  source ~/.config/nvim/plugins/deol.vim
+'''
+
+[[plugins]] # yank範囲をハイライトする
+repo = 'machakann/vim-highlightedyank'
+hook_add = '''
+  source ~/.config/nvim/plugins/vim-highlightedyank.vim
+'''
+
+[[plugins]] # windowのリサイズ
+repo = 'simeji/winresizer'
+
+[[plugins]] # / or ? 検索のジャンプ拡張
+repo = 'hrsh7th/vim-searchx'
+hook_add = '''
+  source ~/.config/nvim/plugins/searchx.vim
+'''
+
+#################################################################################################
+# 補完、リント系プラグイン
+#################################################################################################
+[[plugins]] # スペルチェック
+repo = 'kamykn/spelunker.vim'
+
+[[plugins]] # スペルチェック拡張のneovim対応
+repo = 'kamykn/popup-menu.nvim'
+
+[[plugins]] # 対応する括弧などを補完
+repo = 'cohama/lexima.vim'
+
+[[plugins]] # js&ts&jsx&tsx formatter linter
+repo = 'dense-analysis/ale'
+hook_add = '''
+  source ~/.config/nvim/plugins/ale.vim
+'''
+
+#################################################################################################
+# その他（依存関係など）
+#################################################################################################
+[[plugins]] # チートシート
+repo = 'reireias/vim-cheatsheet'
+hook_add = '''
+  source ~/.config/nvim/plugins/cheatsheet.vim
+'''
+
+[[plugins]] # Denoでプラグインを作るエコシステム
+repo = 'vim-denops/denops.vim'
+
