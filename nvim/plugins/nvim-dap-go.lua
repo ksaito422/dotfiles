@@ -38,13 +38,13 @@ end
 dap.configurations.go = {
 	{
 		type = "go",
-		name = "Debug",
+		name = "Debug the golang",
 		request = "launch",
 		program = "${file}",
 	},
 	{
 		type = "go",
-		name = "Debug test",
+		name = "Debug the golang test",
 		request = "launch",
 		mode = "test",
 		program = "${file}",
