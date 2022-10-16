@@ -55,12 +55,6 @@ hook_add = '''
   source ~/.config/nvim/plugins/deol.vim
 '''
 
-[[plugins]] # Git操作
-repo = 'lambdalisue/gina.vim'
-hook_add = '''
-  source ~/.config/nvim/plugins/gina.vim
-'''
-
 [[plugins]] # Gitの変更表示
 repo = 'airblade/vim-gitgutter'
 hook_add = '''
@@ -73,7 +67,7 @@ hook_add = '''
   source ~/.config/nvim/plugins/conflict-marker.vim
 '''
 
-[[plugins]] # lazygit
+[[plugins]] # lazygit(git ui)
 repo = 'kdheepak/lazygit.nvim'
 hook_add = '''
   source ~/.config/nvim/plugins/lazygit.vim
