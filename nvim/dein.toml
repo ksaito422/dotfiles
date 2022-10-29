@@ -4,7 +4,7 @@
 [[plugins]] # シンタックスハイライトを有効化
 repo = 'nvim-treesitter/nvim-treesitter'
 hook_add = '''
-  source ~/.config/nvim/plugins/treesitter.vim
+  source ~/.config/nvim/plugins/treesitter.lua
 '''
 
 [[plugins]] # カラースキーマ

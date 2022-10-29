@@ -1,4 +1,3 @@
-lua <<EOF
 require'nvim-treesitter.configs'.setup {
   highlight = {
     enable = true,
@@ -10,5 +9,3 @@ require'nvim-treesitter.configs'.setup {
   ensure_installed = 'all', -- one of "all", "maintained"
   ignore_install = {"haskell", "phpdoc"}
 }
-EOF
-
