@@ -15,6 +15,7 @@ set scrolloff=30 "画面端でのスクロール位置指定
 " highlight CursorLine cterm=underline ctermfg=NONE ctermbg=NONE
 "set cursorcolumn
 set hls "検索した文字列をハイライトする
+set laststatus=3
 
 "tab setting
 set smartindent
