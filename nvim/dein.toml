@@ -94,6 +94,12 @@ hook_add = '''
   source ~/.config/nvim/plugins/lazygit.vim
 '''
 
+[[plugins]] # git blame(vscodeのGitlensのようなもの)
+repo = 'APZelos/blamer.nvim'
+hook_add = '''
+  source ~/.config/nvim/plugins/blamer.lua
+'''
+
 [[plugins]] # コメントアウト用 nvim-ts-context-commentstringと組み合わせる
 repo = 'numToStr/Comment.nvim'
 hook_add = '''
