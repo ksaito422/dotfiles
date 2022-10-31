@@ -9,6 +9,12 @@ set splitbelow "画面を水平分割時に下に表示
 set splitright "画面を垂直分割時に右に表示
 set wildmenu "コマンドモードの補完
 set scrolloff=30 "画面端でのスクロール位置指定
+set nobackup " バックアップファイルを作らない
+set noswapfile " スワップファイルを作らない
+set autoread " 編集中のファイルが変更されたら自動で読み直す
+set hidden " バッファが編集中でもその他のファイルを開けるようにする
+set showcmd " 入力中のコマンドをステータスに表示する
+
 
 "見た目系
 " set cursorline "現在の行を強調表示
@@ -16,6 +22,7 @@ set scrolloff=30 "画面端でのスクロール位置指定
 "set cursorcolumn
 set hls "検索した文字列をハイライトする
 set laststatus=3
+set wrap " 長い行を折り返して表示 (nowrap:折り返さない)
 
 "tab setting
 set smartindent
@@ -106,6 +113,10 @@ tnoremap <Esc> <C-\><C-n>
 command! -nargs=* T split | wincmd j | resize 20 | terminal <args>
 autocmd TermOpen * startinsert
 
+"
+" プラグイン管理
+"
+
 if !exists('g:vscode')
   "neovim && dein.vimの設定
   "プラグインをdein.toml, dein_lazy.tomlから読み込む
@@ -129,7 +140,10 @@ if !exists('g:vscode')
   endif
 endif
 
+"
 "ノーマルモード切り替え時に日本語入力をoffにする
+"
+
 function! s:disableIme()
     if has('mac')
         call jobstart(['osascript', '-e', 'tell application "System Events" to key code {102}'], {'in_io': 'null', 'out_io': 'null', 'err_io': 'null'})
