@@ -28,7 +28,7 @@ repo = 'lambdalisue/nerdfont.vim'
 [[plugins]] # filerのアイコン表示
 repo = 'lambdalisue/fern-renderer-nerdfont.vim'
 hook_add = '''
-  source ~/.config/nvim/plugins/fern-renderer-nerdfont.vim
+  source ~/.config/nvim/plugins/fern.lua
 '''
 
 [[plugins]] # ファイラーのアイコンをカラー表示
@@ -133,7 +133,7 @@ hook_add = '''
 [[plugins]] # filer
 repo = 'lambdalisue/fern.vim'
 hook_add = '''
-  source ~/.config/nvim/plugins/fern.vim
+  source ~/.config/nvim/plugins/fern.lua
 '''
 
 [[plugins]] # file preview
