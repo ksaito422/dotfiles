@@ -178,7 +178,7 @@ repo = 'cohama/lexima.vim'
 [[plugins]] # js&ts&jsx&tsx formatter linter
 repo = 'dense-analysis/ale'
 hook_add = '''
-  source ~/.config/nvim/plugins/ale.vim
+  source ~/.config/nvim/plugins/ale.lua
 '''
 
 #################################################################################################
