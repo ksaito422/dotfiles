@@ -91,7 +91,7 @@ hook_add = '''
 [[plugins]] # lazygit(git ui)
 repo = 'kdheepak/lazygit.nvim'
 hook_add = '''
-  source ~/.config/nvim/plugins/lazygit.vim
+  source ~/.config/nvim/plugins/lazygit.lua
 '''
 
 [[plugins]] # git blame(vscodeのGitlensのようなもの)
