@@ -10,7 +10,7 @@ hook_add = '''
 [[plugins]] # カラースキーマ
 repo = 'EdenEast/nightfox.nvim'
 hook_add = '''
-  source ~/.config/nvim/plugins/colorscheme.vim
+  source ~/.config/nvim/plugins/colorscheme.lua
 '''
 
 [[plugins]] # ステータスライン
