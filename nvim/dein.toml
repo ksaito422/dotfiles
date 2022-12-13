@@ -145,7 +145,7 @@ hook_add = '''
 [[plugins]] # ターミナル拡張
 repo ='Shougo/deol.nvim'
 hook_add = '''
-  source ~/.config/nvim/plugins/deol.vim
+  source ~/.config/nvim/plugins/deol.lua
 '''
 
 [[plugins]] # yank範囲をハイライトする
