@@ -199,14 +199,14 @@ repo = 'vim-denops/denops.vim'
 #################################################################################################
 [[plugins]] # Neovim Builtin LSPが提供する構文を引っ張ってくる
 repo = 'Shougo/ddc-nvim-lsp'
-on_source = 'ddc.vim'
+on_source = 'ddc.lua'
 
 [[plugins]] # 入力補完プラグイン
 repo = 'Shougo/ddc.vim'
 on_event = 'InsertEnter'
 depends = ['denops.vim']
 hook_add = '''
-  source ~/.config/nvim/plugins/ddc.vim
+  source ~/.config/nvim/plugins/ddc.lua
 '''
 
 [[plugins]] # 補完候補
