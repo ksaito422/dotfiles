@@ -79,7 +79,7 @@ hook_add = '''
 [[plugins]] # Gitの変更表示
 repo = 'airblade/vim-gitgutter'
 hook_add = '''
-  source ~/.config/nvim/plugins/vim-gitgutter.vim
+  source ~/.config/nvim/plugins/vim-gitgutter.lua
 '''
 
 [[plugins]] # コンフリクトマーカー
