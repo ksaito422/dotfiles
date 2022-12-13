@@ -10,13 +10,13 @@ hook_add = '''
 [[plugins]] # カラースキーマ
 repo = 'EdenEast/nightfox.nvim'
 hook_add = '''
-  source ~/.config/nvim/plugins/colorscheme.vim
+  source ~/.config/nvim/plugins/colorscheme.lua
 '''
 
 [[plugins]] # ステータスライン
 repo = 'itchyny/lightline.vim'
 hook_add = '''
-  source ~/.config/nvim/plugins/lightline.vim
+  source ~/.config/nvim/plugins/lightline.lua
 '''
 
 [[plugins]] # ファイルツリーにgitの差分を表示する
@@ -28,19 +28,19 @@ repo = 'lambdalisue/nerdfont.vim'
 [[plugins]] # filerのアイコン表示
 repo = 'lambdalisue/fern-renderer-nerdfont.vim'
 hook_add = '''
-  source ~/.config/nvim/plugins/fern-renderer-nerdfont.vim
+  source ~/.config/nvim/plugins/fern.lua
 '''
 
 [[plugins]] # ファイラーのアイコンをカラー表示
 repo = 'lambdalisue/glyph-palette.vim'
 hook_add = '''
-  source ~/.config/nvim/plugins/glyph-pallette.vim
+  source ~/.config/nvim/plugins/glyph-pallette.lua
 '''
 
 [[plugins]] # 対応する()のカラーリング
 repo = 'luochen1990/rainbow'
 hook_add = '''
-  source ~/.config/nvim/plugins/rainbow.vim
+  source ~/.config/nvim/plugins/rainbow.lua
 '''
 
 [[plugins]] # bufferlineにアイコンを表示
@@ -49,7 +49,7 @@ repo = 'kyazdani42/nvim-web-devicons'
 [[plugins]] # buffer lineにbufferを表示
 repo = 'romgrk/barbar.nvim'
 hook_add = '''
-  source ~/.config/nvim/plugins/barbar.vim
+  source ~/.config/nvim/plugins/barbar.lua
 '''
 
 [[plugins]] # indentline
@@ -70,7 +70,7 @@ repo = 'vim-jp/vimdoc-ja'
 [[plugins]] # 翻訳
 repo = 'skanehira/translate.vim'
 hook_add = '''
-  source ~/.config/nvim/plugins/translate.vim
+  source ~/.config/nvim/plugins/translate.lua
 '''
 
 #################################################################################################
@@ -79,19 +79,19 @@ hook_add = '''
 [[plugins]] # Gitの変更表示
 repo = 'airblade/vim-gitgutter'
 hook_add = '''
-  source ~/.config/nvim/plugins/vim-gitgutter.vim
+  source ~/.config/nvim/plugins/vim-gitgutter.lua
 '''
 
 [[plugins]] # コンフリクトマーカー
 repo = 'rhysd/conflict-marker.vim'
 hook_add = '''
-  source ~/.config/nvim/plugins/conflict-marker.vim
+  source ~/.config/nvim/plugins/conflict-marker.lua
 '''
 
 [[plugins]] # lazygit(git ui)
 repo = 'kdheepak/lazygit.nvim'
 hook_add = '''
-  source ~/.config/nvim/plugins/lazygit.vim
+  source ~/.config/nvim/plugins/lazygit.lua
 '''
 
 [[plugins]] # git blame(vscodeのGitlensのようなもの)
@@ -133,25 +133,25 @@ hook_add = '''
 [[plugins]] # filer
 repo = 'lambdalisue/fern.vim'
 hook_add = '''
-  source ~/.config/nvim/plugins/fern.vim
+  source ~/.config/nvim/plugins/fern.lua
 '''
 
 [[plugins]] # file preview
 repo = 'yuki-yano/fern-preview.vim'
 hook_add = '''
-  source ~/.config/nvim/plugins/fern-preview.vim
+  source ~/.config/nvim/plugins/fern.lua
 '''
 
 [[plugins]] # ターミナル拡張
 repo ='Shougo/deol.nvim'
 hook_add = '''
-  source ~/.config/nvim/plugins/deol.vim
+  source ~/.config/nvim/plugins/deol.lua
 '''
 
 [[plugins]] # yank範囲をハイライトする
 repo = 'machakann/vim-highlightedyank'
 hook_add = '''
-  source ~/.config/nvim/plugins/vim-highlightedyank.vim
+  source ~/.config/nvim/plugins/vim-highlightedyank.lua
 '''
 
 [[plugins]] # windowのリサイズ
@@ -160,7 +160,7 @@ repo = 'simeji/winresizer'
 [[plugins]] # / or ? 検索のジャンプ拡張
 repo = 'hrsh7th/vim-searchx'
 hook_add = '''
-  source ~/.config/nvim/plugins/searchx.vim
+  source ~/.config/nvim/plugins/searchx.lua
 '''
 
 #################################################################################################
@@ -178,7 +178,7 @@ repo = 'cohama/lexima.vim'
 [[plugins]] # js&ts&jsx&tsx formatter linter
 repo = 'dense-analysis/ale'
 hook_add = '''
-  source ~/.config/nvim/plugins/ale.vim
+  source ~/.config/nvim/plugins/ale.lua
 '''
 
 #################################################################################################
@@ -187,7 +187,7 @@ hook_add = '''
 [[plugins]] # チートシート
 repo = 'reireias/vim-cheatsheet'
 hook_add = '''
-  source ~/.config/nvim/plugins/cheatsheet.vim
+  source ~/.config/nvim/plugins/cheatsheet.lua
 '''
 
 [[plugins]] # Denoでプラグインを作るエコシステム
@@ -199,14 +199,14 @@ repo = 'vim-denops/denops.vim'
 #################################################################################################
 [[plugins]] # Neovim Builtin LSPが提供する構文を引っ張ってくる
 repo = 'Shougo/ddc-nvim-lsp'
-on_source = 'ddc.vim'
+on_source = 'ddc.lua'
 
 [[plugins]] # 入力補完プラグイン
 repo = 'Shougo/ddc.vim'
 on_event = 'InsertEnter'
 depends = ['denops.vim']
 hook_add = '''
-  source ~/.config/nvim/plugins/ddc.vim
+  source ~/.config/nvim/plugins/ddc.lua
 '''
 
 [[plugins]] # 補完候補
