@@ -34,7 +34,7 @@ hook_add = '''
 [[plugins]] # ファイラーのアイコンをカラー表示
 repo = 'lambdalisue/glyph-palette.vim'
 hook_add = '''
-  source ~/.config/nvim/plugins/glyph-pallette.vim
+  source ~/.config/nvim/plugins/glyph-pallette.lua
 '''
 
 [[plugins]] # 対応する()のカラーリング
