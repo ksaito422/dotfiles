@@ -49,7 +49,7 @@ repo = 'kyazdani42/nvim-web-devicons'
 [[plugins]] # buffer lineにbufferを表示
 repo = 'romgrk/barbar.nvim'
 hook_add = '''
-  source ~/.config/nvim/plugins/barbar.vim
+  source ~/.config/nvim/plugins/barbar.lua
 '''
 
 [[plugins]] # indentline
