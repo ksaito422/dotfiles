@@ -139,7 +139,7 @@ hook_add = '''
 [[plugins]] # file preview
 repo = 'yuki-yano/fern-preview.vim'
 hook_add = '''
-  source ~/.config/nvim/plugins/fern-preview.vim
+  source ~/.config/nvim/plugins/fern.lua
 '''
 
 [[plugins]] # ターミナル拡張
