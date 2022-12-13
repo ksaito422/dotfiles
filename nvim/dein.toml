@@ -151,7 +151,7 @@ hook_add = '''
 [[plugins]] # yank範囲をハイライトする
 repo = 'machakann/vim-highlightedyank'
 hook_add = '''
-  source ~/.config/nvim/plugins/vim-highlightedyank.vim
+  source ~/.config/nvim/plugins/vim-highlightedyank.lua
 '''
 
 [[plugins]] # windowのリサイズ
