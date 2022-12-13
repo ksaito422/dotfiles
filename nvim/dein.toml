@@ -187,7 +187,7 @@ hook_add = '''
 [[plugins]] # チートシート
 repo = 'reireias/vim-cheatsheet'
 hook_add = '''
-  source ~/.config/nvim/plugins/cheatsheet.vim
+  source ~/.config/nvim/plugins/cheatsheet.lua
 '''
 
 [[plugins]] # Denoでプラグインを作るエコシステム
