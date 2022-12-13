@@ -85,7 +85,7 @@ hook_add = '''
 [[plugins]] # コンフリクトマーカー
 repo = 'rhysd/conflict-marker.vim'
 hook_add = '''
-  source ~/.config/nvim/plugins/conflict-marker.vim
+  source ~/.config/nvim/plugins/conflict-marker.lua
 '''
 
 [[plugins]] # lazygit(git ui)
