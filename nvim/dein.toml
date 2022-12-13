@@ -70,7 +70,7 @@ repo = 'vim-jp/vimdoc-ja'
 [[plugins]] # 翻訳
 repo = 'skanehira/translate.vim'
 hook_add = '''
-  source ~/.config/nvim/plugins/translate.vim
+  source ~/.config/nvim/plugins/translate.lua
 '''
 
 #################################################################################################
