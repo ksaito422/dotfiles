@@ -7,6 +7,7 @@
 --  ╚═╝╚═╝  ╚═══╝╚═╝   ╚═╝╚═╝╚══════╝ ╚═════╝ ╚═╝  ╚═╝
 --
 
+require('base')
 require('keymap')
 require('functions')
 require('plugins')
