@@ -71,10 +71,13 @@
 - <Leader>? チートシートを開く
 - <Leader>f. チートシートを編集モードで開く
 
-### dein
+### packer
 
-- :call map(dein#check_clean(), "delete(v:val, 'rf')")
-- :call dein#recache_runtimepath()
+- :PackerInstall プラグインをインストールする
+- :PackerUpdate 追加されたプラグインをインストールし、既存のものは更新する
+- :PackerClean 必要無くなったプラグインを削除する
+- :PackerSync `PackerClean`->`PackerUpdate`をする
+- :PackerCompile 設定ファイルをコンパイルする
 
 ### Comment.nvim
 

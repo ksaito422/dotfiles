@@ -1,7 +1,9 @@
--- fern.vim
-vim.api.nvim_set_keymap('n', '<C-b>', ':Fern . -reveal=% -drawer -toggle -width=40<CR>', { noremap = true, silent = true})
+local keymap = vim.api.nvim_set_keymap
 
--- fern-renderer-nerdfonr.vim
+-- fern.vim
+keymap('n', '<C-b>', ':Fern . -reveal=% -drawer -toggle -width=40<CR>', { noremap = true, silent = true})
+
+-- fern-renderer-nerdfont.vim
 vim.cmd([[
 	let g:fern#default_hidden = 1
 	let g:fern_disable_startup_warnings = 1
