@@ -1,4 +1,8 @@
-local mason_lsp = require("mason-lspconfig")
+local status_ok, mason_lsp = pcall(require, 'mason-lspconfig')
+if not status_ok then
+  return
+end
+
 mason_lsp.setup()
 mason_lsp.setup_handlers({ function(server_name)
   local on_attach = function(client, bufnr)
@@ -13,7 +17,7 @@ mason_lsp.setup_handlers({ function(server_name)
     set('n', 'g]', '<cmd>lua vim.lsp.diagnostic.goto_next()<CR>')
     set('n', 'J', '<cmd>lua vim.lsp.buf.formatting()<CR>')
   end
-    require("lspconfig")[server_name].setup {
+    require('lspconfig')[server_name].setup {
       on_attach = on_attach
     }
   end

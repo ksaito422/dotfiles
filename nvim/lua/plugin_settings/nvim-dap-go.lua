@@ -1,6 +1,15 @@
-require("dap-go").setup()
-local dap = require("dap")
+local status_ok_dap, dap = pcall(require, 'dap')
+if not status_ok_dap then
+  return
+end
 
+local status_ok_dap_go, dap_go = pcall(require, 'dap-go')
+if not status_ok_dap_go then
+  return
+end
+
+
+dap_go.setup()
 dap.adapters.go = function(callback, config)
 	local stdout = vim.loop.new_pipe(false)
     local handle
@@ -8,10 +17,10 @@ dap.adapters.go = function(callback, config)
     local port = 38697
     local opts = {
 		stdio = {nil, stdout},
-		args = {"dap", "-l", "127.0.0.1:" .. port},
+		args = {'dap', '-l', '127.0.0.1:' .. port},
 		detached = true
     }
-    handle, pid_or_err = vim.loop.spawn("dlv", opts, function(code)
+    handle, pid_or_err = vim.loop.spawn('dlv', opts, function(code)
 		stdout:close()
 		handle:close()
 		if code ~= 0 then
@@ -30,30 +39,30 @@ dap.adapters.go = function(callback, config)
     -- Wait for delve to start
     vim.defer_fn(
 		function()
-			callback({type = "server", host = "127.0.0.1", port = port})
+			callback({type = 'server', host = '127.0.0.1', port = port})
 		end,
 		100)
 end
 
 dap.configurations.go = {
 	{
-		type = "go",
-		name = "Debug the golang",
-		request = "launch",
-		program = "${file}",
+		type = 'go',
+		name = 'Debug the golang',
+		request = 'launch',
+		program = '${file}',
 	},
 	{
-		type = "go",
-		name = "Debug the golang test",
-		request = "launch",
-		mode = "test",
-		program = "${file}",
+		type = 'go',
+		name = 'Debug the golang test',
+		request = 'launch',
+		mode = 'test',
+		program = '${file}',
 	},
 	{
-		type = "go",
-		name = "Debug test (go.mod)",
-		request = "launch",
-		mode = "test",
-		program = "./${relativeFileDirname}",
+		type = 'go',
+		name = 'Debug test (go.mod)',
+		request = 'launch',
+		mode = 'test',
+		program = './${relativeFileDirname}',
 	}
 }
