@@ -1,18 +1,22 @@
+local keymap = vim.api.nvim_set_keymap
+local dap = require('dap')
+local dapui = require('dapui')
+
 -- dap起動時にdap-uiを表示する
-require'dap'.listeners.before['event_initialized']['custom'] = function(session, body)
-	require'dapui'.open()
+dap.listeners.before['event_initialized']['custom'] = function(session, body)
+	dapui.open()
 end
 
 -- dap停止時にdap-uiを閉じる
-require'dap'.listeners.before['event_terminated']['custom'] = function(session, body)
-	require'dapui'.close()
+dap.listeners.before['event_terminated']['custom'] = function(session, body)
+	dapui.close()
 end
 
 -- key mappings
 local function map(mode, lhs, rhs, opts)
 	local options = {noremap = true}
     if opts then options = vim.tbl_extend('force', options, opts) end
-    vim.api.nvim_set_keymap(mode, lhs, rhs, options)
+    keymap(mode, lhs, rhs, options)
 end
 
 -- dap key map
