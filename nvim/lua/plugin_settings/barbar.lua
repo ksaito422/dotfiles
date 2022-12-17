@@ -1,8 +1,8 @@
 local keymap = vim.api.nvim_set_keymap
 
 -- Move to previous/next
-keymap('n', '<A-,>', ':BufferPrevious<CR>', { noremap = true, silent = true })
-keymap('n', '<A-.>', ':BufferNext<CR>', { noremap = true, silent = true })
+-- keymap('n', '<A-,>', ':BufferPrevious<CR>', { noremap = true, silent = true })
+-- keymap('n', '<A-.>', ':BufferNext<CR>', { noremap = true, silent = true })
 -- Re-order to previous/next
 keymap('n', '<A-<>', ':BufferMovePrevious<CR>', { noremap = true, silent = true })
 keymap('n', '<A->>', ':BufferMoveNext<CR>', { noremap = true, silent = true })

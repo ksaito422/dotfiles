@@ -100,8 +100,8 @@ keymap('t', '<C-d>', '<Del>', { noremap = true })
 keymap('t', '<C-h>', '<BS>', { noremap = true })
 
 -- バッファ操作
-keymap('n', '<C-[', ':bprev<CR>', { noremap = true, silent = true })
-keymap('n', '<C-]', ':bnext<CR>', { noremap = true, silent = true })
+keymap('n', '<C-[>', ':bprev<CR>', { noremap = true, silent = true })
+keymap('n', '<C-]>', ':bnext<CR>', { noremap = true, silent = true })
 
 -- space keyにleaderキーを割り当てる
 vim.g.mapleader = ' '
@@ -122,6 +122,9 @@ vim.cmd([[
 
 require('plugins')
 require('plugin_settings')
+
+-- PackerCompileを自動実行
+vim.cmd[[autocmd BufWritePost plugins.lua PackerCompile]]
 
 -- vim.cmd([[
 -- 	標準プラグインの無効化
