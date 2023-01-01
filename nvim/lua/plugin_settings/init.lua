@@ -1,5 +1,4 @@
 return {
-  plugin1 = require('plugin_settings.ale'),
   plugin2 = require('plugin_settings.barbar'),
   plugin3 = require('plugin_settings.blamer'),
   plugin4 = require('plugin_settings.cheatsheet'),
@@ -24,4 +23,7 @@ return {
   plugin23 = require('plugin_settings.treesitter'),
   plugin24 = require('plugin_settings.vim-gitgutter'),
   plugin25 = require('plugin_settings.vim-highlightedyank'),
+  plugin26 = require('plugin_settings.nvim-lspconfig'),
+  plugin27 = require('plugin_settings.null-ls'),
+  plugin28 = require('plugin_settings.prettier'),
 }
