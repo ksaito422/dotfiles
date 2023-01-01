@@ -1,7 +1,7 @@
 local status = pcall(require, 'packer')
 if (not status) then
-  print('Packer is not installed')
-  return
+	print('Packer is not installed')
+	return
 end
 
 -- this file can be loaded by calling `lua require('plugins')` from your init.vim
@@ -121,13 +121,6 @@ require('packer').startup(function(use)
 	-- 対応する括弧などを補完
 	use 'cohama/lexima.vim'
 
-	-- js&ts&jsx&tsx formatter&linter
-	use {
-		'dense-analysis/ale',
-		opt = true,
-		ft = { 'javascript, javascriptreact, typescript, typescriptreact' }
-	}
-
 	-- ------------------------------------------
 	-- Language protocol server plugins
 	-- ------------------------------------------
@@ -172,6 +165,17 @@ require('packer').startup(function(use)
 		}
 	}
 
+	-- jsx,tsx用のlsp
+	use {
+		'jose-elias-alvarez/null-ls.nvim',
+		requires = {
+			'nvim-lua/plenary.nvim'
+		}
+	}
+
+	-- neovim prettier
+	use 'MunifTanjim/prettier.nvim'
+
 	-- ------------------------------------------
 	-- Debug adapter protocol plugins
 	-- ------------------------------------------
@@ -183,7 +187,7 @@ require('packer').startup(function(use)
 			-- debug ui
 			'rcarriga/nvim-dap-ui',
 			-- debug for golang
-			{ 'leoluz/nvim-dap-go', opt = true, ft = {'go'} }
+			{ 'leoluz/nvim-dap-go', opt = true, ft = { 'go' } }
 		}
 	}
 
