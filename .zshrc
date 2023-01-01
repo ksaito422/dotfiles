@@ -13,6 +13,7 @@ export LANG="ja_JP.UTF-8"
 export GOPATH=$(go env GOPATH)
 export PATH=$PATH:$GOPATH/bin
 export PATH=/usr/local/opt/mysql-client/bin:$PATH
+export PRETTIERD_DEFAULT_CONFIG=$HOME/dotfiles/.prettierrc
 
 # Dockerイメージを「なりすまし」と「改ざん」から保護するセキュリティ機能
 export DOCKER_CONTENT_TRUST=0
