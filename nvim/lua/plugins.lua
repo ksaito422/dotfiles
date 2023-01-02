@@ -209,6 +209,9 @@ require('packer').startup(function(use)
 	-- other plugins(依存関係のためなど)
 	-- ------------------------------------------
 
+	-- 起動画面
+	use 'mhinz/vim-startify'
+
 	-- cheatsheet
 	use {
 		'reireias/vim-cheatsheet',
