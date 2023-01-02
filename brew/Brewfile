@@ -1,4 +1,5 @@
 tap "adoptopenjdk/openjdk"
+tap "aws/tap"
 tap "heroku/brew"
 tap "homebrew/bundle"
 tap "homebrew/cask"
@@ -30,9 +31,7 @@ brew "grep"
 brew "grpcurl"
 brew "ios-deploy"
 brew "jq"
-brew "krb5"
 brew "lazygit"
-brew "libpq"
 brew "mas"
 brew "protobuf"
 brew "mysql"
@@ -48,14 +47,15 @@ brew "php@7.3"
 brew "procs"
 brew "python@3.10", link: false
 brew "python@3.7", link: false
+brew "python@3.8"
 brew "tfenv"
 brew "tmux"
 brew "tree"
 brew "watchman"
 brew "zsh-autosuggestions"
 brew "zsh-syntax-highlighting"
-brew "heroku/brew/heroku", link: false
-brew "songmu/tap/blogsync", link: false
+brew "aws/tap/aws-sam-cli"
+brew "songmu/tap/blogsync"
 cask "adoptopenjdk8"
 cask "alacritty"
 cask "appcleaner"
@@ -78,8 +78,9 @@ cask "raycast"
 cask "shiftit"
 cask "slack"
 cask "stats"
+cask "stoplight-studio"
 cask "visual-studio-code"
-mas "Cloud Outliner Pro", id: 1024917449
+mas "Cloud Outliner", id: 1024917449
 mas "GarageBand", id: 682658836
 mas "Hidden Bar", id: 1452453066
 mas "iMovie", id: 408981434
