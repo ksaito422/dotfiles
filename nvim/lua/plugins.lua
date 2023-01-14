@@ -51,6 +51,9 @@ require('packer').startup(function(use)
 	--	 TOML形式のsyntax highlight enable
 	use { 'cespare/vim-toml', opt = true, ft = { 'toml' } }
 
+	-- カーソル下の単語を自動的にハイライト
+	use 'RRethy/vim-illuminate'
+
 	-- ------------------------------------------
 	-- 開発体験Up plugins
 	-- ------------------------------------------
