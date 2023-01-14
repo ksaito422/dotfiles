@@ -59,7 +59,7 @@ require('packer').startup(function(use)
 	-- ------------------------------------------
 
 	-- Gitの変更表示
-	use 'airblade/vim-gitgutter'
+	use 'lewis6991/gitsigns.nvim'
 
 	-- ConflitMarger
 	use 'rhysd/conflict-marker.vim'
