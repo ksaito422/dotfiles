@@ -112,3 +112,5 @@ opt.clipboard = 'unnamed'
 -- spelunker.vimの機能を使うためspell checkをoff
 opt.spell = false
 
+-- lsp,breakpoint,diffをcolumnnumberの横に常に表示する
+opt.signcolumn = 'yes:1'
