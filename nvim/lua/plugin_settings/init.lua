@@ -29,4 +29,5 @@ return {
 	plugin29 = require('plugin_settings.vim-startify'),
 	plugin30 = require('plugin_settings.vim-illuminate'),
 	plugin31 = require('plugin_settings.todo-comments'),
+	plugin32 = require('plugin_settings.gitsigns'),
 }
