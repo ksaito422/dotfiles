@@ -80,6 +80,12 @@ require('packer').startup(function(use)
 		ft = { "javascriptreact, typescriptreact" }
 	}
 
+	-- TODO/HACK/BUGなどをhighlightする
+	use {
+		'folke/todo-comments.nvim',
+		requires = "nvim-lua/plenary.nvim",
+	}
+
 	-- ------------------------------------------
 	-- 操作性Up plugins
 	-- ------------------------------------------
