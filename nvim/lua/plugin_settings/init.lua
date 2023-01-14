@@ -1,6 +1,5 @@
 return {
 	plugin2 = require('plugin_settings.barbar'),
-	plugin3 = require('plugin_settings.blamer'),
 	plugin4 = require('plugin_settings.cheatsheet'),
 	plugin5 = require('plugin_settings.colorscheme'),
 	plugin6 = require('plugin_settings.comment'),
