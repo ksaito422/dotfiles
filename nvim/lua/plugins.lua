@@ -67,9 +67,6 @@ require('packer').startup(function(use)
 	-- lazygit(git ui)
 	use 'kdheepak/lazygit.nvim'
 
-	-- git blame(vscodeのGitlensのようなもの)
-	use 'APZelos/blamer.nvim'
-
 	-- コメントアウト用 nvim-ts-context-commentstringと組み合わせる
 	use 'numToStr/Comment.nvim'
 
