@@ -51,21 +51,21 @@ require('packer').startup(function(use)
 	--	 TOML形式のsyntax highlight enable
 	use { 'cespare/vim-toml', opt = true, ft = { 'toml' } }
 
+	-- カーソル下の単語を自動的にハイライト
+	use 'RRethy/vim-illuminate'
+
 	-- ------------------------------------------
 	-- 開発体験Up plugins
 	-- ------------------------------------------
 
 	-- Gitの変更表示
-	use 'airblade/vim-gitgutter'
+	use 'lewis6991/gitsigns.nvim'
 
 	-- ConflitMarger
 	use 'rhysd/conflict-marker.vim'
 
 	-- lazygit(git ui)
 	use 'kdheepak/lazygit.nvim'
-
-	-- git blame(vscodeのGitlensのようなもの)
-	use 'APZelos/blamer.nvim'
 
 	-- コメントアウト用 nvim-ts-context-commentstringと組み合わせる
 	use 'numToStr/Comment.nvim'
@@ -75,6 +75,12 @@ require('packer').startup(function(use)
 		'JoosepAlviste/nvim-ts-context-commentstring',
 		opt = true,
 		ft = { "javascriptreact, typescriptreact" }
+	}
+
+	-- TODO/HACK/BUGなどをhighlightする
+	use {
+		'folke/todo-comments.nvim',
+		requires = "nvim-lua/plenary.nvim",
 	}
 
 	-- ------------------------------------------
