@@ -43,3 +43,91 @@ map('n', '<leader><leader>df', ':lua require"dapui".eval()<CR>', { silent = true
 -- dap-go key map
 map('n', '<leader>td', ':lua require"dap-go".debug_test()<CR>', { silent = true })
 
+-- ---------------------------------
+-- Debugger for Golang
+-- ---------------------------------
+dap.adapters.go = function(callback, config)
+	local stdout = vim.loop.new_pipe(false)
+	local handle
+	local pid_or_err
+	local port = 38697
+	local opts = {
+		stdio = { nil, stdout },
+		args = { 'dap', '-l', '127.0.0.1:' .. port },
+		detached = true
+	}
+	handle, pid_or_err = vim.loop.spawn('dlv', opts, function(code)
+		stdout:close()
+		handle:close()
+		if code ~= 0 then
+			print('dlv exited with code', code)
+		end
+	end)
+	assert(handle, 'Error running dlv: ' .. tostring(pid_or_err))
+	stdout:read_start(function(err, chunk)
+		assert(not err, err)
+		if chunk then
+			vim.schedule(function()
+				require('dap.repl').append(chunk)
+			end)
+		end
+	end)
+	-- Wait for delve to start
+	vim.defer_fn(
+		function()
+			callback({ type = 'server', host = '127.0.0.1', port = port })
+		end,
+		100)
+end
+
+dap.configurations.go = {
+	{
+		type = 'go',
+		name = 'Debug the golang',
+		request = 'launch',
+		program = '${file}',
+	},
+	{
+		type = 'go',
+		name = 'Debug the golang test',
+		request = 'launch',
+		mode = 'test',
+		program = '${file}',
+	},
+	{
+		type = 'go',
+		name = 'Debug test (go.mod)',
+		request = 'launch',
+		mode = 'test',
+		program = './${relativeFileDirname}',
+	},
+	{
+		type = "go",
+		name = "Debug go for cast project",
+		request = "launch",
+		program = "${file}",
+		env = {
+			GODEBUG = "repo.fenrir-inc.com/jtis_zrsn/zrsn-cast-backend:log-type=terminal,repo.fenrir-inc.com/jtis_zrsn/zrsn-cast-backend:log-level=100",
+			DB_TLS_DISABLED = "1",
+			DB_USER = "root",
+			DB_PASSWORD = "secret",
+			DB_HOST = "127.0.0.1",
+			DB_NAME = "cast"
+		}
+	},
+	{
+		type = "go",
+		name = "Debug test for cast project (go.mod)",
+		request = "launch",
+		mode = "test",
+		program = "${file}",
+		env = {
+			GODEBUG = "repo.fenrir-inc.com/jtis_zrsn/zrsn-cast-backend:log-type=terminal,repo.fenrir-inc.com/jtis_zrsn/zrsn-cast-backend:log-level=100",
+			DB_TLS_DISABLED = "1",
+			DB_USER = "root",
+			DB_PASSWORD = "secret",
+			DB_HOST = "127.0.0.1",
+			DB_NAME = "cast"
+		}
+	}
+}
