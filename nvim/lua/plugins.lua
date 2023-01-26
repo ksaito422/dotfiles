@@ -204,13 +204,6 @@ require('packer').startup(function(use)
 	-- :help language Japanese
 	use 'vim-jp/vimdoc-ja'
 
-	-- 翻訳ツール
-	use {
-		'skanehira/translate.vim',
-		opt = true,
-		cmd = { 'tt' },
-	}
-
 	-- ------------------------------------------
 	-- other plugins(依存関係のためなど)
 	-- ------------------------------------------
@@ -229,7 +222,9 @@ require('packer').startup(function(use)
 	use {
 		'vim-denops/denops.vim',
 		requires = {
-			'Shougo/ddc.vim'
+			'Shougo/ddc.vim',
+			-- 翻訳ツール
+			'skanehira/denops-translate.vim'
 		}
 	}
 
