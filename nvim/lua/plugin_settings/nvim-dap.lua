@@ -1,11 +1,11 @@
 local status_ok_dap, dap = pcall(require, 'dap')
 if not status_ok_dap then
-  return
+	return
 end
 
 local status_ok_dapui, dapui = pcall(require, 'dapui')
 if not status_ok_dapui then
-  return
+	return
 end
 
 local keymap = vim.api.nvim_set_keymap
@@ -22,23 +22,24 @@ end
 
 -- key mappings
 local function map(mode, lhs, rhs, opts)
-	local options = {noremap = true}
-    if opts then options = vim.tbl_extend('force', options, opts) end
-    keymap(mode, lhs, rhs, options)
+	local options = { noremap = true }
+	if opts then options = vim.tbl_extend('force', options, opts) end
+	keymap(mode, lhs, rhs, options)
 end
 
 -- dap key map
-map('n', '<F5>', ':lua require"dap".continue()<CR>', { silent = true})
-map('n', '<F10>', ':lua require"dap".step_over()<CR>', { silent = true})
-map('n', '<F11>', ':lua require"dap".step_into()<CR>', { silent = true})
-map('n', '<F12>', ':lua require"dap".step_out()<CR>', { silent = true})
-map('n', '<leader>b', ':lua require"dap".toggle_breakpoint()<CR>', { silent = true})
-map('n', '<leader>bc', ':lua require"dap".set_breakpoint(vim.fn.input("Breakpoint condition: "))<CR>', { silent = true})
-map('n', '<leader>l', ':lua require"dap".set_breakpoint(nil, nil, vim.fn.input("Log point message: "))<CR>', { silent = true})
+map('n', '<F5>', ':lua require"dap".continue()<CR>', { silent = true })
+map('n', '<F10>', ':lua require"dap".step_over()<CR>', { silent = true })
+map('n', '<F11>', ':lua require"dap".step_into()<CR>', { silent = true })
+map('n', '<F12>', ':lua require"dap".step_out()<CR>', { silent = true })
+map('n', '<leader>b', ':lua require"dap".toggle_breakpoint()<CR>', { silent = true })
+map('n', '<leader>bc', ':lua require"dap".set_breakpoint(vim.fn.input("Breakpoint condition: "))<CR>', { silent = true })
+map('n', '<leader>l', ':lua require"dap".set_breakpoint(nil, nil, vim.fn.input("Log point message: "))<CR>',
+	{ silent = true })
 
 -- dap-ui key map
-map('n', '<leader>d', ':lua require"dapui".toggle()<CR>', { silent = true})
-map('n', '<leader><leader>df', ':lua require"dapui".eval()<CR>', { silent = true})
+map('n', '<leader>d', ':lua require"dapui".toggle()<CR>', { silent = true })
+map('n', '<leader><leader>df', ':lua require"dapui".eval()<CR>', { silent = true })
 
 -- dap-go key map
 map('n', '<leader>td', ':lua require"dap-go".debug_test()<CR>', { silent = true })
@@ -100,34 +101,5 @@ dap.configurations.go = {
 		request = 'launch',
 		mode = 'test',
 		program = './${relativeFileDirname}',
-	},
-	{
-		type = "go",
-		name = "Debug go for cast project",
-		request = "launch",
-		program = "${file}",
-		env = {
-			GODEBUG = "repo.fenrir-inc.com/jtis_zrsn/zrsn-cast-backend:log-type=terminal,repo.fenrir-inc.com/jtis_zrsn/zrsn-cast-backend:log-level=100",
-			DB_TLS_DISABLED = "1",
-			DB_USER = "root",
-			DB_PASSWORD = "secret",
-			DB_HOST = "127.0.0.1",
-			DB_NAME = "cast"
-		}
-	},
-	{
-		type = "go",
-		name = "Debug test for cast project (go.mod)",
-		request = "launch",
-		mode = "test",
-		program = "${file}",
-		env = {
-			GODEBUG = "repo.fenrir-inc.com/jtis_zrsn/zrsn-cast-backend:log-type=terminal,repo.fenrir-inc.com/jtis_zrsn/zrsn-cast-backend:log-level=100",
-			DB_TLS_DISABLED = "1",
-			DB_USER = "root",
-			DB_PASSWORD = "secret",
-			DB_HOST = "127.0.0.1",
-			DB_NAME = "cast"
-		}
 	}
 }
