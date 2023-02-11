@@ -209,7 +209,7 @@ require('packer').startup(function(use)
 	-- ------------------------------------------
 
 	-- 起動画面
-	use 'mhinz/vim-startify'
+	use 'goolord/alpha-nvim'
 
 	-- cheatsheet
 	use {
