@@ -25,7 +25,7 @@ return {
 	plugin26 = require('plugin_settings.nvim-lspconfig'),
 	plugin27 = require('plugin_settings.null-ls'),
 	plugin28 = require('plugin_settings.prettier'),
-	plugin29 = require('plugin_settings.vim-startify'),
+	plugin29 = require('plugin_settings.alpha'),
 	plugin30 = require('plugin_settings.vim-illuminate'),
 	plugin31 = require('plugin_settings.todo-comments'),
 	plugin32 = require('plugin_settings.gitsigns'),
