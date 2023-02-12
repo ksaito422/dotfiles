@@ -83,6 +83,12 @@ require('packer').startup(function(use)
 		requires = "nvim-lua/plenary.nvim",
 	}
 
+	-- ファジーファインダー
+	use {
+		'nvim-telescope/telescope.nvim', tag = '0.1.1',
+		requires = 'nvim-lua/plenary.nvim'
+	}
+
 	-- ------------------------------------------
 	-- 操作性Up plugins
 	-- ------------------------------------------
