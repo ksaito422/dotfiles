@@ -1,7 +1,11 @@
+local keymap = vim.api.nvim_set_keymap
 local status_ok, todo_comments = pcall(require, 'todo-comments')
 if not status_ok then
 	return
 end
+
+keymap('n', '<Space>tl', ':TodoLocList<CR>', { noremap = true, silent = true })
+keymap('n', '<Space>tt', ':TodoTelescope<CR>', { noremap = true, silent = true })
 
 todo_comments.setup {
 	signs = true, -- show icons in the signs column

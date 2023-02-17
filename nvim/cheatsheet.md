@@ -143,3 +143,8 @@
 - <leader>b toggle breakpoint
 - <leader>d toggle debug ui
 - <leader>td debug test
+
+### todo-comments.nvim
+
+- <Space>tl TodoLocList TODOのリスト表示
+- <Space>tt TodoTelescope TelescopeでTODOのリスト表示
