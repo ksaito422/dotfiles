@@ -148,3 +148,13 @@
 
 - <Space>tl TodoLocList TODOのリスト表示
 - <Space>tt TodoTelescope TelescopeでTODOのリスト表示
+
+### Mason
+
+- "i" install package
+- "u" update package
+- "c" check package
+- "U" update all packages
+- "C" check outdated packages
+- "X" uninstall package
+- <C-c> cancel installation
