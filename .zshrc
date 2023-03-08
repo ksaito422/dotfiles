@@ -25,6 +25,9 @@ export VISUAL='nvim'
 # direnvの利用設定
 eval "$(direnv hook zsh)"
 
+# Rubyのバージョン管理ツール
+eval "$(frum init)"
+
 # cd [tab]で以前移動したディレクトリを表示
 setopt auto_pushd
 # 直前と同じコマンドはヒストリに追加しない
