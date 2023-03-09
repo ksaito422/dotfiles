@@ -77,11 +77,12 @@ opt.shiftwidth = 4
 
 -- ファイルタイプごとのタブ設定
 vim.cmd([[
-	autocmd Filetype javascript setlocal tabstop=2 shiftwidth=2
-	autocmd Filetype typescript setlocal tabstop=2 shiftwidth=2
-	autocmd Filetype javascriptreact setlocal tabstop=2 shiftwidth=2
-	autocmd Filetype typescriptreact setlocal tabstop=2 shiftwidth=2
-	autocmd Filetype jsonc setlocal tabstop=2 shiftwidth=2
+	autocmd FileType ruby setlocal tabstop=2 shiftwidth=2
+	autocmd FileType javascript setlocal tabstop=2 shiftwidth=2
+	autocmd FileType typescript setlocal tabstop=2 shiftwidth=2
+	autocmd FileType javascriptreact setlocal tabstop=2 shiftwidth=2
+	autocmd FileType typescriptreact setlocal tabstop=2 shiftwidth=2
+	autocmd FileType jsonc setlocal tabstop=2 shiftwidth=2
 	autocmd FileType graphql setlocal tabstop=2 shiftwidth=2
 	autocmd FileType terraform setlocal tabstop=2 shiftwidth=2
 	autocmd FileType sh setlocal tabstop=2 shiftwidth=2
