@@ -24,6 +24,7 @@ end
 keymap('n', '<Leader>z', '<cmd>lua vim.lsp.buf.formatting()<CR>', { noremap = true, silent = true })
 
 nvim_lsp.gopls.setup { on_attach = on_attach }
+nvim_lsp.solargraph.setup { on_attach = on_attach }
 nvim_lsp.sumneko_lua.setup {
 	on_attach = on_attach,
 	settings = {
