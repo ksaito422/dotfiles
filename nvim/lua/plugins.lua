@@ -29,10 +29,8 @@ require('packer').startup(function(use)
 	-- status line
 	use {
 		'nvim-lualine/lualine.nvim',
-		requires = {
-			'kyazdani42/nvim-web-devicons',
-			opt = true
-		}
+		-- statuslineにアイコンを表示
+		-- requires = { 'kyazdani42/nvim-web-devicons', opt = true }
 	}
 
 	-- font & file icon
@@ -44,11 +42,8 @@ require('packer').startup(function(use)
 	-- buffer lineにbufferを表示
 	use {
 		'romgrk/barbar.nvim',
-		requires = {
-			-- bufferlineにアイコンを表示
-			'kyazdani42/nvim-web-devicons',
-			opt = true
-		}
+		-- bufferlineにアイコンを表示
+		requires = { 'kyazdani42/nvim-web-devicons' }
 	}
 
 	-- indentlineの表示
@@ -205,7 +200,7 @@ require('packer').startup(function(use)
 			-- debug ui
 			'rcarriga/nvim-dap-ui',
 			-- debug for golang
-			{ 'leoluz/nvim-dap-go', opt = true, ft = { 'go' } }
+			{ 'leoluz/nvim-dap-go',   opt = true, ft = { 'go' } },
 		}
 	}
 

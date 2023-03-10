@@ -1,3 +1,8 @@
+local status, bufferline = pcall(require, 'bufferline')
+if (not status) then
+	return
+end
+
 local keymap = vim.api.nvim_set_keymap
 
 -- Move to previous/next
@@ -36,3 +41,7 @@ keymap('n', '<Space>bw', ':BufferOrderByWindowNumber<CR>', { noremap = true, sil
 -- Other:
 -- :BarbarEnable - enables barbar (enabled by default)
 -- :BarbarDisable - very bad command, should never be used
+
+bufferline.setup {
+	icons = true,
+}
