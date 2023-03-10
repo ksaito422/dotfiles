@@ -47,6 +47,12 @@ map('n', '<leader>td', ':lua require"dap-go".debug_test()<CR>', { silent = true 
 -- ---------------------------------
 -- Debugger for Golang
 -- ---------------------------------
+local status_ok_dap_go, dap_go = pcall(require, 'dap-go')
+if not status_ok_dap_go then
+	return
+end
+dap_go.setup()
+
 dap.adapters.go = function(callback, config)
 	local stdout = vim.loop.new_pipe(false)
 	local handle
