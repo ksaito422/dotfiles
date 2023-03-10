@@ -10,7 +10,6 @@ end
 vim.cmd.packadd 'packer.nvim'
 
 require('packer').startup(function(use)
-
 	-- プラグイン
 	use 'wbthomason/packer.nvim'
 
@@ -28,7 +27,13 @@ require('packer').startup(function(use)
 	use 'EdenEast/nightfox.nvim'
 
 	-- status line
-	use 'itchyny/lightline.vim'
+	use {
+		'nvim-lualine/lualine.nvim',
+		requires = {
+			'kyazdani42/nvim-web-devicons',
+			opt = true
+		}
+	}
 
 	-- font & file icon
 	use 'lambdalisue/nerdfont.vim'
@@ -41,7 +46,8 @@ require('packer').startup(function(use)
 		'romgrk/barbar.nvim',
 		requires = {
 			-- bufferlineにアイコンを表示
-			'kyazdani42/nvim-web-devicons'
+			'kyazdani42/nvim-web-devicons',
+			opt = true
 		}
 	}
 
@@ -233,5 +239,4 @@ require('packer').startup(function(use)
 			'skanehira/denops-translate.vim'
 		}
 	}
-
 end)
