@@ -12,6 +12,8 @@ return {
 	plugin13 = require('plugin_settings.lazygit'),
 	plugin15 = require('plugin_settings.mason-lspconfig'),
 	plugin16 = require('plugin_settings.mason'),
+	plugin17 = require('plugin_settings.nvim-dap-go'),
+	plugin34 = require('plugin_settings.nvim-dap-ruby'),
 	plugin18 = require('plugin_settings.nvim-dap-ui'),
 	plugin19 = require('plugin_settings.nvim-dap'),
 	plugin20 = require('plugin_settings.rainbow'),

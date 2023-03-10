@@ -201,6 +201,8 @@ require('packer').startup(function(use)
 			'rcarriga/nvim-dap-ui',
 			-- debug for golang
 			{ 'leoluz/nvim-dap-go',   opt = true, ft = { 'go' } },
+			-- debug for ruby
+			{ 'suketa/nvim-dap-ruby', opt = true },
 		}
 	}
 
