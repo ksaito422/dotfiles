@@ -10,7 +10,6 @@ return {
 	plugin11 = require('plugin_settings.glyph-pallette'),
 	plugin12 = require('plugin_settings.indent-blankline'),
 	plugin13 = require('plugin_settings.lazygit'),
-	plugin14 = require('plugin_settings.lightline'),
 	plugin15 = require('plugin_settings.mason-lspconfig'),
 	plugin16 = require('plugin_settings.mason'),
 	plugin17 = require('plugin_settings.nvim-dap-go'),
@@ -29,4 +28,5 @@ return {
 	plugin30 = require('plugin_settings.vim-illuminate'),
 	plugin31 = require('plugin_settings.todo-comments'),
 	plugin32 = require('plugin_settings.gitsigns'),
+	plugin33 = require('plugin_settings.lualine'),
 }
