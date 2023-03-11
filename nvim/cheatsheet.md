@@ -144,6 +144,11 @@
 - <leader>d toggle debug ui
 - <leader>td debug test
 
+### debug ruby with rdbg
+
+別ターミナルで下記コマンドで起動後にdapでブレークポイントを貼って`<F5>`でデバッガー起動する
+`rdbg --open --port 38698 -- <ファイル名.rb>`
+
 ### todo-comments.nvim
 
 - <Space>tl TodoLocList TODOのリスト表示
