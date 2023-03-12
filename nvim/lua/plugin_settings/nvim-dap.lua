@@ -139,9 +139,9 @@ dap.adapters.ruby = function(callback, config)
 	-- Wait for rdbg to start
 	vim.defer_fn(
 		function()
-			callback({type = "server", host = "127.0.0.1", port = port})
+			callback({ type = "server", host = "127.0.0.1", port = port })
 		end,
-	100)
+		100)
 end
 
 dap.configurations.ruby = {

@@ -3,4 +3,3 @@ if not status_ok_dap_go then
 	return
 end
 dap_go.setup()
-

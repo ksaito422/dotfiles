@@ -5,4 +5,3 @@ vim.cmd([[
 		autocmd FileType nerdtree,startify call glyph_palette#apply()
 	augroup END
 ]])
-

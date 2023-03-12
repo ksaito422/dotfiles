@@ -39,4 +39,3 @@ vim.cmd([[
 
 	call ddc#enable()
 ]])
-

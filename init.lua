@@ -1,6 +1,6 @@
 -- Setup Hammer spoon
 -- <ctrl+q>でkittyをアクティブウインドウにする
-hs.hotkey.bind({"ctrl"}, "q", function()
+hs.hotkey.bind({ "ctrl" }, "q", function()
 	local kitty = hs.application.get("kitty")
 	if kitty == nil then
 		hs.application.launchOrFocus("/Applications/kitty.app")

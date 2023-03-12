@@ -1,13 +1,13 @@
-local g = vim.g
+local g                            = vim.g
 
 -- Default values
-g.conflict_marker_begin = '^<<<<<<< .*$'
+g.conflict_marker_begin            = '^<<<<<<< .*$'
 g.conflict_marker_common_ancestors = '^||||||| .*$'
-g.conflict_marker_separator = '^=======$'
-g.conflict_marker_end   = '^>>>>>>> .*$'
+g.conflict_marker_separator        = '^=======$'
+g.conflict_marker_end              = '^>>>>>>> .*$'
 
 -- disable the default highlight group
-g.conflict_marker_highlight_group = ''
+g.conflict_marker_highlight_group  = ''
 
 vim.cmd 'highlight ConflictMarkerBegin guibg=#2f7366'
 vim.cmd 'highlight ConflictMarkerOurs guibg=#2e5049'

@@ -16,4 +16,3 @@ cmd 'highlight GitGutterChange guifg = yelllw'
 cmd 'highlight GitGutterDelete guifg = red'
 
 cmd 'set updatetime=250'
-
