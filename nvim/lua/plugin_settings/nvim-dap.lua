@@ -116,10 +116,10 @@ dap.adapters.ruby = function(callback, config)
 	local pid_or_err
 	local port = 38698
 	local opts = {
-		stdio = {nil, stdout},
-		args = {"--open", "--port", port, "--"},
+		stdio = { nil, stdout },
+		args = { "--open", "--port", port, "--" },
 		detached = true
-  }
+	}
 	handle, pid_or_err = vim.loop.spawn("rdbg", opts, function(code)
 		stdout:close()
 		handle:close()
