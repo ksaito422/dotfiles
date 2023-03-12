@@ -1,6 +1,6 @@
 local status_ok, dapui = pcall(require, 'dapui')
 if not status_ok then
-  return
+	return
 end
 
 dapui.setup({
@@ -74,4 +74,3 @@ dapui.setup({
 		max_value_lines = 100, -- Can be integer or nil.
 	}
 })
-
