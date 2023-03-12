@@ -79,6 +79,10 @@
 - :PackerSync `PackerClean`->`PackerUpdate`をする
 - :PackerCompile 設定ファイルをコンパイルする
 
+### nvim-treesitter
+
+- :checkhealth nvim-treesitter ヘルスチェック
+
 ### Comment.nvim
 
 - [count]gcc 1 行コメントアウト
