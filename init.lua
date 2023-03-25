@@ -1,9 +1,9 @@
 -- Setup Hammer spoon
--- <ctrl+q>でweztermをアクティブウインドウにする
+-- <ctrl+q>でWezTermをアクティブウインドウにする
 hs.hotkey.bind({ 'CTRL' }, 'q', function()
-	local wez = hs.application.get('wezterm')
+	local wez = hs.application.get('WezTerm')
 	if wez == nil then
-		hs.application.launchOrFocus('/Applications/wezterm.app')
+		hs.application.launchOrFocus('/Applications/WezTerm.app')
 	elseif wez:isFrontmost() then
 		wez:hide()
 	else
