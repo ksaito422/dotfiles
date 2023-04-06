@@ -8,12 +8,13 @@ export PATH=$PATH:$ANDROID_HOME/tools/bin
 export PATH=$PATH:$ANDROID_HOME/platform-tools
 export PATH=/usr/local/opt/python@3.7/libexec/bin:$PATH
 export PATH=/usr/local/opt/gawk/bin/:$PATH
-export PATH=$HOME/.nodebrew/current/bin:$PATH
 export LANG="ja_JP.UTF-8"
 export GOPATH=$(go env GOPATH)
 export PATH=$PATH:$GOPATH/bin
 export PATH=/usr/local/opt/mysql-client/bin:$PATH
 export PRETTIERD_DEFAULT_CONFIG=$HOME/dotfiles/.prettierrc
+export VOLTA_HOME="$HOME/.volta"
+export PATH="$VOLTA_HOME/bin:$PATH"
 
 # Dockerイメージを「なりすまし」と「改ざん」から保護するセキュリティ機能
 export DOCKER_CONTENT_TRUST=0
