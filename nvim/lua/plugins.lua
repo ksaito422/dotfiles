@@ -66,7 +66,7 @@ require('packer').startup(function(use)
 	use 'rhysd/conflict-marker.vim'
 
 	-- lazygit(git ui)
-	-- use 'kdheepak/lazygit.nvim'
+	use 'kdheepak/lazygit.nvim'
 
 	-- git GUI
 	use { 'TimUntersberger/neogit', requires = 'nvim-lua/plenary.nvim' }
