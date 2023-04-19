@@ -167,3 +167,25 @@
 - "C" check outdated packages
 - "X" uninstall package
 - <C-c> cancel installation
+
+### neogit&diffview
+
+- <Tab> Toggle diff
+- d open diffview.nvim at hovered file
+- b branch popup
+- s stage
+- S stage unstaged changes
+- <C-s> stage everything
+- u unstage
+- U unstage staged changes
+- c commit popup
+- r rebase popup
+- m open merge popup
+- L log popup
+- p pull popup
+- P push popup
+- Z stash popup
+- ? help popup
+- <enter> go to file
+- [c diffviewで次の変更箇所にジャンプする
+- ]c diffviewで前の変更箇所にジャンプする
