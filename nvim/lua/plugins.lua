@@ -66,7 +66,13 @@ require('packer').startup(function(use)
 	use 'rhysd/conflict-marker.vim'
 
 	-- lazygit(git ui)
-	use 'kdheepak/lazygit.nvim'
+	-- use 'kdheepak/lazygit.nvim'
+
+	-- git GUI
+	use { 'TimUntersberger/neogit', requires = 'nvim-lua/plenary.nvim' }
+
+	-- git diff
+	use { 'sindrets/diffview.nvim', requires = 'nvim-lua/plenary.nvim' }
 
 	-- コメントアウト用 nvim-ts-context-commentstringと組み合わせる
 	use 'numToStr/Comment.nvim'
