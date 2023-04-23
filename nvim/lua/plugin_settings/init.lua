@@ -10,8 +10,6 @@ return {
 	plugin11 = require('plugin_settings.glyph-pallette'),
 	plugin12 = require('plugin_settings.indent-blankline'),
 	plugin13 = require('plugin_settings.lazygit'),
-	plugin15 = require('plugin_settings.mason-lspconfig'),
-	plugin16 = require('plugin_settings.mason'),
 	plugin17 = require('plugin_settings.nvim-dap-go'),
 	plugin34 = require('plugin_settings.nvim-dap-ruby'),
 	plugin18 = require('plugin_settings.nvim-dap-ui'),
