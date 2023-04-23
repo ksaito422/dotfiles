@@ -29,4 +29,5 @@ return {
 	plugin28 = require('plugin_settings.gitsigns'),
 	plugin29 = require('plugin_settings.lualine'),
 	plugin30 = require('plugin_settings.neogit'),
+	plugin31 = require('plugin_settings.telescope'),
 }

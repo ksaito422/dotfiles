@@ -83,6 +83,12 @@
 
 - :checkhealth nvim-treesitter ヘルスチェック
 
+### telescope
+
+- <leader>ff ファイル名検索
+- <leader>fg ファイル内テキスト検索(grep)
+- <leader>fb buffers表示
+
 ### Comment.nvim
 
 - [count]gcc 1 行コメントアウト
