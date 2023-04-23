@@ -43,5 +43,5 @@ keymap('n', '<Space>bw', ':BufferOrderByWindowNumber<CR>', { noremap = true, sil
 -- :BarbarDisable - very bad command, should never be used
 
 bufferline.setup {
-	icons = true,
+	icons = { filetype = { enabled = true }},
 }
