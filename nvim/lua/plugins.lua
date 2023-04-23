@@ -55,6 +55,12 @@ require('packer').startup(function(use)
 	-- カーソル下の単語を自動的にハイライト
 	use 'RRethy/vim-illuminate'
 
+	-- markdown preview
+	use({
+		"iamcco/markdown-preview.nvim",
+		run = function() vim.fn["mkdp#util#install"]() end,
+	})
+
 	-- ------------------------------------------
 	-- 開発体験Up plugins
 	-- ------------------------------------------

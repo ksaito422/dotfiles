@@ -132,6 +132,10 @@
 - <C-d> ファイルプレビューのページダウン
 - <C-u> ファイルプレビューのページアップ
 
+### markdown-preview
+
+- :MarkdownPreviewToggle ブラウザでマークダウンプレビューする
+
 ### barbar.nvim
 
 - nnoremap <silent> <C-s> BufferPick 任意のバッファーを開く
