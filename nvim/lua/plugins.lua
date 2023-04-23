@@ -174,15 +174,13 @@ require('packer').startup(function(use)
 	}
 
 	-- Neovim LSP config
-	use {
-		'neovim/nvim-lspconfig',
-		requires = {
-			-- LSP, DAP, Linter, Formatter
-			'williamboman/mason.nvim',
-			-- LSP, DAP, Linter, Formatter manager
-			'williamboman/mason-lspconfig.nvim'
-		}
-	}
+	use 'neovim/nvim-lspconfig'
+
+	-- LSP, DAP, Linter, Formatter manager
+	use 'williamboman/mason.nvim'
+
+	-- LSP, DAP, Linter, Formatter
+	use 'williamboman/mason-lspconfig.nvim'
 
 	-- jsx,tsx用のlsp
 	use {
