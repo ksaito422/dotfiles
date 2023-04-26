@@ -30,4 +30,5 @@ return {
 	plugin29 = require('plugin_settings.lualine'),
 	plugin30 = require('plugin_settings.neogit'),
 	plugin31 = require('plugin_settings.telescope'),
+	plugin32 = require('plugin_settings.nvim-ts-autotag'),
 }

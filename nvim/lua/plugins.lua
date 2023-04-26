@@ -102,6 +102,9 @@ require('packer').startup(function(use)
 		requires = 'nvim-lua/plenary.nvim'
 	}
 
+	-- HTMLタグのauto close & auto rename
+	use 'windwp/nvim-ts-autotag'
+
 	-- ------------------------------------------
 	-- 操作性Up plugins
 	-- ------------------------------------------
