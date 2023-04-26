@@ -9,9 +9,9 @@ vim.cmd([[
 		\   'sorters': ['sorter_fuzzy'],
 		\   'converters': ['converter_fuzzy'],
 		\ },
-		\ 'around': {'mark': 'A'},
+		\ 'around': {'mark': '[Around]'},
 		\ 'nvim-lsp': {
-		\   'mark': 'L',
+		\   'mark': '[LSP]',
 		\   'forceCompletionPattern': '\.\w*|:\w*|->\w*',
 		\   },
 		\ })
@@ -38,4 +38,6 @@ vim.cmd([[
 	autocmd CompleteDone * silent! pclose!
 
 	call ddc#enable()
+	call signature_help#enable()
+	call popup_preview#enable()
 ]])

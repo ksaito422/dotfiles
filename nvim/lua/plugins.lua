@@ -167,7 +167,13 @@ require('packer').startup(function(use)
 			-- 補完(ddc-matcher_head, ddc-sorter_rank, ddc-converter_remove_overlapとほぼ同じ機能)
 			'tani/ddc-fuzzy',
 			-- 行の周辺の単語を候補として抽出
-			'Shougo/ddc-source-around'
+			'Shougo/ddc-source-around',
+			-- 補完ソース
+			'Shougo/ddc-source-nvim-lsp',
+			-- 関数の引数ヘルプ
+			'matsui54/denops-signature_help',
+			-- Show completion documentation
+			'matsui54/denops-popup-preview.vim'
 		}
 	}
 

@@ -79,6 +79,19 @@
 - :PackerSync `PackerClean`->`PackerUpdate`をする
 - :PackerCompile 設定ファイルをコンパイルする
 
+### nvim-lspconfig
+
+- K コード定義hover
+- <leader>e diagnostic open float
+- [d diagnostic goto prev
+- ]d diagnostic goto next
+- rn 同じコードをまとめてrename
+- <leader>na code action
+- <leader>nd code definition
+- <leader>ni code implementation
+- <leader>nr code references
+- <leader>nf code format
+
 ### nvim-treesitter
 
 - :checkhealth nvim-treesitter ヘルスチェック
