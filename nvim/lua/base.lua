@@ -48,7 +48,7 @@ opt.autoread = true
 -- バッファが編集中でもその他のファイルを開けるようにする
 opt.hidden = true
 
--- 入力中のコマンドをstatus lienに表示する
+-- 入力中のコマンドをstatus lineに表示する
 opt.showcmd = true
 
 
@@ -101,8 +101,8 @@ vim.cmd([[
 
 -- floating windowを半透明にする
 opt.termguicolors = true
-opt.pumblend = 10
-opt.winblend = 10
+opt.pumblend = 20
+opt.winblend = 20
 
 -- タブページを常に表示
 opt.showtabline = 2
