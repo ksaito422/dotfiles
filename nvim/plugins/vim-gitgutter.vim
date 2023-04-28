@@ -4,9 +4,9 @@ nmap g[ <Plug>(GitGutterNextHunk)
 nmap gh <Plug>(GitGutterLineHighlightsToggle)
 nmap gp <Plug>(GitGutterPreviewHunk)
 
-highlight GitGutterAdd ctermfg=green
-highlight GitGutterChange ctermfg=blue
-highlight GitGutterDelete ctermfg=red
+highlight GitGutterAdd guifg=lightgreen
+highlight GitGutterChange guifg=yellow
+highlight GitGutterDelete guifg=red
 
 set updatetime=250
 
