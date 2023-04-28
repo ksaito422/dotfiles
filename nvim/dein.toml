@@ -78,13 +78,13 @@ hook_add = '''
 [[plugins]] # コンフリクトマーカー
 repo = 'rhysd/conflict-marker.vim'
 hook_add = '''
-    source ~/.config/nvim/plugins/conflict-marker.vim
+  source ~/.config/nvim/plugins/conflict-marker.vim
 '''
 
 [[plugins]] # lazygit
 repo = 'kdheepak/lazygit.nvim'
 hook_add = '''
-    source ~/.config/nvim/plugins/lazygit.vim
+  source ~/.config/nvim/plugins/lazygit.vim
 '''
 
 [[plugins]] # コメントアウト用 nvim-ts-context-commentstringと組み合わせる
