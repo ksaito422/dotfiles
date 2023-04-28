@@ -27,6 +27,8 @@ if [ $path ]; then
   ln -s $PWD/dotfiles/nvim ~/.config/nvim
   # kitty
   ln -s $PWD/dotfiles/kitty ~/.config/kitty
+  # wezterm
+  ln -s $PWD/dotfiles/wezterm ~/.config/wezterm
   # git
   ln -s $PWD/dotfiles/git ~/.config/git
 fi
