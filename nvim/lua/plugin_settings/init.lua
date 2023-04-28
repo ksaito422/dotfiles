@@ -31,4 +31,5 @@ return {
 	plugin30 = require('plugin_settings.neogit'),
 	plugin31 = require('plugin_settings.telescope'),
 	plugin32 = require('plugin_settings.nvim-ts-autotag'),
+	plugin33 = require('plugin_settings.noice'),
 }

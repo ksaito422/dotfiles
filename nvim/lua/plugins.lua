@@ -246,6 +246,14 @@ require('packer').startup(function(use)
 		cmd = { 'Cheat', 'EditCheat' }
 	}
 
+	use {
+		"folke/noice.nvim",
+		requires = {
+			'MunifTanjim/nui.nvim',
+			'rcarriga/nvim-notify',
+		}
+	}
+
 	-- Denoでプラグインを作るエコシステム
 	use {
 		'vim-denops/denops.vim',
