@@ -93,19 +93,10 @@ hook_add = '''
   source ~/.config/nvim/plugins/comment.lua
 '''
 
-[[plugins]] # jsx,tsxコメントアウト
-repo = 'JoosepAlviste/nvim-ts-context-commentstring'
-
 [[plugins]] # yank範囲をハイライトする
 repo = 'machakann/vim-highlightedyank'
 hook_add = '''
   source ~/.config/nvim/plugins/vim-highlightedyank.vim
-'''
-
-[[plugins]] # シンタックスハイライトを有効化
-repo = 'nvim-treesitter/nvim-treesitter'
-hook_add = '''
-  source ~/.config/nvim/plugins/treesitter.vim
 '''
 
 [[plugins]] # 同じインデントのところに縦線を引いてくれる奴
@@ -141,14 +132,23 @@ repo = 'kamykn/spelunker.vim'
 [[plugins]] # スペルチェック拡張のneovim対応
 repo = 'kamykn/popup-menu.nvim'
 
-[[plugins]] # bufferlineにアイコンを表示
-repo = 'kyazdani42/nvim-web-devicons'
+# [[plugins]] # bufferlineにアイコンを表示
+# repo = 'kyazdani42/nvim-web-devicons'
 
-[[plugins]] # buffer lineにbufferを表示
-repo = 'romgrk/barbar.nvim'
+# [[plugins]] # buffer lineにbufferを表示
+# repo = 'romgrk/barbar.nvim'
 
 [[plugins]] # / or ? 検索のジャンプ拡張
 repo = 'hrsh7th/vim-searchx'
 hook_add = '''
   source ~/.config/nvim/plugins/searchx.vim
 '''
+
+[[plugins]] # シンタックスハイライトを有効化
+repo = 'nvim-treesitter/nvim-treesitter'
+hook_add = '''
+  source ~/.config/nvim/plugins/treesitter.vim
+'''
+
+[[plugins]] # jsx,tsxコメントアウト
+repo = 'JoosepAlviste/nvim-ts-context-commentstring'
