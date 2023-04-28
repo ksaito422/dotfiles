@@ -89,9 +89,6 @@ hook_add = '''
   source ~/.config/nvim/plugins/treesitter.vim
 '''
 
-[[plugins]] # 括弧とかを自動で閉じてくれる
-repo = 'jiangmiao/auto-pairs'
-
 [[plugins]] # 同じインデントのところに縦線を引いてくれる奴
 repo = 'Yggdroot/indentLine'
 hook_add = '''
