@@ -4,7 +4,7 @@ nmap <silent> gi <Plug>(coc-implemntation)
 nmap <silent> gr <Plug>(coc-references)
 nmap <silent> [g <Plug>(coc-diagnostic-prev)
 nmap <silent> ]g <Plug>(coc-diagnostic-next)
-nnoremap <silent> K :call <SID>show_documentation()<CR>
+nnoremap <silent> K :call CocAction('doHover')<CR>
 nnoremap <silent> <space>d :<C-u>CocList diagnostics<CR>
 nmap <leader>do <Plug>(coc-codeaction)
 
@@ -39,15 +39,17 @@ nnoremap <silent> [fzf-p]l     :<C-u>CocCommand fzf-preview.LocationList<CR>
 "pritterによる自動整形
 command! -nargs=0 Format :call CocAction('format')
 
-function! ShowDocIfNoDiagnostic(timer_id)
-  if (coc#float#has_float() == 0 && CocHasProvider('hover') == 1)
-    silent call CocActionAsync('doHover')
-  endif
-endfunction
+if !exists('g:vscode')
+  function! ShowDocIfNoDiagnostic(timer_id)
+    if (coc#float#has_float() == 0 && CocHasProvider('hover') == 1)
+      silent call CocActionAsync('doHover')
+    endif
+  endfunction
 
-function! s:show_hover_doc()
-  call timer_start(100, 'ShowDocIfNoDiagnostic')
-endfunction
+  function! s:show_hover_doc()
+    call timer_start(100, 'ShowDocIfNoDiagnostic')
+  endfunction
 
-autocmd CursorHoldI * :call <SID>show_hover_doc()
-autocmd CursorHold * :call <SID>show_hover_doc()
+  autocmd CursorHoldI * :call <SID>show_hover_doc()
+  autocmd CursorHold * :call <SID>show_hover_doc()
+endif
