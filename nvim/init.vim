@@ -28,6 +28,7 @@ autocmd Filetype javascriptreact setlocal expandtab tabstop=2 shiftwidth=2
 autocmd Filetype typescriptreact setlocal expandtab tabstop=2 shiftwidth=2
 autocmd FileType graphql setlocal expandtab tabstop=2 shiftwidth=2
 autocmd FileType terraform setlocal expandtab tabstop=2 shiftwidth=2
+autocmd FileType sh setlocal expandtab tabstop=2 shiftwidth=2
 
 "全てのjsonファイルをjsoncとして扱うようにする
 "jsoncとして扱うことでcocのコメントアウト構文エラーが出力されないようにする
