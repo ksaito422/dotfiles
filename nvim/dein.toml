@@ -130,3 +130,9 @@ repo = 'kyazdani42/nvim-web-devicons'
 
 [[plugins]] # buffer lineにbufferを表示
 repo = 'romgrk/barbar.nvim'
+
+[[plugins]] # / or ? 検索のジャンプ拡張
+repo = 'hrsh7th/vim-searchx'
+hook_add = '''
+  source ~/.config/nvim/plugins/searchx.vim
+'''
