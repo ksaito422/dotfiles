@@ -1,3 +1,6 @@
+env:
+    TERM: xterm-256color
+
 font:
     # Normal font
     normal:
@@ -7,6 +10,8 @@ font:
     size: 11.0
 
 window:
+    # window title
+    title: Alacritty
     # 透化
     opacity: 0.9
     # 標準ウインドウサイズ 
@@ -25,9 +30,14 @@ scrolling:
     multiplier: 3
 
 shell:
+    # default shell
     program: /bin/zsh
     args:
         - --login
+
+cursor:
+    # cursor style
+    style: Beam
 
 import:
     # colorスキーム
@@ -35,14 +45,15 @@ import:
 
 # キーバインド
 key_bindings:
+    - { key: Space,  mods: Shift|Command, mode: Vi,    action: ToggleViMode            }
     # wikiのrecommnedをそのままコピーしただけ
     - { key: Comma,     mods: Command,      command:
         {program: "sh", args: ["-c","open ~/.config/alacritty/alacritty.yml"]}     }
     - { key: N,         mods: Command,      action: SpawnNewInstance        }
     - { key: Space,     mods: Alt,          chars: " "                      }
     - { key: Back,      mods: Super,   chars: "\x15"                        } # delete word/line
-    - { key: Left,      mods: Alt,     chars: "\x1b"                       } # one word left
-    - { key: Right,     mods: Alt,     chars: "\x1b"                       } # one word right
+    - { key: Left,      mods: Alt,     chars: "\x1bF"                       } # one word left
+    - { key: Right,     mods: Alt,     chars: "\x1bB"                       } # one word right
     - { key: Left,      mods: Command, chars: "\x1bOH",   mode: AppCursor   } # Home
     - { key: Right,     mods: Command, chars: "\x1bOF",   mode: AppCursor   } # End
     # tmuxのprefixをCtrl-Qにしているので、その設定
