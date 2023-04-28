@@ -24,7 +24,8 @@ require('packer').startup(function(use)
 	}
 
 	-- color schema
-	use 'EdenEast/nightfox.nvim'
+	-- use 'EdenEast/nightfox.nvim'
+	use 'folke/tokyonight.nvim'
 
 	-- status line
 	use {

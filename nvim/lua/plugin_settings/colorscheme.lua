@@ -6,6 +6,7 @@ vim.cmd([[
 	autocmd ColorScheme * highlight EndOfBuffer ctermbg=none guibg=none
 
 	if !exists('g:vscode')
-    	colorscheme nightfox
+		" colorscheme nightfox
+		colorscheme tokyonight-night
 	end
 ]])
