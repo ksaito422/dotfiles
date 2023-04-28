@@ -39,4 +39,9 @@ vim.cmd([[
 	call ddc#enable()
 	call signature_help#enable()
 	call popup_preview#enable()
+
+	" コードのドキュメンテーション(floating window)のボーダー有無
+	let g:popup_preview_config = {
+		\ 'border': v:true,
+		\ }
 ]])
