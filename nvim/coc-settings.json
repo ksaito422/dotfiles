@@ -24,7 +24,8 @@
   "php-cs-fixer.rules": "@PSR12,ordered_imports,no_unused_imports",
   "languageserver": {
     "terraform": {
-      "command": "terraform-lsp",
+      "command": "terraform-ls",
+      "args": ["serve"],
       "filetypes": ["terraform", "tf"],
       "initializationOptions": {},
       "settings": {}
