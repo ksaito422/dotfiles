@@ -91,6 +91,8 @@ source $(brew --prefix)/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zs
 PATH=$PATH:~/bin
 
 # alias
+### clear
+alias cc='clear'
 ### ls
 # alias lalias='alias | grep "ls"'
 # alias la='ls -a'
