@@ -74,8 +74,15 @@ repo = 'airblade/vim-gitgutter'
 hook_add = '''
   source ~/.config/nvim/plugins/vim-gitgutter.vim
 '''
-[[plugins]] # コメントアウト
-repo = 'tpope/vim-commentary'
+
+[[plugins]] # コメントアウト用 nvim-ts-context-commentstringと組み合わせる
+repo = 'numToStr/Comment.nvim'
+hook_add = '''
+  source ~/.config/nvim/plugins/comment.lua
+'''
+
+[[plugins]] # jsx,tsxコメントアウト
+repo = 'JoosepAlviste/nvim-ts-context-commentstring'
 
 [[plugins]] # yank範囲をハイライトする
 repo = 'machakann/vim-highlightedyank'
