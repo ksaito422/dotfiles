@@ -142,3 +142,8 @@
 - <C-p> <!-- 自動ファイルプレビューのon/off -->
 - <C-d> <!-- ファイルプレビューのページダウン -->
 - <C-u> <!-- ファイルプレビューのページアップ -->
+
+<!-- barbar.nvim -->
+- nnoremap <silent> <C-s> <!-- BufferPick 任意のバッファーを開く -->
+- nnoremap <silent> <Space>bb <!-- BufferOrderByBufferNumber バッファ順に並び替え -->
+- nnoremap <silent> <Space>bw <!-- BufferOrderByWindowNumber ウインドウ順に並び替え -->
