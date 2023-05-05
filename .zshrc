@@ -1,11 +1,6 @@
 # 変更後、即反映コマンド
 # source ~/.zshrc
 
-export ANDROID_HOME=$HOME/Library/Android/sdk
-export PATH=$PATH:$ANDROID_HOME/emulator
-export PATH=$PATH:$ANDROID_HOME/tools
-export PATH=$PATH:$ANDROID_HOME/tools/bin
-export PATH=$PATH:$ANDROID_HOME/platform-tools
 export PATH=/usr/local/opt/python@3.8/libexec/bin:$PATH
 export PATH=/usr/local/opt/gawk/bin/:$PATH
 export LANG="ja_JP.UTF-8"
