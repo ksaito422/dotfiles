@@ -119,6 +119,7 @@ alias cata='bat -A'
 ### procs
 alias procs-alias='alias | grep "procs"'
 alias ps='procs'
+alias pscpu='ps --sortd cpu'
 
 ### docker
 alias docker-alias='alias | grep "docker"'
