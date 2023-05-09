@@ -22,7 +22,8 @@ export VISUAL='nvim'
 eval "$(direnv hook zsh)"
 
 # Rubyのバージョン管理ツール
-eval "$(frum init)"
+# eval "$(frum init)"
+eval "$(rbenv init - zsh)"
 
 # cd [tab]で以前移動したディレクトリを表示
 setopt auto_pushd
