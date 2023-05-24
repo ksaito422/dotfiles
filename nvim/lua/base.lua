@@ -89,6 +89,7 @@ vim.cmd([[
 	autocmd FileType sh setlocal tabstop=2 shiftwidth=2
 	autocmd FileType toml setlocal tabstop=2 shiftwidth=2
 	autocmd FileType markdown setlocal tabstop=2 shiftwidth=2
+	autocmd FileType css setlocal tabstop=2 shiftwidth=2
 ]])
 
 -- 全てのjsonファイルをjsoncとして扱うようにする
