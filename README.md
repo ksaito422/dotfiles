@@ -18,5 +18,5 @@ This repository in order to management dotfiles.
 
 - Editor: [Neovim](https://github.com/neovim/neovim)
 - Shell: [zsh](https://sourceforge.net/p/zsh/code/ci/master/tree/)
-- Terminal: [kitty](https://github.com/kovidgoyal/kitty)
+- Terminal: [wezterm](https://wezfurlong.org/wezterm/)
 - os package manager: [Homebrew](https://brew.sh/index_ja)
