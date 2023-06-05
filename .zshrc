@@ -22,7 +22,6 @@ export VISUAL='nvim'
 eval "$(direnv hook zsh)"
 
 # Rubyのバージョン管理ツール
-# eval "$(frum init)"
 eval "$(rbenv init - zsh)"
 
 # cd [tab]で以前移動したディレクトリを表示
@@ -225,11 +224,3 @@ fd() {
                   -o -type d -print 2> /dev/null | fzf +m) &&
   cd "$dir"
 }
-
-# launch tmux when start zsh
-# if command -v tmux &> /dev/null && [ -z "$TMUX" ]; then
-#     exec tmux
-# fi
-
-# tmux でControl+のショートカットを使うため
-bindkey -e
