@@ -24,17 +24,18 @@ if [ $path ]; then
   ln -s $PWD/.zshrc ~/.zshrc
 
   # nvim
-  ln -s $PWD/dotfiles/nvim ~/.config/nvim
-  # kitty
-  ln -s $PWD/dotfiles/kitty ~/.config/kitty
+  ln -s $PWD/nvim ~/.config/nvim
   # wezterm
-  ln -s $PWD/dotfiles/wezterm ~/.config/wezterm
+  ln -s $PWD/wezterm ~/.config/wezterm
   # git
-  ln -s $PWD/dotfiles/git ~/.config/git
+  ln -s $PWD/git ~/.config/git
 fi
 
 # brew install
 brew bundle --global
+
+# volta
+curl https://get.volta.sh | bash
 
 # nerdfontのインストールする
 git clone --branch=master --depth 1 https://github.com/ryanoasis/nerd-fonts.git
