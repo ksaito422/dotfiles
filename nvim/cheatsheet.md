@@ -82,15 +82,15 @@
 ### nvim-lspconfig
 
 - K コード定義hover
-- <leader>e diagnostic open float
+- gx diagnostic open float
 - [d diagnostic goto prev
 - ]d diagnostic goto next
 - rn 同じコードをまとめてrename
-- <leader>na code action
-- <leader>nd code definition
-- <leader>ni code implementation
-- <leader>nr code references
-- <leader>nf code format
+- ga code action
+- gd code definition
+- gi code implementation
+- gr code references
+- gf code format
 
 ### nvim-treesitter
 
