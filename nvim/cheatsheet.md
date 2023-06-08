@@ -193,6 +193,7 @@
 
 ### neogit&diffview
 
+- gn neogit
 - <Tab> Toggle diff
 - d open diffview.nvim at hovered file
 - b branch popup

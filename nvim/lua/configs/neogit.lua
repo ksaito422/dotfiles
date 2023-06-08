@@ -4,7 +4,7 @@ if not status_ok then
 	return
 end
 
-keymap('n', '<leader>ng', ':Neogit<CR>', { noremap = true, silent = true })
+keymap('n', '<leader>gn', ':Neogit<CR>', { noremap = true, silent = true })
 
 neogit.setup({
 	disable_signs = false,
