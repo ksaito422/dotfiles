@@ -212,3 +212,9 @@
 - <enter> go to file
 - [c diffviewで次の変更箇所にジャンプする
 - ]c diffviewで前の変更箇所にジャンプする
+
+### vim-gh-line
+
+- <leader>gh blob view
+- <leader>gb blame view
+- <leader>go repo view

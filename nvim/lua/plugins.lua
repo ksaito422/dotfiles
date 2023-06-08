@@ -106,6 +106,9 @@ require('packer').startup(function(use)
 	-- HTMLタグのauto close & auto rename
 	use 'windwp/nvim-ts-autotag'
 
+	-- 該当ソースをリモートリポジトリで開く
+	use 'ruanyl/vim-gh-line'
+
 	-- ------------------------------------------
 	-- 操作性Up plugins
 	-- ------------------------------------------
