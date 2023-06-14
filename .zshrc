@@ -4,13 +4,13 @@
 export PATH=/usr/local/opt/python@3.8/libexec/bin:$PATH
 export PATH=/usr/local/opt/gawk/bin/:$PATH
 export LANG="ja_JP.UTF-8"
-export GOPATH=$(go env GOPATH)
-export PATH=$PATH:$GOPATH/bin
-export PATH=/usr/local/opt/mysql-client/bin:$PATH
 export PRETTIERD_DEFAULT_CONFIG=$HOME/dotfiles/.prettierrc
-export VOLTA_HOME="$HOME/.volta"
-export PATH="$VOLTA_HOME/bin:$PATH"
-export XDG_CONFIG_HOME="$HOME/.config"
+
+# node package manager
+# export VOLTA_HOME="$HOME/.volta"
+# export PATH="$VOLTA_HOME/bin:$PATH"
+eval "$(nodenv init - zsh)"
+export PATH="$HOME/.nodenv/bin:$PATH"
 export PATH="$HOME/.cargo/bin:$PATH"
 export STARSHIP_CONFIG=$HOME/.config/starship.toml
 
@@ -19,6 +19,10 @@ export DOCKER_CONTENT_TRUST=0
 
 # Rubyのバージョン管理ツール
 eval "$(rbenv init - zsh)"
+if [ -e $HOME/.rbenv ]; then
+  export PATH="$HOME/.rbenv/bin:$PATH"
+  eval "$(rbenv init - zsh)"
+fi
 eval "$(starship init zsh)"
 
 # cd [tab]で以前移動したディレクトリを表示
