@@ -1,10 +1,17 @@
 local status_ok, null_ls = pcall(require, "null-ls")
 if not status_ok then
-	return
+    return
 end
 
 null_ls.setup({
-	sources = {
-		null_ls.builtins.formatting.prettierd,
-	}
+    sources = {
+        -- ローカルおよびグローバルのeslintのコード診断機能を利用する
+        null_ls.builtins.diagnostics.eslint.with({
+            prefer_local = 'node_modules/.bin' -- プロジェクトローカルがある場合はそれを利用
+        }),
+        -- ローカルおよびグローバルのPrettierをFormatに利用する
+        null_ls.builtins.formatting.prettier.with({
+            prefer_local = 'node_modules/.bin' -- プロジェクトローカルがある場合はそれを利用
+        }),
+    }
 })
