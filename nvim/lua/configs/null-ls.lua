@@ -5,6 +5,7 @@ end
 
 null_ls.setup({
     sources = {
+        -- js,ts,jsx,tsx
         -- ローカルおよびグローバルのeslintのコード診断機能を利用する
         null_ls.builtins.diagnostics.eslint.with({
             prefer_local = 'node_modules/.bin' -- プロジェクトローカルがある場合はそれを利用
@@ -13,5 +14,8 @@ null_ls.setup({
         null_ls.builtins.formatting.prettier.with({
             prefer_local = 'node_modules/.bin' -- プロジェクトローカルがある場合はそれを利用
         }),
+        -- ruby
+        null_ls.builtins.diagnostics.rubocop,
+        null_ls.builtins.formatting.rubocop,
     }
 })
