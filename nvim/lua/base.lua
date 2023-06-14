@@ -71,7 +71,7 @@ opt.autoindent = true
 -- tab半角スペースの数
 opt.tabstop = 4
 -- tabを複数のspaceに置換
-opt.expandtab = false
+opt.expandtab = true
 -- tabの幅
 opt.shiftwidth = 4
 
