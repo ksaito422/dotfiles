@@ -61,7 +61,19 @@ keymap('n', 'gr', '<cmd>lua vim.lsp.buf.references()<CR>', { noremap = true, sil
 keymap('n', 'gf', '<cmd>lua vim.lsp.buf.format()<CR>', { noremap = true, silent = true })
 
 nvim_lsp.gopls.setup { on_attach = on_attach }
-nvim_lsp.solargraph.setup { on_attach = on_attach }
+nvim_lsp.solargraph.setup {
+    on_attach = on_attach,
+    init_options = {
+        formatting = true,
+    },
+    settings = {
+        solargraph = {
+            -- null-lsでrubocopを扱うため、nvim-lsp&masonのsolargraphに入っているrubocopの診断はoffにする
+            -- 2重で診断結果が表示されるため
+            diagnostics = false,
+        }
+    },
+}
 nvim_lsp.clangd.setup { on_attach = on_attach }
 nvim_lsp.lua_ls.setup {
 	on_attach = on_attach,
