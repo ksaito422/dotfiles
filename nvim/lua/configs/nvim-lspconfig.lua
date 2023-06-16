@@ -64,13 +64,13 @@ nvim_lsp.gopls.setup { on_attach = on_attach }
 nvim_lsp.solargraph.setup {
     on_attach = on_attach,
     init_options = {
-        formatting = false,
+        formatting = true,
     },
     settings = {
         solargraph = {
             -- null-lsでrubocopを扱うため、nvim-lsp&masonのsolargraphに入っているrubocopの診断はoffにする
             -- 2重で診断結果が表示されるため
-            diagnostics = false,
+            diagnostics = true,
         }
     },
 }

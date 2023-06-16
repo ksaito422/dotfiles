@@ -209,9 +209,6 @@ require('packer').startup(function(use)
         }
     }
 
-    -- Ruby rubocopの静的解析用
-    use { 'dense-analysis/ale' }
-
     -- ------------------------------------------
     -- Debug adapter protocol plugins
     -- ------------------------------------------

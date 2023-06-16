@@ -14,7 +14,7 @@ null_ls.setup({
         null_ls.builtins.formatting.prettier.with({
             prefer_local = 'node_modules/.bin' -- プロジェクトローカルがある場合はそれを利用
         }),
-        -- NOTE: bundle exec rubocopを実行しないため、ale.vimでrubocopを使用する
+        -- NOTE: mason solargraphで実行する
         -- ruby
         -- null_ls.builtins.diagnostics.rubocop,
         -- null_ls.builtins.formatting.rubocop.with({
