@@ -58,7 +58,7 @@ keymap('n', 'ga', '<cmd>lua vim.lsp.buf.code_action()<CR>', { noremap = true, si
 keymap('n', 'gd', '<cmd>lua vim.lsp.buf.definition()<CR>', { noremap = true, silent = true })
 keymap('n', 'gi', '<cmd>lua vim.lsp.buf.implementation()<CR>', { noremap = true, silent = true })
 keymap('n', 'gr', '<cmd>lua vim.lsp.buf.references()<CR>', { noremap = true, silent = true })
-keymap('n', 'gf', '<cmd>lua vim.lsp.buf.format()<CR>', { noremap = true, silent = true })
+keymap('n', '<space>f', '<cmd>lua vim.lsp.buf.format()<CR>', { noremap = true, silent = true })
 
 nvim_lsp.gopls.setup { on_attach = on_attach }
 nvim_lsp.solargraph.setup {
