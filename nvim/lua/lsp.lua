@@ -9,14 +9,14 @@ vim.lsp.handlers["textDocument/publishDiagnostics"] = vim.lsp.with(
 )
 
 -- LSP診断結果のvirtual textの色
-vim.cmd 'highlight DiagnosticVirtualTextError guibg=none guifg=#FF4500'
-vim.cmd 'highlight DiagnosticVirtualTextWarn guibg=none guifg=#FFD700'
--- vim.cmd 'highlight DiagnosticVirtualTextInfo guibg=none guifh='
+-- vim.cmd 'highlight DiagnosticVirtualTextError guifg=none'
+-- vim.cmd 'highlight DiagnosticVirtualTextWarn guifg=none'
+-- vim.cmd 'highlight DiagnosticVirtualTextInfo guifg=none'
 -- vim.cmd 'highlight DiagnosticVirtualTextHint guibg=none guifg='
 
 -- LSP診断結果のsign columnの色
-vim.cmd 'highlight DiagnosticsSignError guibg=none guifg=#FF4500'
-vim.cmd 'highlight DiagnosticSignWarn guibg=none guifg=#FFD700'
+-- vim.cmd 'highlight DiagnosticsSignError guibg=none guifg=none'
+-- vim.cmd 'highlight DiagnosticSignWarn guibg=none guifg=none'
 -- vim.cmd 'highlight DiagnosticSignInfo guibg=none guifg='
 -- vim.cmd 'highlight DiagnosticSignHint guibg=none guifg='
 
@@ -25,4 +25,3 @@ vim.cmd 'sign define DiagnosticSignError text=E texthl=DiagnosticSignError lineh
 vim.cmd 'sign define DiagnosticSignWarn text=W texthl=DiagnosticSignWarn linehl= numhl='
 vim.cmd 'sign define DiagnosticSignInfo text=I texthl=DiagnosticSignInfo linehl= numhl='
 -- vim.cmd 'sign define DiagnosticSignHint text=H texthl=DiagnosticSignHint linehl= numhl='
-
