@@ -92,6 +92,9 @@ vim.cmd([[
 	autocmd FileType css setlocal tabstop=2 shiftwidth=2
 ]])
 
+-- line番号左の色
+vim.cmd 'highlight SignColumn guibg=none'
+
 -- 全てのjsonファイルをjsoncとして扱うようにする
 -- jsoncとして扱うことでcocのコメントアウト構文エラーが出力されないようにする
 vim.cmd([[

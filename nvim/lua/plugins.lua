@@ -62,6 +62,9 @@ require('packer').startup(function(use)
         run = function() vim.fn["mkdp#util#install"]() end,
     })
 
+    -- color cordの色を表示する
+    use { 'norcalli/nvim-colorizer.lua', require 'colorizer'.setup()}
+
     -- ------------------------------------------
     -- 開発体験Up plugins
     -- ------------------------------------------
