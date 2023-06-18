@@ -201,7 +201,7 @@ require('packer').startup(function(use)
     -- LSP uiをカッコよくする
     use {
         'nvimdev/lspsaga.nvim',
-        opt = true,
+        -- opt = true,
         branch = 'main',
         -- event = 'LspAttach',
     }

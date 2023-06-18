@@ -3,7 +3,9 @@ if (not status) then return end
 
 local keymap = vim.keymap.set
 
-saga.setup({})
+saga.setup({
+    request_timeout = 10000,
+})
 
 -- NOTE: lsp configにもlsp関連のコマンドあり
 keymap('n', 'K', '<cmd>Lspsaga hover_doc ++quiet<CR>', { noremap = true, silent = true })
