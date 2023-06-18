@@ -87,18 +87,19 @@
 - :PackerSync `PackerClean`->`PackerUpdate`をする
 - :PackerCompile 設定ファイルをコンパイルする
 
-### nvim-lspconfig
+### nvim-lspconfig & lspsaga & telescope lsp
 
-- K コード定義hover
-- gx diagnostic open float
-- [d diagnostic goto prev
-- ]d diagnostic goto next
-- rn 同じコードをまとめてrename
-- ga code action
-- gd code definition
-- gi code implementation
-- gr code references
-- gf code format
+- K コード定義を表示 hover(lspsaga)
+- gh definitionやreferenceをsagaで開く lsp finder(lspsaga)
+- rn まとめて命名変更 rename(lspsaga)
+- ga code action(lspsaga)
+- gd 定義元ジャンプ go to definition(lspsaga)
+- <space>e カーソル位置の診断詳細を表示する diagnostic open float(lspconfig)
+- [d 前の警告箇所 diagnostic goto prev(lspconfig)
+- ]d 次の警告箇所 diagnostic goto next(lspconfig)
+- gi code implementation(lspconfig)
+- <space><space> code format(lspconfig)
+- <leader>ld workspeceの診断結果をtelescopeで開く diagnostics(telescope) 
 
 ### nvim-treesitter
 
