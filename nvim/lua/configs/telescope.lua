@@ -18,5 +18,5 @@ keymap('n', '<leader>vh', ':Telescope command_history<CR>', { noremap = true, si
 keymap('n', '<leader>vs', ':Telescope search_history<CR>', { noremap = true, silent = true })
 
 -- Neovim LSP picker
-keymap('n', '<leader>lr', ':Telescope lsp_references<CR>', { noremap = true, silent = true })
+-- keymap('n', '<leader>lr', ':Telescope lsp_references<CR>', { noremap = true, silent = true })
 keymap('n', '<leader>ld', ':Telescope diagnostics<CR>', { noremap = true, silent = true })
