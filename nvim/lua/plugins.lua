@@ -63,7 +63,7 @@ require('packer').startup(function(use)
     })
 
     -- color cordの色を表示する
-    use { 'norcalli/nvim-colorizer.lua', require 'colorizer'.setup()}
+    use { 'norcalli/nvim-colorizer.lua', require 'colorizer'.setup() }
 
     -- ------------------------------------------
     -- 開発体験Up plugins
