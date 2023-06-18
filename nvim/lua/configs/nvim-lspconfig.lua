@@ -70,7 +70,7 @@ nvim_lsp.solargraph.setup {
         solargraph = {
             -- null-lsでrubocopを扱うため、nvim-lsp&masonのsolargraphに入っているrubocopの診断はoffにする
             -- 2重で診断結果が表示されるため
-            diagnostics = true,
+            diagnostics = false,
         }
     },
 }
