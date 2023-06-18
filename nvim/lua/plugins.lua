@@ -198,6 +198,14 @@ require('packer').startup(function(use)
     -- Neovim LSP config
     use 'neovim/nvim-lspconfig'
 
+    -- LSP uiをカッコよくする
+    use {
+        'nvimdev/lspsaga.nvim',
+        opt = true,
+        branch = 'main',
+        -- event = 'LspAttach',
+    }
+
     -- LSP, DAP, Linter, Formatter manager
     use 'williamboman/mason.nvim'
 

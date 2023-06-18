@@ -49,16 +49,9 @@ local on_attach = function(client, bufnr)
     end
 end
 
-keymap('n', 'K', '<cmd>lua vim.lsp.buf.hover()<CR>', { noremap = true, silent = true })
-keymap('n', '<space>e', '<cmd>lua vim.diagnostic.open_float()<CR>', { noremap = true, silent = true })
-keymap('n', '[d', '<cmd>lua vim.diagnostic.goto_prev()<CR>', { noremap = true, silent = true })
-keymap('n', ']d', '<cmd>lua vim.diagnostic.goto_next()<CR>', { noremap = true, silent = true })
-keymap('n', 'rn', '<cmd>lua vim.lsp.buf.rename()<CR>', { noremap = true, silent = true })
-keymap('n', 'ga', '<cmd>lua vim.lsp.buf.code_action()<CR>', { noremap = true, silent = true })
-keymap('n', 'gd', '<cmd>lua vim.lsp.buf.definition()<CR>', { noremap = true, silent = true })
+-- NOTE: lsp sagaにもlsp関連のコマンドあり
 keymap('n', 'gi', '<cmd>lua vim.lsp.buf.implementation()<CR>', { noremap = true, silent = true })
-keymap('n', 'gr', '<cmd>lua vim.lsp.buf.references()<CR>', { noremap = true, silent = true })
-keymap('n', '<space>f', '<cmd>lua vim.lsp.buf.format()<CR>', { noremap = true, silent = true })
+keymap('n', '<leader><leader>', '<cmd>lua vim.lsp.buf.format()<CR>', { noremap = true, silent = true })
 
 nvim_lsp.gopls.setup { on_attach = on_attach }
 nvim_lsp.solargraph.setup {
