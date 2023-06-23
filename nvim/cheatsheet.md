@@ -108,7 +108,8 @@
 ### telescope
 
 - <leader>ff ファイル名検索
-- <leader>fg ファイル内テキスト検索(grep)
+- <leader>fg git管理ファイルの検索
+- <leader>fl ファイル内テキスト検索(live grep)
 - <leader>fb buffers表示
 
 ### Comment.nvim
