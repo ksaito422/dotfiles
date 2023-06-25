@@ -14,6 +14,7 @@ config = {
 
 	window_background_opacity = visual.opacity,
 	window_padding = visual.padding,
+    window_decorations = visual.window_decorations,
 
 	leader = keybinds.leader,
 	disable_default_key_bindings = true,
