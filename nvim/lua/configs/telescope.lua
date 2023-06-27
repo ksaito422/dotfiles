@@ -8,6 +8,7 @@ end
 keymap('n', '<leader>ff', ':Telescope find_files<CR>', { noremap = true, silent = true })
 keymap('n', '<leader>fg', ':Telescope git_files<CR>', { noremap = true, silent = true })
 keymap('n', '<leader>fl', ':Telescope live_grep<CR>', { noremap = true, silent = true })
+keymap('n', '<leader>fb', ':Telescope buffers<CR>', { noremap = true, silent = true })
 
 -- vim picker
 keymap('n', '<leader>vb', ':Telescope buffers<CR>', { noremap = true, silent = true })
