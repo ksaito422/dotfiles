@@ -1,5 +1,5 @@
 local keymap = vim.api.nvim_set_keymap
-local status_ok, telescope = pcall(require, 'telescope.builtin')
+local status_ok, telescope = pcall(require, 'telescope')
 if not status_ok then
     return
 end
@@ -11,7 +11,6 @@ keymap('n', '<leader>fl', ':Telescope live_grep<CR>', { noremap = true, silent =
 keymap('n', '<leader>fb', ':Telescope buffers<CR>', { noremap = true, silent = true })
 
 -- vim picker
-keymap('n', '<leader>vb', ':Telescope buffers<CR>', { noremap = true, silent = true })
 keymap('n', '<leader>vr', ':Telescope oldfiles<CR>', { noremap = true, silent = true })
 keymap('n', '<leader>vc', ':Telescope commands<CR>', { noremap = true, silent = true })
 keymap('n', '<leader>vt', ':Telescope help_tags<CR>', { noremap = true, silent = true })
@@ -21,3 +20,32 @@ keymap('n', '<leader>vs', ':Telescope search_history<CR>', { noremap = true, sil
 -- Neovim LSP picker
 -- keymap('n', '<leader>lr', ':Telescope lsp_references<CR>', { noremap = true, silent = true })
 keymap('n', '<leader>ld', ':Telescope diagnostics<CR>', { noremap = true, silent = true })
+
+telescope.setup({
+    pickers = {
+        find_files = {
+            theme = 'dropdown',
+        },
+        git_files = {
+            theme = 'dropdown',
+        },
+        live_grep = {
+            theme = 'ivy',
+        },
+        buffers = {
+            theme = 'ivy',
+        },
+        oldfiles = {
+            theme = 'dropdown',
+        },
+        command_history = {
+            theme = 'ivy',
+        },
+        search_history = {
+            theme = 'ivy',
+        },
+        diagnostics = {
+            theme = 'ivy',
+        },
+    }
+})
