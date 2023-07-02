@@ -22,30 +22,40 @@ keymap('n', '<leader>vs', ':Telescope search_history<CR>', { noremap = true, sil
 keymap('n', '<leader>ld', ':Telescope diagnostics<CR>', { noremap = true, silent = true })
 
 telescope.setup({
-    pickers = {
-        find_files = {
-            theme = 'dropdown',
+    defaults = {
+        sorting_strategy = "ascending",
+        winblend = 4,
+        layout_strategy = 'vertical',
+        layout_config = {
+            height = 0.8,
+            width = 0.8,
         },
-        git_files = {
-            theme = 'dropdown',
-        },
-        live_grep = {
-            theme = 'ivy',
-        },
-        buffers = {
-            theme = 'ivy',
-        },
-        oldfiles = {
-            theme = 'dropdown',
-        },
-        command_history = {
-            theme = 'ivy',
-        },
-        search_history = {
-            theme = 'ivy',
-        },
-        diagnostics = {
-            theme = 'ivy',
-        },
-    }
+        file_ignore_patterns = { "^.git/", "^node_modules/" }
+    },
+    -- pickers = {
+    -- find_files = {
+    --     theme = 'dropdown',
+    -- },
+    -- git_files = {
+    --     theme = 'dropdown',
+    -- },
+    -- live_grep = {
+    --     theme = 'ivy',
+    -- },
+    -- buffers = {
+    --     theme = 'ivy',
+    -- },
+    -- oldfiles = {
+    --     theme = 'dropdown',
+    -- },
+    -- command_history = {
+    --     theme = 'ivy',
+    -- },
+    -- search_history = {
+    --     theme = 'ivy',
+    -- },
+    -- diagnostics = {
+    --     theme = 'ivy',
+    -- },
+    -- }
 })
