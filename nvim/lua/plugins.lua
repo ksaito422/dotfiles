@@ -78,9 +78,6 @@ require('packer').startup(function(use)
     -- lazygit(git ui)
     use 'kdheepak/lazygit.nvim'
 
-    -- git GUI
-    use { 'TimUntersberger/neogit', requires = 'nvim-lua/plenary.nvim' }
-
     -- git diff
     use { 'sindrets/diffview.nvim', requires = 'nvim-lua/plenary.nvim' }
 
