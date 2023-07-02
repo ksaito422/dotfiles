@@ -204,6 +204,8 @@
 ### lazygit
 
 - <leader>gg open lagygit
+- <leader>gl LazyGitFilter
+- <leader>glc LazyGitFilterCurrentFile
 
 ### diffview
 

@@ -3,6 +3,8 @@ local g = vim.g
 
 -- setup mapping to call :LazyGit
 keymap('n', '<leader>gg', ':LazyGit<CR>', { noremap = true, silent = true })
+keymap('n', '<leader>gl', ':LazyGitFilter<CR>', { noremap = true, silent = true })
+keymap('n', '<leader>glc', ':LazyGitFilterCurrentFile<CR>', { noremap = true, silent = true })
 
 -- transparency of floating window
 g.lazygit_floating_window_winblend = 0
