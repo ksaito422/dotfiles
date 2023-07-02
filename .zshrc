@@ -12,6 +12,7 @@ export PRETTIERD_DEFAULT_CONFIG=$HOME/dotfiles/.prettierrc
 eval "$(nodenv init - zsh)"
 export PATH="$HOME/.nodenv/bin:$PATH"
 export PATH="$HOME/.cargo/bin:$PATH"
+export XDG_CONFIG_HOME="$HOME/.config"
 export STARSHIP_CONFIG=$HOME/.config/starship.toml
 
 # Dockerイメージを「なりすまし」と「改ざん」から保護するセキュリティ機能
