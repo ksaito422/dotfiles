@@ -4,9 +4,9 @@ vim.cmd([[
 	autocmd ColorScheme * highlight NonText ctermbg=none guibg=none
 	autocmd ColorScheme * highlight Folded ctermbg=none guibg=none
 	autocmd ColorScheme * highlight EndOfBuffer ctermbg=none guibg=none
-
-	if !exists('g:vscode')
-		" colorscheme nightfox
-		colorscheme tokyonight-night
-	end
 ]])
+
+if not vim.g.vscode then
+    vim.cmd[[colorscheme tokyonight-night]]
+end
+

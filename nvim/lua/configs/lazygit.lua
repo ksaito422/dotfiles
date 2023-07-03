@@ -11,7 +11,9 @@ g.lazygit_floating_window_winblend = 0
 -- scaling factor for floating window
 g.lazygit_floating_window_scaling_factor = 1
 -- customize lazygit popup window corner characters
-g.lazygit_floating_window_corner_chars = { '╭', '╮', '╰', '╯' }
+if not vim.g.vscode then
+    g.lazygit_floating_window_corner_chars = { '╭', '╮', '╰', '╯' }
+end
 -- use plenary.nvim to manage floating window if available
 g.lazygit_floating_window_use_plenary = 0
 -- fallback to 0 if neovim-remote is not installed
