@@ -1,7 +1,7 @@
 # -e・・・エラーが処理を中断
 # -u・・・未定義の変数を使おうとすると処理中断
 #!/bin/bash -eu
-path=~/dotfiles
+path=$HOME/dotfiles
 
 cd ~/
 
@@ -13,7 +13,7 @@ fi
 
 # ディレクトリが存在しない場合は作成する
 if [ ! -e ~/.config ]; then
-  mkdir -p ~/.config
+  mkdir -p $HOME/.config
 fi
 
 
@@ -21,14 +21,16 @@ fi
 cd $path
 
 if [ $path ]; then
-  ln -s $PWD/.zshrc ~/.zshrc
+  ln -s $PWD/.zshrc $HOME/.zshrc
 
   # nvim
-  ln -s $PWD/nvim ~/.config/nvim
+  ln -s $PWD/nvim $HOME/.config/nvim
   # wezterm
-  ln -s $PWD/wezterm ~/.config/wezterm
+  ln -s $PWD/wezterm $HOME/.config/wezterm
   # git
-  ln -s $PWD/git ~/.config/git
+  ln -s $PWD/git $HOME/.config/git
+  # lazygit
+  ln -s $PWD/lazygit $HOME/.config/lazygit
 fi
 
 # brew install
