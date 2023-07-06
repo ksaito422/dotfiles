@@ -5,6 +5,7 @@ export PATH=/usr/local/opt/python@3.8/libexec/bin:$PATH
 export PATH=/usr/local/opt/gawk/bin/:$PATH
 export LANG="ja_JP.UTF-8"
 export PRETTIERD_DEFAULT_CONFIG=$HOME/dotfiles/.prettierrc
+export PATH="$HOME/work/script:$PATH"
 
 # node package manager
 # export VOLTA_HOME="$HOME/.volta"
@@ -150,6 +151,9 @@ alias v='vim'
 alias vi='vim'
 alias nvimconf='vi ~/.config/nvim .'
 export PATH=$PATH:~/.bin
+
+### 仕事用でreadonlyなapp engineにsshするコマンド
+alias gae-ssh='(){ gcloud --project $1 app instances ssh $(gcloud --project $1 --format json app instances list --service $2 --sort-by="~instance.startTime" | jq -r ".[0].id") --service $2 --version $(gcloud --project $1 --format json app instances list --service $2 --sort-by="~instance.startTime" | jq -r ".[0].version") }'
 
 if [ -n "$NVIM_LISTEN_ADDRESS" ]; then
     alias nvim=nvr --remote-wait +'set bufhidden=wipe'
