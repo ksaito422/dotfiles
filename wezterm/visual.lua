@@ -1,7 +1,7 @@
 local M = {}
 
 M = {
-    font_size = 11.0,
+    font_size = 12.0,
     -- color_scheme = 'Raycast_Dark'
     -- color_scheme = 'Dracula'
     -- color_scheme = 'iceberg-dark'
