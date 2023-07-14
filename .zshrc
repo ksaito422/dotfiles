@@ -168,6 +168,7 @@ alias gresets='git reset --soft HEAD'
 alias gremote= 'git remote'
 
 ### vim
+alias v='nvim'
 alias vi='nvim'
 alias vim='nvim'
 alias nvimconf='vi ~/.config/nvim .'
