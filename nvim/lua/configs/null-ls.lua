@@ -32,5 +32,6 @@ null_ls.setup({
         --     args = vim.list_extend({ "exec", "rubocop" }, null_ls.builtins.formatting.rubocop._opts.args),
         --     -- args = { "-A", "-f", "quiet", "--stderr", "--stdin", "$FILENAME" },
         -- }),
+        null_ls.builtins.formatting.stylua,
     }
 })
