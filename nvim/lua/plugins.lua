@@ -272,4 +272,7 @@ require('packer').startup(function(use)
             'skanehira/denops-translate.vim'
         }
     }
+
+    -- plugin docを楽に生成するため
+    use 'LeafCage/vimhelpgenerator'
 end)
