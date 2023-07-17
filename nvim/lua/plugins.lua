@@ -275,4 +275,15 @@ require('packer').startup(function(use)
 
     -- plugin docを楽に生成するため
     use 'LeafCage/vimhelpgenerator'
+
+    -- ------------------------------------------
+    -- 自作プラグイン
+    -- ------------------------------------------
+
+    use {
+        "ksaito422/neosess",
+        config = function()
+            require("neosess").setup({})
+        end,
+    }
 end)
