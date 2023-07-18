@@ -167,8 +167,6 @@ require('packer').startup(function(use)
             -- 補完候補
             'Shougo/pum.vim',
             'Shougo/ddc-ui-pum',
-            -- 補完候補UI
-            'Shougo/ddc-ui-native',
             -- 補完(ddc-matcher_head, ddc-sorter_rank, ddc-converter_remove_overlapとほぼ同じ機能)
             'tani/ddc-fuzzy',
             -- 行の周辺の単語を候補として抽出
