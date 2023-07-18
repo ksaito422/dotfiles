@@ -177,7 +177,9 @@ require('packer').startup(function(use)
             -- 関数の引数ヘルプ
             'matsui54/denops-signature_help',
             -- Show completion documentation
-            'matsui54/denops-popup-preview.vim'
+            'matsui54/denops-popup-preview.vim',
+            -- path completion
+            'tani/ddc-path'
         }
     }
 
