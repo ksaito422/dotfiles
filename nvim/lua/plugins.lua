@@ -164,8 +164,6 @@ require('packer').startup(function(use)
     use {
         'Shougo/ddc.vim',
         requires = {
-            -- 補完候補
-            'Shougo/pum.vim',
             -- 補完候補UI
             'Shougo/ddc-ui-native',
             -- 補完(ddc-matcher_head, ddc-sorter_rank, ddc-converter_remove_overlapとほぼ同じ機能)

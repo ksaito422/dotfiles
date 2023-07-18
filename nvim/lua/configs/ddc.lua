@@ -29,14 +29,9 @@ vim.cmd([[
 
     " <TAB>: completion
     inoremap <silent><expr> <TAB>
-        \ pum#visible() ? '<Cmd>call pum#map#insert_relative(+1)<CR>' :
         \ (col('.') <= 1 <Bar><Bar> getline('.')[col('.') - 2] =~# '\s') ?
         \ '<TAB>' : ddc#manual_complete()
     inoremap <expr><S-TAB>  pum#visible() ? '<C-p>' : '<C-h>'
-
-    " pum key mappings
-    inoremap <C-y> <Cmd>call pum#map#confirm()<CR>
-    inoremap <C-e> <Cmd>call pum#map#cancel()<CR>
 
     autocmd CompleteDone * silent! pclose!
 
