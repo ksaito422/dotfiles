@@ -63,6 +63,10 @@ nvim_lsp.solargraph.setup({
 	init_options = {
 		formatting = true,
 	},
+	-- https://medium.com/@cristianvg/neovim-lsp-your-rbenv-gemset-and-solargraph-8896cb3df453
+	-- default { "solargraph", "stdio" }
+	cmd = { os.getenv("HOME") .. "/.rbenv/shims/solargraph", "stdio" },
+	root_dir = nvim_lsp.util.root_pattern("Gemfile", ".git"),
 	settings = {
 		solargraph = {
 			-- null-lsでrubocopを扱うため、nvim-lsp&masonのsolargraphに入っているrubocopの診断はoffにする
