@@ -51,7 +51,6 @@ opt.hidden = true
 -- 入力中のコマンドをstatus lineに表示する
 opt.showcmd = true
 
-
 -- 現在の行を強調表示しない
 opt.cursorline = false
 opt.cursorcolumn = false
@@ -93,7 +92,7 @@ vim.cmd([[
 ]])
 
 -- line番号左の色
-vim.cmd 'highlight SignColumn guibg=none'
+vim.cmd('highlight SignColumn guibg=none')
 
 -- 全てのjsonファイルをjsoncとして扱うようにする
 -- jsoncとして扱うことでcocのコメントアウト構文エラーが出力されないようにする

@@ -7,14 +7,14 @@
 --  ╚═╝╚═╝  ╚═══╝╚═╝   ╚═╝╚═╝╚══════╝ ╚═════╝ ╚═╝  ╚═╝
 --
 
-require("base")
-require("keymap")
+require('base')
+require('keymap')
 
 if not vim.g.vscode then
-	require("functions")
-	require("plugins")
-	require("plugins_load")
-	require("lsp")
+    require('functions')
+    require('plugins')
+    require('plugins_load')
+    require('lsp')
 end
 
 -- PackerCompileを自動実行

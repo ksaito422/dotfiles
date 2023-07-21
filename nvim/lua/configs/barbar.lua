@@ -1,6 +1,6 @@
 local status, bufferline = pcall(require, 'bufferline')
-if (not status) then
-	return
+if not status then
+    return
 end
 
 local keymap = vim.api.nvim_set_keymap
@@ -42,6 +42,6 @@ keymap('n', '<Space>bw', ':BufferOrderByWindowNumber<CR>', { noremap = true, sil
 -- :BarbarEnable - enables barbar (enabled by default)
 -- :BarbarDisable - very bad command, should never be used
 
-bufferline.setup {
-	icons = { filetype = { enabled = true }},
-}
+bufferline.setup({
+    icons = { filetype = { enabled = true } },
+})

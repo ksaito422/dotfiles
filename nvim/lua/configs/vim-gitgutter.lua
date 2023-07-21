@@ -11,8 +11,8 @@ keymap('n', '<Leader>ga', ':GitGutterStageHunk<CR>', {})
 keymap('n', '<Leader>gu', ':GitGutterRevertHunk<CR>', {})
 keymap('n', '<Leader>gv', ':GitGutterPreviewHunk<CR>', {})
 
-cmd 'highlight GitGutterAdd guifg = lightgreen'
-cmd 'highlight GitGutterChange guifg = yelllw'
-cmd 'highlight GitGutterDelete guifg = red'
+cmd('highlight GitGutterAdd guifg = lightgreen')
+cmd('highlight GitGutterChange guifg = yelllw')
+cmd('highlight GitGutterDelete guifg = red')
 
-cmd 'set updatetime=250'
+cmd('set updatetime=250')

@@ -23,14 +23,14 @@ keymap('n', '<leader>ld', ':Telescope diagnostics<CR>', { noremap = true, silent
 
 telescope.setup({
     defaults = {
-        sorting_strategy = "ascending",
+        sorting_strategy = 'ascending',
         winblend = 4,
         layout_strategy = 'vertical',
         layout_config = {
             height = 0.8,
             width = 0.8,
         },
-        file_ignore_patterns = { "^.git/", "^node_modules/" }
+        file_ignore_patterns = { '^.git/', '^node_modules/' },
     },
     -- pickers = {
     -- find_files = {
