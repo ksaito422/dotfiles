@@ -87,11 +87,7 @@ require("packer").startup(function(use)
     use("numToStr/Comment.nvim")
 
     -- jsx,tsxコメントアウト
-    use({
-        "JoosepAlviste/nvim-ts-context-commentstring",
-        opt = true,
-        ft = { "javascriptreact, typescriptreact" },
-    })
+    use("JoosepAlviste/nvim-ts-context-commentstring")
 
     -- TODO/HACK/BUGなどをhighlightする
     use({
