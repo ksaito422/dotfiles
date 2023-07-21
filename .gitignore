@@ -3,3 +3,4 @@
 /nvim/plugin/
 /nvim/sessions/
 /lazygit/state.yml
+.luarc.json
