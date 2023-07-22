@@ -31,6 +31,8 @@ if [ $path ]; then
   ln -s $PWD/git $HOME/.config/git
   # lazygit
   ln -s $PWD/lazygit $HOME/.config/lazygit
+  # solargraph
+  ln -s $PWD/solargraph $HOME/.config/solargraph
 fi
 
 # brew install
