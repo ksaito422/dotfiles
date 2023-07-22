@@ -15,13 +15,13 @@ null_ls.setup({
             prefer_local = 'node_modules/.bin', -- プロジェクトローカルがある場合はそれを利用
         }),
         -- ruby
-        null_ls.builtins.diagnostics.rubocop.with({
-            condition = function(utils)
-                return utils.root_has_file({ '.rubocop.yml' })
-            end,
-            command = 'bundle',
-            args = vim.list_extend({ 'exec', 'rubocop' }, null_ls.builtins.diagnostics.rubocop._opts.args),
-        }),
+        -- null_ls.builtins.diagnostics.rubocop.with({
+        --     condition = function(utils)
+        --         return utils.root_has_file({ '.rubocop.yml' })
+        --     end,
+        --     command = 'bundle',
+        --     args = vim.list_extend({ 'exec', 'rubocop' }, null_ls.builtins.diagnostics.rubocop._opts.args),
+        -- }),
         -- NOTE: mason solargraphで実行する
         -- null_ls.builtins.formatting.rubocop.with({
         --     condition = function(utils)

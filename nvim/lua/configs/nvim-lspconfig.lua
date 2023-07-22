@@ -69,9 +69,8 @@ nvim_lsp.solargraph.setup({
     root_dir = nvim_lsp.util.root_pattern('Gemfile', '.git'),
     settings = {
         solargraph = {
-            -- null-lsでrubocopを扱うため、nvim-lsp&masonのsolargraphに入っているrubocopの診断はoffにする
-            -- 2重で診断結果が表示されるため
-            diagnostics = false,
+            -- nvim-lsp&masonのsolargraphの診断有効にすると.rubocop.ymlのルールでrubocopを実行してくれる
+            diagnostics = true,
         },
     },
 })
