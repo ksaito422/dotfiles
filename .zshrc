@@ -71,8 +71,8 @@ function left-prompt {
   echo "${user}${back_color}${path_b}m%}${text_color}${name_b}m%}${sharp}"\
     "${dir}${text_color}${path_b}m%}${back_color}${git_b}m%}${sharp}"\
     "${git}${text_color}${git_b}m%}${sharp}${reset}"\
-    "%*"\
-    "\n${sharp} "
+    "%D{%Y/%m/%d} %*"\
+    "\n%F{004}>>> "
 }
 PROMPT=`left-prompt`
 precmd(){ vcs_info }
