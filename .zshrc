@@ -49,7 +49,7 @@ setopt prompt_subst
 zstyle ':vcs_info:git:*' check-for-changes true
 zstyle ':vcs_info:git:*' stagedstr "%F{yellow}!"
 zstyle ':vcs_info:git:*' unstagedstr "%F{red}+"
-zstyle ':vcs_info:*' formats "%F{green}%c%u[%b]%f"
+zstyle ':vcs_info:*' formats "%F{green}%c%u%b%f"
 zstyle ':vcs_info:*' actionformats '[%b|%a]'
 ### PROMPT左側に表示
 function left-prompt {
@@ -57,6 +57,7 @@ function left-prompt {
   name_b='0;0;0'    # user name background color
   path_t='255;255;255'     # path text color
   path_b='0;102;153'   # path background color
+  git_b='0;0;0'    # user name background color
   arrow='0;0;0'   # arrow color
   text_color='%{\e[38;2;'    # set text color
   back_color='%{\e[48;2;' # set background color
@@ -65,8 +66,11 @@ function left-prompt {
   
   user="${back_color}${name_b}m%}${text_color}${name_t}m%}%n${reset}"
   dir="${back_color}${path_b}m%}${text_color}${path_t}m%}%~${reset}"
-  git=\$vcs_info_msg_0_
-  echo "${user}${back_color}${path_b}m%}${text_color}${name_b}m%}${sharp} ${dir}${text_color}${path_b}m%}${sharp} ${reset}${git}${sharp}\n${text_color}${arrow}m%}${reset}%F{004}>>>%f "
+  git="${back_color}${name_b}m%}${text_color}${name_t}m%}\$vcs_info_msg_0_${reset}"
+  echo "${user}${back_color}${path_b}m%}${text_color}${name_b}m%}${sharp}"\
+    "${dir}${text_color}${path_b}m%}${back_color}${git_b}m%}${sharp}"\
+    "${git}${text_color}${git_b}m%}${sharp}${reset} "\
+    "\n${sharp} "
 }
 PROMPT=`left-prompt`
 precmd(){ vcs_info }
