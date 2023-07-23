@@ -119,3 +119,9 @@ opt.spell = false
 
 -- lsp,breakpoint,diffをcolumnnumberの横に常に表示する
 opt.signcolumn = 'yes:1'
+vim.cmd([[
+    augroup transparent_signs
+        au!
+        autocmd ColorScheme * highlight SignColumn guibg=NONE
+    augroup END
+]])
