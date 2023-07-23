@@ -29,7 +29,7 @@ wezterm.on('format-tab-title', function(tab, tabs, panes, config, hover, max_wid
     local title = tab_title(tab)
     if tab.is_active then
         return {
-            { Foreground = { Color = '00c4cc' } },
+            { Foreground = { Color = '#00c4cc' } },
             -- { Background = { Color = 'fff' } },
             { Text = ' ' .. title .. ' ' },
         }

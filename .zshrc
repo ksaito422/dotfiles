@@ -53,20 +53,20 @@ zstyle ':vcs_info:*' formats "%F{green}%c%u[%b]%f"
 zstyle ':vcs_info:*' actionformats '[%b|%a]'
 ### PROMPT左側に表示
 function left-prompt {
-  name_t='179m%}'      # user name text color
-  name_b='000m%}'    # user name background color
-  path_t='255m%}'     # path text color
-  path_b='031m%}'   # path background color
-  arrow='004m%}'   # arrow color
-  text_color='%{\e[38;5;'    # set text color
-  back_color='%{\e[30;48;5;' # set background color
+  name_t='204;153;51'      # user name text color
+  name_b='0;0;0'    # user name background color
+  path_t='255;255;255'     # path text color
+  path_b='0;102;153'   # path background color
+  arrow='0;0;0'   # arrow color
+  text_color='%{\e[38;2;'    # set text color
+  back_color='%{\e[48;2;' # set background color
   reset='%{\e[0m%}'   # reset
   sharp='\uE0B0'      # trianglei
   
-  user="${back_color}${name_b}${text_color}${name_t}"
-  dir="${back_color}${path_b}${text_color}${path_t}"
+  user="${back_color}${name_b}m%}${text_color}${name_t}m%}%n${reset}"
+  dir="${back_color}${path_b}m%}${text_color}${path_t}m%}%~${reset}"
   git=\$vcs_info_msg_0_
-  echo "${user}%n${back_color}${path_b}${text_color}${name_b}${sharp} ${dir}%~${reset}${text_color}${path_b}${sharp} ${git}\n${text_color}${arrow}${reset}%F{004}>>>%f "
+  echo "${user}${back_color}${path_b}m%}${text_color}${name_b}m%}${sharp} ${dir}${text_color}${path_b}m%}${sharp} ${reset}${git}${sharp}\n${text_color}${arrow}m%}${reset}%F{004}>>>%f "
 }
 PROMPT=`left-prompt`
 precmd(){ vcs_info }
