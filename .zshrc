@@ -67,15 +67,15 @@ function left-prompt {
   user="${back_color}${name_b}m%}${text_color}${name_t}m%}%n${reset}"
   dir="${back_color}${path_b}m%}${text_color}${path_t}m%}%~${reset}"
   git="${back_color}${name_b}m%}${text_color}${name_t}m%}\$vcs_info_msg_0_${reset}"
+  # format: user name > current dir > git status > now
   echo "${user}${back_color}${path_b}m%}${text_color}${name_b}m%}${sharp}"\
     "${dir}${text_color}${path_b}m%}${back_color}${git_b}m%}${sharp}"\
-    "${git}${text_color}${git_b}m%}${sharp}${reset} "\
+    "${git}${text_color}${git_b}m%}${sharp}${reset}"\
+    "%*"\
     "\n${sharp} "
 }
 PROMPT=`left-prompt`
 precmd(){ vcs_info }
-### PROMPT右側に時間表示
-RPROMPT='%*'
 
 # ヒストリの設定
 HISTFILE=~/.zsh_history
