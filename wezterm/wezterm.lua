@@ -1,6 +1,5 @@
 local wezterm = require('wezterm')
 local keybinds = require('keybinds')
-local visual = require('visual')
 local config = {}
 
 if wezterm.config_builder then
@@ -8,13 +7,18 @@ if wezterm.config_builder then
 end
 
 config = {
-	font_size = visual.font_size,
+	font_size = 12.0,
 	-- config.font = wezterm.font('HackGen35Nerd', {}),
-	color_scheme = visual.color_scheme,
+	color_scheme = 'tokyonight',
 
-	window_background_opacity = visual.opacity,
-	window_padding = visual.padding,
-    window_decorations = visual.window_decorations,
+	window_background_opacity = 0.9,
+	window_padding = {
+        left = 2,
+        right = 0,
+        top = 0,
+        bottom = 0,
+    },
+    window_decorations = 'RESIZE',
 
 	leader = keybinds.leader,
 	disable_default_key_bindings = true,
