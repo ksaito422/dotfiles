@@ -70,7 +70,7 @@ nvim_lsp.solargraph.setup({
     settings = {
         solargraph = {
             -- nvim-lsp&masonのsolargraphの診断有効にすると.rubocop.ymlのルールでrubocopを実行してくれる
-            diagnostics = true,
+            diagnostics = false,
         },
     },
 })
