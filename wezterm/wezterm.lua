@@ -4,16 +4,15 @@ local events = require('events')
 local config = {}
 
 if wezterm.config_builder then
-	config = wezterm.config_builder()
+    config = wezterm.config_builder()
 end
 
 config = {
-	font_size = 12.0,
 	-- config.font = wezterm.font('HackGen35Nerd', {}),
-	color_scheme = 'tokyonight',
-
-	window_background_opacity = 0.9,
-	window_padding = {
+    font_size = 12.0,
+    color_scheme = 'tokyonight',
+    window_background_opacity = 0.9,
+    window_padding = {
         left = 2,
         right = 0,
         top = 0,
@@ -24,12 +23,10 @@ config = {
         saturation = 0.8,
         brightness = 0.7,
     },
-
     leader = keybinds.leader,
     disable_default_key_bindings = true,
     keys = keybinds.create_keybinds(),
     key_tables = keybinds.key_tables,
-
     use_ime = true,
 }
 
