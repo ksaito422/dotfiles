@@ -8,8 +8,10 @@ if wezterm.config_builder then
 end
 
 config = {
-	-- config.font = wezterm.font('HackGen35Nerd', {}),
     font_size = 12.0,
+    font = wezterm.font_with_fallback({
+        { family = 'Hack Nerd Font' },
+    }),
     color_scheme = 'tokyonight',
     window_background_opacity = 0.9,
     window_padding = {
