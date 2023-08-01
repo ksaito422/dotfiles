@@ -211,9 +211,12 @@
 
 - <leader>gd open diffview
 - <leader>gc close diffview
-- '-' stage/unstage
 - [c diffviewで次の変更箇所にジャンプする
 - ]c diffviewで前の変更箇所にジャンプする
+
+### gitsigns
+
+- <leader>hb git blameで該当業の変更内容やコミットハッシュを表示する
 
 ### vim-gh-line
 
