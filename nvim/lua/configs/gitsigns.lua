@@ -1,3 +1,4 @@
+local keymap = vim.api.nvim_set_keymap
 local status_ok, gitsigns = pcall(require, 'gitsigns')
 if not status_ok then
     return
@@ -50,3 +51,6 @@ gitsigns.setup({
         enable = false,
     },
 })
+
+keymap('n', '<leader>hb', '<cmd>lua require"gitsigns".blame_line{full=true}<CR>', { noremap = true, silent = true })
+keymap('n', '<leader>hd', '<cmd>Gitsigns diffthis<CR>', { noremap = true, silent = true })
