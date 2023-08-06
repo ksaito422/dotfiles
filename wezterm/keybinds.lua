@@ -58,6 +58,8 @@ M.default_keybinds = {
     { key = '-', mods = 'CTRL', action = act.DecreaseFontSize },
     { key = '+', mods = 'CTRL', action = act.IncreaseFontSize },
     { key = '0', mods = 'CTRL', action = act.ResetFontSize },
+    { key = '[', mods = 'SUPER|CTRL', action = act.MoveTabRelative(-1) },
+    { key = ']', mods = 'SUPER|CTRL', action = act.MoveTabRelative(1) },
 }
 
 function M.create_keybinds()
