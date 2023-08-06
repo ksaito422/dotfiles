@@ -10,8 +10,6 @@ M.tmux_keybinds = {
     { key = 'w', mods = 'SUPER', action = act({ CloseCurrentTab = { confirm = true } }) },
     { key = 'Tab', mods = 'CTRL', action = act({ ActivateTabRelative = 1 }) },
     { key = 'Tab', mods = 'CTRL|SHIFT', action = act({ ActivateTabRelative = -1 }) },
-    { key = 'h', mods = 'SUPER|CTRL', action = act({ MoveTabRelative = -1 }) },
-    { key = 'l', mods = 'SUPER|CTRL', action = act({ MoveTabRelative = 1 }) },
 }
 
 M.default_keybinds = {
@@ -57,6 +55,9 @@ M.default_keybinds = {
     { key = 'PageUp', mods = 'CTRL', action = act({ ScrollByPage = -1 }) },
     { key = 'PageDown', mods = 'CTRL', action = act({ ScrollByPage = 1 }) },
     { key = 'h', mods = 'SUPER', action = act.HideApplication },
+    { key = '-', mods = 'CTRL', action = act.DecreaseFontSize },
+    { key = '+', mods = 'CTRL', action = act.IncreaseFontSize },
+    { key = '0', mods = 'CTRL', action = act.ResetFontSize },
 }
 
 function M.create_keybinds()
