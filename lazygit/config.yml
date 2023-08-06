@@ -82,3 +82,6 @@ git:
   disableForcePushing: false
   parseEmoji: false
   diffContextSize: 3 # how many lines of context are shown around a change in diffs
+os:
+  editPreset: 'nvim-remote'
+  editInTerminal: true
