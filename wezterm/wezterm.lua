@@ -20,7 +20,7 @@ config = {
         top = 0,
         bottom = 0,
     },
-    window_decorations = 'RESIZE',
+    window_decorations = 'TITLE | RESIZE',
     inactive_pane_hsb = {
         saturation = 0.8,
         brightness = 0.7,
