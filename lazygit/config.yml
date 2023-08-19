@@ -84,4 +84,5 @@ git:
   diffContextSize: 3 # how many lines of context are shown around a change in diffs
 os:
   editPreset: 'nvim-remote'
+  edit: 'nvim --server /tmp/nvim-server.pipe --remote-tab "$(pwd)/{{filename}}"'
   editInTerminal: true

@@ -15,9 +15,6 @@ export XDG_CONFIG_HOME="$HOME/.config"
 # Dockerイメージを「なりすまし」と「改ざん」から保護するセキュリティ機能
 export DOCKER_CONTENT_TRUST=0
 
-# Gitで開くEditorをNeoVimに設定
-export EDITOR='nvim'
-export VISUAL='nvim'
 
 # direnvの利用設定
 eval "$(direnv hook zsh)"
@@ -172,12 +169,19 @@ alias gresets='git reset --soft HEAD'
 alias gremote= 'git remote'
 
 ### vim
-alias v='nvim'
-alias vi='nvim'
-alias vim='nvim'
+# alias v='nvim'
+# alias vi='nvim'
+# alias vim='nvim'
+# nvim-remoteでlazygitからnvimを開くための設定
+alias vim='nvim --listen /tmp/nvim-server.pipe'
+alias v='vim'
+alias vi='vim'
 alias nvimconf='vi ~/.config/nvim .'
 export PATH=$PATH:~/.bin
 
+if [ -n "$NVIM_LISTEN_ADDRESS" ]; then
+    alias nvim=nvr -cc split --remote-wait +'set bufhidden=wipe'
+fi
 # The next line updates PATH for the Google Cloud SDK.
 if [ -f '/Users/saito/google-cloud-sdk/path.zsh.inc' ]; then . '/Users/saito/google-cloud-sdk/path.zsh.inc'; fi
 
