@@ -7,9 +7,9 @@ keymap('n', '<leader>gl', ':LazyGitFilter<CR>', { noremap = true, silent = true 
 keymap('n', '<leader>glc', ':LazyGitFilterCurrentFile<CR>', { noremap = true, silent = true })
 
 -- transparency of floating window
-g.lazygit_floating_window_winblend = 0
+g.lazygit_floating_window_winblend = 1
 -- scaling factor for floating window
-g.lazygit_floating_window_scaling_factor = 1
+g.lazygit_floating_window_scaling_factor = 0.95
 -- customize lazygit popup window corner characters
 if not vim.g.vscode then
     g.lazygit_floating_window_corner_chars = { '╭', '╮', '╰', '╯' }
