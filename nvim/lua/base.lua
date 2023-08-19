@@ -125,3 +125,9 @@ vim.cmd([[
         autocmd ColorScheme * highlight SignColumn guibg=NONE
     augroup END
 ]])
+
+vim.cmd([[
+    if has('nvim') && executable('nvr')
+        let $GIT_EDITOR = "nvr -cc split --remote-wait +'set bufhidden=wipe'"
+    endif
+]])
