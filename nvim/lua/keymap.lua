@@ -28,6 +28,8 @@ keymap('t', '<C-h>', '<BS>', { noremap = true })
 keymap('n', '<C-[>', ':bprev<CR>', { noremap = true, silent = true })
 keymap('n', '<C-]>', ':bnext<CR>', { noremap = true, silent = true })
 
+keymap('n', '<C-c>', ":let @* = expand('%:p')<CR>", { noremap = true })
+
 -- Assign leader key to space key
 vim.g.mapleader = ' '
 
