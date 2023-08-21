@@ -15,9 +15,6 @@ export XDG_CONFIG_HOME="$HOME/.config"
 # Dockerイメージを「なりすまし」と「改ざん」から保護するセキュリティ機能
 export DOCKER_CONTENT_TRUST=0
 
-# direnvの利用設定
-eval "$(direnv hook zsh)"
-
 # Rubyのバージョン管理ツール
 eval "$(rbenv init - zsh)"
 
