@@ -157,27 +157,41 @@ require('packer').startup(function(use)
     -- ------------------------------------------
 
     -- Neovim Builtin LSPが提供する構文を引っ張ってくる
-    use('Shougo/ddc-nvim-lsp')
+    -- use('Shougo/ddc-nvim-lsp')
 
     -- 入力補完
+    -- use({
+    --     'Shougo/ddc.vim',
+    --     requires = {
+    --         -- 補完候補
+    --         'Shougo/pum.vim',
+    --         'Shougo/ddc-ui-pum',
+    --         -- 補完(ddc-matcher_head, ddc-sorter_rank, ddc-converter_remove_overlapとほぼ同じ機能)
+    --         'tani/ddc-fuzzy',
+    --         -- 行の周辺の単語を候補として抽出
+    --         'Shougo/ddc-source-around',
+    --         -- 補完ソース
+    --         'Shougo/ddc-source-nvim-lsp',
+    --         -- 関数の引数ヘルプ
+    --         'matsui54/denops-signature_help',
+    --         -- Show completion documentation
+    --         'matsui54/denops-popup-preview.vim',
+    --         -- path completion
+    --         'tani/ddc-path',
+    --     },
+    -- })
+
+    -- 入力補完(completion, documentation, command line)
     use({
-        'Shougo/ddc.vim',
+        'hrsh7th/cmp-nvim-lsp',
         requires = {
-            -- 補完候補
-            'Shougo/pum.vim',
-            'Shougo/ddc-ui-pum',
-            -- 補完(ddc-matcher_head, ddc-sorter_rank, ddc-converter_remove_overlapとほぼ同じ機能)
-            'tani/ddc-fuzzy',
-            -- 行の周辺の単語を候補として抽出
-            'Shougo/ddc-source-around',
-            -- 補完ソース
-            'Shougo/ddc-source-nvim-lsp',
-            -- 関数の引数ヘルプ
-            'matsui54/denops-signature_help',
-            -- Show completion documentation
-            'matsui54/denops-popup-preview.vim',
-            -- path completion
-            'tani/ddc-path',
+            'hrsh7th/cmp-nvim-lsp',
+            'hrsh7th/cmp-buffer',
+            'hrsh7th/cmp-path',
+            'hrsh7th/cmp-cmdline',
+            'dmitmel/cmp-cmdline-history',
+            'hrsh7th/nvim-cmp',
+            'onsails/lspkind.nvim',
         },
     })
 
@@ -268,7 +282,7 @@ require('packer').startup(function(use)
     use({
         'vim-denops/denops.vim',
         requires = {
-            'Shougo/ddc.vim',
+            -- 'Shougo/ddc.vim',
             -- 翻訳ツール
             'skanehira/denops-translate.vim',
         },
