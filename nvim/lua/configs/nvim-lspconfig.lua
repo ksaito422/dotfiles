@@ -61,7 +61,8 @@ nvim_lsp.gopls.setup({ on_attach = on_attach })
 nvim_lsp.solargraph.setup({
     on_attach = on_attach,
     init_options = {
-        formatting = true,
+        -- 遅いからrubocopのほうで実行する
+        formatting = false,
     },
     -- https://medium.com/@cristianvg/neovim-lsp-your-rbenv-gemset-and-solargraph-8896cb3df453
     -- default { "solargraph", "stdio" }
@@ -104,4 +105,51 @@ nvim_lsp.tsserver.setup({
         'typescript.tsx',
     },
     cmd = { 'typescript-language-server', '--stdio' },
+})
+
+local efm_config = {
+    eslint = {
+        lintCommand = './node_modules/.bin/eslint',
+        rootMarkers = { 'package.json' },
+    },
+    prettier = {
+        formatCommand = './node_modules/.bin/prettier',
+        rootMarkers = { 'package.json' },
+    },
+    rubocop = {
+        lintCommand = 'bundle exec rubocop --force-exclusion',
+        -- NOTE: timeoutするけどファイルリロードしたらフォーマットされているかも
+        formatCommand = "bundle exec rubocop -a -f quiet ${INPUT}",
+        rootMarkers = { '.rubocop.yml' },
+    },
+    stylua = {
+        -- TODO: 動くように直す or lua_lsあるから不要かも
+        formatCommand = "stylua --config-path ./.stylua.toml --stdin-filepath ${INPUT}",
+        rootMarkers = { '.stylua.toml', 'stylua.toml' },
+    },
+}
+
+nvim_lsp.efm.setup({
+    on_attach = on_attach,
+    cmd = { 'efm-langserver', '-logfile', '/tmp/efm.log', '-loglevel', '5' },
+    init_options = { documentFormatting = true, codeAction = false },
+    filetypes = {
+        'javascript',
+        'typescript',
+        'javascriptreact',
+        'typescriptreact',
+        'ruby',
+        'lua',
+    },
+    settings = {
+        rootMarkers = { '.git/' },
+        languages = {
+            javascript = { efm_config.eslint, efm_config.prettier },
+            typescript = { efm_config.eslint, efm_config.prettier },
+            javascriptreact = { efm_config.eslint, efm_config.prettier },
+            typescriptreact = { efm_config.eslint, efm_config.prettier },
+            ruby = { efm_config.rubocop },
+            lua = { efm_config.stylua },
+        }
+    }
 })
