@@ -103,12 +103,14 @@
 
 ### nvim-lspconfig & lspsaga & telescope lsp
 
-- K コード定義を表示 hover(lspsaga)
-- gh definitionやreferenceをsagaで開く lsp finder(lspsaga)
+- K コード定義を表示 hover_doc ++quiet(lspsaga)
+- gh definitionやreferenceをsagaで開く finder(lspsaga)
 - rn まとめて命名変更 rename(lspsaga)
 - ga code action(lspsaga)
-- gd 定義元ジャンプ go to definition(lspsaga)
-- <space>e カーソル位置の診断詳細を表示する diagnostic open float(lspconfig)
+- gd 定義元ジャンプ goto_definition(lspsaga)
+- gp 定義元コードをpopup previewする peek_definition(lspsaga)
+- <space>e カーソル位置の診断詳細を表示する show_line_diagnostics(lspsaga)
+- <space>sw workspace内の辛酸詳細を表示する show_workspace_diagnostics(lspsaga)
 - [d 前の警告箇所 diagnostic goto prev(lspconfig)
 - ]d 次の警告箇所 diagnostic goto next(lspconfig)
 - gi code implementation(lspconfig)
