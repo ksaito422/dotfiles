@@ -1,168 +1,157 @@
-local status = pcall(require, 'packer')
-if not status then
-    print('Packer is not installed')
-    return
+local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
+if not vim.loop.fs_stat(lazypath) then
+  vim.fn.system({
+    "git",
+    "clone",
+    "--filter=blob:none",
+    "https://github.com/folke/lazy.nvim.git",
+    "--branch=stable", -- latest stable release
+    lazypath,
+  })
 end
+vim.opt.rtp:prepend(lazypath)
 
--- this file can be loaded by calling `lua require('plugins')` from your init.vim
-
--- only required if you have packer configured as `opt`
-vim.cmd.packadd('packer.nvim')
-
-require('packer').startup(function(use)
-    -- プラグイン
-    use('wbthomason/packer.nvim')
-
-    -- ------------------------------------------
-    -- 視認性Up plugins
-    -- ------------------------------------------
-
+require('lazy').setup({
     -- syntax highlight enable
-    use({
+    {
         'nvim-treesitter/nvim-treesitter',
-        run = ':TSUpdate',
-    })
+        build = ':TSUpdate',
+    },
 
     -- color schema
     -- use 'EdenEast/nightfox.nvim'
-    use('folke/tokyonight.nvim')
+    'folke/tokyonight.nvim',
 
     -- status line
-    use({
+    {
         'nvim-lualine/lualine.nvim',
-        -- statuslineにアイコンを表示
-        -- requires = { 'kyazdani42/nvim-web-devicons', opt = true }
-    })
-
-    -- font & file icon
-    use('lambdalisue/nerdfont.vim')
+        dependencies = { 'kyazdani42/nvim-web-devicons' },
+    },
 
     -- 対応する()のカラーリング
-    use('luochen1990/rainbow')
+    'luochen1990/rainbow',
 
     -- buffer lineにbufferを表示
-    use({
+    {
         'romgrk/barbar.nvim',
         -- bufferlineにアイコンを表示
-        requires = { 'kyazdani42/nvim-web-devicons' },
-    })
+        dependencies = { 'kyazdani42/nvim-web-devicons' },
+    },
 
     -- indentlineの表示
-    use('lukas-reineke/indent-blankline.nvim')
+    'lukas-reineke/indent-blankline.nvim',
 
     --	 TOML形式のsyntax highlight enable
-    use({ 'cespare/vim-toml', opt = true, ft = { 'toml' } })
+    {
+        'cespare/vim-toml',
+        ft = { 'toml' },
+    },
 
     -- カーソル下の単語を自動的にハイライト
-    use('RRethy/vim-illuminate')
+    'RRethy/vim-illuminate',
 
     -- markdown preview
-    use({
+    {
         'iamcco/markdown-preview.nvim',
-        run = function()
+        build = function()
             vim.fn['mkdp#util#install']()
         end,
-    })
+    },
 
     -- color cordの色を表示する
-    use({ 'norcalli/nvim-colorizer.lua', require('colorizer').setup() })
-
-    -- ------------------------------------------
-    -- 開発体験Up plugins
-    -- ------------------------------------------
+    {
+        'norcalli/nvim-colorizer.lua',
+        config = function()
+            require('colorizer').setup()
+        end,
+    },
 
     -- Gitの変更表示
-    use('lewis6991/gitsigns.nvim')
+    'lewis6991/gitsigns.nvim',
 
     -- ConflitMarger
-    use('rhysd/conflict-marker.vim')
+    'rhysd/conflict-marker.vim',
 
     -- lazygit(git ui)
-    use('kdheepak/lazygit.nvim')
+    'kdheepak/lazygit.nvim',
 
     -- git diff
-    use({ 'sindrets/diffview.nvim', requires = 'nvim-lua/plenary.nvim' })
+    {
+        'sindrets/diffview.nvim',
+        dependencies = 'nvim-lua/plenary.nvim',
+    },
 
     -- コメントアウト用 nvim-ts-context-commentstringと組み合わせる
-    use('numToStr/Comment.nvim')
+    'numToStr/Comment.nvim',
 
     -- jsx,tsxコメントアウト
-    use('JoosepAlviste/nvim-ts-context-commentstring')
+    'JoosepAlviste/nvim-ts-context-commentstring',
 
     -- TODO/HACK/BUGなどをhighlightする
-    use({
+    {
         'folke/todo-comments.nvim',
-        requires = 'nvim-lua/plenary.nvim',
-    })
+        dependencies = 'nvim-lua/plenary.nvim',
+    },
 
     -- ファジーファインダー
-    use({
+    {
         'nvim-telescope/telescope.nvim',
         tag = '0.1.1',
-        requires = 'nvim-lua/plenary.nvim',
-    })
+        dependencies = 'nvim-lua/plenary.nvim',
+    },
 
     -- HTMLタグのauto close & auto rename
-    use('windwp/nvim-ts-autotag')
+    'windwp/nvim-ts-autotag',
 
     -- 該当ソースをリモートリポジトリで開く
-    use('ruanyl/vim-gh-line')
-
-    -- ------------------------------------------
-    -- 操作性Up plugins
-    -- ------------------------------------------
+    'ruanyl/vim-gh-line',
 
     -- filer
-    use({
+    {
         'lambdalisue/fern.vim',
-        requires = {
-            -- file preview
+        dependencies = {
             'yuki-yano/fern-preview.vim',
-            -- filerのアイコン表示
-            'lambdalisue/fern-renderer-nerdfont.vim',
-            -- file treeにgitの差分を表示する
+            'lambdalisue/nerdfont.vim',
+            {
+                'lambdalisue/fern-renderer-nerdfont.vim',
+                config = function()
+                    vim.g['fern#renderer'] = "nerdfont"
+                end,
+                dependencies = { 'lambdalisue/nerdfont.vim' },
+            },
             'lambdalisue/fern-git-status.vim',
-            -- filerのiconをカラー表示
             'lambdalisue/glyph-palette.vim',
         },
-    })
+    },
 
     -- terminal
-    use('Shougo/deol.nvim')
+    'Shougo/deol.nvim',
 
     -- yank範囲のhighlight
-    use('machakann/vim-highlightedyank')
+    'machakann/vim-highlightedyank',
 
     -- windowのリサイズ
-    use('simeji/winresizer')
+    'simeji/winresizer',
 
     -- / or ? 検索のジャンプ拡張
-    use('hrsh7th/vim-searchx')
-
-    -- ------------------------------------------
-    -- Formater&Linter Plugins
-    -- ------------------------------------------
+    'hrsh7th/vim-searchx',
 
     -- spell check
-    use('kamykn/spelunker.vim')
+    'kamykn/spelunker.vim',
 
     -- spell check拡張のneovim対応
-    use('kamykn/popup-menu.nvim')
+    'kamykn/popup-menu.nvim',
 
     -- 対応する括弧などを補完
-    use('cohama/lexima.vim')
-
-    -- ------------------------------------------
-    -- Language protocol server plugins
-    -- ------------------------------------------
+    'cohama/lexima.vim',
 
     -- Neovim Builtin LSPが提供する構文を引っ張ってくる
-    -- use('Shougo/ddc-nvim-lsp')
+    -- 'Shougo/ddc-nvim-lsp'
 
     -- 入力補完
-    -- use({
+    -- {
     --     'Shougo/ddc.vim',
-    --     requires = {
+    --     dependencies = {
     --         -- 補完候補
     --         'Shougo/pum.vim',
     --         'Shougo/ddc-ui-pum',
@@ -179,12 +168,12 @@ require('packer').startup(function(use)
     --         -- path completion
     --         'tani/ddc-path',
     --     },
-    -- })
+    -- },
 
     -- 入力補完(completion, documentation, command line)
-    use({
+    {
         'hrsh7th/cmp-nvim-lsp',
-        requires = {
+        dependencies = {
             'hrsh7th/cmp-nvim-lsp',
             'hrsh7th/cmp-buffer',
             'hrsh7th/cmp-path',
@@ -193,112 +182,106 @@ require('packer').startup(function(use)
             'hrsh7th/nvim-cmp',
             'onsails/lspkind.nvim',
         },
-    })
+    },
 
     -- snipet
-    use({
+    {
         'hrsh7th/vim-vsnip',
-        requires = {
+        dependencies = {
             -- snipet
             'hrsh7th/vim-vsnip-integ',
             -- snipet
             'rafamadriz/friendly-snippets',
         },
-    })
+    },
 
     -- Neovim LSP config
-    use('neovim/nvim-lspconfig')
+    'neovim/nvim-lspconfig',
 
     -- LSP uiをカッコよくする
-    use({
+    {
         'nvimdev/lspsaga.nvim',
-        -- opt = true,
         branch = 'main',
-        -- event = 'LspAttach',
-    })
+    },
 
     -- LSP, DAP, Linter, Formatter manager
-    use('williamboman/mason.nvim')
+    'williamboman/mason.nvim',
 
     -- LSP, DAP, Linter, Formatter
-    use('williamboman/mason-lspconfig.nvim')
+    'williamboman/mason-lspconfig.nvim',
 
     -- LSP以外のformat,linter(prettier, rubocopなど)を動かすプラグイン
-    use({
-        'jose-elias-alvarez/null-ls.nvim',
-        requires = {
-            'nvim-lua/plenary.nvim',
-        },
-    })
-    -- use("w0rp/ale")
+    -- {
+    --     'jose-elias-alvarez/null-ls.nvim',
+    --     dependencies = { 'nvim-lua/plenary.nvim' },
+    -- },
 
-    -- ------------------------------------------
-    -- Debug adapter protocol plugins
-    -- ------------------------------------------
+    -- 'w0rp/ale',
 
     -- debug adapter protocol
-    use({
+    {
         'mfussenegger/nvim-dap',
-        requires = {
+        dependencies = {
             -- debug ui
             'rcarriga/nvim-dap-ui',
             -- debug for golang
-            { 'leoluz/nvim-dap-go', opt = true, ft = { 'go' } },
+            { 'leoluz/nvim-dap-go', ft = { 'go' } },
             -- debug for ruby
-            { 'suketa/nvim-dap-ruby', opt = true },
+            'suketa/nvim-dap-ruby',
         },
-    })
-
-    -- ------------------------------------------
-    -- 翻訳 plugins
-    -- ------------------------------------------
+    },
 
     -- :help language Japanese
-    use('vim-jp/vimdoc-ja')
+    'vim-jp/vimdoc-ja',
 
     -- ------------------------------------------
     -- other plugins(依存関係のためなど)
     -- ------------------------------------------
 
     -- 起動画面
-    use('goolord/alpha-nvim')
+    'goolord/alpha-nvim',
 
     -- cheatsheet
-    use({
+    {
         'reireias/vim-cheatsheet',
-        opt = true,
         cmd = { 'Cheat', 'EditCheat' },
-    })
+    },
 
-    use({
+    -- 通知やコマンドラインをカッコよくする
+    {
         'folke/noice.nvim',
-        requires = {
+        dependencies = {
             'MunifTanjim/nui.nvim',
             'rcarriga/nvim-notify',
         },
-    })
+    },
 
     -- Denoでプラグインを作るエコシステム
-    use({
+    {
         'vim-denops/denops.vim',
-        requires = {
+        dependencies = {
             -- 'Shougo/ddc.vim',
             -- 翻訳ツール
             'skanehira/denops-translate.vim',
         },
-    })
+    },
 
     -- plugin docを楽に生成するため
-    use('LeafCage/vimhelpgenerator')
+    'LeafCage/vimhelpgenerator',
+
+    -- dependencies plugins
+    'kyazdani42/nvim-web-devicons',
+    'lambdalisue/nerdfont.vim',
+    'nvim-lua/plenary.nvim',
 
     -- ------------------------------------------
     -- 自作プラグイン
     -- ------------------------------------------
 
-    use({
+    {
         'ksaito422/neosess',
         config = function()
             require('neosess').setup({})
         end,
-    })
-end)
+    },
+})
