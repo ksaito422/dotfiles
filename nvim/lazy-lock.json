@@ -29,7 +29,7 @@
   "markdown-preview.nvim": { "branch": "master", "commit": "02cc3874738bc0f86e4b91f09b8a0ac88aef8e96" },
   "mason-lspconfig.nvim": { "branch": "main", "commit": "dfdd771b792fbb4bad8e057d72558255695aa1a7" },
   "mason.nvim": { "branch": "main", "commit": "0942198fb9a998b6ccee36fb8dd7495eb8ba659c" },
-  "neosess": { "branch": "main", "commit": "b7394bd863cf08963b61f08f9fc57c7232be281d" },
+  "neosess": { "branch": "main", "commit": "9a2eee4f5eb86fa5475547d34852dadadf626e6e" },
   "nerdfont.vim": { "branch": "master", "commit": "85dcc800c94f7ab04e13900d6668faf86a0cdc78" },
   "noice.nvim": { "branch": "main", "commit": "74c2902146b080035beb19944baf6f014a954720" },
   "nui.nvim": { "branch": "main", "commit": "aa1b4c1e05983ff7debd2b4b2788651db099de2f" },
