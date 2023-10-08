@@ -93,7 +93,13 @@ nvim_lsp.lua_ls.setup({
     },
 })
 nvim_lsp.tflint.setup({ on_attach = on_attach })
-nvim_lsp.terraform_lsp.setup({ on_attach = on_attach })
+nvim_lsp.terraformls.setup({ on_attach = on_attach })
+vim.api.nvim_create_autocmd({'BufWritePre'}, {
+    pattern = {'*.tf', '*.tfvars'},
+    callback = function()
+        vim.lsp.buf.format()
+    end,
+})
 nvim_lsp.tsserver.setup({
     on_attach = on_attach,
     filetypes = {
@@ -140,6 +146,7 @@ nvim_lsp.efm.setup({
         'typescriptreact',
         'ruby',
         'lua',
+        'terraform',
     },
     settings = {
         rootMarkers = { '.git/' },
@@ -150,6 +157,8 @@ nvim_lsp.efm.setup({
             typescriptreact = { efm_config.eslint, efm_config.prettier },
             ruby = { efm_config.rubocop },
             lua = { efm_config.stylua },
+            hcl = { efm_config.terraform },
+            terraform = { efm_config.terraform },
         }
     }
 })
