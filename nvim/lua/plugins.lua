@@ -170,6 +170,9 @@ require('lazy').setup({
     --     },
     -- },
 
+    -- colorful cursor
+    'gen740/SmoothCursor.nvim',
+
     -- 入力補完(completion, documentation, command line)
     {
         'hrsh7th/cmp-nvim-lsp',
