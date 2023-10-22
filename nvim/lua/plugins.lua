@@ -242,6 +242,7 @@ require('lazy').setup({
         config = function()
             require('configs.fern')
         end,
+        event = 'VimEnter',
     },
 
     -- terminal
@@ -321,13 +322,7 @@ require('lazy').setup({
         config = function()
             require('configs.smooth-cursor')
         end,
-        event = {
-            'BufReadPre',
-            'BufNewFile',
-        },
-        cmd = {
-            'Fern',
-        },
+        event = 'VimEnter',
     },
 
     -- 入力補完(completion, documentation, command line)
