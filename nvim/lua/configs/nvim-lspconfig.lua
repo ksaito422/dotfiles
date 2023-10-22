@@ -1,36 +1,8 @@
 local keymap = vim.api.nvim_set_keymap
-local mStatus_ok, mason = pcall(require, 'mason')
-if not mStatus_ok then
+local status_ok, nvim_lsp = pcall(require, 'lspconfig')
+if not status_ok then
     return
 end
-
-local mlStatus_ok, mason_lsp = pcall(require, 'mason-lspconfig')
-if not mlStatus_ok then
-    return
-end
-
-local lStatus_ok, nvim_lsp = pcall(require, 'lspconfig')
-if not lStatus_ok then
-    return
-end
-
--------------------------------------------------------------------
--- mason
--------------------------------------------------------------------
-mason.setup({
-    ui = {
-        icons = {
-            package_installed = '✓',
-            package_pending = '➜',
-            package_uninstalled = '✗',
-        },
-    },
-})
-
--------------------------------------------------------------------
--- mason lsp
--------------------------------------------------------------------
-mason_lsp.setup()
 
 -------------------------------------------------------------------
 -- nvim-lspconfig
