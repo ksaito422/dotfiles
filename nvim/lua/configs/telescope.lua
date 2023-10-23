@@ -31,6 +31,11 @@ telescope.setup({
             width = 0.8,
         },
         file_ignore_patterns = { '^.git/', '^node_modules/' },
+        mappings = {
+            i = {
+                ['<c-d>'] = require('telescope.actions').delete_buffer
+            }
+        },
     },
     -- pickers = {
     -- find_files = {
