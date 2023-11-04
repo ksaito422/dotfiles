@@ -247,8 +247,12 @@ require('lazy').setup({
 
     -- terminal
     {
-        'Shougo/deol.nvim',
-        cmd = 'Deol',
+        'akinsho/toggleterm.nvim',
+        version = '*',
+        config = function()
+            require('configs/toggleterm')
+        end,
+        event = 'VimEnter',
     },
 
     -- yank範囲のhighlight
