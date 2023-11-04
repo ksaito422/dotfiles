@@ -44,7 +44,7 @@ M.default_keybinds = {
         }),
     },
     {
-        key = '-',
+        key = '\'',
         mods = 'CTRL',
         action = act({
             SplitVertical = { domain = 'CurrentPaneDomain' },
