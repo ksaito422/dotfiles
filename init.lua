@@ -13,3 +13,6 @@ hs.hotkey.bind({ 'CTRL' }, 'q', function()
         win:focus()
     end
 end)
+
+hs.loadSpoon('ShiftIt')
+spoon.ShiftIt:bindHotkeys({})
