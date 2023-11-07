@@ -222,6 +222,8 @@
 - <leader>gg open lagygit
 - <leader>gl LazyGitFilter
 - <leader>glc LazyGitFilterCurrentFile
+- <shift>j diffview down scroll
+- <shift>k diffview up scroll
 
 ### diffview
 
