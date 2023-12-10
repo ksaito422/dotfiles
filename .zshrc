@@ -163,6 +163,7 @@ alias greset='git reset'
 alias greseth='git reset --hard'
 alias gresets='git reset --soft HEAD'
 alias gremote= 'git remote'
+alias diff='git diff'
 
 ### vim
 # alias v='nvim'
