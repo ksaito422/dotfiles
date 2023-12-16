@@ -105,7 +105,7 @@ alias cdp='cd ~/work/project'
 alias eza-alias='alias | grep "eza"'
 alias ls='eza -1lF'
 alias la='eza -1aalF'
-alias lst='eza -lT'
+alias lt='eza -T -L 3 -a --icons -I "node_modules|.git|.cache"'
 
 ### bat
 alias bat-alias='alias | grep "bat"'
