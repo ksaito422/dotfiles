@@ -173,6 +173,9 @@ require('lazy').setup({
     -- jsx,tsxコメントアウト
     {
         'JoosepAlviste/nvim-ts-context-commentstring',
+        config = function()
+            require('configs.nvim-ts-context-commentstring')
+        end,
         event = {
             'BufReadPre',
             'BufNewFile',
@@ -195,7 +198,7 @@ require('lazy').setup({
     -- ファジーファインダー
     {
         'nvim-telescope/telescope.nvim',
-        tag = '0.1.1',
+        tag = '0.1.4',
         dependencies = 'nvim-lua/plenary.nvim',
         config = function()
             require('configs.telescope')
