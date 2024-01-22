@@ -417,6 +417,12 @@ require('lazy').setup({
             'BufNewFile',
         },
     },
+
+    -- github copilot
+    {
+        'github/copilot.vim',
+    },
+
     -- LSP以外のformat,linter(prettier, rubocopなど)を動かすプラグイン
     -- {
     --     'jose-elias-alvarez/null-ls.nvim',
