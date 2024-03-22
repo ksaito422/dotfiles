@@ -60,6 +60,8 @@ M.default_keybinds = {
     { key = '0', mods = 'CTRL', action = act.ResetFontSize },
     { key = '[', mods = 'SUPER|CTRL', action = act.MoveTabRelative(-1) },
     { key = ']', mods = 'SUPER|CTRL', action = act.MoveTabRelative(1) },
+    { key = 'P', mods = 'CTRL', action = act.ActivateCommandPalette },
+    { key = 'l', mods = 'ALT', action = act.ShowLauncher },
 }
 
 function M.create_keybinds()
