@@ -3,7 +3,7 @@ local wezterm = require('wezterm')
 local utils = require('utils')
 local act = wezterm.action
 
-M.leader = { key = 'q', mods = 'SUPER' }
+M.leader = { key = 'j', mods = 'SUPER' }
 
 M.tmux_keybinds = {
     { key = 't', mods = 'SUPER', action = act({ SpawnTab = 'CurrentPaneDomain' }) },
@@ -62,6 +62,25 @@ M.default_keybinds = {
     { key = ']', mods = 'SUPER|CTRL', action = act.MoveTabRelative(1) },
     { key = 'P', mods = 'CTRL', action = act.ActivateCommandPalette },
     { key = 'l', mods = 'ALT', action = act.ShowLauncher },
+    -- Show workspace
+    { key = 's', mods = 'LEADER', action = act.ShowLauncherArgs { flags = 'WORKSPACES' , title = "Select workspace" } },
+    -- Create new workspace
+    { key = 'S', mods = 'LEADER|SHIFT', action = act.PromptInputLine {
+      description = "(wezterm) Create new workspace:",
+      action = wezterm.action_callback(function(window, pane, line)
+        if line then
+          window:perform_action(
+            act.SwitchToWorkspace {
+              name = line,
+            },
+            pane
+          )
+        end
+      end),
+     }
+    },
+    { key = 'l', mods = 'LEADER', action = act.SwitchWorkspaceRelative(1) },
+    { key = 'h', mods = 'LEADER', action = act.SwitchWorkspaceRelative(-1) },
 }
 
 function M.create_keybinds()
