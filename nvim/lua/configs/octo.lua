@@ -3,9 +3,13 @@ if not status_ok then
     return
 end
 
+local keymap = vim.api.nvim_set_keymap
+
+keymap('n', '<leader>o', '<Cmd>Octo<CR>', { noremap = true })
+
 octo.setup({
     use_local_fs = false,
-    enable_builtin = false,
+    enable_builtin = true,
     default_remote = {'upstream', 'origin'},
     default_merge_method = 'commit',
     ssh_aliases = {},
