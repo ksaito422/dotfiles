@@ -11,6 +11,7 @@ export PRETTIERD_DEFAULT_CONFIG=$HOME/dotfiles/.prettierrc
 export VOLTA_HOME="$HOME/.volta"
 export PATH="$VOLTA_HOME/bin:$PATH"
 export XDG_CONFIG_HOME="$HOME/.config"
+export PATH="$HOME/.cargo/bin:$PATH"
 
 # Dockerイメージを「なりすまし」と「改ざん」から保護するセキュリティ機能
 export DOCKER_CONTENT_TRUST=0
