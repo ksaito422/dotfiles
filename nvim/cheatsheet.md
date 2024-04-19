@@ -223,17 +223,18 @@
 
 ### diffview
 
-- <leader>gd open diffview
-- <leader>gc close diffview
+- :DiffviewOpen HEAD~ open diffview
+- :DiffviewClose close diffview
+- <leader>gf file history
 - [c diffviewで次の変更箇所にジャンプする
 - ]c diffviewで前の変更箇所にジャンプする
 
 ### gitsigns
 
-- <leader>hb git blameで該当業の変更内容やコミットハッシュを表示する
+- <leader>gb git blameで該当行の変更内容やコミットハッシュを表示する
+- <leader>gd 該当ファイルのdiffを表示する
 
 ### vim-gh-line
 
 - <leader>gh blob view
-- <leader>gb blame view
 - <leader>go repo view

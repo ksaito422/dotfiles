@@ -155,6 +155,7 @@ require('lazy').setup({
         cmd = {
             'DiffviewOpen',
             'DiffviewClose',
+            'DiffviewFileHistory',
         },
     },
 
@@ -222,7 +223,7 @@ require('lazy').setup({
         'ruanyl/vim-gh-line',
         keys = {
             '<leader>gh',
-            '<leader>gb',
+            '<leader>go',
         },
     },
 

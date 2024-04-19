@@ -52,5 +52,5 @@ gitsigns.setup({
     },
 })
 
-keymap('n', '<leader>hb', '<cmd>lua require"gitsigns".blame_line{full=true}<CR>', { noremap = true, silent = true })
-keymap('n', '<leader>hd', '<cmd>Gitsigns diffthis<CR>', { noremap = true, silent = true })
+keymap('n', '<leader>gb', '<cmd>lua require"gitsigns".blame_line{full=true}<CR>', { noremap = true, silent = true })
+keymap('n', '<leader>gd', '<cmd>Gitsigns diffthis<CR>', { noremap = true, silent = true })
