@@ -531,7 +531,6 @@ require('lazy').setup({
 
     {
         'ksaito422/neosess',
-        dir = '~/work/project/dev/nvim-plug/neosess',
         config = function()
             require('neosess').setup({})
         end,
