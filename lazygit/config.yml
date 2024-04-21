@@ -41,8 +41,7 @@ gui:
   experimentalShowBranchHeads: false # visualize branch heads with (*) in commits list
   showBottomLine: true # for hiding the bottom information line (unless it has important information to tell you)
   showCommandLog: true
-  showIcons: true # deprecated: use nerdFontsVersion instead
-  nerdFontsVersion: "" # nerd fonts version to use ("2" or "3"); empty means don't show nerd font icons
+  nerdFontsVersion: "3" # nerd fonts version to use ("2" or "3"); empty means don't show nerd font icons
   commandLogSize: 8
   splitDiff: 'auto' # one of 'auto' | 'always'
   skipRewordInEditorWarning: false # for skipping the confirmation before launching the reword editor
@@ -76,8 +75,8 @@ git:
   autoFetch: true
   autoRefresh: true
   fetchAll: true # Pass --all flag when running git fetch. Set to false to fetch only origin (or the current branch's upstream remote if there is one)
-  branchLogCmd: 'git log --graph --color=always --abbrev-commit --decorate --date=relative --pretty=medium {{branchName}} --'
-  allBranchesLogCmd: 'git log --graph --all --color=always --abbrev-commit --decorate --date=relative  --pretty=medium'
+  allBranchesLogCmd: 'git log --graph --all --color=always --date=format:"%Y-%m-%d %H:%M" --pretty=format:"%C(#a0a0a0 reverse)%h%Creset %C(cyan)%ad%Creset %C(#ee7800)%ae%Creset %C(yellow reverse)%d%Creset %n%C(white bold)%s%Creset%n" {{branchName}}'
+  branchLogCmd: 'git log --graph --all --color=always --date=format:"%Y-%m-%d %H:%M" --pretty=format:"%C(#a0a0a0 reverse)%h%Creset %C(cyan)%ad%Creset %C(#ee7800)%ae%Creset %C(yellow reverse)%d%Creset %n%C(white bold)%s%Creset%n" {{branchName}}'
   overrideGpg: false # prevents lazygit from spawning a separate process when using GPG
   disableForcePushing: false
   parseEmoji: false
