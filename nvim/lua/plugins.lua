@@ -161,17 +161,6 @@ require('lazy').setup({
         },
     },
 
-    -- git diff
-    {
-        'sindrets/diffview.nvim',
-        dependencies = 'nvim-lua/plenary.nvim',
-        cmd = {
-            'DiffviewOpen',
-            'DiffviewClose',
-            'DiffviewFileHistory',
-        },
-    },
-
     -- コメントアウト用 nvim-ts-context-commentstringと組み合わせる
     {
         'numToStr/Comment.nvim',
