@@ -12,7 +12,8 @@ config = {
     font = wezterm.font_with_fallback({
         { family = 'Hack Nerd Font' },
     }),
-    color_scheme = 'tokyonight',
+    -- color_scheme = 'tokyonight',
+    color_scheme = 'kanagawabones',
     window_background_opacity = 0.9,
     window_padding = {
         left = 2,
