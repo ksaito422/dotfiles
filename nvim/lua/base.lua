@@ -52,7 +52,12 @@ opt.hidden = true
 opt.showcmd = true
 
 -- 現在の行を強調表示しない
-opt.cursorline = false
+opt.cursorline = true
+-- 現在の行番号だけ強調表示する
+vim.cmd([[
+    autocmd BufEnter * hi clear CursorLine
+]])
+-- 現在のカラムを強調表示しない
 opt.cursorcolumn = false
 -- highlight CursorLine cterm=underline ctermfg=NONE ctermbg=NONE
 
@@ -90,9 +95,6 @@ vim.cmd([[
 	autocmd FileType markdown setlocal tabstop=2 shiftwidth=2
 	autocmd FileType css setlocal tabstop=2 shiftwidth=2
 ]])
-
--- line番号左の色
-vim.cmd('highlight SignColumn guibg=none')
 
 -- 全てのjsonファイルをjsoncとして扱うようにする
 -- jsoncとして扱うことでcocのコメントアウト構文エラーが出力されないようにする
