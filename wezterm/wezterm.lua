@@ -15,6 +15,7 @@ config = {
     -- color_scheme = 'tokyonight',
     color_scheme = 'kanagawabones',
     window_background_opacity = 0.9,
+    macos_window_background_blur = 10,
     window_padding = {
         left = 2,
         right = 0,
