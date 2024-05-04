@@ -19,9 +19,6 @@ export DOCKER_CONTENT_TRUST=0
 # Rubyのバージョン管理ツール
 eval "$(rbenv init - zsh)"
 
-# github cliの補完
-eval "$(gh completion -s zsh)"
-
 # cd [tab]で以前移動したディレクトリを表示
 setopt auto_pushd
 # 直前と同じコマンドはヒストリに追加しない
@@ -76,8 +73,15 @@ HISTFILE=~/.zsh_history
 HISTSIZE=1000000
 SAVEHIST=1000000
 
-# コマンド入力時に直近の履歴を表示
-source $(brew --prefix)/share/zsh-autosuggestions/zsh-autosuggestions.zsh
+if type brew &>/dev/null
+then
+  # brewがインストールされている場合
+  # brewのzsh-completionsを読み込む
+  FPATH=$(brew --prefix)/share/zsh/site-functions:$FPATH
+  # コマンド入力時に直近の履歴を表示
+  source $(brew --prefix)/share/zsh-autosuggestions/zsh-autosuggestions.zsh
+  autoload -Uz compinit && compinit
+fi
 
 # 同時に起動したzshの間でヒストリを共有する
 setopt share_history
