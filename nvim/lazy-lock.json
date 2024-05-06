@@ -1,6 +1,6 @@
 {
   "Comment.nvim": { "branch": "master", "commit": "0236521ea582747b58869cb72f70ccfa967d2e89" },
-  "SmoothCursor.nvim": { "branch": "main", "commit": "cc8780622a7b7c328f774762fa2d97d9f83be828" },
+  "SmoothCursor.nvim": { "branch": "main", "commit": "d60c1995b13e5d8c446c78a850fe8a587fa0ddd6" },
   "alpha-nvim": { "branch": "main", "commit": "41283fb402713fc8b327e60907f74e46166f4cfd" },
   "barbar.nvim": { "branch": "master", "commit": "88fe247ba6453b6ac422f26eb047acaac1a6000a" },
   "cmp-buffer": { "branch": "main", "commit": "3022dbc9166796b644a841a02de8dd1cc1d311fa" },
