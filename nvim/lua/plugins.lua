@@ -66,11 +66,11 @@ require('lazy').setup({
         event = 'VimEnter',
     },
 
-    -- indentlineの表示
+    -- indent lineの表示
     {
-        'lukas-reineke/indent-blankline.nvim',
+        'shellRaining/hlchunk.nvim',
         config = function()
-            require('configs.indent-blankline')
+            require('configs.hlchunk')
         end,
         event = {
             'BufReadPre',
