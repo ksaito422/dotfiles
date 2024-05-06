@@ -37,7 +37,7 @@ require('lazy').setup({
     {
         'nvim-lualine/lualine.nvim',
         dependencies = {
-            'folke/tokyonight.nvim',
+            -- 'folke/tokyonight.nvim',
             'kyazdani42/nvim-web-devicons',
         },
         config = function()
