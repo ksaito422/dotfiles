@@ -60,5 +60,6 @@
   "vim-vsnip-integ": { "branch": "master", "commit": "1914e72cf3de70df7f5dde476cd299aba2440aef" },
   "vimdoc-ja": { "branch": "master", "commit": "4f5fbeb88bbc9d2c954e1be82dff56d706ed93c8" },
   "vimhelpgenerator": { "branch": "master", "commit": "6c9a583de297b2df54d24cd0d90e739f4d046866" },
+  "which-key.nvim": { "branch": "main", "commit": "4433e5ec9a507e5097571ed55c02ea9658fb268a" },
   "winresizer": { "branch": "master", "commit": "9bd559a03ccec98a458e60c705547119eb5350f3" }
 }
