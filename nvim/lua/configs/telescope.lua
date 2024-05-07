@@ -41,11 +41,12 @@ telescope.setup({
             }
         },
     },
-    -- extensions = {
-    --     file_browser = {
-    --         theme = 'ivy',
-    --     },
-    -- },
+    extensions = {
+        file_browser = {
+            -- theme = 'ivy',
+            hidden = { file_browser = true, folder_browser = true },
+        },
+    },
     -- pickers = {
     -- find_files = {
     --     theme = 'dropdown',
