@@ -47,6 +47,7 @@
   "rainbow": { "branch": "master", "commit": "61f719aebe0dc5c3048330c50db72cfee1afdd34" },
   "spelunker.vim": { "branch": "master", "commit": "a0bc530f62798bbe053905555a4aa9ed713485eb" },
   "telescope-file-browser.nvim": { "branch": "master", "commit": "4d5fd21bae12ee6e9a79232e1c377f43c419d0c5" },
+  "telescope-live-grep-args.nvim": { "branch": "master", "commit": "731a046da7dd3adff9de871a42f9b7fb85f60f47" },
   "telescope.nvim": { "branch": "master", "commit": "7011eaae0ac1afe036e30c95cf80200b8dc3f21a" },
   "todo-comments.nvim": { "branch": "main", "commit": "a7e39ae9e74f2c8c6dc4eea6d40c3971ae84752d" },
   "toggleterm.nvim": { "branch": "main", "commit": "066cccf48a43553a80a210eb3be89a15d789d6e6" },

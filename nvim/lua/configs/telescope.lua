@@ -7,7 +7,8 @@ end
 -- file picker
 keymap('n', '<leader>ff', ':Telescope find_files hidden=true<CR>', { noremap = true, silent = true })
 keymap('n', '<leader>fg', ':Telescope git_files hidden=true<CR>', { noremap = true, silent = true })
-keymap('n', '<leader>fl', ':Telescope live_grep hidden=true<CR>', { noremap = true, silent = true })
+keymap('n', '<leader>fl', ':lua require("telescope").extensions.live_grep_args.live_grep_args()<CR>', { noremap = true, silent = true })
+-- keymap('n', '<leader>fl', ':Telescope live_grep hidden=true<CR>', { noremap = true, silent = true })
 keymap('n', '<leader>fb', ':Telescope buffers<CR>', { noremap = true, silent = true })
 
 -- vim picker
@@ -76,3 +77,4 @@ telescope.setup({
 })
 
 telescope.load_extension 'file_browser'
+telescope.load_extension 'live_grep_args'
