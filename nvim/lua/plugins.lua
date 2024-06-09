@@ -446,13 +446,6 @@ require('lazy').setup({
         dependencies = {
             -- debug ui
             'rcarriga/nvim-dap-ui',
-            -- debug for golang
-            {
-                'leoluz/nvim-dap-go',
-                config = function()
-                    require('configs.nvim-dap-go')
-                end,
-            },
             -- debug for ruby
             {
                 'suketa/nvim-dap-ruby',
@@ -465,7 +458,7 @@ require('lazy').setup({
             require('configs.nvim-dap')
             require('configs.nvim-dap-ui')
         end,
-        ft = { 'ruby', 'go' },
+        ft = { 'ruby' },
     },
 
     -- :help language Japanese
