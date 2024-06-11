@@ -30,6 +30,7 @@ nvim_treesitter_configs.setup({
         'jq',
         'jsdoc',
         'json',
+        'jsonc',
         'json5',
         'lua',
         'make',
