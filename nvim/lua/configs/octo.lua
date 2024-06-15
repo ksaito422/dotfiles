@@ -40,7 +40,8 @@ octo.setup({
     timeout = 5000,
     default_to_projects_v2 = true,
     ui = {
-        user_signcolumn = true,
+        use_signcolumn = true,
+        use_statuscolumn = false, -- nvim 0.10.0 feature
     },
     issues = {
         order_by = {
