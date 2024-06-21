@@ -13,7 +13,7 @@
   "denops-translate.vim": { "branch": "main", "commit": "e72b7315023de72e7ef039f6e0cc9b71757b06c3" },
   "denops.vim": { "branch": "main", "commit": "c6fa7c615ea7209ece65b2322591f0dd0167358d" },
   "friendly-snippets": { "branch": "main", "commit": "682157939e57bd6a2c86277dfd4d6fbfce63dbac" },
-  "gitsigns.nvim": { "branch": "main", "commit": "f846c507242a74d9a458bff2d029bd2eae8c0ca1" },
+  "gitsigns.nvim": { "branch": "main", "commit": "e4efe9b99b7c473e9f917edf441cec48c05fd99e" },
   "hlchunk.nvim": { "branch": "main", "commit": "1754bb9fecb8ab4a68163b721ab3e1a744fcf4a7" },
   "kanagawa.nvim": { "branch": "master", "commit": "fe5b2c9e2549862c3dc3f3c8e9cf7ddece0f40c2" },
   "lazy.nvim": { "branch": "main", "commit": "bc620783663ab09d16bff9fdecc07da65b2a1528" },

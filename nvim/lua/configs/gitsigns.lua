@@ -5,19 +5,6 @@ if not status_ok then
 end
 
 gitsigns.setup({
-    signs = {
-        add = { text = '│', hl = 'GitSignsAdd', numhl = 'GitSignsAddNr', linehl = 'GitSignsAddLn' },
-        change = { text = '│', hl = 'GitSignsChange', numhl = 'GitSignsChangeNr', linehl = 'GitSignsChangeLn' },
-        delete = { text = '_', hl = 'GitSignsDelete', numhl = 'GitSignsDeleteNr', linehl = 'GitSignsDeleteLn' },
-        topdelete = { text = '‾', hl = 'GitSignsDelete', numhl = 'GitSignsDeleteNr', linehl = 'GitSignsDeleteLn' },
-        changedelete = {
-            text = '~',
-            hl = 'GitSignsChange',
-            numhl = 'GitSignsChangeDeleteNr',
-            linehl = 'GitSignsChangeLn',
-        },
-        untracked = { text = '┆' },
-    },
     signcolumn = true, -- Toggle with `:Gitsigns toggle_signs`
     numhl = true, -- Toggle with `:Gitsigns toggle_numhl`
     linehl = false, -- Toggle with `:Gitsigns toggle_linehl`
