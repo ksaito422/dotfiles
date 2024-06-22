@@ -84,6 +84,7 @@ require('lazy').setup({
         config = function()
             require('configs.hlchunk')
         end,
+        commit = '2b600d9',
         event = {
             'BufReadPre',
             'BufNewFile',
@@ -446,6 +447,7 @@ require('lazy').setup({
         dependencies = {
             -- debug ui
             'rcarriga/nvim-dap-ui',
+            'nvim-neotest/nvim-nio',
             -- debug for ruby
             {
                 'suketa/nvim-dap-ruby',
