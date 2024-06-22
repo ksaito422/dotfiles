@@ -34,9 +34,6 @@ gitsigns.setup({
         row = 0,
         col = 1,
     },
-    yadm = {
-        enable = false,
-    },
 })
 
 keymap('n', '<leader>gb', '<cmd>lua require"gitsigns".blame_line{full=true}<CR>', { noremap = true, silent = true })
