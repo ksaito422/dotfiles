@@ -51,12 +51,8 @@ opt.hidden = true
 -- 入力中のコマンドをstatus lineに表示する
 opt.showcmd = true
 
--- 現在の行を強調表示しない
+-- 現在の行を強調表示する
 opt.cursorline = true
--- 現在の行番号だけ強調表示する
-vim.cmd([[
-    autocmd BufEnter * hi clear CursorLine
-]])
 -- 現在のカラムを強調表示しない
 opt.cursorcolumn = false
 -- highlight CursorLine cterm=underline ctermfg=NONE ctermbg=NONE
