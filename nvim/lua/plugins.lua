@@ -242,10 +242,13 @@ require('lazy').setup({
     -- 該当ソースをリモートリポジトリで開く
     {
         'ruanyl/vim-gh-line',
-        keys = {
-            '<leader>gh',
-            '<leader>go',
-        },
+        config = function()
+            local g = vim.g
+            g.gh_line_map = '<leader>gh'
+            -- g.gh_line_blame_map = '<leader>gb'
+            g.gh_line_open_map = '<leader>go'
+            g.gh_open_command = 'fn() { echo "$@" | pbcopy; }; fn '
+        end,
     },
 
     -- filer
