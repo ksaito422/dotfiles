@@ -51,13 +51,16 @@ nvim_lsp.lua_ls.setup({
     on_attach = on_attach,
     settings = {
         Lua = {
-            diagnostics = {
-                globals = { 'vim' },
-            },
             workspace = {
                 library = vim.api.nvim_get_runtime_file('', true),
             },
             telemetry = {
+                enable = false,
+            },
+            diagnostics = {
+                enable = true,
+            },
+            format = {
                 enable = false,
             },
         },
@@ -101,8 +104,8 @@ local efm_config = {
     },
     stylua = {
         -- TODO: 動くように直す or lua_lsあるから不要かも
-        formatCommand = "stylua --config-path ./.stylua.toml --stdin-filepath ${INPUT}",
-        rootMarkers = { '.stylua.toml', 'stylua.toml' },
+        formatCommand = "stylua --config-path .stylua.toml --stdin-filepath ${INPUT} -",
+        formatStdin = true,
     },
 }
 
