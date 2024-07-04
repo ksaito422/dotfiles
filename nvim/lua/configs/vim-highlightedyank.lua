@@ -1,1 +1,2 @@
-vim.cmd('let g:highlightedyank_highlight_duration = 150')
+vim.cmd("let g:highlightedyank_highlight_duration = 150")
+

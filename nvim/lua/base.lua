@@ -14,9 +14,9 @@
 local opt = vim.opt
 
 -- 文字コードの設定
-opt.encoding = 'utf-8'
+opt.encoding = "utf-8"
 -- ヘルプの言語
-opt.helplang = 'ja,en'
+opt.helplang = "ja,en"
 
 -- カーソル位置の表示
 opt.ruler = true
@@ -26,7 +26,7 @@ opt.number = true
 opt.relativenumber = true
 
 -- 行末の1文字先までカーソルを移動できるように
-opt.virtualedit = 'onemore'
+opt.virtualedit = "onemore"
 -- 改行時の自動インデント
 opt.autoindent = true
 
@@ -109,14 +109,14 @@ opt.winblend = 20
 opt.showtabline = 2
 
 -- マウス操作
-opt.mouse = 'a'
-opt.clipboard = 'unnamed'
+opt.mouse = "a"
+opt.clipboard = "unnamed"
 
 -- spelunker.vimの機能を使うためspell checkをoff
 opt.spell = false
 
 -- lsp,breakpoint,diffをcolumnnumberの横に常に表示する
-opt.signcolumn = 'yes:1'
+opt.signcolumn = "yes:1"
 vim.cmd([[
     augroup transparent_signs
         au!

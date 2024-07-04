@@ -1,6 +1,7 @@
-local status_ok, mason_lsp = pcall(require, 'mason-lspconfig')
+local status_ok, mason_lsp = pcall(require, "mason-lspconfig")
 if not status_ok then
-    return
+  return
 end
 
 mason_lsp.setup()
+

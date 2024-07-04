@@ -8,9 +8,9 @@ vim.cmd([[
 ]])
 
 if not vim.g.vscode then
-    -- vim.cmd([[colorscheme tokyonight-night]])
-    -- vim.cmd([[colorscheme gruber-darker]])
-    vim.cmd([[colorscheme kanagawa]])
-    -- vim.cmd([[colorscheme kanagawa-wave]])
-    -- vim.cmd([[colorscheme kanagawa-dragon]])
+  -- vim.cmd([[colorscheme tokyonight-night]])
+  -- vim.cmd([[colorscheme gruber-darker]])
+  vim.cmd([[colorscheme kanagawa]])
+  -- vim.cmd([[colorscheme kanagawa-wave]])
+  -- vim.cmd([[colorscheme kanagawa-dragon]])
 end

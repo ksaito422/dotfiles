@@ -1,20 +1,20 @@
 local keymap = vim.api.nvim_set_keymap
 
 -- Overwrite / and ?.
-keymap('n', '?', '<Cmd>call searchx#start({ "dir": 0 })<CR>', { noremap = true })
-keymap('n', '/', '<Cmd>call searchx#start({ "dir": 1 })<CR>', { noremap = true })
-keymap('x', '?', '<Cmd>call searchx#start({ "dir": 0 })<CR>', { noremap = true })
-keymap('x', '/', '<Cmd>call searchx#start({ "dir": 1 })<CR>', { noremap = true })
-keymap('c', ';', '<Cmd>call searchx#select()<CR>', { noremap = true })
+keymap("n", "?", '<Cmd>call searchx#start({ "dir": 0 })<CR>', { noremap = true })
+keymap("n", "/", '<Cmd>call searchx#start({ "dir": 1 })<CR>', { noremap = true })
+keymap("x", "?", '<Cmd>call searchx#start({ "dir": 0 })<CR>', { noremap = true })
+keymap("x", "/", '<Cmd>call searchx#start({ "dir": 1 })<CR>', { noremap = true })
+keymap("c", ";", "<Cmd>call searchx#select()<CR>", { noremap = true })
 
 -- Move to next/prev match.
-keymap('n', 'N', '<Cmd>call searchx#prev_dir()<CR>', { noremap = true })
-keymap('n', 'n', '<Cmd>call searchx#next_dir()<CR>', { noremap = true })
-keymap('x', 'N', '<Cmd>call searchx#prev_dir()<CR>', { noremap = true })
-keymap('x', 'n', '<Cmd>call searchx#next_dir()<CR>', { noremap = true })
+keymap("n", "N", "<Cmd>call searchx#prev_dir()<CR>", { noremap = true })
+keymap("n", "n", "<Cmd>call searchx#next_dir()<CR>", { noremap = true })
+keymap("x", "N", "<Cmd>call searchx#prev_dir()<CR>", { noremap = true })
+keymap("x", "n", "<Cmd>call searchx#next_dir()<CR>", { noremap = true })
 
 -- Clear highlights
-keymap('n', '<C-l>', '<Cmd>call searchx#clear()<CR>', { noremap = true })
+keymap("n", "<C-l>", "<Cmd>call searchx#clear()<CR>", { noremap = true })
 
 vim.cmd([[
 	let g:searchx = {}

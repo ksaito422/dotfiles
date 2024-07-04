@@ -13,5 +13,5 @@ vim.cmd([[
 
 ]])
 
-keymap('n', '<Leader>?', '<Cmd>Cheat<CR>', { noremap = true })
-keymap('n', '<Leader>ec', '<Cmd>EditCheat<CR>', { noremap = true })
+keymap("n", "<Leader>?", "<Cmd>Cheat<CR>", { noremap = true })
+keymap("n", "<Leader>ec", "<Cmd>EditCheat<CR>", { noremap = true })

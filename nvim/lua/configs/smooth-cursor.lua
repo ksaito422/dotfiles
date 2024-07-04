@@ -1,10 +1,10 @@
-local status, smooth = pcall(require, 'smoothcursor')
+local status, smooth = pcall(require, "smoothcursor")
 if not status then
-    return
+  return
 end
 
 smooth.setup({
-    fancy = {
-        enable = true
-    }
+  fancy = {
+    enable = true,
+  },
 })
