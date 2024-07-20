@@ -79,6 +79,7 @@ opt.shiftwidth = 4
 vim.cmd([[
 	autocmd FileType cpp setlocal tabstop=2 shiftwidth=2
 	autocmd FileType ruby setlocal tabstop=2 shiftwidth=2
+	autocmd FileType lua setlocal tabstop=2 shiftwidth=2
 	autocmd FileType javascript setlocal tabstop=2 shiftwidth=2
 	autocmd FileType typescript setlocal tabstop=2 shiftwidth=2
 	autocmd FileType javascriptreact setlocal tabstop=2 shiftwidth=2
