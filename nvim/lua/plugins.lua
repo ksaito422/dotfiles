@@ -514,6 +514,10 @@ require("lazy").setup({
       -- 翻訳ツール
       { "skanehira/denops-translate.vim" },
     },
+    config = function()
+      -- TODO: Neovim0.10.0に上げたら消す
+      vim.g.denops_disable_version_check = 1
+    end,
     event = { "BufReadPre" },
     cmd = { "Translate" },
   },
