@@ -514,10 +514,6 @@ require("lazy").setup({
       -- 翻訳ツール
       { "skanehira/denops-translate.vim" },
     },
-    config = function()
-      -- TODO: Neovim0.10.0に上げたら消す
-      vim.g.denops_disable_version_check = 1
-    end,
     event = { "BufReadPre" },
     cmd = { "Translate" },
   },
@@ -548,5 +544,16 @@ require("lazy").setup({
       "NeosessList",
       "NeosessSave",
     },
+  },
+
+  {
+    "ksaito422/remote-line.nvim",
+    dir = "~/work/project/dev/nvim-plug/remote-line.nvim",
+    config = function()
+      require("remote-line").setup({})
+    end,
+    cmd = {
+      "OpenRemote",
+    }
   },
 })
