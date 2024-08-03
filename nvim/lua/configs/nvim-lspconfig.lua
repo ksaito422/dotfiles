@@ -46,6 +46,17 @@ nvim_lsp.solargraph.setup({
     },
   },
 })
+-- solargraphのみだと参照先リストなどの一部の機能が使えないのでruby-lspと併用する
+nvim_lsp.ruby_lsp.setup({
+  on_attach = on_attach,
+  cmd = { "ruby-lsp" },
+  filetypes = { "ruby" },
+  root_dir = nvim_lsp.util.root_pattern("Gemfile", ".git"),
+  init_options = {
+    formatting = 'auto',
+  },
+  single_file_support = true,
+})
 nvim_lsp.clangd.setup({ on_attach = on_attach })
 nvim_lsp.lua_ls.setup({
   on_attach = on_attach,
@@ -96,12 +107,6 @@ local efm_config = {
     formatCommand = "./node_modules/.bin/prettier",
     rootMarkers = { "package.json" },
   },
-  rubocop = {
-    lintCommand = "bundle exec rubocop --force-exclusion",
-    -- NOTE: timeoutするけどファイルリロードしたらフォーマットされているかも
-    formatCommand = "bundle exec rubocop -a -f quiet ${INPUT}",
-    rootMarkers = { ".rubocop.yml" },
-  },
   stylua = {
     -- TODO: 動くように直す or lua_lsあるから不要かも
     formatCommand = "stylua --config-path .stylua.toml --stdin-filepath ${INPUT} -",
@@ -118,7 +123,6 @@ nvim_lsp.efm.setup({
     "typescript",
     "javascriptreact",
     "typescriptreact",
-    "ruby",
     "lua",
     "terraform",
   },
@@ -129,7 +133,6 @@ nvim_lsp.efm.setup({
       typescript = { efm_config.eslint, efm_config.prettier },
       javascriptreact = { efm_config.eslint, efm_config.prettier },
       typescriptreact = { efm_config.eslint, efm_config.prettier },
-      ruby = { efm_config.rubocop },
       lua = { efm_config.stylua },
       hcl = { efm_config.terraform },
       terraform = { efm_config.terraform },
