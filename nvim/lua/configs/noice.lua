@@ -8,10 +8,6 @@ if not notify_status_ok then
   return
 end
 
-notify.setup({
-  background_colour = "#000000",
-})
-
 noice.setup({
   lsp = {
     -- override markdown rendering so that **cmp** and other plugins use **Treesitter**
@@ -20,6 +16,14 @@ noice.setup({
       ["vim.lsp.util.stylize_markdown"] = true,
       ["cmp.entry.get_documentation"] = true,
     },
+  },
+  messages = {
+    enabled = true,
+    view = "mini",
+    view_error = "mini",
+    view_warn = "mini",
+    view_history = "mini",
+    view_search = "mini",
   },
   -- you can enable a preset for easier configuration
   presets = {
