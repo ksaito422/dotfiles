@@ -548,12 +548,12 @@ require("lazy").setup({
 
   {
     "ksaito422/remote-line.nvim",
-    dir = "~/work/project/dev/nvim-plug/remote-line.nvim",
+    -- dir = "~/work/project/dev/nvim-plug/remote-line.nvim",
     config = function()
       require("remote-line").setup({})
     end,
     cmd = {
-      "OpenRemote",
+      "RemoteLine",
     }
   },
 })
