@@ -239,18 +239,6 @@ require("lazy").setup({
     ft = { "html", "jsx", "tsx", "javascriptreact", "typescriptreact" },
   },
 
-  -- 該当ソースをリモートリポジトリで開く
-  {
-    "ruanyl/vim-gh-line",
-    config = function()
-      local g = vim.g
-      g.gh_line_map = "<leader>gh"
-      -- g.gh_line_blame_map = '<leader>gb'
-      g.gh_line_open_map = "<leader>go"
-      g.gh_open_command = 'fn() { echo "$@" | pbcopy; }; fn '
-    end,
-  },
-
   -- filer
   {
     "nvim-telescope/telescope-file-browser.nvim",
@@ -546,14 +534,18 @@ require("lazy").setup({
     },
   },
 
+  -- 該当ソースをリモートリポジトリで開く
   {
     "ksaito422/remote-line.nvim",
     -- dir = "~/work/project/dev/nvim-plug/remote-line.nvim",
     config = function()
-      require("remote-line").setup({})
+      require("remote-line").setup({
+        vim.api.nvim_set_keymap("n", "<leader>gh", "<Cmd>RemoteLine<CR>", { noremap = true, silent = true })
+      })
     end,
-    cmd = {
-      "RemoteLine",
-    }
+    event = {
+      "BufReadPre",
+      "BufNewFile",
+    },
   },
 })
