@@ -25,9 +25,10 @@ require("lazy").setup({
   -- color schema
   -- use 'EdenEast/nightfox.nvim'
   {
-    -- 'folke/tokyonight.nvim',
+    'folke/tokyonight.nvim',
     -- 'blazkowolf/gruber-darker.nvim',
-    "rebelot/kanagawa.nvim",
+    -- "rebelot/kanagawa.nvim",
+    -- "0xstepit/flow.nvim",
     config = function()
       require("configs.colorscheme")
     end,
@@ -540,7 +541,7 @@ require("lazy").setup({
     -- dir = "~/work/project/dev/nvim-plug/remote-line.nvim",
     config = function()
       require("remote-line").setup({
-        vim.api.nvim_set_keymap("n", "<leader>gh", "<Cmd>RemoteLine<CR>", { noremap = true, silent = true })
+        vim.api.nvim_set_keymap("n", "<leader>gh", "<Cmd>RemoteLine<CR>", { noremap = true, silent = true }),
       })
     end,
     event = {
