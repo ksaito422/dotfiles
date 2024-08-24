@@ -112,11 +112,8 @@ require("lazy").setup({
 
   -- markdown preview
   {
-    "iamcco/markdown-preview.nvim",
-    build = function()
-      vim.fn["mkdp#util#install"]()
-    end,
-    ft = { "markdown" },
+    "OXY2DEV/markview.nvim",
+    lazy = false,
   },
 
   -- color codeの色を表示する
