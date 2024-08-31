@@ -54,7 +54,7 @@ function left-prompt {
   back_color='%{\e[48;2;' # set background color
   reset='%{\e[0m%}'   # reset
   sharp='\uE0B0'      # trianglei
-  
+
   user="${back_color}${name_b}m%}${text_color}${name_t}m%}%n${reset}"
   dir="${back_color}${path_b}m%}${text_color}${path_t}m%}%~${reset}"
   git="${back_color}${name_b}m%}${text_color}${name_t}m%}\$vcs_info_msg_0_${reset}"
@@ -193,9 +193,17 @@ else
     export EDITOR="nvim"
 fi
 
+# pecoでヒストリ検索
+function peco-select-history() {
+  BUFFER=$(\history -n -r 1 | peco --query "$LBUFFER")
+  CURSOR=$#BUFFER
+  zle clear-screen
+}
+zle -N peco-select-history
+bindkey '^r' peco-select-history
+
 # The next line updates PATH for the Google Cloud SDK.
 if [ -f '/Users/saito/google-cloud-sdk/path.zsh.inc' ]; then . '/Users/saito/google-cloud-sdk/path.zsh.inc'; fi
 
 # The next line enables shell command completion for gcloud.
 # if [ -f '/Users/saito/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/saito/google-cloud-sdk/completion.zsh.inc'; fi
-
