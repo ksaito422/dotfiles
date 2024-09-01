@@ -42,45 +42,17 @@ telescope.setup({
     },
     file_ignore_patterns = { "^.git/", "^node_modules/" },
     mappings = {
-      i = {
-        ["<c-d>"] = require("telescope.actions").delete_buffer,
+      n = {
+        ["d"] = require("telescope.actions").delete_buffer,
       },
     },
   },
   extensions = {
     file_browser = {
-      -- theme = 'ivy',
       hidden = { file_browser = true, folder_browser = true },
     },
   },
-  -- pickers = {
-  -- find_files = {
-  --     theme = 'dropdown',
-  -- },
-  -- git_files = {
-  --     theme = 'dropdown',
-  -- },
-  -- live_grep = {
-  --     theme = 'ivy',
-  -- },
-  -- buffers = {
-  --     theme = 'ivy',
-  -- },
-  -- oldfiles = {
-  --     theme = 'dropdown',
-  -- },
-  -- command_history = {
-  --     theme = 'ivy',
-  -- },
-  -- search_history = {
-  --     theme = 'ivy',
-  -- },
-  -- diagnostics = {
-  --     theme = 'ivy',
-  -- },
-  -- }
 })
 
 telescope.load_extension("file_browser")
 telescope.load_extension("live_grep_args")
-
