@@ -69,7 +69,7 @@ nvim_lsp.lua_ls.setup({
         enable = false,
       },
       diagnostics = {
-        enable = true,
+        enable = false,
       },
       format = {
         enable = false,
@@ -108,9 +108,14 @@ local efm_config = {
     rootMarkers = { "package.json" },
   },
   stylua = {
-    -- TODO: 動くように直す or lua_lsあるから不要かも
     formatCommand = "stylua --config-path .stylua.toml --stdin-filepath ${INPUT} -",
     formatStdin = true,
+    rootMarkers = { "stylua.toml", ".stylua.toml" },
+  },
+  selene = {
+    lintCommand = "selene --display-style quiet ${INPUT} -",
+    lintStdin = true,
+    rootMarkers = { "selene.toml" },
   },
 }
 
@@ -133,7 +138,7 @@ nvim_lsp.efm.setup({
       typescript = { efm_config.eslint, efm_config.prettier },
       javascriptreact = { efm_config.eslint, efm_config.prettier },
       typescriptreact = { efm_config.eslint, efm_config.prettier },
-      lua = { efm_config.stylua },
+      lua = { efm_config.stylua, efm_config.selene },
       hcl = { efm_config.terraform },
       terraform = { efm_config.terraform },
     },

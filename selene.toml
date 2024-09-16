@@ -1,0 +1,11 @@
+# std = "neovim"
+
+[rules]
+empty_if = "deny"
+deprecated = "warn"
+unused_variable = "warn"
+undefined_variable = "warn"
+global_usage = "allow"
+multiple_statements = "allow"
+incorrect_standard_library_use = "allow"
+mixed_table = "allow"
