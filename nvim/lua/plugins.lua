@@ -25,7 +25,7 @@ require("lazy").setup({
   -- color schema
   -- use 'EdenEast/nightfox.nvim'
   {
-    'folke/tokyonight.nvim',
+    "folke/tokyonight.nvim",
     -- 'blazkowolf/gruber-darker.nvim',
     -- "rebelot/kanagawa.nvim",
     -- "0xstepit/flow.nvim",
@@ -424,8 +424,11 @@ require("lazy").setup({
 
   -- LSP以外のformat,linter(prettier, rubocopなど)を動かすプラグイン
   -- {
-  --     'jose-elias-alvarez/null-ls.nvim',
-  --     dependencies = { 'nvim-lua/plenary.nvim' },
+  --   "nvimtools/none-ls.nvim",
+  --   dependencies = { "nvim-lua/plenary.nvim" },
+  --   config = function()
+  --     require("configs.null-ls")
+  --   end,
   -- },
 
   -- 'w0rp/ale',
