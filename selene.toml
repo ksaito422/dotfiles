@@ -1,4 +1,4 @@
-# std = "neovim"
+std = "vim"
 
 [rules]
 almost_swapped = "deny"
