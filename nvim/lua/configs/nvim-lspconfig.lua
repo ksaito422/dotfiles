@@ -53,7 +53,7 @@ nvim_lsp.ruby_lsp.setup({
   filetypes = { "ruby" },
   root_dir = nvim_lsp.util.root_pattern("Gemfile", ".git"),
   init_options = {
-    formatting = 'auto',
+    formatting = "auto",
   },
   single_file_support = true,
 })
@@ -144,4 +144,5 @@ nvim_lsp.efm.setup({
       terraform = { efm_config.terraform },
     },
   },
+  logLevel = vim.lsp.protocol.MessageType.Log,
 })
