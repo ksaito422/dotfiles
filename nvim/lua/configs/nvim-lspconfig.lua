@@ -116,6 +116,7 @@ local efm_config = {
     lintCommand = "selene --display-style quiet ${INPUT} -",
     lintStdin = true,
     rootMarkers = { "selene.toml" },
+    lintFormats = { "%f:%l:%c: %t%*[^:]: %m" },
   },
 }
 
