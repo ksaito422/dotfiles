@@ -4,16 +4,17 @@ if not status_ok then
 end
 
 null_ls.setup({
+  debug = true,
   sources = {
     -- js,ts,jsx,tsx
     -- ローカルおよびグローバルのeslintのコード診断機能を利用する
-    null_ls.builtins.diagnostics.eslint.with({
-      prefer_local = "node_modules/.bin", -- プロジェクトローカルがある場合はそれを利用
-    }),
+    -- null_ls.builtins.diagnostics.eslint.with({
+    --   prefer_local = "node_modules/.bin", -- プロジェクトローカルがある場合はそれを利用
+    -- }),
     -- ローカルおよびグローバルのPrettierをFormatに利用する
-    null_ls.builtins.formatting.prettier.with({
-      prefer_local = "node_modules/.bin", -- プロジェクトローカルがある場合はそれを利用
-    }),
+    -- null_ls.builtins.formatting.prettier.with({
+    --   prefer_local = "node_modules/.bin", -- プロジェクトローカルがある場合はそれを利用
+    -- }),
     -- ruby
     null_ls.builtins.diagnostics.rubocop.with({
       condition = function(utils)
@@ -32,6 +33,14 @@ null_ls.setup({
     --     -- args = vim.list_extend({ 'exec', 'rubocop' }, null_ls.builtins.formatting.rubocop._opts.args),
     --     args = { 'exec', 'rubocop', '-A', '-f', 'quiet', '--stderr', '--stdin', '$FILENAME' },
     -- }),
-    null_ls.builtins.formatting.stylua,
+    -- null_ls.builtins.formatting.stylua,
+    -- null_ls.builtins.diagnostics.selene.with({
+    --   condition = function(utils)
+    --     return utils.root_has_file({ "selene.toml", ".selene.toml" })
+    --   end,
+    --   -- command = "/Users/saito/dotfiles/nvim/lua/configs/script.sh",
+    --   command = "selene",
+    --   args = { "--display-style", "quiet", "-" },
+    -- }),
   },
 })
