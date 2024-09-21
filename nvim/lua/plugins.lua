@@ -239,11 +239,23 @@ require("lazy").setup({
 
   -- filer
   {
-    "nvim-telescope/telescope-file-browser.nvim",
+    "lambdalisue/fern.vim",
     dependencies = {
-      "nvim-telescope/telescope.nvim",
-      "nvim-lua/plenary.nvim",
+      "yuki-yano/fern-preview.vim",
+      "lambdalisue/nerdfont.vim",
+      {
+        "lambdalisue/fern-renderer-nerdfont.vim",
+        config = function()
+          vim.g["fern#renderer"] = "nerdfont"
+        end,
+        dependencies = { "lambdalisue/nerdfont.vim" },
+      },
+      "lambdalisue/fern-git-status.vim",
+      "lambdalisue/glyph-palette.vim",
     },
+    config = function()
+      require("configs.fern")
+    end,
     event = "VimEnter",
   },
 

@@ -27,10 +27,6 @@ keymap("n", "<leader>vs", ":Telescope search_history<CR>", { noremap = true, sil
 -- keymap('n', '<leader>lr', ':Telescope lsp_references<CR>', { noremap = true, silent = true })
 keymap("n", "<leader>ld", ":Telescope diagnostics<CR>", { noremap = true, silent = true })
 
--- filer
--- keymap('n', '<C-b>', ':Telescope file_browser<CR>', { noremap = true, silent = true })
-keymap("n", "<C-b>", ":Telescope file_browser path=%:p:h select_buffer=true<CR>", { noremap = true, silent = true })
-
 telescope.setup({
   defaults = {
     sorting_strategy = "ascending",
@@ -47,12 +43,6 @@ telescope.setup({
       },
     },
   },
-  extensions = {
-    file_browser = {
-      hidden = { file_browser = true, folder_browser = true },
-    },
-  },
 })
 
-telescope.load_extension("file_browser")
 telescope.load_extension("live_grep_args")
