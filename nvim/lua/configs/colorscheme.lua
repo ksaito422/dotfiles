@@ -8,7 +8,13 @@ vim.cmd([[
 ]])
 
 if not vim.g.vscode then
-  vim.cmd([[colorscheme tokyonight-moon]])
+  -- FIX: エラーになるので、13の色を独自に指定
+  vim.cmd([[
+    let g:terminal_color_13 = '#000'
+    colorscheme tokyonight-moon
+  ]])
+  -- vim.cmd([[colorscheme tokyonight]])
+  -- vim.cmd([[colorscheme tokyonight-storm]])
   -- vim.cmd([[colorscheme gruber-darker]])
   -- vim.cmd([[colorscheme kanagawa]])
   -- vim.cmd([[colorscheme kanagawa-wave]])
