@@ -12,9 +12,9 @@ config = {
   font = wezterm.font_with_fallback({
     { family = "Hack Nerd Font" },
   }),
-  -- color_scheme = 'tokyonight',
-  color_scheme = "kanagawabones",
-  window_background_opacity = 0.9,
+  color_scheme = "tokyonight-moon",
+  -- color_scheme = "kanagawabones",
+  window_background_opacity = 0.8,
   macos_window_background_blur = 10,
   window_padding = {
     left = 2,
@@ -22,7 +22,19 @@ config = {
     top = 0,
     bottom = 0,
   },
-  window_decorations = "TITLE | RESIZE",
+  window_decorations = "RESIZE",
+  show_tabs_in_tab_bar = true,
+  window_frame = {
+    inactive_titlebar_bg = "none",
+    active_titlebar_bg = "none",
+  },
+  show_new_tab_button_in_tab_bar = false,
+  -- show_close_tab_button_in_tabs = false,
+  colors = {
+    tab_bar = {
+      inactive_tab_edge = "none",
+    },
+  },
   inactive_pane_hsb = {
     saturation = 0.8,
     brightness = 0.7,

@@ -50,6 +50,7 @@ M.default_keybinds = {
       SplitVertical = { domain = "CurrentPaneDomain" },
     }),
   },
+  { key = "C", mods = "LEADER", action = act.ActivateCopyMode },
   { key = "c", mods = "SUPER", action = act({ CopyTo = "Clipboard" }) },
   { key = "v", mods = "SUPER", action = act({ PasteFrom = "Clipboard" }) },
   { key = "PageUp", mods = "CTRL", action = act({ ScrollByPage = -1 }) },
