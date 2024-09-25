@@ -1,4 +1,4 @@
-local events = require("events")
+require("events")
 local keybinds = require("keybinds")
 local wezterm = require("wezterm")
 local config = {}
@@ -12,9 +12,11 @@ config = {
   font = wezterm.font_with_fallback({
     { family = "Hack Nerd Font" },
   }),
-  color_scheme = "tokyonight-moon",
+  -- color_scheme = "tokyonight_moon",
+  color_scheme = "Tokyo Night Moon",
+  -- color_scheme = "tokyonight_night",
   -- color_scheme = "kanagawabones",
-  window_background_opacity = 0.8,
+  window_background_opacity = 0.9,
   macos_window_background_blur = 10,
   window_padding = {
     left = 2,
@@ -44,6 +46,7 @@ config = {
   keys = keybinds.create_keybinds(),
   key_tables = keybinds.key_tables,
   use_ime = true,
+  scrollback_lines = 3500,
 }
 
 return config
