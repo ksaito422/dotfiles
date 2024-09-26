@@ -23,7 +23,7 @@ opt.ruler = true
 -- 行番号の表示
 opt.number = true
 -- 相対行番号の表示
-opt.relativenumber = true
+opt.relativenumber = false
 
 -- 行末の1文字先までカーソルを移動できるように
 opt.virtualedit = "onemore"
