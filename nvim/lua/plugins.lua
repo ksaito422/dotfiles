@@ -334,15 +334,6 @@ require("lazy").setup({
   --     },
   -- },
 
-  -- colorful cursor
-  {
-    "gen740/SmoothCursor.nvim",
-    config = function()
-      require("configs.smooth-cursor")
-    end,
-    event = "VimEnter",
-  },
-
   -- 入力補完(completion, documentation, command line)
   {
     "hrsh7th/cmp-nvim-lsp",
