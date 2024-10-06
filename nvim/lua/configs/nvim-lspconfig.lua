@@ -77,7 +77,7 @@ vim.api.nvim_create_autocmd({ "BufWritePre" }, {
     vim.lsp.buf.format()
   end,
 })
-nvim_lsp.tsserver.setup({
+nvim_lsp.ts_ls.setup({
   on_attach = on_attach,
   filetypes = {
     "javascript",
