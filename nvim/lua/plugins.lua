@@ -434,8 +434,6 @@ require("lazy").setup({
   --   end,
   -- },
 
-  -- 'w0rp/ale',
-
   -- :help language Japanese
   {
     "vim-jp/vimdoc-ja",
