@@ -68,17 +68,6 @@ require("lazy").setup({
     },
   },
 
-  -- buffer lineにbufferを表示
-  {
-    "romgrk/barbar.nvim",
-    -- bufferlineにアイコンを表示
-    dependencies = { "kyazdani42/nvim-web-devicons" },
-    config = function()
-      require("configs.barbar")
-    end,
-    event = "VimEnter",
-  },
-
   -- indent lineの表示
   {
     "shellRaining/hlchunk.nvim",

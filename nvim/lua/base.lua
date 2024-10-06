@@ -107,7 +107,7 @@ opt.pumblend = 20
 opt.winblend = 20
 
 -- タブページを常に表示
-opt.showtabline = 2
+opt.showtabline = 1
 
 -- マウス操作
 opt.mouse = "a"
