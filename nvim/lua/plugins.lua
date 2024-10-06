@@ -436,28 +436,6 @@ require("lazy").setup({
 
   -- 'w0rp/ale',
 
-  -- debug adapter protocol
-  {
-    "mfussenegger/nvim-dap",
-    dependencies = {
-      -- debug ui
-      "rcarriga/nvim-dap-ui",
-      "nvim-neotest/nvim-nio",
-      -- debug for ruby
-      {
-        "suketa/nvim-dap-ruby",
-        config = function()
-          require("configs.nvim-dap-ruby")
-        end,
-      },
-    },
-    config = function()
-      require("configs.nvim-dap")
-      require("configs.nvim-dap-ui")
-    end,
-    ft = { "ruby" },
-  },
-
   -- :help language Japanese
   {
     "vim-jp/vimdoc-ja",
