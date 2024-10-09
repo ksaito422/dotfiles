@@ -74,7 +74,6 @@ require("lazy").setup({
     config = function()
       require("configs.hlchunk")
     end,
-    commit = "2b600d9",
     event = {
       "BufReadPre",
       "BufNewFile",
