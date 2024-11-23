@@ -5,3 +5,8 @@ name = "vim"
 [vim]
 any = true
 
+[hs]
+any = true
+
+[spoon]
+any = true

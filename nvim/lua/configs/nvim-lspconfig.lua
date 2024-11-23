@@ -7,7 +7,7 @@ end
 -------------------------------------------------------------------
 -- nvim-lspconfig
 -------------------------------------------------------------------
-local on_attach = function(client, bufnr)
+local on_attach = function()
   -- format on save
   -- if client.server_capabilities.documentFormattingProvider then
   --     vim.api.nvim_create_autocmd('BufWritePre', {

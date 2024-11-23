@@ -1,6 +1,6 @@
 local wezterm = require("wezterm")
 
-wezterm.on("format-window-title", function(tab, pane, tabs, panes, config)
+wezterm.on("format-window-title", function(tab, tabs)
   local zoomed = ""
   if tab.active_pane.is_zoomed then
     zoomed = "[Z] "
@@ -28,7 +28,7 @@ end
 local SOLID_LEFT_ARROW = wezterm.nerdfonts.ple_left_half_circle_thick
 local SOLID_RIGHT_ARROW = wezterm.nerdfonts.ple_right_half_circle_thick
 
-wezterm.on("format-tab-title", function(tab, tabs, panes, config, hover, max_width)
+wezterm.on("format-tab-title", function(tab)
   local title = tab_title(tab)
   local background = "#5c6d74"
   local foreground = "##f0f0f0"

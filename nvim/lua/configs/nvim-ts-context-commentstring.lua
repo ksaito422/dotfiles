@@ -3,8 +3,6 @@ if not status_ok then
   return
 end
 
-local g = vim.g
-
 ts_context_commentstring.setup({
   skip_ts_context_commentstring_module = true,
   enable_autocmd = false,
