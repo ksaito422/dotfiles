@@ -3,7 +3,7 @@ if not status_ok then
   return
 end
 
-support_filetypes = {
+local support_filetypes = {
   "*.lua",
   "*.rb",
   "*.erb",

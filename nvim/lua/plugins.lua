@@ -59,15 +59,6 @@ require("lazy").setup({
     event = "VimEnter",
   },
 
-  -- 対応する()のカラーリング
-  {
-    "luochen1990/rainbow",
-    event = {
-      "BufReadPre",
-      "BufNewFile",
-    },
-  },
-
   -- indent lineの表示
   {
     "shellRaining/hlchunk.nvim",
@@ -89,9 +80,6 @@ require("lazy").setup({
   -- カーソル下の単語を自動的にハイライト
   {
     "RRethy/vim-illuminate",
-    -- config = function()
-    --     require('configs.vim-illuminate')
-    -- end,
     event = {
       "BufReadPre",
       "BufNewFile",
@@ -513,3 +501,18 @@ require("lazy").setup({
     },
   },
 })
+
+-- -----------------------------------
+-- Loading neovim plugin settings
+-- -----------------------------------
+require("configs/cheatsheet")
+require("configs/conflict-marker")
+-- require('configs/ddc')
+-- require('configs/pum')
+require("configs/glyph-palette")
+require("configs/searchx")
+require("configs/translate")
+require("configs/vim-highlightedyank")
+-- require('configs/null-ls')
+require("configs/vim-illuminate")
+require("configs/lazygit")

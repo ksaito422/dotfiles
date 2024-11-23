@@ -35,4 +35,3 @@ keymap("n", "gp", "<cmd>Lspsaga peek_definition<CR>", { noremap = true, silent =
 keymap("n", "go", "<cmd>Lspsaga outline<CR>", { noremap = true, silent = true })
 -- keymap('n', '<leader>sb', '<cmd>Lspsaga show_buf_diagnostics<CR>', { noremap = true, silent = true })
 keymap("n", "<leader>sw", "<cmd>Lspsaga show_workspace_diagnostics<CR>", { noremap = true, silent = true })
-
