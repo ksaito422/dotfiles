@@ -13,7 +13,6 @@ require("keymap")
 if not vim.g.vscode then
   require("functions")
   require("plugins")
-  require("plugins_load")
   require("lsp")
 
   -- 不要なデフォルトプラグインを無効化する
