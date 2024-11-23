@@ -449,17 +449,13 @@ require("lazy").setup({
     },
   },
 
-  -- 通知やコマンドラインをカッコよくする
+  -- 通知の見た目をよくする
   {
-    "folke/noice.nvim",
-    dependencies = {
-      "MunifTanjim/nui.nvim",
-      "rcarriga/nvim-notify",
-    },
-    config = function()
-      require("configs.noice")
-    end,
+    "rcarriga/nvim-notify",
     event = { "VimEnter" },
+    config = function()
+      require("configs.nvim-notify")
+    end,
   },
 
   -- Denoでプラグインを作るエコシステム
