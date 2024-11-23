@@ -24,4 +24,3 @@ function ToggleRelativeNumber()
 end
 vim.api.nvim_create_user_command("ToggleRelNum", ToggleRelativeNumber, {})
 vim.api.nvim_set_keymap("n", "<F2>", ":ToggleRelNum<CR>", { noremap = true, silent = true })
-

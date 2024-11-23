@@ -35,4 +35,3 @@ vim.g.mapleader = " "
 
 -- ノーマルモードに切り替える。[jk]
 keymap("i", "jk", "<ESC>", { noremap = true, silent = true })
-
