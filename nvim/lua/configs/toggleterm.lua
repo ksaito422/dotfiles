@@ -10,7 +10,7 @@ keymap("t", "<esc>", [[<C-\><C-n>]], { noremap = true, silent = true })
 -- keymap('t', '<C-h>', [[<Cmd>wincmd h<CR>]], { noremap = true, silent = true })
 keymap("t", "<C-j>", [[<Cmd>wincmd j<CR>]], { noremap = true, silent = true })
 keymap("t", "<C-k>", [[<Cmd>wincmd k<CR>]], { noremap = true, silent = true })
-keymap("t", "<C-l>", [[<Cmd>wincmd l<CR>]], { noremap = true, silent = true })
+-- keymap("t", "<C-l>", [[<Cmd>wincmd l<CR>]], { noremap = true, silent = true })
 keymap("t", "<C-w>", [[<C-\><C-n><C-w>]], { noremap = true, silent = true })
 
 toggleterm.setup({
