@@ -12,7 +12,6 @@ This repository in order to management dotfiles.
 - Set of symbolic link.
 - Installation of applications managed by brewfile.
 - Installing nerdfont.
-- dlv installed to start golang debugger.
 
 ## using tools
 
