@@ -29,26 +29,7 @@ keymap("n", "]d", "<cmd>lua vim.diagnostic.goto_next()<CR>", { noremap = true, s
 keymap("n", "gi", "<cmd>lua vim.lsp.buf.implementation()<CR>", { noremap = true, silent = true })
 keymap("n", "<space><space>", "<cmd>lua vim.lsp.buf.format()<CR>", { noremap = true, silent = true })
 
-nvim_lsp.solargraph.setup({
-  on_attach = on_attach,
-  init_options = {
-    -- 遅いからrubocopのほうで実行する
-    formatting = false,
-  },
-  -- https://medium.com/@cristianvg/neovim-lsp-your-rbenv-gemset-and-solargraph-8896cb3df453
-  -- default { "solargraph", "stdio" }
-  cmd = { os.getenv("HOME") .. "/.rbenv/shims/solargraph", "stdio" },
-  root_dir = nvim_lsp.util.root_pattern("Gemfile", ".git"),
-  settings = {
-    solargraph = {
-      -- nvim-lsp&masonのsolargraphの診断有効にすると.rubocop.ymlのルールでrubocopを実行してくれる
-      diagnostics = false,
-    },
-  },
-})
--- solargraphのみだと参照先リストなどの一部の機能が使えないのでruby-lspと併用する
 nvim_lsp.ruby_lsp.setup({
-  on_attach = on_attach,
   cmd = { "ruby-lsp" },
   filetypes = { "ruby" },
   root_dir = nvim_lsp.util.root_pattern("Gemfile", ".git"),
