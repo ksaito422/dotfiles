@@ -27,6 +27,10 @@ keymap("t", "<C-h>", "<BS>", { noremap = true })
 -- Buffer operation
 keymap("n", "<C-[>", ":bprev<CR>", { noremap = true, silent = true })
 keymap("n", "<C-]>", ":bnext<CR>", { noremap = true, silent = true })
+keymap("n", "<C-w><C-h>", "<C-w>5<", { noremap = true, silent = true })
+keymap("n", "<C-w><C-l>", "<C-w>5>", { noremap = true, silent = true })
+keymap("n", "<C-w><C-k>", "<C-w>5+", { noremap = true, silent = true })
+keymap("n", "<C-w><C-j>", "<C-w>5-", { noremap = true, silent = true })
 
 keymap("n", "<C-c>", ":let @* = expand('%:p')<CR>", { noremap = true })
 

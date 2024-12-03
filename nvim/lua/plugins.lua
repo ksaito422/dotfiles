@@ -251,12 +251,6 @@ require("lazy").setup({
     keys = { "y", mode = "n" },
   },
 
-  -- windowのリサイズ
-  {
-    "simeji/winresizer",
-    keys = { "<C-e>", mode = "n" },
-  },
-
   -- / or ? 検索のジャンプ拡張
   {
     "hrsh7th/vim-searchx",
