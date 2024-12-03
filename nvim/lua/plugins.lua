@@ -251,12 +251,6 @@ require("lazy").setup({
     keys = { "y", mode = "n" },
   },
 
-  -- / or ? 検索のジャンプ拡張
-  {
-    "hrsh7th/vim-searchx",
-    event = "VimEnter",
-  },
-
   -- spell check
   {
     "kamykn/spelunker.vim",
@@ -504,7 +498,6 @@ require("configs/conflict-marker")
 -- require('configs/ddc')
 -- require('configs/pum')
 require("configs/glyph-palette")
-require("configs/searchx")
 require("configs/translate")
 require("configs/vim-highlightedyank")
 -- require('configs/null-ls')
