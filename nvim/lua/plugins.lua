@@ -235,16 +235,6 @@ require("lazy").setup({
     event = "VimEnter",
   },
 
-  -- terminal
-  {
-    "akinsho/toggleterm.nvim",
-    version = "*",
-    config = function()
-      require("configs/toggleterm")
-    end,
-    event = "VimEnter",
-  },
-
   -- yank範囲のhighlight
   {
     "machakann/vim-highlightedyank",

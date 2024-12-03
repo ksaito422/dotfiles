@@ -23,6 +23,8 @@ keymap("t", "<C-b>", "<Left>", { noremap = true })
 keymap("t", "<C-f>", "<Right>", { noremap = true })
 keymap("t", "<C-d>", "<Del>", { noremap = true })
 keymap("t", "<C-h>", "<BS>", { noremap = true })
+keymap("t", "<esc>", [[<C-\><C-n>]], { noremap = true, silent = true })
+keymap("t", "<C-w>", [[<C-\><C-n><C-w>]], { noremap = true, silent = true })
 
 -- Buffer operation
 keymap("n", "<C-[>", ":bprev<CR>", { noremap = true, silent = true })
@@ -33,6 +35,17 @@ keymap("n", "<C-w><C-k>", "<C-w>5+", { noremap = true, silent = true })
 keymap("n", "<C-w><C-j>", "<C-w>5-", { noremap = true, silent = true })
 
 keymap("n", "<C-c>", ":let @* = expand('%:p')<CR>", { noremap = true })
+keymap("n", "<C-t>", ":T<CR>", { noremap = true, silent = true })
+
+vim.api.nvim_create_user_command("T", function(opts)
+  vim.cmd("split")
+  vim.cmd("wincmd j")
+  vim.cmd("resize 20")
+  vim.cmd("terminal " .. (opts.args or ""))
+  vim.cmd("startinsert")
+end, {
+  nargs = "*", -- 引数を受け取る設定
+})
 
 -- Assign leader key to space key
 vim.g.mapleader = " "
