@@ -71,12 +71,6 @@ require("lazy").setup({
     },
   },
 
-  --	 TOML形式のsyntax highlight enable
-  {
-    "cespare/vim-toml",
-    ft = { "toml" },
-  },
-
   -- カーソル下の単語を自動的にハイライト
   {
     "RRethy/vim-illuminate",
