@@ -14,7 +14,6 @@
   "fern-preview.vim": { "branch": "main", "commit": "74f2c1c45eb48fe9b7e4aa87032f053808944e17" },
   "fern-renderer-nerdfont.vim": { "branch": "master", "commit": "325629c68eb543229715b68920fbcb92b206beb6" },
   "fern.vim": { "branch": "main", "commit": "95218a9eeb5bf25ff30196b8700eeb64b8f3aeba" },
-  "friendly-snippets": { "branch": "main", "commit": "de8fce94985873666bd9712ea3e49ee17aadb1ed" },
   "gitsigns.nvim": { "branch": "main", "commit": "ac5aba6dce8c06ea22bea2c9016f51a2dbf90dc7" },
   "glyph-palette.vim": { "branch": "master", "commit": "d696c432f5efcc3d21a5467ec459298063f5fd7d" },
   "hlchunk.nvim": { "branch": "main", "commit": "ba6e2347177fec8ec6af4ae26d11a468c9e0ca72" },
@@ -49,8 +48,6 @@
   "vim-cheatsheet": { "branch": "master", "commit": "35a8d57e53abc210b1baa9377965ffe360b84334" },
   "vim-highlightedyank": { "branch": "master", "commit": "afb0f262b490706c23e94012c2ab9fa67c0481ce" },
   "vim-illuminate": { "branch": "master", "commit": "5eeb7951fc630682c322e88a9bbdae5c224ff0aa" },
-  "vim-vsnip": { "branch": "master", "commit": "02a8e79295c9733434aab4e0e2b8c4b7cea9f3a9" },
-  "vim-vsnip-integ": { "branch": "master", "commit": "90ae474e8b05ed41e36d6f58382a9fbfb4b672c4" },
   "vimdoc-ja": { "branch": "master", "commit": "7ce6c1f1313ae5795ecba5846ee79ba25ea68152" },
   "vimhelpgenerator": { "branch": "master", "commit": "6c9a583de297b2df54d24cd0d90e739f4d046866" },
   "which-key.nvim": { "branch": "main", "commit": "68e37e12913a66b60073906f5d3f14dee0de19f2" }

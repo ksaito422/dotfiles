@@ -286,7 +286,6 @@ require("lazy").setup({
   {
     "hrsh7th/cmp-nvim-lsp",
     dependencies = {
-      "hrsh7th/cmp-nvim-lsp",
       "hrsh7th/cmp-buffer",
       "hrsh7th/cmp-path",
       "hrsh7th/cmp-cmdline",
@@ -298,21 +297,6 @@ require("lazy").setup({
       require("configs.nvim-cmp")
     end,
     event = "VimEnter",
-  },
-
-  -- snipet
-  {
-    "hrsh7th/vim-vsnip",
-    dependencies = {
-      -- snipet
-      "hrsh7th/vim-vsnip-integ",
-      -- snipet
-      "rafamadriz/friendly-snippets",
-    },
-    event = {
-      "BufReadPre",
-      "BufNewFile",
-    },
   },
 
   -- Neovim LSP config
