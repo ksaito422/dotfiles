@@ -238,10 +238,6 @@ require("lazy").setup({
   -- spell check
   {
     "kamykn/spelunker.vim",
-    dependencies = {
-      -- spell check拡張のneovim対応
-      "kamykn/popup-menu.nvim",
-    },
     event = {
       "BufReadPre",
       "BufNewFile",
