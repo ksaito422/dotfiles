@@ -287,7 +287,6 @@ require("lazy").setup({
       "hrsh7th/cmp-cmdline",
       "dmitmel/cmp-cmdline-history",
       "hrsh7th/nvim-cmp",
-      "onsails/lspkind.nvim",
     },
     config = function()
       require("configs.nvim-cmp")
