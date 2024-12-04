@@ -4,20 +4,14 @@ if not status then
 end
 
 cmp.setup({
-  snippet = {
-    expand = function(args)
-      vim.fn["vsnip#anonymous"](args.body)
-    end,
-  },
+  snippet = {},
   window = {
     completion = cmp.config.window.bordered({
-      -- border = { '●', '─', '●', '│', '●', '─', '●', '│' },
-      border = "single",
+      border = { '●', '─', '●', '│', '●', '─', '●', '│' },
       winhighlight = "Normal:Pmenu",
     }),
     documentation = cmp.config.window.bordered({
-      -- border = { '●', '─', '●', '│', '●', '─', '●', '│' },
-      border = "single",
+      border = { '●', '─', '●', '│', '●', '─', '●', '│' },
       winhighlight = "Normal:Pmenu",
     }),
   },
@@ -32,10 +26,6 @@ cmp.setup({
   }),
   sources = cmp.config.sources({
     { name = "nvim_lsp" },
-    -- { name = "vsnip" }, -- For vsnip users.
-    -- { name = 'luasnip' }, -- For luasnip users.
-    -- { name = 'ultisnips' }, -- For ultisnips users.
-    -- { name = 'snippy' }, -- For snippy users.
   }, {
     { name = "buffer" },
   }),
