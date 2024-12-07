@@ -212,14 +212,7 @@ require("lazy").setup({
     "lambdalisue/fern.vim",
     dependencies = {
       "yuki-yano/fern-preview.vim",
-      "lambdalisue/nerdfont.vim",
-      {
-        "lambdalisue/fern-renderer-nerdfont.vim",
-        config = function()
-          vim.g["fern#renderer"] = "nerdfont"
-        end,
-        dependencies = { "lambdalisue/nerdfont.vim" },
-      },
+      "TheLeoP/fern-renderer-web-devicons.nvim",
       "lambdalisue/fern-git-status.vim",
       "lambdalisue/glyph-palette.vim",
     },
@@ -419,7 +412,6 @@ require("lazy").setup({
   },
   -- dependencies plugins
   "kyazdani42/nvim-web-devicons",
-  "lambdalisue/nerdfont.vim",
   "nvim-lua/plenary.nvim",
 
   -- ------------------------------------------
