@@ -49,10 +49,6 @@ require("lazy").setup({
   -- status line
   {
     "nvim-lualine/lualine.nvim",
-    dependencies = {
-      -- 'folke/tokyonight.nvim',
-      "kyazdani42/nvim-web-devicons",
-    },
     config = function()
       require("configs.lualine")
     end,
@@ -104,7 +100,6 @@ require("lazy").setup({
     dependencies = {
       "nvim-lua/plenary.nvim",
       "nvim-telescope/telescope.nvim",
-      "nvim-tree/nvim-web-devicons",
     },
     config = function()
       require("configs.octo")
@@ -411,7 +406,7 @@ require("lazy").setup({
     },
   },
   -- dependencies plugins
-  "kyazdani42/nvim-web-devicons",
+  "nvim-tree/nvim-web-devicons",
   "nvim-lua/plenary.nvim",
 
   -- ------------------------------------------
