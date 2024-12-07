@@ -2,6 +2,7 @@ local keymap = vim.api.nvim_set_keymap
 -- fern.vim
 keymap("n", "<C-b>", ":Fern . -reveal=% -drawer -width=30 -toggle -keep<CR>", { noremap = true, silent = true })
 vim.g["fern#renderer"] = "nvim-web-devicons"
+vim.g["fern#default_hidden"] = 1
 
 -- fern-preview.vim
 vim.cmd([[
