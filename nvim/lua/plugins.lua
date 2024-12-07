@@ -23,9 +23,9 @@ require("lazy").setup({
   },
 
   -- color schema
-  -- use 'EdenEast/nightfox.nvim'
   {
     "folke/tokyonight.nvim",
+    -- "EdenEast/nightfox.nvim",
     -- 'blazkowolf/gruber-darker.nvim',
     -- "rebelot/kanagawa.nvim",
     -- "0xstepit/flow.nvim",
