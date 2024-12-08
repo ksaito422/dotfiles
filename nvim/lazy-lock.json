@@ -46,5 +46,6 @@
   "vim-illuminate": { "branch": "master", "commit": "5eeb7951fc630682c322e88a9bbdae5c224ff0aa" },
   "vimdoc-ja": { "branch": "master", "commit": "7ce6c1f1313ae5795ecba5846ee79ba25ea68152" },
   "vimhelpgenerator": { "branch": "master", "commit": "6c9a583de297b2df54d24cd0d90e739f4d046866" },
-  "which-key.nvim": { "branch": "main", "commit": "68e37e12913a66b60073906f5d3f14dee0de19f2" }
+  "which-key.nvim": { "branch": "main", "commit": "68e37e12913a66b60073906f5d3f14dee0de19f2" },
+  "winresizer": { "branch": "master", "commit": "9bd559a03ccec98a458e60c705547119eb5350f3" }
 }

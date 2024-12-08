@@ -221,6 +221,12 @@ require("lazy").setup({
     keys = { "y", mode = "n" },
   },
 
+  -- windowのリサイズ
+  {
+    "simeji/winresizer",
+    keys = { "<C-e>", mode = "n" },
+  },
+
   -- spell check
   {
     "kamykn/spelunker.vim",
