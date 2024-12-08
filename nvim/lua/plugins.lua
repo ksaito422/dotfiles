@@ -292,17 +292,9 @@ require("lazy").setup({
     },
   },
 
-  -- LSP uiをカッコよくする
   {
-    "nvimdev/lspsaga.nvim",
-    branch = "main",
     config = function()
-      require("configs.lspsaga")
     end,
-    event = {
-      "BufReadPre",
-      "BufNewFile",
-    },
   },
 
   -- LSP, DAP, Linter, Formatter manager

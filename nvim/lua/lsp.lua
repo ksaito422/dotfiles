@@ -45,3 +45,18 @@ end)(vim.lsp.util.open_floating_preview)
 -- vim.cmd("sign define DiagnosticSignWarn text=W texthl=DiagnosticSignWarn linehl= numhl=")
 -- vim.cmd("sign define DiagnosticSignInfo text=I texthl=DiagnosticSignInfo linehl= numhl=")
 -- vim.cmd 'sign define DiagnosticSignHint text=H texthl=DiagnosticSignHint linehl= numhl='
+
+local keymap = vim.api.nvim_set_keymap
+keymap("n", "K", "<cmd>lua vim.lsp.buf.hover()<CR>", { noremap = true, silent = true })
+keymap("n", "<leader>e", "<cmd>lua vim.diagnostic.open_float()<CR>", { noremap = true, silent = true })
+keymap("n", "gd", "<cmd>lua vim.lsp.buf.definition()<CR>", { noremap = true, silent = true })
+keymap("n", "[d", "<cmd>lua vim.diagnostic.goto_prev()<CR>", { noremap = true, silent = true })
+keymap("n", "]d", "<cmd>lua vim.diagnostic.goto_next()<CR>", { noremap = true, silent = true })
+keymap("n", "ga", "<cmd>lua vim.lsp.buf.code_action()<CR>", { noremap = true, silent = true })
+keymap("n", "gr", "<cmd>lua vim.lsp.buf.rename()<CR>", { noremap = true, silent = true })
+keymap("n", "gi", "<cmd>lua vim.lsp.buf.implementation()<CR>", { noremap = true, silent = true })
+keymap("n", "<space><space>", "<cmd>lua vim.lsp.buf.format()<CR>", { noremap = true, silent = true })
+
+keymap("n", "gh", "<cmd>Trouble lsp_references toggle<CR>", { noremap = true, silent = true })
+keymap("n", "gs", "<cmd>Trouble diagnostics toggle filter.buf=0<CR>", { noremap = true, silent = true })
+keymap("n", "go", "<cmd>Trouble symbols toggle<CR>", { noremap = true, silent = true })
