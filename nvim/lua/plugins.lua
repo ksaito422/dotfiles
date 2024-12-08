@@ -365,15 +365,6 @@ require("lazy").setup({
     event = "VimEnter",
   },
 
-  -- cheatsheet
-  {
-    "reireias/vim-cheatsheet",
-    cmd = {
-      "Cheat",
-      "EditCheat",
-    },
-  },
-
   -- 通知の見た目をよくする
   {
     "rcarriga/nvim-notify",
@@ -441,7 +432,6 @@ require("lazy").setup({
 -- -----------------------------------
 -- Loading neovim plugin settings
 -- -----------------------------------
-require("configs/cheatsheet")
 require("configs/conflict-marker")
 -- require('configs/ddc')
 -- require('configs/pum')

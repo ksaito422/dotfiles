@@ -51,3 +51,14 @@ vim.api.nvim_create_user_command("MeasureCompletionTime", function()
   measure_manual_completion_time()
 end, {})
 
+-- チートシートを開く
+local function open_cheatsheet()
+  local cheatsheet = "~/.config/nvim/cheatsheet.md"
+  vim.cmd("edit " .. cheatsheet)
+end
+
+vim.api.nvim_create_user_command("OpenCheatsheet", function()
+  open_cheatsheet()
+end, { desc = "Open cheatsheet" }
+)
+
