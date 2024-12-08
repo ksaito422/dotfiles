@@ -307,6 +307,12 @@ require("lazy").setup({
     end,
   },
 
+  -- winbarにパンくずリストを表示
+  {
+    "SmiteshP/nvim-navic",
+    requires = "neovim/nvim-lspconfig",
+  },
+
   -- LSP, DAP, Linter, Formatter manager
   {
     "williamboman/mason.nvim",

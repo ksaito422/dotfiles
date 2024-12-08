@@ -1,13 +1,22 @@
-local keymap = vim.api.nvim_set_keymap
 local status_ok, nvim_lsp = pcall(require, "lspconfig")
 if not status_ok then
   return
 end
 
+local nvic_status_ok, navic = pcall(require, "nvim-navic")
+if not nvic_status_ok then
+  return
+end
+
+vim.o.winbar = " %{%v:lua.vim.fn.expand('%F')%} %{%v:lua.require'nvim-navic'.get_location()%}"
+
 -------------------------------------------------------------------
 -- nvim-lspconfig
 -------------------------------------------------------------------
-local on_attach = function()
+local on_attach = function(client, bufnr)
+  if client.server_capabilities.documentSymbolProvider then
+    navic.attach(client, bufnr)
+  end
   -- format on save
   -- if client.server_capabilities.documentFormattingProvider then
   --     vim.api.nvim_create_autocmd('BufWritePre', {
@@ -22,6 +31,7 @@ local on_attach = function()
 end
 
 nvim_lsp.ruby_lsp.setup({
+  on_attach = on_attach,
   cmd = { "ruby-lsp" },
   filetypes = { "ruby" },
   root_dir = nvim_lsp.util.root_pattern("Gemfile", ".git"),
