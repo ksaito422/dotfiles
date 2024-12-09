@@ -182,6 +182,7 @@ require("lazy").setup({
     dependencies = {
       "nvim-lua/plenary.nvim",
       "nvim-telescope/telescope-live-grep-args.nvim",
+      "nvim-telescope/telescope-file-browser.nvim",
     },
     config = function()
       require("configs.telescope")
@@ -198,21 +199,6 @@ require("lazy").setup({
       require("configs.nvim-ts-autotag")
     end,
     ft = { "html", "jsx", "tsx", "javascriptreact", "typescriptreact" },
-  },
-
-  -- filer
-  {
-    "lambdalisue/fern.vim",
-    dependencies = {
-      "yuki-yano/fern-preview.vim",
-      "TheLeoP/fern-renderer-web-devicons.nvim",
-      "lambdalisue/fern-git-status.vim",
-      "lambdalisue/glyph-palette.vim",
-    },
-    config = function()
-      require("configs.fern")
-    end,
-    event = "VimEnter",
   },
 
   -- yank範囲のhighlight
