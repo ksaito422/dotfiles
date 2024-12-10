@@ -43,11 +43,13 @@ telescope.setup({
     prompt_title = "Prompt",
     dynamic_preview_title = true,
     sorting_strategy = "ascending",
-    winblend = 4,
-    layout_strategy = "vertical",
+    winblend = 10,
+    layout_strategy = "horizontal",
     layout_config = {
       height = 0.8,
       width = 0.8,
+      prompt_position = "top",
+      preview_width = 0.5,
     },
     file_ignore_patterns = { "^.git/", "^node_modules/" },
     mappings = {
@@ -56,15 +58,54 @@ telescope.setup({
       },
     },
   },
-  extensions = {
-    file_browser = {
-      layout_strategy = "horizontal",
+  pickers = {
+    find_files = {
+      layout_strategy = "vertical",
       layout_config = {
         height = 0.8,
         width = 0.8,
-        prompt_position = "top",
-        preview_width = 0.5,
+        prompt_position = "bottom",
       },
+    },
+    git_files = {
+      layout_strategy = "vertical",
+      layout_config = {
+        height = 0.8,
+        width = 0.8,
+        prompt_position = "bottom",
+      },
+    },
+    oldfiles = {
+      layout_strategy = "vertical",
+      layout_config = {
+        height = 0.8,
+        width = 0.8,
+        prompt_position = "bottom",
+      },
+    },
+    buffers = {
+      prompt_title = "Find Buffers",
+    },
+    diagnostics = {
+      layout_strategy = "vertical",
+      layout_config = {
+        height = 0.8,
+        width = 0.8,
+        prompt_position = "bottom",
+      },
+    },
+  },
+  extensions = {
+    live_grep_args = {
+      layout_strategy = "vertical",
+      layout_config = {
+        height = 0.8,
+        width = 0.8,
+        prompt_position = "bottom",
+      },
+    },
+    file_browser = {
+      prompt_title = "File Explorer",
       -- dir_icon = "",
       hidden = { file_browser = false, folder_browser = false },
       mappings = {
