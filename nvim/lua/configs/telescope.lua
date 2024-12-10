@@ -33,6 +33,15 @@ keymap("n", "<C-b>", ":Telescope file_browser path=%:p:h select_buffer=true<CR>"
 local fb_actions = require("telescope").extensions.file_browser.actions
 telescope.setup({
   defaults = {
+    wrap_results = false,
+    prompt_prefix = " ",
+    selection_caret = "❯ ",
+    entry_prefix = "  ",
+    initial_mode = "insert",
+    border = true,
+    results_title = "Results",
+    prompt_title = "Prompt",
+    dynamic_preview_title = true,
     sorting_strategy = "ascending",
     winblend = 4,
     layout_strategy = "vertical",
@@ -56,6 +65,7 @@ telescope.setup({
         prompt_position = "top",
         preview_width = 0.5,
       },
+      -- dir_icon = "",
       hidden = { file_browser = false, folder_browser = false },
       mappings = {
         ["n"] = {
@@ -80,3 +90,15 @@ telescope.setup({
 
 telescope.load_extension("live_grep_args")
 telescope.load_extension("file_browser")
+
+vim.cmd([[
+  highlight TelescopePromptNormal guifg=#F1F1F1 guibg=#434343
+  highlight TelescopePromptBorder guifg=#434343 guibg=#434343
+  highlight TelescopePromptTitle guifg=#B7B8B6 guibg=#336B87
+  highlight TelescopePreviewNormal guifg=#F1F1F1 guibg=#393939
+  highlight TelescopePreviewBorder guifg=#393939 guibg=#393939
+  highlight TelescopePreviewTitle guifg=#B7B8B6 guibg=#2C7873
+  highlight TelescopeResultsNormal guifg=#F1F1F1 guibg=#323232
+  highlight TelescopeResultsBorder guifg=#323232 guibg=#323232
+  highlight TelescopeResultsTitle guifg=#B7B8B6 guibg=#2C7873
+]])
