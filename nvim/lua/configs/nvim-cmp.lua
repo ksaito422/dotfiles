@@ -7,11 +7,11 @@ cmp.setup({
   snippet = {},
   window = {
     completion = cmp.config.window.bordered({
-      border = { '●', '─', '●', '│', '●', '─', '●', '│' },
+      border = { "●", "─", "●", "│", "●", "─", "●", "│" },
       winhighlight = "Normal:Pmenu",
     }),
     documentation = cmp.config.window.bordered({
-      border = { '●', '─', '●', '│', '●', '─', '●', '│' },
+      border = { "●", "─", "●", "│", "●", "─", "●", "│" },
       winhighlight = "Normal:Pmenu",
     }),
   },

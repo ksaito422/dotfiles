@@ -59,6 +59,4 @@ end
 
 vim.api.nvim_create_user_command("OpenCheatsheet", function()
   open_cheatsheet()
-end, { desc = "Open cheatsheet" }
-)
-
+end, { desc = "Open cheatsheet" })

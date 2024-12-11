@@ -284,7 +284,7 @@ require("lazy").setup({
     },
   },
 
-   -- LSPの操作を楽にする
+  -- LSPの操作を楽にする
   {
     "folke/trouble.nvim",
     event = "VeryLazy",
