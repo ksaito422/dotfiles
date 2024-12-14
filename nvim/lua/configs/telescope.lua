@@ -107,7 +107,7 @@ telescope.setup({
     file_browser = {
       prompt_title = "File Explorer",
       -- dir_icon = "",
-      hidden = { file_browser = false, folder_browser = false },
+      hidden = { file_browser = true, folder_browser = true },
       mappings = {
         ["n"] = {
           ["c"] = fb_actions.create,
