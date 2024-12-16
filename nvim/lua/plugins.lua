@@ -187,9 +187,10 @@ require("lazy").setup({
     config = function()
       require("configs.telescope")
     end,
-    event = {
-      "VimEnter",
-    },
+    -- telescopeのhighlightの適用がズレて反映されないときがあるのでoffにする
+    -- event = {
+    --   "VimEnter",
+    -- },
   },
 
   -- HTMLタグのauto close & auto rename
