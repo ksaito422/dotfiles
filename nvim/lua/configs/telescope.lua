@@ -37,7 +37,7 @@ telescope.setup({
     prompt_prefix = " ",
     selection_caret = "❯ ",
     entry_prefix = "  ",
-    initial_mode = "insert",
+    initial_mode = "normal",
     border = true,
     results_title = "Results",
     prompt_title = "Prompt",
