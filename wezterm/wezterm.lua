@@ -24,12 +24,12 @@ config = {
     top = 0,
     bottom = 0,
   },
-  window_decorations = "RESIZE",
+  -- window_decorations = "RESIZE",
   show_tabs_in_tab_bar = true,
-  window_frame = {
-    inactive_titlebar_bg = "none",
-    active_titlebar_bg = "none",
-  },
+  -- window_frame = {
+    -- inactive_titlebar_bg = "none",
+    -- active_titlebar_bg = "none",
+  -- },
   show_new_tab_button_in_tab_bar = false,
   -- show_close_tab_button_in_tabs = false,
   colors = {
