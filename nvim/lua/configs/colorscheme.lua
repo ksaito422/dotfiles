@@ -10,10 +10,10 @@ vim.cmd([[
 if not vim.g.vscode then
   -- vim.cmd([[colorscheme nightfox]])
   -- vim.cmd([[colorscheme tokyonight]])
-  vim.cmd([[colorscheme tokyonight-moon]])
+  -- vim.cmd([[colorscheme tokyonight-moon]])
   -- vim.cmd([[colorscheme tokyonight-storm]])
   -- vim.cmd([[colorscheme gruber-darker]])
-  -- vim.cmd([[colorscheme kanagawa]])
+  vim.cmd([[colorscheme kanagawa]])
   -- vim.cmd([[colorscheme kanagawa-wave]])
   -- vim.cmd([[colorscheme kanagawa-dragon]])
   -- vim.cmd([[colorscheme flow]])

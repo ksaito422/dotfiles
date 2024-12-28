@@ -24,10 +24,10 @@ require("lazy").setup({
 
   -- color schema
   {
-    "folke/tokyonight.nvim",
+    -- "folke/tokyonight.nvim",
     -- "EdenEast/nightfox.nvim",
     -- 'blazkowolf/gruber-darker.nvim',
-    -- "rebelot/kanagawa.nvim",
+    "rebelot/kanagawa.nvim",
     -- "0xstepit/flow.nvim",
     config = function()
       require("configs.colorscheme")
