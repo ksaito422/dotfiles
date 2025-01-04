@@ -333,6 +333,14 @@ require("lazy").setup({
     "github/copilot.vim",
   },
 
+  -- copilot chat
+  {
+    "CopilotC-Nvim/CopilotChat.nvim",
+    config = function()
+      require("configs.copilot-chat")
+    end,
+  },
+
   -- LSP以外のformat,linter(prettier, rubocopなど)を動かすプラグイン
   -- {
   --   "nvimtools/none-ls.nvim",
