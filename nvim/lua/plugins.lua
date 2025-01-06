@@ -328,6 +328,14 @@ require("lazy").setup({
     },
   },
 
+    -- lspのセットアップ状況の可視化と通知を見やすくする
+  {
+    "j-hui/fidget.nvim",
+    config = function()
+      require("configs.fidget")
+    end,
+  },
+
   -- github copilot
   {
     "github/copilot.vim",
@@ -366,15 +374,6 @@ require("lazy").setup({
       require("configs.alpha")
     end,
     event = "VimEnter",
-  },
-
-  -- 通知の見た目をよくする
-  {
-    "rcarriga/nvim-notify",
-    event = { "VimEnter" },
-    config = function()
-      require("configs.nvim-notify")
-    end,
   },
 
   -- Denoでプラグインを作るエコシステム
