@@ -1,13 +1,14 @@
+local keymap = vim.api.nvim_set_keymap
 local status_ok, chat = pcall(require, "CopilotChat")
 if not status_ok then
   return
 end
 
+keymap("n", "<leader>aa", "<cmd>CopilotChatToggle<CR>", { noremap = true, silent = true })
+keymap("n", "<leader>ax", "<cmd>CopilotChatReset<CR>", { noremap = true, silent = true })
+
 local select = require("CopilotChat.select")
 chat.setup({
-  debug = true,
-  proxy = nil,
-  allow_insecure = false,
   model = "gpt-4o",
   agent = "copilot",
   temperature = 0.1,
@@ -17,6 +18,18 @@ chat.setup({
     width = 0.3,
     height = 0.3,
     border = "rounded",
+  },
+  show_help = true,
+  show_folds = true,
+  debug = true,
+  log_level = "info",
+  proxy = nil,
+  allow_insecure = false,
+  mappings = {
+    submit_prompt = {
+      normal = "<CR>",
+      insert = "<C-CR>",
+    },
   },
   prompts = {
     Explain = {
@@ -36,6 +49,9 @@ chat.setup({
     },
     Review = {
       prompt = "/COPILOT_REVIEW 選択したコードをレビューしてください。コードの問題点、改善点、およびその他のコメントを書いてください。",
+    },
+    Commit = {
+      prompt = "変更のコミットメッセージをConventional Commitの規約に従って日本語で書いてください。",
     },
   },
 })
