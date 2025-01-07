@@ -273,6 +273,17 @@ require("lazy").setup({
     event = "VimEnter",
   },
 
+  {
+    "zbirenbaum/copilot-cmp",
+    config = function()
+      require("copilot_cmp").setup()
+    end,
+    dependencies = {
+      "hrsh7th/nvim-cmp",
+      "zbirenbaum/copilot.lua",
+    },
+  },
+
   -- Neovim LSP config
   {
     "neovim/nvim-lspconfig",
@@ -328,7 +339,7 @@ require("lazy").setup({
     },
   },
 
-    -- lspのセットアップ状況の可視化と通知を見やすくする
+  -- lspのセットアップ状況の可視化と通知を見やすくする
   {
     "j-hui/fidget.nvim",
     config = function()
@@ -338,7 +349,10 @@ require("lazy").setup({
 
   -- github copilot
   {
-    "github/copilot.vim",
+    "zbirenbaum/copilot.lua",
+    config = function()
+      require("configs.copilot")
+    end,
   },
 
   -- copilot chat
