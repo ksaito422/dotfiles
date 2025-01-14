@@ -363,6 +363,14 @@ require("lazy").setup({
     end,
   },
 
+  -- memo
+  {
+    "glidenote/memolist.vim",
+    config = function()
+      require("configs.memolist")
+    end,
+  },
+
   -- LSP以外のformat,linter(prettier, rubocopなど)を動かすプラグイン
   -- {
   --   "nvimtools/none-ls.nvim",
