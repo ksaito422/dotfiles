@@ -25,6 +25,7 @@ chat.setup({
   log_level = "info",
   proxy = nil,
   allow_insecure = false,
+  chat_autocomplete = true,
   mappings = {
     submit_prompt = {
       normal = "<CR>",

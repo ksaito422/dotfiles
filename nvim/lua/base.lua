@@ -116,6 +116,9 @@ opt.clipboard = "unnamed"
 -- spelunker.vimの機能を使うためspell checkをoff
 opt.spell = false
 
+-- vim標準の補完候補の表示方法
+opt.completeopt = "menu,menuone,noselect,popup"
+
 opt.foldlevel = 99
 opt.foldmethod = "expr"
 opt.foldexpr = "v:lua.vim.treesitter.foldexpr()"
