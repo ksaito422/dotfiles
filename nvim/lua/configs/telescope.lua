@@ -49,6 +49,7 @@ telescope.setup({
       height = 0.8,
       width = 0.8,
       prompt_position = "top",
+      preview_width = 0.5,
     },
     file_ignore_patterns = { "^.git/", "^node_modules/" },
     mappings = {
@@ -84,9 +85,6 @@ telescope.setup({
     },
     buffers = {
       prompt_title = "Find Buffers",
-      layout_config = {
-        preview_width = 0.5,
-      },
     },
     diagnostics = {
       layout_strategy = "vertical",
@@ -126,9 +124,6 @@ telescope.setup({
           ["h"] = fb_actions.toggle_hidden,
           ["s"] = fb_actions.toggle_all,
         },
-      },
-      layout_config = {
-        preview_width = 0.5,
       },
     },
   },
