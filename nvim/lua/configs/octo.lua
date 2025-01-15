@@ -6,8 +6,9 @@ end
 local keymap = vim.api.nvim_set_keymap
 
 keymap("n", "<leader>o", "<Cmd>Octo<CR>", { noremap = true })
-keymap("n", "<leader>oam", "<Cmd>Octo pr search author:@me is:open<CR>", { noremap = true })
-keymap("n", "<leader>orm", "<Cmd>Octo pr search review-requested:@me is:open<CR>", { noremap = true })
+keymap("n", "<leader>oo", "<Cmd>Octo pr search author:@me is:open<CR>", { noremap = true })
+keymap("n", "<leader>om", "<Cmd>Octo pr search author:@me<CR>", { noremap = true })
+keymap("n", "<leader>or", "<Cmd>Octo pr search review-requested:@me is:open<CR>", { noremap = true })
 
 octo.setup({
   use_local_fs = false,

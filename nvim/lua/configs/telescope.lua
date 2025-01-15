@@ -49,7 +49,9 @@ telescope.setup({
       height = 0.8,
       width = 0.8,
       prompt_position = "top",
-      preview_width = 0.5,
+      horizontal = {
+        preview_width = 0.5,
+      }
     },
     file_ignore_patterns = { "^.git/", "^node_modules/" },
     mappings = {
