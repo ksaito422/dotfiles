@@ -51,7 +51,7 @@ chat.setup({
       prompt = "/COPILOT_REVIEW 選択したコードをレビューしてください。コードの問題点、改善点、およびその他のコメントを書いてください。",
     },
     Commit = {
-      prompt = "変更のコミットメッセージをConventional Commitの規約に従って日本語で書いてください。",
+      prompt = "#git:staged\n\n日本語でコミットメッセージをConventional Commitの規約に従って書いてください。タイトルは最大50文字で、メッセージは72文字で折り返して。",
     },
   },
 })
