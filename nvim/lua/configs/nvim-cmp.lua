@@ -44,11 +44,11 @@ cmp.setup({
   window = {
     completion = cmp.config.window.bordered({
       border = { "●", "─", "●", "│", "●", "─", "●", "│" },
-      winhighlight = "Normal:Pmenu",
+      winhighlight = "Normal:CmpItemMenu,FloatBorder:CmpItemMenu",
     }),
     documentation = cmp.config.window.bordered({
       border = { "●", "─", "●", "│", "●", "─", "●", "│" },
-      winhighlight = "Normal:Pmenu",
+      winhighlight = "Normal:CmpItemMenu,FloatBorder:CmpItemMenu",
     }),
   },
   formatting = {
