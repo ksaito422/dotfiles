@@ -11,6 +11,34 @@ local has_words_before = function()
   return col ~= 0 and vim.api.nvim_buf_get_text(0, line - 1, 0, line - 1, col, {})[1]:match("^%s*$") == nil
 end
 
+local cmp_kinds = {
+  Text = "  ",
+  Method = "  ",
+  Function = "  ",
+  Constructor = "  ",
+  Field = "  ",
+  Variable = "  ",
+  Class = "  ",
+  Interface = "  ",
+  Module = "  ",
+  Property = "  ",
+  Unit = "  ",
+  Value = "  ",
+  Enum = "  ",
+  Keyword = "  ",
+  Snippet = "  ",
+  Color = "  ",
+  File = "  ",
+  Reference = "  ",
+  Folder = "  ",
+  EnumMember = "  ",
+  Constant = "  ",
+  Struct = "  ",
+  Event = "  ",
+  Operator = "  ",
+  TypeParameter = "  ",
+}
+
 cmp.setup({
   snippet = {},
   window = {
@@ -22,6 +50,12 @@ cmp.setup({
       border = { "●", "─", "●", "│", "●", "─", "●", "│" },
       winhighlight = "Normal:Pmenu",
     }),
+  },
+  formatting = {
+    format = function(_, vim_item)
+      vim_item.kind = (cmp_kinds[vim_item.kind] or "") .. vim_item.kind
+      return vim_item
+    end,
   },
   mapping = cmp.mapping.preset.insert({
     ["<C-n>"] = cmp.mapping.select_next_item(),
@@ -52,7 +86,7 @@ cmp.setup.filetype("gitcommit", {
   sources = cmp.config.sources({
     -- You can specify the `git` source if [you were installed it](https://github.com/petertriho/cmp-git).
     { name = "git" },
-    { name = "copilot" }
+    { name = "copilot" },
   }, {
     { name = "buffer" },
   }),
