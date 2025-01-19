@@ -138,28 +138,13 @@ require("lazy").setup({
     },
   },
 
-  -- コメントアウト用 nvim-ts-context-commentstringと組み合わせる
-  {
-    "numToStr/Comment.nvim",
-    config = function()
-      require("configs.comment")
-    end,
-    event = {
-      "BufReadPre",
-      "BufNewFile",
-    },
-  },
-
   -- jsx,tsxコメントアウト
   {
-    "JoosepAlviste/nvim-ts-context-commentstring",
+    "folke/ts-comments.nvim",
+    event = "VeryLazy",
     config = function()
-      require("configs.nvim-ts-context-commentstring")
-    end,
-    event = {
-      "BufReadPre",
-      "BufNewFile",
-    },
+      require("ts-comments").setup()
+    end
   },
 
   -- TODO/HACK/BUGなどをhighlightする

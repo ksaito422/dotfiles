@@ -111,7 +111,7 @@
 - ]d 次の警告箇所 diagnostic goto next(lspconfig)
 - gi code implementation(lspconfig)
 - <space><space> code format(lspconfig)
-- <leader>ld workspeceの診断結果をtelescopeで開く diagnostics(telescope) 
+- <leader>ld workspeceの診断結果をtelescopeで開く diagnostics(telescope)
 
 ### nvim-treesitter
 
@@ -123,11 +123,6 @@
 - <leader>fg git管理ファイルの検索
 - <leader>fl ファイル内テキスト検索(live grep)
 - <leader>fb buffers表示
-
-### Comment.nvim
-
-- [count]gcc 1 行コメントアウト
-- [count]gbc 複数行コメントアウト
 
 ### fern.vim
 
