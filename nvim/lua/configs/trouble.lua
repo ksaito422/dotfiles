@@ -8,10 +8,12 @@ trouble.setup({
   auto_close = false,
   auto_open = false,
   auto_preview = true,
-  open_no_results = true,
+  auto_jump = false,
+  open_no_results = false,
   auto_refresh = true,
   multiline = false,
   pinned = true,
+  focus = true,
   keys = {
     gb = { -- example of a custom action that toggles the active view filter
       action = function(view)
