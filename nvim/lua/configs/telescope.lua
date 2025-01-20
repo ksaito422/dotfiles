@@ -51,7 +51,7 @@ telescope.setup({
       prompt_position = "top",
       horizontal = {
         preview_width = 0.5,
-      }
+      },
     },
     file_ignore_patterns = { "^.git/", "^node_modules/" },
     mappings = {
@@ -133,15 +133,3 @@ telescope.setup({
 
 telescope.load_extension("live_grep_args")
 telescope.load_extension("file_browser")
-
-vim.cmd([[
-  autocmd ColorScheme * highlight TelescopePromptNormal guifg=#F1F1F1 guibg=#434343
-  autocmd ColorScheme * highlight TelescopePromptBorder guifg=#434343 guibg=#434343
-  autocmd ColorScheme * highlight TelescopePromptTitle guifg=#B7B8B6 guibg=#336B87
-  autocmd ColorScheme * highlight TelescopePreviewNormal guifg=#F1F1F1 guibg=#393939
-  autocmd ColorScheme * highlight TelescopePreviewBorder guifg=#393939 guibg=#393939
-  autocmd ColorScheme * highlight TelescopePreviewTitle guifg=#B7B8B6 guibg=#2C7873
-  autocmd ColorScheme * highlight TelescopeResultsNormal guifg=#F1F1F1 guibg=#323232
-  autocmd ColorScheme * highlight TelescopeResultsBorder guifg=#323232 guibg=#323232
-  autocmd ColorScheme * highlight TelescopeResultsTitle guifg=#B7B8B6 guibg=#2C7873
-]])
