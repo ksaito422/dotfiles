@@ -27,8 +27,8 @@ config = {
   -- window_decorations = "RESIZE",
   show_tabs_in_tab_bar = true,
   -- window_frame = {
-    -- inactive_titlebar_bg = "none",
-    -- active_titlebar_bg = "none",
+  -- inactive_titlebar_bg = "none",
+  -- active_titlebar_bg = "none",
   -- },
   show_new_tab_button_in_tab_bar = false,
   -- show_close_tab_button_in_tabs = false,
