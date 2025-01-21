@@ -14,6 +14,6 @@ copilot.setup({
     markdown = true,
     terraform = true,
     yaml = true,
-    gitcommit = true
-  }
+    gitcommit = true,
+  },
 })

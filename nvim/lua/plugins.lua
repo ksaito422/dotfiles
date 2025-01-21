@@ -144,7 +144,7 @@ require("lazy").setup({
     event = "VeryLazy",
     config = function()
       require("ts-comments").setup()
-    end
+    end,
   },
 
   -- TODO/HACK/BUGなどをhighlightする
