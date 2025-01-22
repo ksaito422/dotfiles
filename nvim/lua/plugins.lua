@@ -76,12 +76,6 @@ require("lazy").setup({
     },
   },
 
-  -- markdown preview
-  {
-    "OXY2DEV/markview.nvim",
-    lazy = false,
-  },
-
   -- color codeの色を表示する
   {
     "norcalli/nvim-colorizer.lua",
@@ -332,20 +326,37 @@ require("lazy").setup({
     end,
   },
 
-  -- github copilot
   {
-    "zbirenbaum/copilot.lua",
-    config = function()
-      require("configs.copilot")
-    end,
-  },
-
-  -- copilot chat
-  {
-    "CopilotC-Nvim/CopilotChat.nvim",
-    config = function()
-      require("configs.copilot-chat")
-    end,
+    "yetone/avante.nvim",
+    event = "VeryLazy",
+    build = "make",
+    dependencies = {
+      "nvim-treesitter/nvim-treesitter",
+      "stevearc/dressing.nvim",
+      "nvim-lua/plenary.nvim",
+      "MunifTanjim/nui.nvim",
+      --- The below dependencies are optional,
+      "nvim-tree/nvim-web-devicons", -- or echasnovski/mini.icons
+      "zbirenbaum/copilot.lua", -- for providers='copilot'
+      {
+        "MeanderingProgrammer/render-markdown.nvim",
+        opts = {
+          file_types = { "markdown", "Avante" },
+        },
+        ft = { "markdown", "Avante" },
+      }
+    },
+    opts = {
+      provider = "copilot",
+      auto_suggestions_provider = "copilot",
+      behavior = {
+        auto_suggestions = true,
+        auto_set_highligght_group = true,
+        auto_set_keymaps = true,
+        auto_apply_diff_after_generation = true,
+        support_paste_from_clipboard = true,
+      },
+    },
   },
 
   -- memo
