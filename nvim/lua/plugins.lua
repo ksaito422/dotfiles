@@ -342,10 +342,24 @@ require("lazy").setup({
 
   -- copilot chat
   {
-    "CopilotC-Nvim/CopilotChat.nvim",
+    "olimorris/codecompanion.nvim",
+    dependencies = {
+      "nvim-lua/plenary.nvim",
+      "nvim-treesitter/nvim-treesitter",
+    },
     config = function()
-      require("configs.copilot-chat")
+      require("configs.codecompanion")
     end,
+  },
+
+  -- markdown preview
+  {
+    "OXY2DEV/markview.nvim",
+    ft = { "markdown", "codecompanion" },
+    opts = {
+      filetypes = { "markdown", "codecompanion" },
+      buf_ignore = {},
+    },
   },
 
   -- memo
