@@ -342,13 +342,9 @@ require("lazy").setup({
 
   -- copilot chat
   {
-    "olimorris/codecompanion.nvim",
-    dependencies = {
-      "nvim-lua/plenary.nvim",
-      "nvim-treesitter/nvim-treesitter",
-    },
+    "CopilotC-Nvim/CopilotChat.nvim",
     config = function()
-      require("configs.codecompanion")
+      require("configs.copilot-chat")
     end,
   },
 
