@@ -78,8 +78,12 @@ require("lazy").setup({
 
   -- markdown preview
   {
-    "OXY2DEV/markview.nvim",
-    lazy = false,
+    "MeanderingProgrammer/render-markdown.nvim",
+    config = function()
+      require("render-markdown").setup({
+        file_types = { "markdown", "copilot-chat" },
+      })
+    end,
   },
 
   -- color codeの色を表示する
@@ -346,16 +350,6 @@ require("lazy").setup({
     config = function()
       require("configs.copilot-chat")
     end,
-  },
-
-  -- markdown preview
-  {
-    "OXY2DEV/markview.nvim",
-    ft = { "markdown", "codecompanion" },
-    opts = {
-      filetypes = { "markdown", "codecompanion" },
-      buf_ignore = {},
-    },
   },
 
   -- memo
