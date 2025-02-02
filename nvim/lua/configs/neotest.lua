@@ -19,7 +19,7 @@ keymap("n", "<leader>tp", "<Cmd>lua require('neotest').output_panel.toggle()<CR>
 
 neotest.setup({
   adapters = {
-    require("neotest-plenary")
-  }
+    require("neotest-plenary"),
+    require("neotest-rspec"),
+  },
 })
-

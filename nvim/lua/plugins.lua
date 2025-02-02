@@ -335,6 +335,7 @@ require("lazy").setup({
       "nvim-lua/plenary.nvim",
       "nvim-treesitter/nvim-treesitter",
       "nvim-neotest/neotest-plenary",
+      "olimorris/neotest-rspec",
     },
     config = function()
       require("configs.neotest")
