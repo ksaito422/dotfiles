@@ -27,8 +27,8 @@ chat.setup({
   allow_insecure = false,
   chat_autocomplete = true,
   highlight_headers = false,
-  separator = '---',
-  error_header = '> [!ERROR] Error',
+  separator = "---",
+  error_header = "> [!ERROR] Error",
   mappings = {
     submit_prompt = {
       normal = "<CR>",
