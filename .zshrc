@@ -12,14 +12,12 @@ export VOLTA_HOME="$HOME/.volta"
 export PATH="$VOLTA_HOME/bin:$PATH"
 export XDG_CONFIG_HOME="$HOME/.config"
 export PATH="$HOME/.cargo/bin:$PATH"
-export STARSHIP_CONFIG=$HOME/.config/starship.toml
 
 # Dockerイメージを「なりすまし」と「改ざん」から保護するセキュリティ機能
 export DOCKER_CONTENT_TRUST=0
 
 # Rubyのバージョン管理ツール
 eval "$(rbenv init - zsh)"
-eval "$(starship init zsh)"
 
 # cd [tab]で以前移動したディレクトリを表示
 setopt auto_pushd
@@ -33,6 +31,42 @@ zstyle ':completion:*:default' menu select=1
 setopt correct
 # vim mode
 # bindkey -v
+
+# PROMPTの表示内容をカスタマイズ
+### gitブランチを表示
+### 色を使用できるようにする
+autoload -Uz vcs_info
+setopt prompt_subst
+zstyle ':vcs_info:git:*' check-for-changes true
+zstyle ':vcs_info:git:*' stagedstr "%F{yellow}!"
+zstyle ':vcs_info:git:*' unstagedstr "%F{red}+"
+zstyle ':vcs_info:*' formats "%F{green}%c%u%b%f"
+zstyle ':vcs_info:*' actionformats '[%b|%a]'
+### PROMPT左側に表示
+function left-prompt {
+  name_t='204;153;51'      # user name text color
+  name_b='0;0;0'    # user name background color
+  path_t='255;255;255'     # path text color
+  path_b='0;102;153'   # path background color
+  git_b='0;0;0'    # user name background color
+  arrow='0;0;0'   # arrow color
+  text_color='%{\e[38;2;'    # set text color
+  back_color='%{\e[48;2;' # set background color
+  reset='%{\e[0m%}'   # reset
+  sharp='\uE0B0'      # trianglei
+
+  user="${back_color}${name_b}m%}${text_color}${name_t}m%}%n${reset}"
+  dir="${back_color}${path_b}m%}${text_color}${path_t}m%}%~${reset}"
+  git="${back_color}${name_b}m%}${text_color}${name_t}m%}\$vcs_info_msg_0_${reset}"
+  # format: user name > current dir > git status > now
+  echo "${user}${back_color}${path_b}m%}${text_color}${name_b}m%}${sharp}"\
+    "${dir}${text_color}${path_b}m%}${back_color}${git_b}m%}${sharp}"\
+    "${git}${text_color}${git_b}m%}${sharp}${reset}"\
+    "%D{%Y/%m/%d} %*"\
+    "\n%F{004}>>> "
+}
+PROMPT=`left-prompt`
+precmd(){ vcs_info }
 
 # ヒストリの設定
 HISTFILE=~/.zsh_history
