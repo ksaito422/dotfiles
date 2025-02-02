@@ -328,6 +328,23 @@ require("lazy").setup({
     },
   },
 
+  {
+    "nvim-neotest/neotest",
+    dependencies = {
+      "nvim-neotest/nvim-nio",
+      "nvim-lua/plenary.nvim",
+      "nvim-treesitter/nvim-treesitter",
+      "nvim-neotest/neotest-plenary",
+    },
+    config = function()
+      require("configs.neotest")
+    end,
+    event = {
+      "BufReadPre",
+      "BufNewFile",
+    },
+  },
+
   -- lspのセットアップ状況の可視化と通知を見やすくする
   {
     "j-hui/fidget.nvim",
