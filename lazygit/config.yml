@@ -49,7 +49,7 @@ gui:
 git:
   paging:
     colorArg: always
-    pager: delta --dark --paging=never
+    pager: delta --dark --paging=never --side-by-side
   commit:
     signOff: false
     verbose: default # one of 'default' | 'always' | 'never'
