@@ -74,7 +74,7 @@ keybindings:
   prs:
     - key: C
       command: >-
-        wezterm cli spawn --cwd {{.RepoPath}} -- zsh -c "nvim -c ':silent Octo pr edit {{.PrNumber}}'"
+        wezterm cli spawn --cwd {{.RepoPath}} -- nvim -c ':silent Octo pr edit {{.PrNumber}}'
 repoPaths:
 theme:
   ui:
