@@ -75,6 +75,9 @@ keybindings:
     - key: C
       command: >-
         wezterm cli spawn --cwd {{.RepoPath}} -- nvim -c ':silent Octo pr edit {{.PrNumber}}'
+    - key: S
+      command: >-
+        cd {{.RepoPath}} && git fetch && git worktree add {{.HeadRefName}} && wezterm cli spawn --cwd {{.RepoPath}}/{{.HeadRefName}}
 repoPaths:
 theme:
   ui:
