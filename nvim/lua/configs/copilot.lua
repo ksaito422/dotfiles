@@ -7,7 +7,7 @@ copilot.setup({
   suggestion = { enabled = false },
   panel = { enabled = false },
   filetypes = {
-    ruby = true,
+    ruby = false,
     lua = true,
     javascript = true,
     typescript = true,
