@@ -81,7 +81,7 @@ require("lazy").setup({
     "MeanderingProgrammer/render-markdown.nvim",
     config = function()
       require("render-markdown").setup({
-        file_types = { "markdown", "copilot-chat" },
+        file_types = { "markdown", "copilot-chat", "Avante" },
       })
     end,
   },
@@ -362,11 +362,22 @@ require("lazy").setup({
     end,
   },
 
-  -- copilot chat
+  -- AI agent
   {
-    "CopilotC-Nvim/CopilotChat.nvim",
+    "yetone/avante.nvim",
+    event = "VeryLazy",
+    build = "make",
+    dependencies = {
+      "nvim-treesitter/nvim-treesitter",
+      "stevearc/dressing.nvim",
+      "nvim-lua/plenary.nvim",
+      "MunifTanjim/nui.nvim",
+      "nvim-tree/nvim-web-devicons", -- or echasnovski/mini.icons
+      "zbirenbaum/copilot.lua", -- for providers='copilot'
+      "MeanderingProgrammer/render-markdown.nvim",
+    },
     config = function()
-      require("configs.copilot-chat")
+      require("configs.avante")
     end,
   },
 
