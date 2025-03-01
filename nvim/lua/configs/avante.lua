@@ -28,3 +28,29 @@ avante.setup({
     enable_cursor_planning_mode = true,
   },
 })
+
+local prompts = {
+  Explain = "このコードの処理について説明してください。",
+  Fix = "このコードにバグがあれば、説明をして修正案を出してください。",
+  Optimize = "このコードを最適化してください。",
+  Test = "このコードのテストをプロジェクトで使用しているテストフレームワークに従って書いてください。",
+  Refactor = "このコードをより読みやすく、メンテナンスしやすくリファクタリングしてください。",
+}
+
+for command, question in pairs(prompts) do
+  vim.api.nvim_create_user_command("Avante" .. command, function()
+    require('avante.api').ask { question = question }
+  end, { range = true })
+end
+
+keymap("v", "<leader>ae", "<cmd>AvanteExplain<CR>", { noremap = true, silent = true })
+keymap("n", "<leader>ae", "<cmd>AvanteExplain<CR>", { noremap = true, silent = true })
+keymap("v", "<leader>af", "<cmd>AvanteFix<CR>", { noremap = true, silent = true })
+keymap("n", "<leader>af", "<cmd>AvanteFix<CR>", { noremap = true, silent = true })
+keymap("v", "<leader>ao", "<cmd>AvanteOptimize<CR>", { noremap = true, silent = true })
+keymap("n", "<leader>ao", "<cmd>AvanteOptimize<CR>", { noremap = true, silent = true })
+keymap("v", "<leader>at", "<cmd>AvanteTest<CR>", { noremap = true, silent = true })
+keymap("n", "<leader>at", "<cmd>AvanteTest<CR>", { noremap = true, silent = true })
+keymap("v", "<leader>ar", "<cmd>AvanteRefactor<CR>", { noremap = true, silent = true })
+keymap("n", "<leader>ar", "<cmd>AvanteRefactor<CR>", { noremap = true, silent = true })
+
