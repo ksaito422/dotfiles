@@ -5,7 +5,7 @@ if not status_ok then
 end
 
 keymap("n", "<leader>tr", "<Cmd>lua require('neotest').run.run()<CR>", { noremap = true, silent = true })
--- keymap("n", "<leader>te", "<Cmd>lua require('neotest').stop()<CR>", { noremap = true, silent = true })
+keymap("n", "<leader>te", "<Cmd>lua require('neotest').stop()<CR>", { noremap = true, silent = true })
 -- keymap(
 --   "n",
 --   "<leader>tf",
@@ -14,8 +14,10 @@ keymap("n", "<leader>tr", "<Cmd>lua require('neotest').run.run()<CR>", { noremap
 -- )
 -- keymap("n", "<leader>tw", "<Cmd>lua require('neotest').watch.toggle(vim.fn.expand('%'))<CR>", { noremap = true, silent = true })
 keymap("n", "<leader>ts", "<Cmd>lua require('neotest').summary.toggle()<CR>", { noremap = true, silent = true })
+keymap("n", "<leader>tm", "<Cmd>Neotest summary mark<CR>", { noremap = true, silent = true })
+keymap("n", "<leader>tt", "<Cmd>lua require('neotest').summary.run_marked()<CR>", { noremap = true, silent = true })
 -- keymap("n", "<leader>to", "<Cmd>lua require('neotest').output.open({ enter = true })<CR>", { noremap = true, silent = true })
-keymap("n", "<leader>tp", "<Cmd>lua require('neotest').output_panel.toggle()<CR>", { noremap = true, silent = true })
+keymap("n", "<leader>to", "<Cmd>lua require('neotest').output_panel.toggle()<CR>", { noremap = true, silent = true })
 
 neotest.setup({
   adapters = {
