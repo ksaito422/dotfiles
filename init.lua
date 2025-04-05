@@ -14,8 +14,8 @@ hs.hotkey.bind({ "CTRL" }, "q", function()
   end
 end)
 
--- <cmd+q>でvscodeをアクティブウインドウにする
-hs.hotkey.bind({ "CTRL", "alt" }, "q", function()
+-- <ctrl+x>でvscodeをアクティブウインドウにする
+hs.hotkey.bind({ "CTRL" }, "x", function()
   local vscode = hs.application.get("Code")
   if vscode == nil then
     hs.application.launchOrFocus("/Applications/Visual Studio Code.app")
