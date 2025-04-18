@@ -7,13 +7,14 @@ copilot.setup({
   suggestion = { enabled = false },
   panel = { enabled = false },
   filetypes = {
-    ruby = false,
-    lua = false,
-    javascript = false,
-    typescript = false,
-    markdown = false,
-    terraform = false,
-    yaml = false,
-    gitcommit = false,
+    ruby = true,
+    lua = true,
+    javascript = true,
+    typescript = true,
+    markdown = true,
+    terraform = true,
+    yaml = true,
+    gitcommit = true,
   },
+  copilot_model = "claude-3.7-sonnet"
 })
