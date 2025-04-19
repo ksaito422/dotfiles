@@ -56,3 +56,7 @@ keymap("n", "<leader>g[", "<cmd>Gitsigns prev_hunk<CR>", {
   noremap = true,
   silent = true,
 })
+keymap("n", "<leader>gl", "<cmd>Gitsigns setqflist<CR>", {
+  noremap = true,
+  silent = true,
+})
