@@ -95,11 +95,6 @@ PATH=$PATH:~/bin
 # alias
 ### clear
 alias cc='clear'
-### ls
-# alias lalias='alias | grep "ls"'
-# alias la='ls -a'
-# alias ll='ls -l'
-# alias lal='ls -al'
 
 ### cd
 alias cd-alias='alias | grep "cd"'
@@ -112,67 +107,12 @@ alias ls='eza -1lF'
 alias la='eza -1aalF'
 alias lt='eza -T -L 3 -a --icons -I "node_modules|.git|.cache"'
 
-### bat
-alias bat-alias='alias | grep "bat"'
-alias cat='bat'
-alias cata='bat -A'
-
 ### procs
 alias procs-alias='alias | grep "procs"'
 alias ps='procs'
 alias pscpu='ps --sortd cpu'
 
-### docker
-alias docker-alias='alias | grep "docker"'
-alias dcup='docker compose up'
-alias dcupd='docker compose up -d'
-alias dcps='docker compose ps'
-alias dcla='docker container ls -a'
-alias dex='docker exec -it'
-alias dcs='docker compose stop'
-alias dcd='docker compose down'
-alias dcb='docker compose build'
-alias ds='docker stop'
-alias dcl='docker compose logs'
-alias dnl='docker network ls'
-alias di='docker images'
-alias dri='docker rmi'
-
-### git
-alias git-alias='alias | grep "git"'
-alias ginit='git init'
-alias gadd='git add'
-alias gadda='git add -A'
-alias gaddu='git add -U'
-alias gco='git commit'
-alias gpush='git push'
-alias gpull='git pull'
-alias gf='git fetch'
-alias gm='git merge'
-alias gstatus='git status'
-alias glog='git log --oneline'
-alias glog10='git log --oneline -10 --graph --decorate'
-# alias gdiffh='git diff HEAD'
-alias gb='git branch'
-alias gswitch='git switch'
-alias grestore='git restore'
-alias gcherry='git cherry-pick'
-alias gstash='git stash'
-alias gstashu='git stash -u'
-alias gstashs='git stash save'
-alias gstashl='git stash list'
-alias gstashp='git stash pop'
-alias gstashc='git stash clear'
-alias greset='git reset'
-alias greseth='git reset --hard'
-alias gresets='git reset --soft'
-alias gremote= 'git remote'
-# alias diff='git diff'
-
 ### vim
-# alias v='nvim'
-# alias vi='nvim'
-# alias vim='nvim'
 # nvim-remoteでlazygitからnvimを開くための設定
 alias vim='nvim --listen /tmp/nvim-server.pipe'
 alias v='vim'
