@@ -29,5 +29,20 @@ hs.hotkey.bind({ "CTRL" }, "x", function()
   end
 end)
 
+-- <ctrl+s>でobsidianをアクティブウインドウにする
+hs.hotkey.bind({ "CTRL" }, "s", function()
+  local obsidian = hs.application.get("Obsidian")
+  if obsidian == nil then
+    hs.application.launchOrFocus("/Applications/Obsidian.app")
+  elseif obsidian:isFrontmost() then
+    obsidian:hide()
+  else
+    local space = hs.spaces.focusedSpace()
+    local win = obsidian:focusedWindow()
+    hs.spaces.moveWindowToSpace(win, space)
+    win:focus()
+  end
+end)
+
 hs.loadSpoon("ShiftIt")
 spoon.ShiftIt:bindHotkeys({})
