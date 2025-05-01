@@ -38,7 +38,7 @@ hlchunk.setup({
 
   indent = {
     enable = true,
-    use_treesitter = true,
+    use_treesitter = false,
     chars = {
       "│",
     },
