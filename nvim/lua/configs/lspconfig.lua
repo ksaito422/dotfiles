@@ -52,6 +52,17 @@ local on_attach = function(client, bufnr)
   -- end
 end
 
+vim.lsp.config('lua_ls', {
+  settings = {
+    Lua = {
+      workspace = { library = vim.api.nvim_get_runtime_file("", true) },
+      telemetry = { enable = false },
+      diagnostics = { enable = false },
+      format = { enable = false },
+    }
+  },
+})
+
 nvim_lsp.ruby_lsp.setup({
   on_attach = on_attach,
   cmd = { "ruby-lsp" },
@@ -63,17 +74,17 @@ nvim_lsp.ruby_lsp.setup({
   single_file_support = true,
 })
 nvim_lsp.clangd.setup({ on_attach = on_attach })
-nvim_lsp.lua_ls.setup({
-  on_attach = on_attach,
-  settings = {
-    Lua = {
-      workspace = { library = vim.api.nvim_get_runtime_file("", true) },
-      telemetry = { enable = false },
-      diagnostics = { enable = false },
-      format = { enable = false },
-    },
-  },
-})
+-- nvim_lsp.lua_ls.setup({
+--   on_attach = on_attach,
+--   settings = {
+--     Lua = {
+--       workspace = { library = vim.api.nvim_get_runtime_file("", true) },
+--       telemetry = { enable = false },
+--       diagnostics = { enable = false },
+--       format = { enable = false },
+--     },
+--   },
+-- })
 nvim_lsp.tflint.setup({ on_attach = on_attach })
 nvim_lsp.terraformls.setup({ on_attach = on_attach })
 vim.api.nvim_create_autocmd({ "BufWritePre" }, {
