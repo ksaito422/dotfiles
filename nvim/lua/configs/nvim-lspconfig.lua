@@ -3,6 +3,28 @@ if not status_ok then
   return
 end
 
+local m_status_ok, mason = pcall(require, "mason")
+if not m_status_ok then
+  return
+end
+
+mason.setup({
+  ui = {
+    icons = {
+      package_installed = "✓",
+      package_pending = "➜",
+      package_uninstalled = "✗",
+    },
+  },
+})
+
+local ml_status_ok, mason_lsp = pcall(require, "mason-lspconfig")
+if not ml_status_ok then
+  return
+end
+
+mason_lsp.setup()
+
 local nvic_status_ok, navic = pcall(require, "nvim-navic")
 if not nvic_status_ok then
   return
