@@ -1,4 +1,4 @@
-local status_ok, nvim_lsp = pcall(require, "lspconfig")
+local status_ok, _ = pcall(require, "lspconfig")
 if not status_ok then
   return
 end
@@ -33,7 +33,7 @@ end
 vim.o.winbar = " %{%v:lua.vim.fn.expand('%F')%} %{%v:lua.require'nvim-navic'.get_location()%}"
 
 -------------------------------------------------------------------
--- nvim-lspconfig
+-- lsp setup
 -------------------------------------------------------------------
 local on_attach = function(client, bufnr)
   if client.server_capabilities.documentSymbolProvider then
@@ -52,58 +52,48 @@ local on_attach = function(client, bufnr)
   -- end
 end
 
-vim.lsp.config('lua_ls', {
+vim.lsp.enable({
+  "ruby_lsp",
+  "ts_ls",
+  "clangd",
+  "lua_ls",
+  "tflint",
+  "terraformls",
+  "efm",
+})
+
+vim.lsp.config("ruby_lsp", {
+  on_attach = on_attach,
+})
+vim.lsp.config("ts_ls", {
+  on_attach = on_attach,
+})
+vim.lsp.config("clangd", {
+  on_attach = on_attach,
+})
+vim.lsp.config("lua_ls", {
+  on_attach = on_attach,
   settings = {
     Lua = {
       workspace = { library = vim.api.nvim_get_runtime_file("", true) },
       telemetry = { enable = false },
       diagnostics = { enable = false },
       format = { enable = false },
-    }
+    },
   },
+})
+vim.lsp.config("tflint", {
+  on_attach = on_attach,
+})
+vim.lsp.config("terraformls", {
+  on_attach = on_attach,
 })
 
-nvim_lsp.ruby_lsp.setup({
-  on_attach = on_attach,
-  cmd = { "ruby-lsp" },
-  filetypes = { "ruby" },
-  root_dir = nvim_lsp.util.root_pattern("Gemfile", ".git"),
-  init_options = {
-    formatting = "auto",
-  },
-  single_file_support = true,
-})
-nvim_lsp.clangd.setup({ on_attach = on_attach })
--- nvim_lsp.lua_ls.setup({
---   on_attach = on_attach,
---   settings = {
---     Lua = {
---       workspace = { library = vim.api.nvim_get_runtime_file("", true) },
---       telemetry = { enable = false },
---       diagnostics = { enable = false },
---       format = { enable = false },
---     },
---   },
--- })
-nvim_lsp.tflint.setup({ on_attach = on_attach })
-nvim_lsp.terraformls.setup({ on_attach = on_attach })
 vim.api.nvim_create_autocmd({ "BufWritePre" }, {
   pattern = { "*.tf", "*.tfvars" },
   callback = function()
     vim.lsp.buf.format()
   end,
-})
-nvim_lsp.ts_ls.setup({
-  on_attach = on_attach,
-  filetypes = {
-    "javascript",
-    "typescript",
-    "javascriptreact",
-    "typescriptreact",
-    "javascript.jsx",
-    "typescript.tsx",
-  },
-  cmd = { "typescript-language-server", "--stdio" },
 })
 
 local efm_config = {
@@ -128,7 +118,7 @@ local efm_config = {
   },
 }
 
-nvim_lsp.efm.setup({
+vim.lsp.config("efm", {
   on_attach = on_attach,
   cmd = { "efm-langserver", "-logfile", "/tmp/efm.log", "-loglevel", "5" },
   init_options = { documentFormatting = true, codeAction = false },
