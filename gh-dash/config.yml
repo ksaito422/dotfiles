@@ -79,6 +79,7 @@ keybindings:
       command: >-
         cd {{.RepoPath}} && git fetch && git worktree add {{.HeadRefName}} && wezterm cli spawn --cwd {{.RepoPath}}/{{.HeadRefName}}
 repoPaths:
+  ksaito422/dotfiles: ~/dotfiles
 theme:
   ui:
     table:
