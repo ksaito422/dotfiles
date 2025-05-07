@@ -39,7 +39,7 @@ local prompts = {
 
 for command, question in pairs(prompts) do
   vim.api.nvim_create_user_command("Avante" .. command, function()
-    require('avante.api').ask { question = question }
+    require("avante.api").ask({ question = question })
   end, { range = true })
 end
 
@@ -53,4 +53,3 @@ keymap("v", "<leader>at", "<cmd>AvanteTest<CR>", { noremap = true, silent = true
 keymap("n", "<leader>at", "<cmd>AvanteTest<CR>", { noremap = true, silent = true })
 keymap("v", "<leader>ar", "<cmd>AvanteRefactor<CR>", { noremap = true, silent = true })
 keymap("n", "<leader>ar", "<cmd>AvanteRefactor<CR>", { noremap = true, silent = true })
-

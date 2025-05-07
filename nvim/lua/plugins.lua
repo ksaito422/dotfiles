@@ -277,7 +277,7 @@ require("lazy").setup({
   {
     "neovim/nvim-lspconfig",
     config = function()
-      require("configs.nvim-lspconfig")
+      require("configs.lspconfig")
     end,
     event = {
       "BufReadPre",
@@ -303,9 +303,6 @@ require("lazy").setup({
   -- LSP, DAP, Linter, Formatter manager
   {
     "williamboman/mason.nvim",
-    config = function()
-      require("configs.mason")
-    end,
     cmd = {
       "Mason",
       "MasonInstall",
@@ -319,9 +316,6 @@ require("lazy").setup({
   -- LSP, DAP, Linter, Formatter
   {
     "williamboman/mason-lspconfig.nvim",
-    config = function()
-      require("configs.mason-lspconfig")
-    end,
     event = {
       "BufReadPre",
       "BufNewFile",
