@@ -1,21 +1,6 @@
 # 変更後、即反映コマンド
 # source ~/.zshrc
 
-export PATH=/usr/local/opt/python@3.8/libexec/bin:$PATH
-export PATH=/usr/local/opt/gawk/bin/:$PATH
-export LANG="ja_JP.UTF-8"
-export GOBIN="$(go env GOPATH)/bin"
-export PATH=$PATH:$GOBIN
-export PATH=/usr/local/opt/mysql-client/bin:$PATH
-export PRETTIERD_DEFAULT_CONFIG=$HOME/dotfiles/.prettierrc
-export VOLTA_HOME="$HOME/.volta"
-export PATH="$VOLTA_HOME/bin:$PATH"
-export XDG_CONFIG_HOME="$HOME/.config"
-export PATH="$HOME/.cargo/bin:$PATH"
-
-# Dockerイメージを「なりすまし」と「改ざん」から保護するセキュリティ機能
-export DOCKER_CONTENT_TRUST=0
-
 # Rubyのバージョン管理ツール
 eval "$(rbenv init - zsh)"
 
@@ -89,8 +74,6 @@ setopt share_history
 # シンタックスハイライト brew install zsh-syntax-highlighting
 source $(brew --prefix)/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
-# シェルスクリプト置き場のパスを追加
-PATH=$PATH:~/bin
 
 # alias
 ### clear
@@ -118,19 +101,8 @@ alias vim='nvim --listen /tmp/nvim-server.pipe'
 alias v='vim'
 alias vi='vim'
 alias nvimconf='vi ~/.config/nvim .'
-export PATH=$PATH:~/.bin
-
 if [ -n "$NVIM_LISTEN_ADDRESS" ]; then
     alias nvim=nvr --remote-wait +'set bufhidden=wipe'
-fi
-
-# Gitで開くEditorをNeoVimに設定
-if [ -n "$NVIM_LISTEN_ADDRESS" ]; then
-    export VISUAL="nvr -cc split --remote-wait +'set bufhidden=wipe'"
-    export EDITOR="nvr -cc split --remote-wait +'set bufhidden=wipe'"
-else
-    export VISUAL="nvim"
-    export EDITOR="nvim"
 fi
 
 # pecoでヒストリ検索
