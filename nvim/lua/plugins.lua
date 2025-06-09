@@ -362,23 +362,13 @@ require("lazy").setup({
     end,
   },
 
-  -- AI agent
   {
-    "yetone/avante.nvim",
-    event = "VeryLazy",
-    build = "make",
     "greggh/claude-code.nvim",
     keys = { { "<C-n>", "<Cmd>ClaudeCode<CR>" } },
     dependencies = {
-      "nvim-treesitter/nvim-treesitter",
-      "nvim-lua/plenary.nvim",
-      "MunifTanjim/nui.nvim",
-      "nvim-tree/nvim-web-devicons", -- or echasnovski/mini.icons
-      "zbirenbaum/copilot.lua", -- for providers='copilot'
-      "MeanderingProgrammer/render-markdown.nvim",
+      "nvim-lua/plenary.nvim", -- Required for git operations
     },
     config = function()
-      require("configs.avante")
       require("claude-code").setup({
         command = "claude",
         window = {
