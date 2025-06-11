@@ -420,7 +420,10 @@ require("lazy").setup({
   {
     "ksaito422/neosess",
     config = function()
-      require("neosess").setup({})
+      require("neosess").setup({
+        auto_save = true,
+        auto_save_confirm = true,
+      })
     end,
     cmd = {
       "NeosessList",
