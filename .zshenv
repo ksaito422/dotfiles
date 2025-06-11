@@ -9,7 +9,7 @@
 if [[ ( "$SHLVL" -eq 1 && ! -o LOGIN ) && -s "${ZDOTDIR:-$HOME}/.zprofile" ]]; then
   source "${ZDOTDIR:-$HOME}/.zprofile"
 fi
-export PATH=~/.composer/vendor/bin:/usr/local/opt/php@7.4/bin:/Users/saito/.nodebrew/current/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Library/Apple/usr/bin
+export PATH=/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Library/Apple/usr/bin
 . "$HOME/.cargo/env"
 
 export PATH=/usr/local/opt/python@3.8/libexec/bin:$PATH
