@@ -8,7 +8,7 @@ if not nvic_status_ok then
   return
 end
 
-vim.o.winbar = " %{%v:lua.vim.fn.expand('%F')%} %{%v:lua.require'nvim-navic'.get_location()%}"
+vim.o.winbar = " %{%v:lua.vim.fn.expand('%F')%} %{%v:lua.require'nvim-navic'.get_location()%}"
 
 -------------------------------------------------------------------
 -- nvim-lspconfig
