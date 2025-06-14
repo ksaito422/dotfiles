@@ -72,15 +72,16 @@ git:
   # The main branches. We colour commits green if they belong to one of these branches,
   # so that you can easily see which commits are unique to your branch (coloured in yellow)
   mainBranches: [master, main]
-  autoFetch: true
+  autoFetch: false
   autoRefresh: true
-  fetchAll: true # Pass --all flag when running git fetch. Set to false to fetch only origin (or the current branch's upstream remote if there is one)
-  allBranchesLogCmd: 'git log --graph --all --color=always --date=format:"%Y-%m-%d %H:%M" --pretty=format:"%C(#a0a0a0 reverse)%h%Creset %C(cyan)%ad%Creset %C(#ee7800)%ae%Creset %C(yellow reverse)%d%Creset %n%C(white bold)%s%Creset%n" {{branchName}}'
+  fetchAll: false # Pass --all flag when running git fetch. Set to false to fetch only origin (or the current branch's upstream remote if there is one)
   branchLogCmd: 'git log --graph --all --color=always --date=format:"%Y-%m-%d %H:%M" --pretty=format:"%C(#a0a0a0 reverse)%h%Creset %C(cyan)%ad%Creset %C(#ee7800)%ae%Creset %C(yellow reverse)%d%Creset %n%C(white bold)%s%Creset%n" {{branchName}}'
   overrideGpg: false # prevents lazygit from spawning a separate process when using GPG
   disableForcePushing: false
   parseEmoji: false
   diffContextSize: 3 # how many lines of context are shown around a change in diffs
+  allBranchesLogCmds:
+    - git log --graph --all --color=always --date=format:"%Y-%m-%d %H:%M" --pretty=format:"%C(#a0a0a0 reverse)%h%Creset %C(cyan)%ad%Creset %C(#ee7800)%ae%Creset %C(yellow reverse)%d%Creset %n%C(white bold)%s%Creset%n" {{branchName}}
 os:
   editPreset: 'nvim-remote'
   edit: 'nvim --server /tmp/nvim-server.pipe --remote-tab "$(pwd)/{{filename}}"'
