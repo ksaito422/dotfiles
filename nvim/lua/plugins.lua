@@ -171,7 +171,6 @@ require("lazy").setup({
     dependencies = {
       "nvim-lua/plenary.nvim",
       "nvim-telescope/telescope-live-grep-args.nvim",
-      "nvim-telescope/telescope-file-browser.nvim",
     },
     config = function()
       require("configs.telescope")
@@ -180,6 +179,18 @@ require("lazy").setup({
     -- event = {
     --   "VimEnter",
     -- },
+  },
+
+  -- filer
+  {
+    "stevearc/oil.nvim",
+    dependencies = { "nvim-tree/nvim-web-devicons" },
+    lazy = false,
+    config = function()
+      require("oil").setup({
+        vim.api.nvim_set_keymap("n", "<C-b>", ":Oil<CR>", { noremap = true, silent = true })
+      })
+    end
   },
 
   -- HTMLタグのauto close & auto rename

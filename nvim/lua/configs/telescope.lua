@@ -27,10 +27,6 @@ keymap("n", "<leader>vs", ":Telescope search_history<CR>", { noremap = true, sil
 -- keymap('n', '<leader>lr', ':Telescope lsp_references<CR>', { noremap = true, silent = true })
 keymap("n", "<leader>ld", ":Telescope diagnostics<CR>", { noremap = true, silent = true })
 
--- file_browser
-keymap("n", "<C-b>", ":Telescope file_browser path=%:p:h select_buffer=true<CR>", { noremap = true, silent = true })
-
-local fb_actions = require("telescope").extensions.file_browser.actions
 telescope.setup({
   defaults = {
     wrap_results = false,
@@ -106,30 +102,7 @@ telescope.setup({
         prompt_position = "bottom",
       },
     },
-    file_browser = {
-      prompt_title = "File Explorer",
-      -- dir_icon = "",
-      hidden = { file_browser = true, folder_browser = true },
-      mappings = {
-        ["n"] = {
-          ["c"] = fb_actions.create,
-          ["r"] = fb_actions.rename,
-          ["m"] = fb_actions.move,
-          ["y"] = fb_actions.copy,
-          ["d"] = fb_actions.remove,
-          ["o"] = fb_actions.open,
-          ["g"] = fb_actions.goto_parent_dir,
-          ["e"] = fb_actions.goto_home_dir,
-          ["w"] = fb_actions.goto_cwd,
-          ["t"] = fb_actions.change_cwd,
-          ["f"] = fb_actions.toggle_browser,
-          ["h"] = fb_actions.toggle_hidden,
-          ["s"] = fb_actions.toggle_all,
-        },
-      },
-    },
   },
 })
 
 telescope.load_extension("live_grep_args")
-telescope.load_extension("file_browser")
