@@ -84,5 +84,5 @@ git:
     - git log --graph --all --color=always --date=format:"%Y-%m-%d %H:%M" --pretty=format:"%C(#a0a0a0 reverse)%h%Creset %C(cyan)%ad%Creset %C(#ee7800)%ae%Creset %C(yellow reverse)%d%Creset %n%C(white bold)%s%Creset%n" {{branchName}}
 os:
   editPreset: 'nvim-remote'
-  edit: 'nvim --server /tmp/nvim-server.pipe --remote-tab "$(pwd)/{{filename}}"'
+  edit: "nvim --server /tmp/$(basename $PWD).pipe --remote-tab {{filename}}"
   editInTerminal: true

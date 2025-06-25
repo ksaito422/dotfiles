@@ -97,7 +97,7 @@ alias pscpu='ps --sortd cpu'
 
 ### vim
 # nvim-remoteでlazygitからnvimを開くための設定
-alias vim='nvim --listen /tmp/nvim-server.pipe'
+alias vim="nvim --listen /tmp/$(basename $PWD).pipe"
 alias v='vim'
 alias vi='vim'
 alias nvimconf='vi ~/.config/nvim .'
