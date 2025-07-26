@@ -122,15 +122,6 @@ require("lazy").setup({
     },
   },
 
-  -- ConflictMarker
-  {
-    "rhysd/conflict-marker.vim",
-    event = {
-      "BufReadPre",
-      "BufNewFile",
-    },
-  },
-
   -- lazygit(git ui)
   {
     "kdheepak/lazygit.nvim",
@@ -461,7 +452,6 @@ require("lazy").setup({
 -- -----------------------------------
 -- Loading neovim plugin settings
 -- -----------------------------------
-require("configs/conflict-marker")
 -- require('configs/ddc')
 -- require('configs/pum')
 require("configs/glyph-palette")
