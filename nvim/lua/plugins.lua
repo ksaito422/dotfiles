@@ -179,9 +179,9 @@ require("lazy").setup({
     lazy = false,
     config = function()
       require("oil").setup({
-        vim.api.nvim_set_keymap("n", "<C-b>", ":Oil<CR>", { noremap = true, silent = true })
+        vim.api.nvim_set_keymap("n", "<C-b>", ":Oil<CR>", { noremap = true, silent = true }),
       })
-    end
+    end,
   },
 
   -- HTMLタグのauto close & auto rename
@@ -343,16 +343,6 @@ require("lazy").setup({
     "zbirenbaum/copilot.lua",
     config = function()
       require("configs.copilot")
-    end,
-  },
-
-  {
-    "greggh/claude-code.nvim",
-    dependencies = {
-      "nvim-lua/plenary.nvim", -- Required for git operations
-    },
-    config = function()
-      require("configs.claude-code")
     end,
   },
 
