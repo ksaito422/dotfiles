@@ -30,7 +30,7 @@ keymap("t", "<C-w>", [[<C-\><C-n><C-w>]], { noremap = true, silent = true })
 keymap("n", "<C-[>", ":bprev<CR>", { noremap = true, silent = true })
 keymap("n", "<C-]>", ":bnext<CR>", { noremap = true, silent = true })
 
-keymap("n", "<C-c>", ":let @* = expand('%:p')<CR>", { noremap = true })
+keymap("n", "<C-c>", ":let @* = expand('%')<CR>", { noremap = true })
 
 vim.api.nvim_create_user_command("T", function(opts)
   vim.cmd("split")
