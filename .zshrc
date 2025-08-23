@@ -90,11 +90,6 @@ alias ls='eza -1lF'
 alias la='eza -1aalF'
 alias lt='eza -T -L 3 -a --icons -I "node_modules|.git|.cache"'
 
-### procs
-alias procs-alias='alias | grep "procs"'
-alias ps='procs'
-alias pscpu='ps --sortd cpu'
-
 ### vim
 # nvim-remoteでlazygitからnvimを開くための設定
 alias vim="nvim --listen /tmp/$(basename $PWD).pipe"
