@@ -36,6 +36,8 @@ M.default_keybinds = {
       CaseSensitiveString = "",
     }),
   },
+  { key = "[", mods = "LEADER", action = act.ActivateCopyMode },
+  { key = "]", mods = "LEADER", action = act.QuickSelect },
   {
     key = "\\",
     mods = "CTRL",
@@ -64,7 +66,11 @@ M.default_keybinds = {
   { key = "P", mods = "CTRL", action = act.ActivateCommandPalette },
   { key = "l", mods = "ALT", action = act.ShowLauncher },
   -- Show workspace
-  { key = "s", mods = "LEADER", action = act.ShowLauncherArgs({ flags = "WORKSPACES", title = "Select workspace" }) },
+  {
+    key = "s",
+    mods = "LEADER",
+    action = act.ShowLauncherArgs({ flags = "WORKSPACES", title = "Select workspace" }),
+  },
   -- Create new workspace
   {
     key = "S",

@@ -47,6 +47,9 @@ config = {
   key_tables = keybinds.key_tables,
   use_ime = true,
   scrollback_lines = 3500,
+  quick_select_patterns = {
+    '[0-9a-zA-Z]+[._-][0-9a-zA-Z._-]+',
+  }
 }
 
 return config
