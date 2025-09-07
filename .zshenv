@@ -24,6 +24,7 @@ export PATH="$VOLTA_HOME/bin":$PATH
 export PATH=~/.npm-global/bin:$PATH
 export XDG_CONFIG_HOME="$HOME/.config"
 export PATH="$HOME/.cargo/bin:$PATH"
+export DISABLE_AUTOUPDATER=1 # cluade codeのauto updateを無効にする
 
 # Additional PATH entries
 export PATH=$PATH:~/bin
