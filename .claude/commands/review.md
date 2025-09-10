@@ -112,7 +112,7 @@ Verify that all the selected subagents are running. If there is any subagent not
 
 ### Phase 6: Generate Unified Report
 
-Create comprehensive review report in `./tmp/review.md`.
+Create comprehensive review report in `./tmp/review.md` in Japanese.
 
 ### Phase 7: Completion Report
 

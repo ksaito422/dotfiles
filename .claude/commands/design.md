@@ -47,5 +47,5 @@ Important context that should be included and passed to AI agents as part of the
 **_Think deeply about the implementation plan and plan your approach before starting to create the implementation plan_**
 
 ### Save and Commit Implementation Plan
-- Save implementation plan as `./tmp/plan.md`
+- Save implementation plan as `./tmp/plan.md` in Japanese
 
