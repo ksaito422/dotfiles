@@ -16,5 +16,5 @@ copilot.setup({
     yaml = true,
     gitcommit = true,
   },
-  copilot_model = "claude-3.7-sonnet"
+  copilot_model = "claude-4.0-sonnet"
 })
