@@ -3,6 +3,16 @@ if not status then
   return
 end
 
+local lsp_names = function()
+  local clients = vim
+      .iter(vim.lsp.get_active_clients { bufnr = 0 })
+      :map(function(client)
+        return client.name
+      end)
+      :totable()
+  return ' ' .. table.concat(clients, ', ')
+end
+
 lualine.setup({
   options = {
     icons_enabled = true,
@@ -18,7 +28,7 @@ lualine.setup({
     lualine_a = { "mode" },
     lualine_b = { "branch", "diff", "diagnostics" },
     lualine_c = { { "filetype", icon_only = true }, { "filename", path = 1 }, { "searchcount" } },
-    lualine_x = { "encoding", "fileformat" },
+    lualine_x = { lsp_names, "encoding", "fileformat" },
     lualine_y = { "progress" },
     lualine_z = { "location" },
   },
