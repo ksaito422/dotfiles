@@ -78,8 +78,6 @@ Analyze the context and changes to determine which specialized subagents to invo
    - Conditionally invoke based on changes:
      - backend-reviewer: When changes in any backend files
      - frontend-reviewer: When changes any in frontend files
-     - ui-reviewer: When changes in any frontend files
-     - infrastructure-reviewer: When changes in any infrastructure files
 
 ### Phase 4: Parallel Agent Execution
 
