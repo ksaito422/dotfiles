@@ -28,5 +28,18 @@
   "statusLine": {
     "type": "command",
     "command": "~/dotfiles/.claude/statusline.sh"
+  },
+  "hooks": {
+    "Notification": [
+      {
+        "matcher": "",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "notify-send 'Claude Code' 'Awaiting your input'"
+          }
+        ]
+      }
+    ]
   }
 }
