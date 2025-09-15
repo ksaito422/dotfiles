@@ -1,0 +1,6 @@
+[tools]
+lua-language-server = "3.15.0"
+stylua = "2.2.0"
+terraform-ls = "0.37.0"
+tflint = "0.59.1"
+
