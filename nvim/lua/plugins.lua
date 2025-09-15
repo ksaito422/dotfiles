@@ -302,34 +302,6 @@ require("lazy").setup({
     requires = "neovim/nvim-lspconfig",
   },
 
-  -- LSP, DAP, Linter, Formatter manager
-  {
-    "williamboman/mason.nvim",
-    config = function()
-      require("configs.mason")
-    end,
-    cmd = {
-      "Mason",
-      "MasonInstall",
-      "MasonUninstall",
-      "MasonUninstallAll",
-      "MasonLog",
-      "MasonUpdate",
-    },
-  },
-
-  -- LSP, DAP, Linter, Formatter
-  {
-    "williamboman/mason-lspconfig.nvim",
-    config = function()
-      require("configs.mason-lspconfig")
-    end,
-    event = {
-      "BufReadPre",
-      "BufNewFile",
-    },
-  },
-
   -- lspのセットアップ状況の可視化と通知を見やすくする
   {
     "j-hui/fidget.nvim",
