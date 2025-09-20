@@ -1,9 +1,6 @@
 # 変更後、即反映コマンド
 # source ~/.zshrc
 
-# Rubyのバージョン管理ツール
-eval "$(rbenv init - zsh)"
-
 # cd [tab]で以前移動したディレクトリを表示
 setopt auto_pushd
 # 直前と同じコマンドはヒストリに追加しない

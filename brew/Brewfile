@@ -48,8 +48,6 @@ brew "postgresql@14"
 brew "protobuf"
 brew "python@3.11"
 brew "python@3.8", link: false
-brew "ruby-build"
-brew "rbenv"
 brew "rustup"
 brew "superfile"
 brew "terraform-docs"
