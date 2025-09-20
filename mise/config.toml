@@ -21,3 +21,6 @@ stylua = "2.2.0"
 terraform-ls = "0.37.0"
 tflint = "0.59.1"
 
+[settings]
+idiomatic_version_file_enable_tools = ["ruby", "node"]
+
