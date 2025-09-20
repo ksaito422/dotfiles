@@ -4,7 +4,7 @@
 [init]
     defaultBranch = main
 [pull]
-    ff = only
+    rebase = false
 [url "ssh://git@github.com/"]
     insteadOf = https://github.com/
 [merge]
@@ -16,4 +16,7 @@
     colorMoved = default
 
 [push]
+	default = simple
 	autoSetupRemote = true
+[fetch]
+	prune = true
