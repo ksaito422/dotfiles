@@ -1,6 +1,7 @@
 # 変更後、即反映コマンド
 # source ~/.zshrc
 
+eval "$(mise activate zsh)"
 # cd [tab]で以前移動したディレクトリを表示
 setopt auto_pushd
 # 直前と同じコマンドはヒストリに追加しない
@@ -111,8 +112,6 @@ if [ -f "$HOME/google-cloud-sdk/path.zsh.inc" ]; then . "$HOME/google-cloud-sdk/
 
 # The next line enables shell command completion for gcloud.
 if [ -f "$HOME/google-cloud-sdk/completion.zsh.inc" ]; then . "$HOME/google-cloud-sdk/completion.zsh.inc"; fi
-
-eval "$(mise activate zsh)"
 
 if [[ -f ~/dotfiles/.zshrc.local ]]; then
   source ~/dotfiles/.zshrc.local
