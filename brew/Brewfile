@@ -50,8 +50,6 @@ brew "python@3.11"
 brew "python@3.8", link: false
 brew "rustup"
 brew "superfile"
-brew "terraform-docs"
-brew "tfenv"
 brew "tree"
 brew "zsh-autosuggestions"
 brew "zsh-syntax-highlighting"

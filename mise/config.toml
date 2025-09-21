@@ -3,6 +3,7 @@ go = "1.25.1"
 hugo = "0.150.0"
 ruby = "3.4.4"
 node = "24.3.0"
+terraform = "latest"
 
 gh = "2.79.0"
 jq = "1.8.1"
