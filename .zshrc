@@ -113,3 +113,7 @@ if [ -f "$HOME/google-cloud-sdk/path.zsh.inc" ]; then . "$HOME/google-cloud-sdk/
 if [ -f "$HOME/google-cloud-sdk/completion.zsh.inc" ]; then . "$HOME/google-cloud-sdk/completion.zsh.inc"; fi
 
 eval "$(mise activate zsh)"
+
+if [[ -f ~/dotfiles/.zshrc.local ]]; then
+  source ~/dotfiles/.zshrc.local
+fi

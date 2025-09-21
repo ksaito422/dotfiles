@@ -19,6 +19,7 @@ export PATH=/usr/local/opt/mysql-client/bin:$PATH
 export PRETTIERD_DEFAULT_CONFIG=$HOME/dotfiles/.prettierrc
 export PATH=~/.npm-global/bin:$PATH
 export XDG_CONFIG_HOME="$HOME/.config"
+export PATH="$HOME/work/script:$PATH"
 export PATH="$HOME/.cargo/bin:$PATH"
 export DISABLE_AUTOUPDATER=1 # cluade codeのauto updateを無効にする
 
@@ -29,11 +30,14 @@ export PATH=$PATH:~/.bin
 # Docker security settings
 export DOCKER_CONTENT_TRUST=0
 
-# Editor settings
 if [ -n "$NVIM_LISTEN_ADDRESS" ]; then
     export VISUAL="nvr -cc split --remote-wait +'set bufhidden=wipe'"
     export EDITOR="nvr -cc split --remote-wait +'set bufhidden=wipe'"
 else
     export VISUAL="nvim"
     export EDITOR="nvim"
+fi
+
+if [[ -f ~/dotfiles/.zshenv.local ]]; then
+  source ~/dotfiles/.zshenv.local
 fi

@@ -1,4 +1,6 @@
 .DS_Store
+.zshenv.local
+.zshrc.local
 
 /nvim/plugin/
 /nvim/sessions/
