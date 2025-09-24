@@ -14,6 +14,7 @@ keymap(
   { noremap = true, silent = true }
 )
 keymap("n", "<leader>ql", ":Telescope quickfix<CR>", { noremap = true, silent = true } )
+keymap("n", "<leader>fr", ":Telescope resume<CR>", { noremap = true, silent = true })
 -- keymap('n', '<leader>fl', ':Telescope live_grep hidden=true<CR>', { noremap = true, silent = true })
 keymap("n", "<leader>fb", ":Telescope buffers<CR>", { noremap = true, silent = true })
 
