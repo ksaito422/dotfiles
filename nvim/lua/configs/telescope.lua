@@ -13,6 +13,7 @@ keymap(
   ':lua require("telescope").extensions.live_grep_args.live_grep_args()<CR>',
   { noremap = true, silent = true }
 )
+keymap("n", "<leader>ql", ":Telescope quickfix<CR>", { noremap = true, silent = true } )
 -- keymap('n', '<leader>fl', ':Telescope live_grep hidden=true<CR>', { noremap = true, silent = true })
 keymap("n", "<leader>fb", ":Telescope buffers<CR>", { noremap = true, silent = true })
 
@@ -53,6 +54,7 @@ telescope.setup({
     mappings = {
       n = {
         ["d"] = require("telescope.actions").delete_buffer,
+        ["<leader>qa"] = require('telescope.actions').send_to_qflist + require('telescope.actions').open_qflist,
       },
     },
   },
