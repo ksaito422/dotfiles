@@ -81,7 +81,7 @@ require("lazy").setup({
     "MeanderingProgrammer/render-markdown.nvim",
     config = function()
       require("render-markdown").setup({
-        file_types = { "markdown", "copilot-chat", "Avante" },
+        file_types = { "markdown" },
       })
     end,
   },
@@ -262,17 +262,6 @@ require("lazy").setup({
       require("configs.nvim-cmp")
     end,
     event = "VimEnter",
-  },
-
-  {
-    "zbirenbaum/copilot-cmp",
-    config = function()
-      require("copilot_cmp").setup()
-    end,
-    dependencies = {
-      "hrsh7th/nvim-cmp",
-      "zbirenbaum/copilot.lua",
-    },
   },
 
   -- Neovim LSP config

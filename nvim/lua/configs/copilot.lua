@@ -4,8 +4,16 @@ if not status_ok then
 end
 
 copilot.setup({
-  suggestion = { enabled = false },
-  panel = { enabled = false },
+  suggestion = {
+    enabled = true,
+    auto_trigger = true,
+    keymap = {
+      accept = "<C-a>",
+      next = "<C-]>",
+      prev = "<C-[>",
+    },
+  },
+  panel = { enabled = true },
   filetypes = {
     ruby = true,
     lua = true,
@@ -16,5 +24,5 @@ copilot.setup({
     yaml = true,
     gitcommit = true,
   },
-  copilot_model = "claude-4.0-sonnet"
+  copilot_model = "claude-4.0-sonnet",
 })
