@@ -27,7 +27,8 @@ require("lazy").setup({
     -- "folke/tokyonight.nvim",
     -- "EdenEast/nightfox.nvim",
     -- 'blazkowolf/gruber-darker.nvim',
-    "rebelot/kanagawa.nvim",
+    -- "rebelot/kanagawa.nvim",
+    "scottmckendry/cyberdream.nvim",
     -- "0xstepit/flow.nvim",
     config = function()
       require("configs.colorscheme")
