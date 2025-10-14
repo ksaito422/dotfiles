@@ -308,6 +308,13 @@ require("lazy").setup({
     end,
   },
 
+  {
+    "copilotlsp-nvim/copilot-lsp",
+    config = function()
+      require("configs.copilot-lsp")
+    end,
+  },
+
   -- memo
   {
     "glidenote/memolist.vim",
