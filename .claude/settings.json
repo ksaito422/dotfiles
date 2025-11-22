@@ -1,8 +1,8 @@
 {
-  "includeCoAuthoredBy": false,
   "env": {
     "CLAUDE_CODE_DISABLE_TERMINAL_TITLE": "1"
   },
+  "includeCoAuthoredBy": false,
   "permissions": {
     "allow": [
       "Bash(bundle exec rspec:*)",
@@ -25,10 +25,6 @@
       "Read(.env.*)"
     ]
   },
-  "statusLine": {
-    "type": "command",
-    "command": "~/dotfiles/.claude/statusline.sh"
-  },
   "hooks": {
     "Notification": [
       {
@@ -41,5 +37,10 @@
         ]
       }
     ]
-  }
+  },
+  "statusLine": {
+    "type": "command",
+    "command": "~/dotfiles/.claude/statusline.sh"
+  },
+  "model": "sonnet"
 }

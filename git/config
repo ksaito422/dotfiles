@@ -5,10 +5,7 @@
     defaultBranch = main
 [pull]
     rebase = false
-[url "ssh://git@github.com/"]
-    insteadOf = https://github.com/
 [merge]
-    conflictstyle = zdiff3
     tool = nvimdiff
 [mergetool "nvimdiff"]
     cmd = nvim -d $LOCAL $MERGED $REMOTE -c 'wincmd l' -c 'wincmd J'
