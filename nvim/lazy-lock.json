@@ -16,7 +16,7 @@
   "lazy.nvim": { "branch": "main", "commit": "6c3bda4aca61a13a9c63f1c1d1b16b9d3be90d7a" },
   "lazygit.nvim": { "branch": "main", "commit": "2305deed25bc61b866d5d39189e9105a45cf1cfb" },
   "lexima.vim": { "branch": "master", "commit": "ab621e4756465c9d354fce88cff2bd1aa7887065" },
-  "lualine.nvim": { "branch": "master", "commit": "3946f0122255bc377d14a59b27b609fb3ab25768" },
+  "lualine.nvim": { "branch": "master", "commit": "47f91c416daef12db467145e16bed5bbfe00add8" },
   "memolist.vim": { "branch": "master", "commit": "8090f7a973f266a600c2ea84ec6941346414300a" },
   "neosess": { "branch": "main", "commit": "f8b5d2eb0fe5571e8d1f276f838327109df74106" },
   "nvim-cmp": { "branch": "main", "commit": "b5311ab3ed9c846b585c0c15b7559be131ec4be9" },
