@@ -7,6 +7,8 @@ local keymap = vim.api.nvim_set_keymap
 -- Emacs move
 keymap("i", "<C-p>", "<Up>", {})
 keymap("i", "<C-n>", "<Down>", {})
+keymap("c", "<C-p>", "<Up>", { noremap = true })
+keymap("c", "<C-n>", "<Down>", { noremap = true })
 keymap("i", "<C-b>", "<Left>", {})
 keymap("i", "<C-f>", "<Right>", {})
 keymap("i", "<C-a>", "<Home>", {})
