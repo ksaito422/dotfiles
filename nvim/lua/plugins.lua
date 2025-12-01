@@ -194,12 +194,6 @@ require("lazy").setup({
     ft = { "html", "jsx", "tsx", "javascriptreact", "typescriptreact" },
   },
 
-  -- yank範囲のhighlight
-  {
-    "machakann/vim-highlightedyank",
-    keys = { "y", mode = "n" },
-  },
-
   -- windowのリサイズ
   {
     "simeji/winresizer",

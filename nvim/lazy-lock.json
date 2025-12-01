@@ -38,7 +38,6 @@
   "todo-comments.nvim": { "branch": "main", "commit": "304a8d204ee787d2544d8bc23cd38d2f929e7cc5" },
   "trouble.nvim": { "branch": "main", "commit": "85bedb7eb7fa331a2ccbecb9202d8abba64d37b3" },
   "ts-comments.nvim": { "branch": "main", "commit": "123a9fb12e7229342f807ec9e6de478b1102b041" },
-  "vim-highlightedyank": { "branch": "master", "commit": "285a61425e79742997bbde76a91be6189bc988fb" },
   "vim-illuminate": { "branch": "master", "commit": "0d1e93684da00ab7c057410fecfc24f434698898" },
   "vimdoc-ja": { "branch": "master", "commit": "358ae44591d48e82bc2aff0fa5262eb9a68c252a" },
   "vimhelpgenerator": { "branch": "master", "commit": "6c9a583de297b2df54d24cd0d90e739f4d046866" },

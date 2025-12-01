@@ -98,3 +98,10 @@ end
 
 vim.api.nvim_create_user_command("ToggleTerm", ToggleTerminal, { desc = "Toggle terminal" })
 vim.api.nvim_set_keymap("n", "<C-t>", ":ToggleTerm<CR>", { noremap = true, silent = true })
+
+vim.api.nvim_create_autocmd("TextYankPost", {
+  pattern = "*",
+  callback = function()
+    vim.highlight.on_yank({ timeout = 200 })
+  end,
+})
