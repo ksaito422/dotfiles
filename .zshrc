@@ -92,7 +92,7 @@ alias lt='eza -T -L 3 -a --icons -I "node_modules|.git|.cache"'
 # nvim-remoteでlazygitからnvimを開くための設定
 alias vim="nvim --listen /tmp/$(basename $PWD).pipe"
 alias v='vim'
-alias vi='vim'
+alias vi='nvim -u NONE'
 alias nvimconf='vi ~/.config/nvim .'
 if [ -n "$NVIM_LISTEN_ADDRESS" ]; then
     alias nvim=nvr --remote-wait +'set bufhidden=wipe'
