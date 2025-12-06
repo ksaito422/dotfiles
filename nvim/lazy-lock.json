@@ -7,6 +7,7 @@
   "cmp-path": { "branch": "main", "commit": "c642487086dbd9a93160e1679a1327be111cbc25" },
   "copilot-lsp": { "branch": "main", "commit": "884034b23c3716d55b417984ad092dc2b011115b" },
   "copilot.lua": { "branch": "master", "commit": "4958fb9390f624cb389be2772e3c5e718e94d8b6" },
+  "csvview.nvim": { "branch": "main", "commit": "688bcc7437b577de000f71a2d406271c79e2a545" },
   "cyberdream.nvim": { "branch": "main", "commit": "22b993f79c7aab934c00bfc3437d41f4621974dc" },
   "denops-translate.vim": { "branch": "main", "commit": "d812b70732249aae0f41166f368314d06daadd30" },
   "denops.vim": { "branch": "main", "commit": "0a8841cfa50f42d65252f65c1defce47410ed733" },

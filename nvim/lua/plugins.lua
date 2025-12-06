@@ -218,6 +218,15 @@ require("lazy").setup({
     },
   },
 
+  -- csv viewer
+  {
+    "hat0uma/csvview.nvim",
+    config = function()
+      require("configs.csvview")
+    end,
+    ft = { "csv", "tsv" },
+  },
+
   -- Neovim Builtin LSPが提供する構文を引っ張ってくる
   -- 'Shougo/ddc-nvim-lsp'
 
