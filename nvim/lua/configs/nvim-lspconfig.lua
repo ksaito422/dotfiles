@@ -121,3 +121,11 @@ nvim_lsp.efm.setup({
   },
   logLevel = vim.lsp.protocol.MessageType.Log,
 })
+
+nvim_lsp.typos_lsp.setup({
+  on_attach = on_attach,
+  cmd = { "typos-lsp" },
+  init_options = {
+    config = '~/.config/nvim/spell/typos.toml',
+  },
+})

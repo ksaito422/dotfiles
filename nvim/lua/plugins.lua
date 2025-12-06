@@ -200,15 +200,6 @@ require("lazy").setup({
     keys = { "<C-e>", mode = "n" },
   },
 
-  -- spell check
-  {
-    "kamykn/spelunker.vim",
-    event = {
-      "BufReadPre",
-      "BufNewFile",
-    },
-  },
-
   -- 対応する括弧などを補完
   {
     "cohama/lexima.vim",
