@@ -9,7 +9,6 @@ copilot.setup({
     auto_trigger = true,
     keymap = {
       accept = "<C-a>",
-      next = "<C-]>",
       prev = "<C-[>",
     },
   },

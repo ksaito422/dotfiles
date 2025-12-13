@@ -14,7 +14,7 @@ octo.setup({
   use_local_fs = false,
   enable_builtin = true,
   default_remote = { "upstream", "origin" },
-  default_merge_method = "commit",
+  default_merge_method = "merge",
   ssh_aliases = {},
   picker = "telescope",
   picker_config = {

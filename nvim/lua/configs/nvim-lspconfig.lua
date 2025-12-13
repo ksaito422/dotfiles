@@ -1,4 +1,4 @@
-local status_ok, nvim_lsp = pcall(require, "lspconfig")
+local status_ok, _ = pcall(require, "lspconfig")
 if not status_ok then
   return
 end
@@ -30,18 +30,29 @@ local on_attach = function(client, bufnr)
   -- end
 end
 
-nvim_lsp.ruby_lsp.setup({
+vim.lsp.enable({
+  "ruby_lsp",
+  "clangd",
+  "lua_ls",
+  "tflint",
+  "terraformls",
+  "ts_ls",
+  "typos_lsp",
+  "efm"
+})
+
+vim.lsp.config("ruby_lsp", {
   on_attach = on_attach,
   cmd = { "ruby-lsp" },
   filetypes = { "ruby" },
-  root_dir = nvim_lsp.util.root_pattern("Gemfile", ".git"),
+  root_markers = { "Gemfile", ".git" },
   init_options = {
     formatting = "auto",
   },
   single_file_support = true,
 })
-nvim_lsp.clangd.setup({ on_attach = on_attach })
-nvim_lsp.lua_ls.setup({
+vim.lsp.config("clangd", { on_attach = on_attach })
+vim.lsp.config("lua_ls", {
   on_attach = on_attach,
   settings = {
     Lua = {
@@ -52,15 +63,15 @@ nvim_lsp.lua_ls.setup({
     },
   },
 })
-nvim_lsp.tflint.setup({ on_attach = on_attach })
-nvim_lsp.terraformls.setup({ on_attach = on_attach })
+vim.lsp.config("tflint", { on_attach = on_attach })
+vim.lsp.config("terraformls", { on_attach = on_attach })
 vim.api.nvim_create_autocmd({ "BufWritePre" }, {
   pattern = { "*.tf", "*.tfvars" },
   callback = function()
     vim.lsp.buf.format()
   end,
 })
-nvim_lsp.ts_ls.setup({
+vim.lsp.config("ts_ls", {
   on_attach = on_attach,
   filetypes = {
     "javascript",
@@ -95,7 +106,7 @@ local efm_config = {
   },
 }
 
-nvim_lsp.efm.setup({
+vim.lsp.config("efm", {
   on_attach = on_attach,
   cmd = { "efm-langserver", "-logfile", "/tmp/efm.log", "-loglevel", "5" },
   init_options = { documentFormatting = true, codeAction = false },
@@ -122,10 +133,10 @@ nvim_lsp.efm.setup({
   logLevel = vim.lsp.protocol.MessageType.Log,
 })
 
-nvim_lsp.typos_lsp.setup({
+vim.lsp.config("typos_lsp", {
   on_attach = on_attach,
   cmd = { "typos-lsp" },
   init_options = {
-    config = '~/.config/nvim/spell/typos.toml',
+    config = "~/.config/nvim/spell/typos.toml",
   },
 })
