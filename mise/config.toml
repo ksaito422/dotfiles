@@ -1,7 +1,7 @@
 [tools]
 go = "1.25.1"
 hugo = "0.150.0"
-ruby = "3.4.4"
+ruby = "4.0.0"
 node = "24.3.0"
 terraform = "latest"
 
