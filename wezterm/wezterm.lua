@@ -11,6 +11,8 @@ config = {
   font_size = 12.0,
   font = wezterm.font_with_fallback({
     { family = "Hack Nerd Font" },
+    { family = "M+ 1m Nerd Font" },
+    { family = "Hiragino Kaku Gothic ProN" },
   }),
   -- color_scheme = "tokyonight_moon",
   color_scheme = "Tokyo Night Moon",
