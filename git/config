@@ -17,3 +17,5 @@
 	autoSetupRemote = true
 [fetch]
 	prune = true
+[ghq]
+    root = ~/work

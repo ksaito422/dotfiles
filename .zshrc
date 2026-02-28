@@ -80,7 +80,6 @@ alias cc='clear'
 ### cd
 alias cd-alias='alias | grep "cd"'
 alias cdw='cd ~/work/'
-alias cdp='cd ~/work/project'
 
 ### eza
 alias eza-alias='alias | grep "eza"'
@@ -106,6 +105,17 @@ function peco-select-history() {
 }
 zle -N peco-select-history
 bindkey '^r' peco-select-history
+
+function peco-src () {
+  local selected_dir=$(ghq list -p | peco --query "$LBUFFER")
+  if [ -n "$selected_dir" ]; then
+    BUFFER="cd ${selected_dir}"
+    zle accept-line
+  fi
+  zle clear-screen
+}
+zle -N peco-src
+bindkey '^]' peco-src
 
 # The next line updates PATH for the Google Cloud SDK.
 if [ -f "$HOME/google-cloud-sdk/path.zsh.inc" ]; then . "$HOME/google-cloud-sdk/path.zsh.inc"; fi
