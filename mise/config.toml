@@ -6,6 +6,7 @@ node = "24.3.0"
 terraform = "latest"
 
 gh = "2.82.1"
+ghq = "1.9.4"
 jq = "1.8.1"
 fzf = "0.65.2"
 colima = "0.8.4"
