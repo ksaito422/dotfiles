@@ -11,7 +11,7 @@ export PATH="$HOME/work/script:$PATH"
 export PATH="$HOME/.cargo/bin:$PATH"
 export PATH=~/.npm-global/bin:$PATH
 export LANG="ja_JP.UTF-8"
-export PRETTIERD_DEFAULT_CONFIG=$HOME/dotfiles/.prettierrc
+export PRETTIERD_DEFAULT_CONFIG=$HOME/work/ghq/github.com/ksaito422/dotfiles/.prettierrc
 export XDG_CONFIG_HOME="$HOME/.config"
 export DISABLE_AUTOUPDATER=1 # cluade codeのauto updateを無効にする
 
@@ -30,6 +30,6 @@ else
     export EDITOR="nvim"
 fi
 
-if [[ -f ~/dotfiles/.zshenv.local ]]; then
-  source ~/dotfiles/.zshenv.local
+if [[ -f ~/work/ghq/github.com/ksaito422/dotfiles/.zshrc.local ]]; then
+  source ~/work/ghq/github.com/ksaito422/dotfiles/.zshrc.local
 fi
