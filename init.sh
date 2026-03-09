@@ -1,12 +1,12 @@
 # -e・・・エラーが処理を中断
 # -u・・・未定義の変数を使おうとすると処理中断
 #!/bin/bash -eu
-path=$HOME/dotfiles
+path=$HOME/work/ghq/github.com/ksaito422/dotfiles
 
 cd ~/
 
-# AMD Mac以外ならセットアップ終了
-if [ "$(uname)" != "Darwin" ] ; then
+# arm Mac以外ならセットアップ終了
+if [ "$(uname)" != "arm64" ] ; then
 	echo "Not macOS!"
 	exit 1
 fi
@@ -17,11 +17,12 @@ if [ ! -e ~/.config ]; then
 fi
 
 
-# ~/dotfilesに戻る
+# dotfilesに戻る
 cd $path
 
 if [ $path ]; then
   ln -s $PWD/.zshrc $HOME/.zshrc
+  ln -s $PWD/.zshenv $HOME/.zshenv
 
   # nvim
   ln -s $PWD/nvim $HOME/.config/nvim
@@ -31,22 +32,19 @@ if [ $path ]; then
   ln -s $PWD/git $HOME/.config/git
   # lazygit
   ln -s $PWD/lazygit $HOME/.config/lazygit
-  # solargraph
-  ln -s $PWD/solargraph $HOME/.config/solargraph
+  # mise
+  ln -s $PWD/mise $HOME/.config/mise
+  # yazi
+  ln -s $PWD/yazi $HOME/.config/yazi
 fi
 
 # brew install
 brew bundle --global
 
-# volta
-curl https://get.volta.sh | bash
-
-# nerdfontのインストールする
+# nerdfontのインストール
 git clone --branch=master --depth 1 https://github.com/ryanoasis/nerd-fonts.git
 cd nerd-fonts
 ./install.sh
 cd ..
-$ rm -fr nerd-fonts
+$ rm -rf nerd-fonts
 
-# DAP for golangのインストール
-go install github.com/go-delve/delve/cmd/dlv@latest
