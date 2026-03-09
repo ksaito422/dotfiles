@@ -18,4 +18,4 @@
 [fetch]
 	prune = true
 [ghq]
-    root = ~/work
+    root = ~/work/ghq
