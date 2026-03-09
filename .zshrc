@@ -72,11 +72,7 @@ setopt share_history
 # シンタックスハイライト brew install zsh-syntax-highlighting
 source $(brew --prefix)/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
-
 # alias
-### clear
-alias cc='clear'
-
 ### cd
 alias cd-alias='alias | grep "cd"'
 alias cdw='cd ~/work/'
