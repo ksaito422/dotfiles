@@ -53,4 +53,9 @@ wezterm.on("format-tab-title", function(tab)
   }
 end)
 
+wezterm.on('update-status', function(window, pane)
+  local workspace = window:active_workspace()
+  window:set_right_status(' ' .. workspace .. ' ')
+end)
+
 return wezterm
