@@ -1,4 +1,5 @@
 local wezterm = require("wezterm")
+local session = require("session")
 
 wezterm.on("format-window-title", function(tab, tabs)
   local zoomed = ""
@@ -53,9 +54,20 @@ wezterm.on("format-tab-title", function(tab)
   }
 end)
 
-wezterm.on('update-status', function(window, pane)
+wezterm.on("update-status", function(window, pane)
   local workspace = window:active_workspace()
-  window:set_right_status(' ' .. workspace .. ' ')
+  window:set_right_status(" " .. workspace .. " ")
+end)
+
+-- Auto-restore all saved sessions on startup.
+-- Skipped when WezTerm is launched with an explicit command (e.g. wezterm start --cwd ...).
+wezterm.on("gui-startup", function(cmd)
+  if cmd then return end
+
+  local names = session.list_sessions()
+  for _, name in ipairs(names) do
+    session.restore_session(name)
+  end
 end)
 
 return wezterm

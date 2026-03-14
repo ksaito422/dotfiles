@@ -1,6 +1,7 @@
 require("events")
 local keybinds = require("keybinds")
 local wezterm = require("wezterm")
+local session = require("session")
 local config = {}
 
 if wezterm.config_builder then
@@ -53,5 +54,8 @@ config = {
     '[0-9a-zA-Z]+[._-][0-9a-zA-Z._-]+',
   }
 }
+
+-- Auto-save all workspaces every 5 minutes
+session.start_autosave(300)
 
 return config
