@@ -11,11 +11,13 @@
       "Bash(pnpm lint:*)",
       "Bash(gh pr view:*)"
     ],
-    "deny": [
+    "ask": [
       "Bash(git commit:*)",
       "Bash(git push:*)",
       "Bash(git reset:*)",
-      "Bash(git rebase:*)",
+      "Bash(git rebase:*)"
+    ],
+    "deny": [
       "Bash(rm:*)",
       "Bash(rm -rf)",
       "Bash(sudo:*)",
@@ -40,7 +42,7 @@
   },
   "statusLine": {
     "type": "command",
-    "command": "~/dotfiles/.claude/statusline.sh"
+    "command": "~/work/ghq/github.com/ksaito422/dotfiles/.claude/statusline.sh"
   },
   "model": "sonnet"
 }
