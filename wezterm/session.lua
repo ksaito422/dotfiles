@@ -196,54 +196,54 @@ function M.restore_session(name, target_win)
     local mux_win = target_win
 
     for _, tab_data in ipairs(win_data.tabs) do
-      if #tab_data.panes == 0 then goto continue end
+      if #tab_data.panes ~= 0 then
 
-      local tab_cwd = (tab_data.panes[1] and tab_data.panes[1].cwd) or wezterm.home_dir
-      local mux_tab, pane_base
+        local tab_cwd = (tab_data.panes[1] and tab_data.panes[1].cwd) or wezterm.home_dir
+        local mux_tab, pane_base
 
-      if mux_win then
-        mux_tab, pane_base = mux_win:spawn_tab({ cwd = tab_cwd })
-      else
-        -- Auto-restore: create a new window; mux_win is set for subsequent tabs
-        mux_tab, pane_base, mux_win = wezterm.mux.spawn_window({
-          workspace = data.workspace,
-          cwd       = tab_cwd,
-        })
-      end
+        if mux_win then
+          mux_tab, pane_base = mux_win:spawn_tab({ cwd = tab_cwd })
+        else
+          -- Auto-restore: create a new window; mux_win is set for subsequent tabs
+          mux_tab, pane_base, mux_win = wezterm.mux.spawn_window({
+            workspace = data.workspace,
+            cwd       = tab_cwd,
+          })
+        end
 
-      if tab_data.title and #tab_data.title > 0 then
-        mux_tab:set_title(tab_data.title)
-      end
+        if tab_data.title and #tab_data.title > 0 then
+          mux_tab:set_title(tab_data.title)
+        end
 
-      -- Sort panes: top row first, then left to right
-      local sorted = {}
-      for _, p in ipairs(tab_data.panes) do
-        table.insert(sorted, p)
-      end
-      table.sort(sorted, function(a, b)
-        if a.top ~= b.top then return a.top < b.top end
-        return a.left < b.left
-      end)
+        -- Sort panes: top row first, then left to right
+        local sorted = {}
+        for _, p in ipairs(tab_data.panes) do
+          table.insert(sorted, p)
+        end
+        table.sort(sorted, function(a, b)
+          if a.top ~= b.top then return a.top < b.top end
+          return a.left < b.left
+        end)
 
-      local spawned = { pane_base }
+        local spawned = { pane_base }
 
-      for i = 2, #sorted do
-        local prev_info = sorted[i - 1]
-        local curr_info = sorted[i]
-        local prev_pane = spawned[i - 1]
+        for i = 2, #sorted do
+          local prev_info = sorted[i - 1]
+          local curr_info = sorted[i]
+          local prev_pane = spawned[i - 1]
 
-        local direction = infer_split_direction(prev_info, curr_info)
-        local size      = infer_split_size(prev_info, curr_info, direction)
+          local direction = infer_split_direction(prev_info, curr_info)
+          local size      = infer_split_size(prev_info, curr_info, direction)
 
-        local new_pane = prev_pane:split({
-          direction = direction,
-          cwd       = curr_info.cwd,
-          size      = size,
-        })
-        table.insert(spawned, new_pane)
-      end
+          local new_pane = prev_pane:split({
+            direction = direction,
+            cwd       = curr_info.cwd,
+            size      = size,
+          })
+          table.insert(spawned, new_pane)
+        end
 
-      ::continue::
+      end   -- if #tab_data.panes ~= 0
     end
   end
 
