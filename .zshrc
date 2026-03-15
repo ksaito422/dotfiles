@@ -2,6 +2,7 @@
 # source ~/.zshrc
 
 eval "$(mise activate zsh)"
+setopt emacs
 # cd [tab]で以前移動したディレクトリを表示
 setopt auto_pushd
 # 直前と同じコマンドはヒストリに追加しない
@@ -12,8 +13,6 @@ setopt hist_ignore_space
 zstyle ':completion:*:default' menu select=1
 # コマンドのスペルを訂正する
 setopt correct
-# vim mode
-# bindkey -v
 
 # PROMPTの表示内容をカスタマイズ
 ### gitブランチを表示
