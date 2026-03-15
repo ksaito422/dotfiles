@@ -36,11 +36,15 @@ end
 local function infer_split_size(prev, curr, direction)
   if direction == "Right" or direction == "Left" then
     local total = prev.width + curr.width
-    if total == 0 then return 0.5 end
+    if total == 0 then
+      return 0.5
+    end
     return curr.width / total
   else
     local total = prev.height + curr.height
-    if total == 0 then return 0.5 end
+    if total == 0 then
+      return 0.5
+    end
     return curr.height / total
   end
 end
@@ -62,12 +66,12 @@ local function capture_window(mux_win)
     for _, info in ipairs(tab:panes_with_info()) do
       local cwd_uri = info.pane:get_current_working_dir()
       table.insert(tab_data.panes, {
-        title     = info.pane:get_title(),
-        cwd       = resolve_cwd(cwd_uri),
-        left      = info.left,
-        top       = info.top,
-        width     = info.width,
-        height    = info.height,
+        title = info.pane:get_title(),
+        cwd = resolve_cwd(cwd_uri),
+        left = info.left,
+        top = info.top,
+        width = info.width,
+        height = info.height,
         is_active = info.is_active,
         is_zoomed = info.is_zoomed,
       })
@@ -105,10 +109,10 @@ function M.save_session(session_name, workspace_name)
   end
 
   local data = {
-    name      = session_name,
-    saved_at  = os.date("!%Y-%m-%dT%H:%M:%S"),
+    name = session_name,
+    saved_at = os.date("!%Y-%m-%dT%H:%M:%S"),
     workspace = workspace_name,
-    windows   = windows,
+    windows = windows,
   }
 
   local path = M.SESSION_DIR .. "/" .. session_name .. ".json"
@@ -154,7 +158,9 @@ function M.list_sessions()
   ensure_session_dir()
   local names = {}
   local ok, entries = pcall(wezterm.read_dir, M.SESSION_DIR)
-  if not ok then return names end
+  if not ok then
+    return names
+  end
   for _, path in ipairs(entries) do
     local name = path:match("([^/]+)%.json$")
     if name then
@@ -197,7 +203,6 @@ function M.restore_session(name, target_win)
 
     for _, tab_data in ipairs(win_data.tabs) do
       if #tab_data.panes ~= 0 then
-
         local tab_cwd = (tab_data.panes[1] and tab_data.panes[1].cwd) or wezterm.home_dir
         local mux_tab, pane_base
 
@@ -207,7 +212,7 @@ function M.restore_session(name, target_win)
           -- Auto-restore: create a new window; mux_win is set for subsequent tabs
           mux_tab, pane_base, mux_win = wezterm.mux.spawn_window({
             workspace = data.workspace,
-            cwd       = tab_cwd,
+            cwd = tab_cwd,
           })
         end
 
@@ -221,7 +226,9 @@ function M.restore_session(name, target_win)
           table.insert(sorted, p)
         end
         table.sort(sorted, function(a, b)
-          if a.top ~= b.top then return a.top < b.top end
+          if a.top ~= b.top then
+            return a.top < b.top
+          end
           return a.left < b.left
         end)
 
@@ -233,17 +240,16 @@ function M.restore_session(name, target_win)
           local prev_pane = spawned[i - 1]
 
           local direction = infer_split_direction(prev_info, curr_info)
-          local size      = infer_split_size(prev_info, curr_info, direction)
+          local size = infer_split_size(prev_info, curr_info, direction)
 
           local new_pane = prev_pane:split({
             direction = direction,
-            cwd       = curr_info.cwd,
-            size      = size,
+            cwd = curr_info.cwd,
+            size = size,
           })
           table.insert(spawned, new_pane)
         end
-
-      end   -- if #tab_data.panes ~= 0
+      end -- if #tab_data.panes ~= 0
     end
   end
 

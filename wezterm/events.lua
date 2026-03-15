@@ -1,5 +1,5 @@
-local wezterm = require("wezterm")
 local session = require("session")
+local wezterm = require("wezterm")
 
 wezterm.on("format-window-title", function(tab, tabs)
   local zoomed = ""
@@ -62,7 +62,9 @@ end)
 -- Auto-restore all saved sessions on startup.
 -- Skipped when WezTerm is launched with an explicit command (e.g. wezterm start --cwd ...).
 wezterm.on("gui-startup", function(cmd)
-  if cmd then return end
+  if cmd then
+    return
+  end
 
   local names = session.list_sessions()
   for _, name in ipairs(names) do
