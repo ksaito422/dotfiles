@@ -6,7 +6,7 @@ path=$HOME/work/ghq/github.com/ksaito422/dotfiles
 cd ~/
 
 # arm Mac以外ならセットアップ終了
-if [ "$(uname)" != "arm64" ] ; then
+if [ "$(uname)" != "Darwin" ] ; then
 	echo "Not macOS!"
 	exit 1
 fi
@@ -16,29 +16,29 @@ if [ ! -e ~/.config ]; then
   mkdir -p $HOME/.config
 fi
 
-
 # dotfilesに戻る
 cd $path
 
 if [ $path ]; then
-  ln -s $PWD/.zshrc $HOME/.zshrc
-  ln -s $PWD/.zshenv $HOME/.zshenv
+  ln -s $path/.zshrc $HOME/.zshrc
+  ln -s $path/.zshenv $HOME/.zshenv
 
   # nvim
-  ln -s $PWD/nvim $HOME/.config/nvim
+  ln -s $path/nvim $HOME/.config/nvim
   # wezterm
-  ln -s $PWD/wezterm $HOME/.config/wezterm
+  ln -s $path/wezterm $HOME/.config/wezterm
   # git
-  ln -s $PWD/git $HOME/.config/git
+  ln -s $path/git $HOME/.config/git
   # lazygit
-  ln -s $PWD/lazygit $HOME/.config/lazygit
+  ln -s $path/lazygit $HOME/.config/lazygit
   # mise
-  ln -s $PWD/mise $HOME/.config/mise
+  ln -s $path/mise $HOME/.config/mise
   # yazi
-  ln -s $PWD/yazi $HOME/.config/yazi
+  ln -s $path/yazi $HOME/.config/yazi
 fi
 
 # brew install
+cd $path/brew
 brew bundle --global
 
 # nerdfontのインストール

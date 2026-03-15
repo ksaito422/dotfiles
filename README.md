@@ -1,25 +1,25 @@
 # dotfiles
 
-This repository in order to management dotfiles.
+dotfiles管理のリポジトリ
 
-## using
+## 前提
 
-1. `xcode-select --install`
-2. `git clone <url>`
-3. Running `init.sh`
-4. `gem install rails ruby-lsp rubocop`
-5. `npm install -g typescript-language-server`
-6. `cargo install selene`
+```
+xcode-select --install
+git clone <url>
+```
 
-## contents of init.sh setting
+## セットアップ
 
-- Set of symbolic link.
-- Installation of applications managed by brewfile.
-- Installing nerdfont.
+```
+chmod 755 init.sh
+gem install rails ruby-lsp rubocop
+npm install -g typescript-language-server
+npm install -g @github/copilot-language-server
+cargo install selene
+```
 
-## checking
-
-core tools are installed correctly.
+## 確認
 
 ```
 # ruby, node, nvimなどのバージョンを確認
@@ -36,7 +36,7 @@ docker-compose --version
 nb --version
 ```
 
-## using tools
+## 使用しているツール
 
 - Editor: [Neovim](https://github.com/neovim/neovim)
 - Shell: [zsh](https://sourceforge.net/p/zsh/code/ci/master/tree/)
