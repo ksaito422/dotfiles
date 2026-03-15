@@ -2,6 +2,7 @@ local M = {}
 local utils = require("utils")
 local wezterm = require("wezterm")
 local act = wezterm.action
+local session = require("session")
 
 M.leader = { key = "j", mods = "SUPER" }
 
@@ -91,6 +92,90 @@ M.default_keybinds = {
   },
   { key = "l", mods = "LEADER", action = act.SwitchWorkspaceRelative(1) },
   { key = "h", mods = "LEADER", action = act.SwitchWorkspaceRelative(-1) },
+  -- Session manager: save (Alt+s)
+  {
+    key = "s",
+    mods = "ALT",
+    action = act.PromptInputLine({
+      description = "(session) Save session (Enter to use workspace name):",
+      action = wezterm.action_callback(function(window, pane, line)
+        local workspace = window:active_workspace()
+        local name = (line and #line > 0) and line or workspace
+        local ok, err = session.save_session(name, workspace)
+        if ok then
+          window:set_right_status(" Saved: " .. name .. " ")
+        else
+          window:set_right_status(" Save failed: " .. tostring(err) .. " ")
+        end
+      end),
+    }),
+  },
+  -- Session manager: restore (Alt+r)
+  {
+    key = "r",
+    mods = "ALT",
+    action = wezterm.action_callback(function(window, pane)
+      local names = session.list_sessions()
+      if #names == 0 then
+        window:set_right_status(" No saved sessions ")
+        return
+      end
+      local choices = {}
+      for _, name in ipairs(names) do
+        table.insert(choices, { label = name, id = name })
+      end
+      window:perform_action(
+        act.InputSelector({
+          title = "Restore session",
+          choices = choices,
+          action = wezterm.action_callback(function(win, _, id, _)
+            if id then
+              local ok, err = session.restore_session(id, win:mux_window())
+              if ok then
+                win:set_right_status(" Restored: " .. id .. " ")
+              else
+                win:set_right_status(" Restore failed: " .. tostring(err) .. " ")
+              end
+            end
+          end),
+        }),
+        pane
+      )
+    end),
+  },
+  -- Session manager: delete (Alt+d)
+  {
+    key = "d",
+    mods = "ALT",
+    action = wezterm.action_callback(function(window, pane)
+      local names = session.list_sessions()
+      if #names == 0 then
+        window:set_right_status(" No saved sessions ")
+        return
+      end
+      local choices = {}
+      for _, name in ipairs(names) do
+        table.insert(choices, { label = name, id = name })
+      end
+      window:perform_action(
+        act.InputSelector({
+          title = "Delete session",
+          choices = choices,
+          action = wezterm.action_callback(function(win, _, id, _)
+            if id then
+              local ok, err = session.delete_session(id)
+              if ok then
+                win:set_right_status(" Deleted: " .. id .. " ")
+              else
+                win:set_right_status(" Delete failed: " .. tostring(err) .. " ")
+              end
+            end
+          end),
+        }),
+        pane
+      )
+    end),
+  },
 }
 
 function M.create_keybinds()

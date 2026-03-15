@@ -1,5 +1,6 @@
 require("events")
 local keybinds = require("keybinds")
+local session = require("session")
 local wezterm = require("wezterm")
 local config = {}
 
@@ -50,8 +51,11 @@ config = {
   use_ime = true,
   scrollback_lines = 3500,
   quick_select_patterns = {
-    '[0-9a-zA-Z]+[._-][0-9a-zA-Z._-]+',
-  }
+    "[0-9a-zA-Z]+[._-][0-9a-zA-Z._-]+",
+  },
 }
+
+-- Auto-save all workspaces every 5 minutes
+session.start_autosave(300)
 
 return config
