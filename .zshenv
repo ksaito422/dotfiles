@@ -3,12 +3,9 @@ if [[ ( "$SHLVL" -eq 1 && ! -o LOGIN ) && -s "${ZDOTDIR:-$HOME}/.zprofile" ]]; t
   source "${ZDOTDIR:-$HOME}/.zprofile"
 fi
 export PATH=/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Library/Apple/usr/bin
-. "$HOME/.cargo/env"
 
-export PATH=/usr/local/opt/python@3.8/libexec/bin:$PATH
 export PATH=/usr/local/opt/gawk/bin/:$PATH
 export PATH="$HOME/work/script:$PATH"
-export PATH="$HOME/.cargo/bin:$PATH"
 export PATH=~/.npm-global/bin:$PATH
 export LANG="ja_JP.UTF-8"
 export PRETTIERD_DEFAULT_CONFIG=$HOME/work/ghq/github.com/ksaito422/dotfiles/.prettierrc

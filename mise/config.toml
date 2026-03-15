@@ -25,6 +25,7 @@ tflint = "0.59.1"
 typos = "1.40.0"
 claude = "latest"
 "aqua:neovim/neovim" = "0.11.6"
+"aqua:Kampfkarren/selene" = "0.30.1"
 
 [settings]
 idiomatic_version_file_enable_tools = ["ruby", "node"]
