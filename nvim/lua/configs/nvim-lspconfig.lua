@@ -64,7 +64,10 @@ vim.lsp.config("lua_ls", {
   },
 })
 vim.lsp.config("tflint", { on_attach = on_attach })
-vim.lsp.config("terraformls", { on_attach = on_attach })
+vim.lsp.config("terraformls", {
+  on_attach = on_attach,
+  filetypes = { "terraform" },
+})
 vim.api.nvim_create_autocmd({ "BufWritePre" }, {
   pattern = { "*.tf", "*.tfvars" },
   callback = function()
