@@ -38,7 +38,7 @@ vim.lsp.enable({
   "terraformls",
   "ts_ls",
   "typos_lsp",
-  "efm"
+  "efm",
 })
 
 vim.lsp.config("ruby_lsp", {

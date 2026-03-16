@@ -5,12 +5,12 @@ end
 
 local lsp_names = function()
   local clients = vim
-      .iter(vim.lsp.get_clients { bufnr = 0 })
-      :map(function(client)
-        return client.name
-      end)
-      :totable()
-  return ' ' .. table.concat(clients, ', ')
+    .iter(vim.lsp.get_clients({ bufnr = 0 }))
+    :map(function(client)
+      return client.name
+    end)
+    :totable()
+  return " " .. table.concat(clients, ", ")
 end
 
 lualine.setup({

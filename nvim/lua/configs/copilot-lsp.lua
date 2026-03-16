@@ -25,6 +25,5 @@ vim.keymap.set("n", "<tab>", function()
 end, { desc = "Accept Copilot NES suggestion", expr = true })
 
 vim.keymap.set("n", "<esc>", function()
-  if not require("copilot-lsp.nes").clear() then
-  end
+  require("copilot-lsp.nes").clear()
 end, { desc = "Clear Copilot suggestion or fallback" })
