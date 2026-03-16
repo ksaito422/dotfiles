@@ -6,7 +6,7 @@ end
 
 csvview.setup({
   parser = { comments = { "#", "//" } },
-  view = { display_mode = "border", },
+  view = { display_mode = "border" },
   keymaps = {
     textobject_field_inner = { "if", mode = { "o", "x" } },
     textobject_field_outer = { "af", mode = { "o", "x" } },
