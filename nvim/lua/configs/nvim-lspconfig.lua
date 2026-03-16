@@ -78,8 +78,6 @@ vim.lsp.config("ts_ls", {
     "typescript",
     "javascriptreact",
     "typescriptreact",
-    "javascript.jsx",
-    "typescript.tsx",
   },
   cmd = { "typescript-language-server", "--stdio" },
 })
