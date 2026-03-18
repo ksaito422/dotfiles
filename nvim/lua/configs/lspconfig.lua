@@ -1,8 +1,3 @@
-local status_ok, _ = pcall(require, "lspconfig")
-if not status_ok then
-  return
-end
-
 local nvic_status_ok, navic = pcall(require, "nvim-navic")
 if not nvic_status_ok then
   return
@@ -40,9 +35,17 @@ vim.lsp.config("ruby_lsp", {
   },
   single_file_support = true,
 })
-vim.lsp.config("clangd", { on_attach = on_attach })
+vim.lsp.config("clangd", {
+  on_attach = on_attach,
+  cmd = { "clangd" },
+  filetypes = { "c", "cpp", "objc", "objcpp", "cuda" },
+  root_markers = { ".clangd", ".clang-tidy", ".clang-format", "compile_commands.json", "compile_flags.txt", ".git" },
+})
 vim.lsp.config("lua_ls", {
   on_attach = on_attach,
+  cmd = { "lua-language-server" },
+  filetypes = { "lua" },
+  root_markers = { ".luarc.json", ".luarc.jsonc", ".stylua.toml", "stylua.toml", "selene.toml", ".git" },
   settings = {
     Lua = {
       workspace = { library = vim.api.nvim_get_runtime_file("", true) },
@@ -52,10 +55,17 @@ vim.lsp.config("lua_ls", {
     },
   },
 })
-vim.lsp.config("tflint", { on_attach = on_attach })
+vim.lsp.config("tflint", {
+  on_attach = on_attach,
+  cmd = { "tflint", "--langserver" },
+  filetypes = { "terraform" },
+  root_markers = { ".terraform", ".git", ".tflint.hcl" },
+})
 vim.lsp.config("terraformls", {
   on_attach = on_attach,
+  cmd = { "terraform-ls", "serve" },
   filetypes = { "terraform" },
+  root_markers = { ".terraform", ".git" },
 })
 vim.api.nvim_create_autocmd({ "BufWritePre" }, {
   pattern = { "*.tf", "*.tfvars" },
@@ -65,13 +75,14 @@ vim.api.nvim_create_autocmd({ "BufWritePre" }, {
 })
 vim.lsp.config("ts_ls", {
   on_attach = on_attach,
+  cmd = { "typescript-language-server", "--stdio" },
   filetypes = {
     "javascript",
     "typescript",
     "javascriptreact",
     "typescriptreact",
   },
-  cmd = { "typescript-language-server", "--stdio" },
+  root_markers = { "package-lock.json", "yarn.lock", "pnpm-lock.yaml", "bun.lockb", "bun.lock", ".git" },
 })
 
 local efm_config = {
@@ -99,6 +110,7 @@ local efm_config = {
 vim.lsp.config("efm", {
   on_attach = on_attach,
   cmd = { "efm-langserver", "-logfile", "/tmp/efm.log", "-loglevel", "5" },
+  root_markers = { ".git" },
   init_options = { documentFormatting = true, codeAction = false },
   filetypes = {
     "javascript",
@@ -126,6 +138,7 @@ vim.lsp.config("efm", {
 vim.lsp.config("typos_lsp", {
   on_attach = on_attach,
   cmd = { "typos-lsp" },
+  root_markers = { "typos.toml", "_typos.toml", ".typos.toml", ".git" },
   init_options = {
     config = "~/.config/nvim/spell/typos.toml",
   },
@@ -141,4 +154,3 @@ vim.lsp.enable({
   "typos_lsp",
   "efm",
 })
-

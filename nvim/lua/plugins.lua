@@ -258,18 +258,6 @@ require("lazy").setup({
     event = "VimEnter",
   },
 
-  -- Neovim LSP config
-  {
-    "neovim/nvim-lspconfig",
-    config = function()
-      require("configs.nvim-lspconfig")
-    end,
-    event = {
-      "BufReadPre",
-      "BufNewFile",
-    },
-  },
-
   -- LSPの操作を楽にする
   {
     "folke/trouble.nvim",
@@ -282,7 +270,13 @@ require("lazy").setup({
   -- winbarにパンくずリストを表示
   {
     "SmiteshP/nvim-navic",
-    requires = "neovim/nvim-lspconfig",
+    config = function()
+      require("configs.lspconfig")
+    end,
+    event = {
+      "BufReadPre",
+      "BufNewFile",
+    },
   },
 
   -- コードジャンプをポップアップで表示
