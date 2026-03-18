@@ -30,17 +30,6 @@ local on_attach = function(client, bufnr)
   -- end
 end
 
-vim.lsp.enable({
-  "ruby_lsp",
-  "clangd",
-  "lua_ls",
-  "tflint",
-  "terraformls",
-  "ts_ls",
-  "typos_lsp",
-  "efm",
-})
-
 vim.lsp.config("ruby_lsp", {
   on_attach = on_attach,
   cmd = { "ruby-lsp" },
@@ -141,3 +130,15 @@ vim.lsp.config("typos_lsp", {
     config = "~/.config/nvim/spell/typos.toml",
   },
 })
+
+vim.lsp.enable({
+  "ruby_lsp",
+  "clangd",
+  "lua_ls",
+  "tflint",
+  "terraformls",
+  "ts_ls",
+  "typos_lsp",
+  "efm",
+})
+
