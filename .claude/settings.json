@@ -3,7 +3,6 @@
   "env": {
     "CLAUDE_CODE_DISABLE_TERMINAL_TITLE": "1"
   },
-  "includeCoAuthoredBy": false,
   "permissions": {
     "defaultMode": "plan",
     "allow": [
@@ -28,6 +27,10 @@
       "Bach(curl:*)",
       "Read(.env.*)"
     ]
+  },
+  "attribution": {
+    "commit": "🤖 Generated with [Claude Code](https://claude.com/claude-code)",
+    "pr": ""
   },
   "hooks": {
     "Notification": [
