@@ -4,6 +4,7 @@
   },
   "includeCoAuthoredBy": false,
   "permissions": {
+    "defaultMode": "plan",
     "allow": [
       "Bash(bundle exec rspec:*)",
       "Bash(bundle exec rubocop)",
