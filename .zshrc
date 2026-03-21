@@ -1,8 +1,10 @@
 # 変更後、即反映コマンド
 # source ~/.zshrc
 
+# export VISUAL="nvim"によるviinsモードではなく、emacsキーバインドを使う
+bindkey -e
+
 eval "$(mise activate zsh)"
-setopt emacs
 # cd [tab]で以前移動したディレクトリを表示
 setopt auto_pushd
 # 直前と同じコマンドはヒストリに追加しない
