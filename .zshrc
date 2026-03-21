@@ -62,14 +62,13 @@ then
   FPATH=$(brew --prefix)/share/zsh/site-functions:$FPATH
   # コマンド入力時に直近の履歴を表示
   source $(brew --prefix)/share/zsh-autosuggestions/zsh-autosuggestions.zsh
+  # シンタックスハイライト brew install zsh-syntax-highlighting
+  source $(brew --prefix)/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
   autoload -Uz compinit && compinit
 fi
 
 # 同時に起動したzshの間でヒストリを共有する
 setopt share_history
-
-# シンタックスハイライト brew install zsh-syntax-highlighting
-source $(brew --prefix)/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
 # alias
 ### cd
