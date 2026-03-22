@@ -2,6 +2,9 @@
 -- Neovim standard Keymap settings
 -- -----------------------------------
 
+-- Assign leader key to space key
+vim.g.mapleader = " "
+
 local keymap = vim.api.nvim_set_keymap
 
 -- Emacs move
@@ -32,6 +35,12 @@ keymap("t", "<C-w>", [[<C-\><C-n><C-w>]], { noremap = true, silent = true })
 keymap("n", "<C-[>", ":bprev<CR>", { noremap = true, silent = true })
 keymap("n", "<C-]>", ":bnext<CR>", { noremap = true, silent = true })
 
+-- Tab operation
+keymap("n", "<leader>t", ":tabnew<CR>", { noremap = true, silent = true })
+keymap("n", "<leader>d", ":tabclose<CR>", { noremap = true, silent = true })
+keymap("n", "<leader>n", ":tabnext<CR>", { noremap = true, silent = true })
+keymap("n", "<leader>p", ":tabprev<CR>", { noremap = true, silent = true })
+
 keymap("n", "<C-c>", ":let @* = expand('%')<CR>", { noremap = true })
 
 vim.api.nvim_create_user_command("T", function(opts)
@@ -43,9 +52,6 @@ vim.api.nvim_create_user_command("T", function(opts)
 end, {
   nargs = "*", -- 引数を受け取る設定
 })
-
--- Assign leader key to space key
-vim.g.mapleader = " "
 
 -- ノーマルモードに切り替える。[jk]
 keymap("i", "jk", "<ESC>", { noremap = true, silent = true })
