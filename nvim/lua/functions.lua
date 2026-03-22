@@ -52,41 +52,83 @@ vim.api.nvim_create_user_command("MeasureCompletionTime", function()
 end, {})
 
 -- ターミナルをトグルで表示/非表示する
-local term_buf = nil
-local term_win = nil
+local term_state = {
+  s = { buf = nil, win = nil },
+  v = { buf = nil, win = nil },
+  c = { buf = nil, win = nil, prev_buf = nil },
+}
 
-function ToggleTerminal()
-  -- ターミナルウィンドウがすでに存在し、有効な場合
-  if term_win and vim.api.nvim_win_is_valid(term_win) then
-    -- ターミナルウィンドウを閉じる
-    vim.api.nvim_win_close(term_win, true)
-    term_win = nil
-    return
-  end
+function ToggleTerminal(mode)
+  local state = term_state[mode]
 
-  -- ターミナルバッファがすでに存在し、有効な場合
-  if term_buf and vim.api.nvim_buf_is_valid(term_buf) then
-    -- 水平分割で新しいウィンドウを作成
-    vim.cmd("split")
-    vim.cmd("wincmd j")
-    vim.cmd("resize 20")
-    -- 既存のターミナルバッファを表示
-    vim.api.nvim_win_set_buf(0, term_buf)
-    term_win = vim.api.nvim_get_current_win()
-    vim.cmd("startinsert")
+  if mode == "s" or mode == "v" then
+    -- ウィンドウが有効 → close
+    if state.win and vim.api.nvim_win_is_valid(state.win) then
+      vim.api.nvim_win_close(state.win, true)
+      state.win = nil
+      return
+    end
+
+    local split_cmd = mode == "s" and "split" or "vsplit"
+
+    -- バッファが有効 → 再表示
+    if state.buf and vim.api.nvim_buf_is_valid(state.buf) then
+      vim.cmd(split_cmd)
+      if mode == "s" then
+        vim.cmd("wincmd j")
+        vim.cmd("resize 20")
+      else
+        vim.cmd("wincmd l")
+        vim.cmd("vertical resize 80")
+      end
+      vim.api.nvim_win_set_buf(0, state.buf)
+      state.win = vim.api.nvim_get_current_win()
+      vim.cmd("startinsert")
+    else
+      -- 新規作成
+      vim.cmd(split_cmd)
+      if mode == "s" then
+        vim.cmd("wincmd j")
+        vim.cmd("resize 20")
+      else
+        vim.cmd("wincmd l")
+        vim.cmd("vertical resize 80")
+      end
+      vim.cmd("terminal")
+      state.buf = vim.api.nvim_get_current_buf()
+      state.win = vim.api.nvim_get_current_win()
+      vim.cmd("startinsert")
+    end
   else
-    -- 新しいターミナルを作成
-    vim.cmd("split")
-    vim.cmd("wincmd j")
-    vim.cmd("resize 20")
-    vim.cmd("terminal")
-    term_buf = vim.api.nvim_get_current_buf()
-    term_win = vim.api.nvim_get_current_win()
-    vim.cmd("startinsert")
+    -- mode == "c"（カレントウィンドウ）
+    local cur_buf = vim.api.nvim_get_current_buf()
+
+    -- 現在のバッファがターミナル → prev_buf に戻す
+    if cur_buf == state.buf then
+      if state.prev_buf and vim.api.nvim_buf_is_valid(state.prev_buf) then
+        vim.api.nvim_win_set_buf(0, state.prev_buf)
+      end
+      return
+    end
+
+    -- ターミナルバッファが有効 → カレントウィンドウで表示
+    if state.buf and vim.api.nvim_buf_is_valid(state.buf) then
+      state.prev_buf = cur_buf
+      vim.api.nvim_win_set_buf(0, state.buf)
+      vim.cmd("startinsert")
+    else
+      -- 新規作成
+      state.prev_buf = cur_buf
+      vim.cmd("terminal")
+      state.buf = vim.api.nvim_get_current_buf()
+      vim.cmd("startinsert")
+    end
   end
 end
 
-vim.api.nvim_create_user_command("ToggleTerm", ToggleTerminal, { desc = "Toggle terminal" })
+vim.api.nvim_create_user_command("ToggleTerm", function(opts)
+  ToggleTerminal(opts.args ~= "" and opts.args or "c")
+end, { nargs = "?", desc = "Toggle terminal (s=split, v=vsplit, default=current)" })
 vim.api.nvim_set_keymap("n", "<C-t>", ":ToggleTerm<CR>", { noremap = true, silent = true })
 
 vim.api.nvim_create_autocmd("TextYankPost", {
