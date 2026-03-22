@@ -43,15 +43,5 @@ keymap("n", "<leader>p", ":tabprev<CR>", { noremap = true, silent = true })
 
 keymap("n", "<C-c>", ":let @* = expand('%')<CR>", { noremap = true })
 
-vim.api.nvim_create_user_command("T", function(opts)
-  vim.cmd("split")
-  vim.cmd("wincmd j")
-  vim.cmd("resize 20")
-  vim.cmd("terminal " .. (opts.args or ""))
-  vim.cmd("startinsert")
-end, {
-  nargs = "*", -- 引数を受け取る設定
-})
-
 -- ノーマルモードに切り替える。[jk]
 keymap("i", "jk", "<ESC>", { noremap = true, silent = true })
