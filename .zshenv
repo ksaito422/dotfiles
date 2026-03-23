@@ -10,6 +10,7 @@ export LANG="ja_JP.UTF-8"
 export PRETTIERD_DEFAULT_CONFIG=$HOME/work/ghq/github.com/ksaito422/dotfiles/.prettierrc
 export XDG_CONFIG_HOME="$HOME/.config"
 export DISABLE_AUTOUPDATER=1 # cluade codeのauto updateを無効にする
+export DOCKER_CONFIG=${DOCKER_CONFIG:-$HOME/.docker}
 
 # Additional PATH entries
 export PATH=$PATH:~/bin
