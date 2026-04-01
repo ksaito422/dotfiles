@@ -23,7 +23,6 @@ stylua = "2.2.0"
 terraform-ls = "0.37.0"
 tflint = "0.59.1"
 typos = "1.40.0"
-claude = "latest"
 "aqua:neovim/neovim" = "0.11.6"
 "aqua:Kampfkarren/selene" = "0.30.1"
 
