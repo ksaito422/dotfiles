@@ -86,3 +86,60 @@ os:
   editPreset: 'nvim-remote'
   edit: "nvim --server /tmp/$(basename $PWD).pipe --remote-tab {{filename}}"
   editInTerminal: true
+customCommands:
+  - key: 'w'
+    context: 'localBranches'
+    description: 'worktreeを作成しwezterm workspaceを作る'
+    command: >-
+      bash -lc '
+        BRANCH="{{.SelectedLocalBranch.Name}}"
+        CURRENT=$(git symbolic-ref --short HEAD 2>/dev/null)
+        if [ "$CURRENT" = "$BRANCH" ]; then
+          echo "Error: Cannot create worktree for currently checked out branch: $BRANCH"
+          exit 1
+        fi
+        PATH_NAME="${BRANCH//\//-}"
+        REPO_ROOT=$(git rev-parse --show-toplevel)
+        WORKTREE_PATH="$(dirname "$REPO_ROOT")/$PATH_NAME"
+        git worktree add "$WORKTREE_PATH" "$BRANCH"
+        wezterm cli spawn --new-window --workspace "$PATH_NAME" --cwd "$WORKTREE_PATH"
+      '
+    output: log
+  - key: 'w'
+    context: 'remoteBranches'
+    description: 'checkoutして、worktreeを作成しwezterm workspaceを作る'
+    command: >-
+      bash -lc '
+        REMOTE_BRANCH="{{.SelectedRemoteBranch.Name}}"
+        LOCAL_BRANCH="${REMOTE_BRANCH#*/}"
+        PATH_NAME="${LOCAL_BRANCH//\//-}"
+        REPO_ROOT=$(git rev-parse --show-toplevel)
+        WORKTREE_PATH="$(dirname "$REPO_ROOT")/$PATH_NAME"
+        git fetch origin "$LOCAL_BRANCH" || true
+        git worktree add "$WORKTREE_PATH" "$LOCAL_BRANCH" 2>/dev/null || \
+          git worktree add -b "$LOCAL_BRANCH" "$WORKTREE_PATH" "origin/$LOCAL_BRANCH"
+        wezterm cli spawn --new-window --workspace "$PATH_NAME" --cwd "$WORKTREE_PATH"
+      '
+    output: log
+  - key: 'W'
+    context: 'localBranches'
+    description: 'ブランチを作成して、worktreeを作成しwezterm workspaceを作る'
+    prompts:
+      - type: 'input'
+        title: 'New branch name'
+        key: 'NewBranch'
+      - type: 'input'
+        title: 'Base branch'
+        key: 'BaseBranch'
+        initialValue: 'main'
+    command: >-
+      bash -lc '
+        NEW_BRANCH="{{.Form.NewBranch}}"
+        BASE_BRANCH="{{.Form.BaseBranch}}"
+        PATH_NAME="${NEW_BRANCH//\//-}"
+        REPO_ROOT=$(git rev-parse --show-toplevel)
+        WORKTREE_PATH="$(dirname "$REPO_ROOT")/$PATH_NAME"
+        git worktree add -b "$NEW_BRANCH" "$WORKTREE_PATH" "$BASE_BRANCH"
+        wezterm cli spawn --new-window --workspace "$PATH_NAME" --cwd "$WORKTREE_PATH"
+      '
+    output: log
