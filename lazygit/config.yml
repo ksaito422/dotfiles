@@ -87,6 +87,11 @@ os:
   edit: "nvim --server /tmp/$(basename $PWD).pipe --remote-tab {{filename}}"
   editInTerminal: true
 customCommands:
+  - key: 'r'
+    context: 'global'
+    description: 'レビュワーアサインされているPRを表示'
+    command: 'gh pr list --search "review-requested:@me"'
+    output: log
   - key: 'w'
     context: 'localBranches'
     description: 'worktreeを作成しwezterm workspaceを作る'
