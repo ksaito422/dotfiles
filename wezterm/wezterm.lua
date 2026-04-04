@@ -16,9 +16,9 @@ config = {
     { family = "Hiragino Kaku Gothic ProN" },
   }),
   -- color_scheme = "tokyonight_moon",
-  color_scheme = "Tokyo Night Moon",
+  -- color_scheme = "Tokyo Night Moon",
   -- color_scheme = "tokyonight_night",
-  -- color_scheme = "kanagawabones",
+  color_scheme = "kanagawabones",
   window_background_opacity = 0.9,
   macos_window_background_blur = 10,
   window_padding = {

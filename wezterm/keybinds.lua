@@ -25,10 +25,7 @@ M.default_keybinds = {
   {
     key = "a",
     mods = "LEADER",
-    action = act.ActivateKeyTable({
-      name = "activate_pane",
-      one_shot = false,
-    }),
+    action = act.PaneSelect,
   },
   {
     key = "f",
@@ -53,7 +50,7 @@ M.default_keybinds = {
       SplitVertical = { domain = "CurrentPaneDomain" },
     }),
   },
-  { key = "C", mods = "LEADER", action = act.ActivateCopyMode },
+  { key = "c", mods = "LEADER", action = act.ActivateCopyMode },
   { key = "c", mods = "SUPER", action = act({ CopyTo = "Clipboard" }) },
   { key = "v", mods = "SUPER", action = act({ PasteFrom = "Clipboard" }) },
   { key = "PageUp", mods = "CTRL", action = act({ ScrollByPage = -1 }) },
@@ -192,18 +189,6 @@ M.key_tables = {
     { key = "k", action = act.AdjustPaneSize({ "Up", 1 }) },
     { key = "DownArrow", action = act.AdjustPaneSize({ "Down", 1 }) },
     { key = "j", action = act.AdjustPaneSize({ "Down", 1 }) },
-    -- Cancel the mode by pressing escape
-    { key = "Escape", action = "PopKeyTable" },
-  },
-  activate_pane = {
-    { key = "LeftArrow", action = act.ActivatePaneDirection("Left") },
-    { key = "h", action = act.ActivatePaneDirection("Left") },
-    { key = "RightArrow", action = act.ActivatePaneDirection("Right") },
-    { key = "l", action = act.ActivatePaneDirection("Right") },
-    { key = "UpArrow", action = act.ActivatePaneDirection("Up") },
-    { key = "k", action = act.ActivatePaneDirection("Up") },
-    { key = "DownArrow", action = act.ActivatePaneDirection("Down") },
-    { key = "j", action = act.ActivatePaneDirection("Down") },
     -- Cancel the mode by pressing escape
     { key = "Escape", action = "PopKeyTable" },
   },
