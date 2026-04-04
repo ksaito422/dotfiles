@@ -42,7 +42,7 @@ gui:
   showBottomLine: true # for hiding the bottom information line (unless it has important information to tell you)
   showCommandLog: true
   nerdFontsVersion: "3" # nerd fonts version to use ("2" or "3"); empty means don't show nerd font icons
-  commandLogSize: 8
+  commandLogSize: 20
   splitDiff: 'auto' # one of 'auto' | 'always'
   skipRewordInEditorWarning: false # for skipping the confirmation before launching the reword editor
   border: 'double' # one of 'single' | 'double' | 'rounded' | 'hidden'
@@ -87,7 +87,7 @@ os:
   edit: "nvim --server /tmp/$(basename $PWD).pipe --remote-tab {{filename}}"
   editInTerminal: true
 customCommands:
-  - key: 'r'
+  - key: '<c-a>'
     context: 'global'
     description: 'レビュワーアサインされているPRを表示'
     command: 'gh pr list --search "review-requested:@me"'
