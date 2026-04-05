@@ -34,7 +34,7 @@ M.default_keybinds = {
       CaseSensitiveString = "",
     }),
   },
-  { key = "[", mods = "LEADER", action = act.ActivateCopyMode },
+  { key = "c", mods = "LEADER", action = act.ActivateCopyMode },
   { key = "]", mods = "LEADER", action = act.QuickSelect },
   { key = "L", mods = "CTRL", action = act.ShowDebugOverlay },
   {
@@ -51,7 +51,6 @@ M.default_keybinds = {
       SplitVertical = { domain = "CurrentPaneDomain" },
     }),
   },
-  { key = "c", mods = "LEADER", action = act.ActivateCopyMode },
   { key = "c", mods = "SUPER", action = act({ CopyTo = "Clipboard" }) },
   { key = "v", mods = "SUPER", action = act({ PasteFrom = "Clipboard" }) },
   { key = "PageUp", mods = "CTRL", action = act({ ScrollByPage = -1 }) },
