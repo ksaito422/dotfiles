@@ -1,6 +1,9 @@
 local M = {}
 local wezterm = require("wezterm")
 
+local _cache = { total = 0, running = 0, updated_at = 0 }
+local CACHE_TTL = 3
+
 local function is_claude_pane(pane)
   local proc = pane:get_foreground_process_name()
   if not proc then return false end
@@ -63,6 +66,19 @@ function M.collect_sessions()
     end
   end
   return sessions
+end
+
+function M.get_summary()
+  local now = os.time()
+  if now - _cache.updated_at >= CACHE_TTL then
+    local sessions = M.collect_sessions()
+    local running = 0
+    for _, s in ipairs(sessions) do
+      if s.state == "running" then running = running + 1 end
+    end
+    _cache = { total = #sessions, running = running, updated_at = now }
+  end
+  return _cache.total, _cache.running
 end
 
 function M.build_palette_entries(_, _)

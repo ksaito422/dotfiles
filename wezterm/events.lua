@@ -43,7 +43,12 @@ end)
 
 wezterm.on("update-status", function(window, _)
   local workspace = window:active_workspace()
-  window:set_left_status(" " .. workspace .. " ")
+  local total, running = claude.get_summary()
+  local idle = total - running
+
+  local lamp = running > 0 and "🟢" or "⚪"
+  local right = total > 0 and string.format("  %s %d/%d ", lamp, running, total) or " "
+  window:set_left_status(" " .. workspace .. right)
 end)
 
 -- Auto-restore all saved sessions on startup.
