@@ -31,13 +31,15 @@ config = {
   show_tabs_in_tab_bar = true,
   tab_bar_at_bottom = true,
   show_new_tab_button_in_tab_bar = false,
-  -- window_frame = {
-  -- inactive_titlebar_bg = "none",
-  -- active_titlebar_bg = "none",
-  -- },
   -- show_close_tab_button_in_tabs = false,
+  -- use_fancy_tab_bar = false,
+  window_frame = {
+    inactive_titlebar_bg = "none",
+    active_titlebar_bg = "none",
+  },
   colors = {
     tab_bar = {
+      -- background = "none",
       inactive_tab_edge = "none",
     },
   },
