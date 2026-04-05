@@ -19,21 +19,22 @@ config = {
   -- color_scheme = "Tokyo Night Moon",
   -- color_scheme = "tokyonight_night",
   color_scheme = "kanagawabones",
-  window_background_opacity = 0.9,
-  macos_window_background_blur = 10,
+  window_background_opacity = 0.8,
+  macos_window_background_blur = 20,
   window_padding = {
     left = 2,
     right = 0,
     top = 0,
     bottom = 0,
   },
-  -- window_decorations = "RESIZE",
+  window_decorations = "RESIZE",
   show_tabs_in_tab_bar = true,
+  tab_bar_at_bottom = true,
+  show_new_tab_button_in_tab_bar = false,
   -- window_frame = {
   -- inactive_titlebar_bg = "none",
   -- active_titlebar_bg = "none",
   -- },
-  show_new_tab_button_in_tab_bar = false,
   -- show_close_tab_button_in_tabs = false,
   colors = {
     tab_bar = {
