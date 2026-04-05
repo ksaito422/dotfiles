@@ -19,6 +19,7 @@ config = {
   -- color_scheme = "Tokyo Night Moon",
   -- color_scheme = "tokyonight_night",
   color_scheme = "kanagawabones",
+  adjust_window_size_when_changing_font_size = false,
   window_background_opacity = 0.8,
   macos_window_background_blur = 20,
   window_padding = {
