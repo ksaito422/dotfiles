@@ -36,6 +36,7 @@ M.default_keybinds = {
   },
   { key = "[", mods = "LEADER", action = act.ActivateCopyMode },
   { key = "]", mods = "LEADER", action = act.QuickSelect },
+  { key = "L", mods = "CTRL", action = act.ShowDebugOverlay },
   {
     key = "\\",
     mods = "CTRL",
