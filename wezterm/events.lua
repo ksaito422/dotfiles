@@ -1,20 +1,6 @@
 local session = require("session")
 local wezterm = require("wezterm")
 
-wezterm.on("format-window-title", function(tab, tabs)
-  local zoomed = ""
-  if tab.active_pane.is_zoomed then
-    zoomed = "[Z] "
-  end
-
-  local index = ""
-  if #tabs > 1 then
-    index = string.format("[%d/%d] ", tab.tab_index + 1, #tabs)
-  end
-
-  return zoomed .. index .. tab.active_pane.title
-end)
-
 function tab_title(tab_info)
   local title = tab_info.tab_title
   -- if the tab title is explicitly set, take that
