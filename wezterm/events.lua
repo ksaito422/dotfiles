@@ -1,4 +1,5 @@
 local session = require("session")
+local claude  = require("claude")
 local wezterm = require("wezterm")
 
 function tab_title(tab_info)
@@ -56,6 +57,16 @@ wezterm.on("gui-startup", function(cmd)
   for _, name in ipairs(names) do
     session.restore_session(name)
   end
+end)
+
+wezterm.on("augment-command-palette", function(window, pane)
+  local entries = {}
+
+  for _, e in ipairs(claude.build_palette_entries(window, pane)) do
+    table.insert(entries, e)
+  end
+
+  return entries
 end)
 
 return wezterm
