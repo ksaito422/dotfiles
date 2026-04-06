@@ -349,15 +349,6 @@ require("lazy").setup({
   -- other plugins(依存関係のためなど)
   -- ------------------------------------------
 
-  -- 起動画面
-  {
-    "goolord/alpha-nvim",
-    config = function()
-      require("configs.alpha")
-    end,
-    event = "VimEnter",
-  },
-
   -- Denoでプラグインを作るエコシステム
   {
     "vim-denops/denops.vim",
