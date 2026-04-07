@@ -20,6 +20,7 @@ require("lazy").setup({
     end,
     build = ":TSUpdate",
     event = "VimEnter",
+    branch = "main",
   },
 
   -- color schema
