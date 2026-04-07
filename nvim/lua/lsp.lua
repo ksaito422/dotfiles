@@ -52,9 +52,8 @@ keymap("n", "<leader>e", "<cmd>lua vim.diagnostic.open_float()<CR>", { noremap =
 -- keymap("n", "gd", "<cmd>lua vim.lsp.buf.definition()<CR>", { noremap = true, silent = true })
 keymap("n", "[d", "<cmd>lua vim.diagnostic.jump({count=-1})<CR>", { noremap = true, silent = true })
 keymap("n", "]d", "<cmd>lua vim.diagnostic.jump({count=1})<CR>", { noremap = true, silent = true })
-keymap("n", "ga", "<cmd>lua vim.lsp.buf.code_action()<CR>", { noremap = true, silent = true })
-keymap("n", "gr", "<cmd>lua vim.lsp.buf.rename()<CR>", { noremap = true, silent = true })
-keymap("n", "gi", "<cmd>lua vim.lsp.buf.implementation()<CR>", { noremap = true, silent = true })
+keymap("n", "gra", "<cmd>lua vim.lsp.buf.code_action()<CR>", { noremap = true, silent = true })
+keymap("n", "gri", "<cmd>lua vim.lsp.buf.implementation()<CR>", { noremap = true, silent = true })
 keymap("n", "<space><space>", "<cmd>lua vim.lsp.buf.format()<CR>", { noremap = true, silent = true })
 
 keymap("n", "gd", "<cmd>Trouble lsp_definitions toggle<CR>", { noremap = true, silent = true })
