@@ -1,6 +1,7 @@
 {
   "language": "japanese",
   "autoUpdatesChannel": "stable",
+  "effortLevel": "high",
   "env": {
     "CLAUDE_CODE_DISABLE_TERMINAL_TITLE": "1"
   },
