@@ -1,5 +1,5 @@
 local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
-if not vim.loop.fs_stat(lazypath) then
+if not vim.uv.fs_stat(lazypath) then
   vim.fn.system({
     "git",
     "clone",
@@ -20,6 +20,7 @@ require("lazy").setup({
     end,
     build = ":TSUpdate",
     event = "VimEnter",
+    branch = "main",
   },
 
   -- color schema
@@ -78,12 +79,13 @@ require("lazy").setup({
   },
 
   -- markdown preview
+  -- call mkdp#util#install()
   {
-    "MeanderingProgrammer/render-markdown.nvim",
-    config = function()
-      require("render-markdown").setup({
-        file_types = { "markdown" },
-      })
+    "iamcco/markdown-preview.nvim",
+    cmd = { "MarkdownPreviewToggle", "MarkdownPreview", "MarkdownPreviewStop" },
+    ft = { "markdown" },
+    build = function()
+      vim.fn["mkdp#util#install"]()
     end,
   },
 
