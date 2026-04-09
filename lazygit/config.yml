@@ -47,9 +47,9 @@ gui:
   skipRewordInEditorWarning: false # for skipping the confirmation before launching the reword editor
   border: 'double' # one of 'single' | 'double' | 'rounded' | 'hidden'
 git:
-  paging:
-    colorArg: always
-    pager: delta --dark --paging=never --side-by-side
+  pagers:
+    - colorArg: always
+      pager: delta --dark --paging=never --side-by-side
   commit:
     signOff: false
     verbose: default # one of 'default' | 'always' | 'never'
@@ -97,6 +97,7 @@ customCommands:
     description: 'worktreeを作成しwezterm workspaceを作る'
     command: >-
       bash -lc '
+
         BRANCH="{{.SelectedLocalBranch.Name}}"
         CURRENT=$(git symbolic-ref --short HEAD 2>/dev/null)
         if [ "$CURRENT" = "$BRANCH" ]; then
@@ -115,6 +116,7 @@ customCommands:
     description: 'checkoutして、worktreeを作成しwezterm workspaceを作る'
     command: >-
       bash -lc '
+
         REMOTE_BRANCH="{{.SelectedRemoteBranch.Name}}"
         LOCAL_BRANCH="${REMOTE_BRANCH#*/}"
         PATH_NAME="${LOCAL_BRANCH//\//-}"
@@ -139,6 +141,7 @@ customCommands:
         initialValue: 'main'
     command: >-
       bash -lc '
+
         NEW_BRANCH="{{.Form.NewBranch}}"
         BASE_BRANCH="{{.Form.BaseBranch}}"
         PATH_NAME="${NEW_BRANCH//\//-}"
