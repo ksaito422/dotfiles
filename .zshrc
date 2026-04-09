@@ -120,4 +120,10 @@ if [ -f "$HOME/google-cloud-sdk/path.zsh.inc" ]; then . "$HOME/google-cloud-sdk/
 if [ -f "$HOME/google-cloud-sdk/completion.zsh.inc" ]; then . "$HOME/google-cloud-sdk/completion.zsh.inc"; fi
 
 export PATH="$HOME/.local/bin:$PATH"
+export XDG_CONFIG_HOME="$HOME/.config"
+export PATH="$HOME/work/script:$PATH"
+
+if [[ -f ~/work/ghq/github.com/ksaito422/dotfiles/.zshrc.local ]]; then
+  source ~/work/ghq/github.com/ksaito422/dotfiles/.zshrc.local
+fi
 

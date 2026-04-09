@@ -5,24 +5,17 @@
   "env": {
     "CLAUDE_CODE_DISABLE_TERMINAL_TITLE": "1"
   },
-  "enabledPlugins": {
-    "code-review@claude-plugins-official": true,
-    "skill-creator@claude-plugins-official": true
+  "attribution": {
+    "commit": "🤖 Generated with [Claude Code](https://claude.com/claude-code)",
+    "pr": ""
   },
   "permissions": {
-    "defaultMode": "plan",
     "allow": [
       "Bash(bundle exec rspec:*)",
       "Bash(bundle exec rubocop)",
       "Bash(pnpm test:*)",
       "Bash(pnpm lint:*)",
       "Bash(gh pr view:*)"
-    ],
-    "ask": [
-      "Bash(git commit:*)",
-      "Bash(git push:*)",
-      "Bash(git reset:*)",
-      "Bash(git rebase:*)"
     ],
     "deny": [
       "Bash(rm:*)",
@@ -32,12 +25,16 @@
       "Bash(pnpm uninstall:*)",
       "Bach(curl:*)",
       "Read(.env.*)"
-    ]
+    ],
+    "ask": [
+      "Bash(git commit:*)",
+      "Bash(git push:*)",
+      "Bash(git reset:*)",
+      "Bash(git rebase:*)"
+    ],
+    "defaultMode": "plan"
   },
-  "attribution": {
-    "commit": "🤖 Generated with [Claude Code](https://claude.com/claude-code)",
-    "pr": ""
-  },
+  "model": "claude-sonnet-4-6",
   "hooks": {
     "Notification": [
       {
@@ -66,5 +63,10 @@
     "type": "command",
     "command": "~/work/ghq/github.com/ksaito422/dotfiles/.claude/statusline.sh"
   },
-  "model": "sonnet"
+  "enabledPlugins": {
+    "code-review@claude-plugins-official": true,
+    "skill-creator@claude-plugins-official": true
+  },
+  "language": "japanese",
+  "autoUpdatesChannel": "stable"
 }
