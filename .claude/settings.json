@@ -15,15 +15,20 @@
       "Bash(bundle exec rubocop)",
       "Bash(pnpm test:*)",
       "Bash(pnpm lint:*)",
-      "Bash(gh pr view:*)"
+      "Bash(gh pr view:*)",
+      "Bash(find:*)",
+      "Bash(grep:*)",
+      "Bash(ls:*)",
+      "Bash(cat:*)"
     ],
     "deny": [
       "Bash(rm:*)",
       "Bash(rm -rf)",
       "Bash(sudo:*)",
+      "Bash(bundle install:*)",
       "Bash(pnpm install:*)",
       "Bash(pnpm uninstall:*)",
-      "Bach(curl:*)",
+      "Bash(curl:*)",
       "Read(.env.*)"
     ],
     "ask": [
