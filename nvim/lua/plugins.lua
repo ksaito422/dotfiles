@@ -206,31 +206,6 @@ require("lazy").setup({
     ft = { "csv", "tsv" },
   },
 
-  -- Neovim Builtin LSPが提供する構文を引っ張ってくる
-  -- 'Shougo/ddc-nvim-lsp'
-
-  -- 入力補完
-  -- {
-  --     'Shougo/ddc.vim',
-  --     dependencies = {
-  --         -- 補完候補
-  --         'Shougo/pum.vim',
-  --         'Shougo/ddc-ui-pum',
-  --         -- 補完(ddc-matcher_head, ddc-sorter_rank, ddc-converter_remove_overlapとほぼ同じ機能)
-  --         'tani/ddc-fuzzy',
-  --         -- 行の周辺の単語を候補として抽出
-  --         'Shougo/ddc-source-around',
-  --         -- 補完ソース
-  --         'Shougo/ddc-source-nvim-lsp',
-  --         -- 関数の引数ヘルプ
-  --         'matsui54/denops-signature_help',
-  --         -- Show completion documentation
-  --         'matsui54/denops-popup-preview.vim',
-  --         -- path completion
-  --         'tani/ddc-path',
-  --     },
-  -- },
-
   -- 入力補完(completion, documentation, command line)
   {
     "hrsh7th/cmp-nvim-lsp",
@@ -320,15 +295,6 @@ require("lazy").setup({
     end,
   },
 
-  -- LSP以外のformat,linter(prettier, rubocopなど)を動かすプラグイン
-  -- {
-  --   "nvimtools/none-ls.nvim",
-  --   dependencies = { "nvim-lua/plenary.nvim" },
-  --   config = function()
-  --     require("configs.null-ls")
-  --   end,
-  -- },
-
   -- :help language Japanese
   {
     "vim-jp/vimdoc-ja",
@@ -342,7 +308,6 @@ require("lazy").setup({
   {
     "vim-denops/denops.vim",
     dependencies = {
-      -- 'Shougo/ddc.vim',
       -- 翻訳ツール
       { "skanehira/denops-translate.vim" },
     },
@@ -351,13 +316,13 @@ require("lazy").setup({
   },
 
   -- plugin docを楽に生成するため
-  {
-    "LeafCage/vimhelpgenerator",
-    cmd = {
-      "VimHelpGenerator",
-      "HelpIntoMarkdown",
-    },
-  },
+  -- {
+  --   "LeafCage/vimhelpgenerator",
+  --   cmd = {
+  --     "VimHelpGenerator",
+  --     "HelpIntoMarkdown",
+  --   },
+  -- },
   -- dependencies plugins
   "nvim-tree/nvim-web-devicons",
   "nvim-lua/plenary.nvim",
@@ -399,11 +364,8 @@ require("lazy").setup({
 -- -----------------------------------
 -- Loading neovim plugin settings
 -- -----------------------------------
--- require('configs/ddc')
--- require('configs/pum')
 require("configs/glyph-palette")
 require("configs/translate")
 require("configs/vim-highlightedyank")
--- require('configs/null-ls')
 require("configs/vim-illuminate")
 require("configs/lazygit")
