@@ -145,19 +145,6 @@ require("lazy").setup({
     end,
   },
 
-  -- TODO/HACK/BUGなどをhighlightする
-  {
-    "folke/todo-comments.nvim",
-    dependencies = "nvim-lua/plenary.nvim",
-    config = function()
-      require("configs.todo-comments")
-    end,
-    event = {
-      "BufReadPre",
-      "BufNewFile",
-    },
-  },
-
   -- ファジーファインダー
   {
     "nvim-telescope/telescope.nvim",

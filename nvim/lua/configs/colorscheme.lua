@@ -15,6 +15,21 @@ vim.cmd([[
   autocmd ColorScheme * highlight TelescopeResultsTitle guifg=#B7B8B6 guibg=#2C7873
 ]])
 
+local function set_comment_highlights()
+  -- treesitter comment parser injection でハイライトする
+  vim.api.nvim_set_hl(0, "@comment.todo",  { bg = "#5ea1ff", fg = "#000000", bold = true })
+  vim.api.nvim_set_hl(0, "@comment.note",  { bg = "#5eff6c", fg = "#000000", bold = true })
+  vim.api.nvim_set_hl(0, "@comment.warning",  { bg = "#f1ff5e", fg = "#000000", bold = true })
+  vim.api.nvim_set_hl(0, "@comment.error", { bg = "#ff6e67", fg = "#000000", bold = true })
+   -- LSP semantic token (priority 高いの) が comment 全体を上書きするのを防ぐ
+  vim.api.nvim_set_hl(0, "@lsp.type.comment", {})
+end
+
+vim.api.nvim_create_autocmd("ColorScheme", {
+  pattern = "*",
+  callback = set_comment_highlights,
+})
+
 -- vim.cmd([[colorscheme nightfox]])
 -- vim.cmd([[colorscheme tokyonight]])
 -- vim.cmd([[colorscheme tokyonight-moon]])
