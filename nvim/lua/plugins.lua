@@ -136,15 +136,6 @@ require("lazy").setup({
     end,
   },
 
-  -- jsx,tsxコメントアウト
-  {
-    "folke/ts-comments.nvim",
-    event = "VeryLazy",
-    config = function()
-      require("ts-comments").setup()
-    end,
-  },
-
   -- ファジーファインダー
   {
     "nvim-telescope/telescope.nvim",
