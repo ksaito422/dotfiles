@@ -19,7 +19,7 @@ require("lazy").setup({
       require("configs.treesitter")
     end,
     build = ":TSUpdate",
-    event = "VimEnter",
+    lazy = false,
     branch = "main",
   },
 
