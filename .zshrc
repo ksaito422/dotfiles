@@ -113,6 +113,40 @@ function fzf-src () {
 zle -N fzf-src
 bindkey '^]' fzf-src
 
+# fzfでファイル検索
+function fzf-find-file() {
+  local file=$(rg --files | fzf \
+    --reverse \
+    --preview 'bat --color=always --style=numbers {}' \
+    --preview-window=right:60%)
+  if [ -n "$file" ]; then
+    BUFFER="${EDITOR:-nvim} $file"
+    zle accept-line
+  fi
+  zle clear-screen
+}
+zle -N fzf-find-file
+bindkey '^f' fzf-find-file
+
+# fzf+rgでファイル内検索
+function fzf-grep() {
+  local result=$(fzf --ansi --disabled --query "" \
+    --reverse \
+    --bind "change:reload:rg --line-number --color=always {q} . 2>/dev/null || true" \
+    --delimiter=: \
+    --preview 'bat --color=always --style=numbers --highlight-line {2} {1}' \
+    --preview-window=right:60%:+{2}-5)
+  if [ -n "$result" ]; then
+    local file=$(echo "$result" | cut -d: -f1)
+    local line=$(echo "$result" | cut -d: -f2)
+    BUFFER="${EDITOR:-nvim} +${line} ${file}"
+    zle accept-line
+  fi
+  zle clear-screen
+}
+zle -N fzf-grep
+bindkey '^g' fzf-grep
+
 # The next line updates PATH for the Google Cloud SDK.
 if [ -f "$HOME/google-cloud-sdk/path.zsh.inc" ]; then . "$HOME/google-cloud-sdk/path.zsh.inc"; fi
 
