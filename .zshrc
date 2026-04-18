@@ -126,7 +126,7 @@ function fzf-find-file() {
   zle clear-screen
 }
 zle -N fzf-find-file
-bindkey '^f' fzf-find-file
+bindkey '^w' fzf-find-file
 
 # fzf+rgでファイル内検索
 function fzf-grep() {
