@@ -3,6 +3,7 @@ if [[ ( "$SHLVL" -eq 1 && ! -o LOGIN ) && -s "${ZDOTDIR:-$HOME}/.zprofile" ]]; t
   source "${ZDOTDIR:-$HOME}/.zprofile"
 fi
 
+export PATH="$HOME/.nix-profile/bin:$PATH"
 export PATH=/usr/local/opt/gawk/bin/:$PATH
 export PATH="$HOME/work/script:$PATH"
 export PATH=~/.npm-global/bin:$PATH
