@@ -10,6 +10,10 @@
     btop
     colima
     delta
+    deno
+    docker
+    docker-compose
+    efm-langserver
     eza
     fzf
     gh
