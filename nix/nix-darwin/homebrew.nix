@@ -1,11 +1,15 @@
 {
   homebrew = {
     enable = true;
+
+    global.autoUpdate = false;
+
     onActivation = {
-      autoUpdate = true;
+      autoUpdate = false;
       upgrade = true;
-      cleanup = "zap";
+      cleanup = "uninstall";
     };
+
     taps = [
       "adoptopenjdk/openjdk"
       "aws/tap"
@@ -15,25 +19,23 @@
     ];
     brews = [
       { name = "cocoapods"; link = false; }
-      "docker"
       "edencommon"
       "fb303"
       "fbthrift"
       "firefoxpwa"
       "fizz"
       "folly"
-      "httpd"
-      "ios-deploy"
       "lima-additional-guestagents"
       "rustup"
       "wangle"
+      "zsh-autosuggestions"
+      "zsh-syntax-highlighting"
       "daipeihust/tap/im-select"
       "songmu/tap/blogsync"
     ];
     casks = [
       "1password"
       "app-cleaner"
-      "dbeaver-community"
       "discord"
       { name = "firefox"; args = { language = "ja"; }; }
       "font-hackgen-nerd"

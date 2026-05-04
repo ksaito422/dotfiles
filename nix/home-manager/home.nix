@@ -13,6 +13,7 @@
     colima
     delta
     deno
+    docker
     docker-compose
     efm-langserver
     eza
@@ -50,8 +51,6 @@
     typos
     typos-lsp
     yazi
-    zsh-autosuggestions
-    zsh-syntax-highlighting
   ];
 
   programs.home-manager.enable = true;
