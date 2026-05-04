@@ -1,5 +1,5 @@
 {
-  description = "Home Manager configuration";
+  description = "My dotfiles";
 
   inputs = {
     nixpkgs.url = "github:nixos/nixpkgs/nixpkgs-unstable";
@@ -7,18 +7,25 @@
       url = "github:nix-community/home-manager";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-  };
-
-  outputs = { nixpkgs, home-manager, ... }:
-  let
-    system = "aarch64-darwin";
-    pkgs = nixpkgs.legacyPackages.${system};
-  in
-  {
-    homeConfigurations."saito" = home-manager.lib.homeManagerConfiguration {
-      inherit pkgs;
-
-      modules = [ ./home.nix ];
+    nix-darwin = {
+      url = "github:nix-darwin/nix-darwin";
+      inputs.nixpkgs.follows = "nixpkgs";
     };
   };
+
+  outputs =
+    {
+      nixpkgs,
+      home-manager,
+      nix-darwin,
+      ...
+    }:
+    {
+      darwinConfigurations."MacBook-Air" = nix-darwin.lib.darwinSystem {
+        modules = [
+          ./nix-darwin/configuration.nix
+          home-manager.darwinModules.home-manager
+        ];
+      };
+    };
 }
