@@ -43,7 +43,7 @@
         "hooks": [
           {
             "type": "command",
-            "command": "printf '\\e]777;notify;Claude Code;承認が必要です\\e\\\\' > /dev/tty"
+            "command": "printf '\\e]777;notify;Claude Code;承認が必要です\\e\\\\' > /dev/tty 2>/dev/null || true"
           }
         ]
       }
@@ -54,7 +54,7 @@
         "hooks": [
           {
             "type": "command",
-            "command": "printf '\\e]777;notify;Claude Code;タスクが完了しました\\e\\\\' > /dev/tty"
+            "command": "printf '\\e]777;notify;Claude Code;タスクが完了しました\\e\\\\' > /dev/tty 2>/dev/null || true"
           }
         ]
       }
