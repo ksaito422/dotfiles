@@ -3,7 +3,10 @@
 {
   users.users."saito".home = "/Users/saito";
 
-  imports = [ ./home_manager.nix ];
+  imports = [
+    ./home_manager.nix
+    ./homebrew.nix
+  ];
 
   nixpkgs.hostPlatform = "aarch64-darwin";
   system.stateVersion = 6;
