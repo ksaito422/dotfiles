@@ -86,6 +86,7 @@ os:
   editPreset: 'nvim-remote'
   edit: "nvim --server /tmp/$(basename $PWD).pipe --remote-tab {{filename}}"
   editInTerminal: true
+  editCommand: 'nvim'
 customCommands:
   - key: '<c-a>'
     context: 'global'
