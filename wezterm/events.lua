@@ -64,14 +64,4 @@ wezterm.on("gui-startup", function(cmd)
   end
 end)
 
-wezterm.on("augment-command-palette", function(window, pane)
-  local entries = {}
-
-  for _, e in ipairs(claude.build_palette_entries(window, pane)) do
-    table.insert(entries, e)
-  end
-
-  return entries
-end)
-
 return wezterm
