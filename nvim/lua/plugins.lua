@@ -271,21 +271,6 @@ require("lazy").setup({
     end,
   },
 
-  -- github copilot
-  {
-    "zbirenbaum/copilot.lua",
-    config = function()
-      require("configs.copilot")
-    end,
-  },
-
-  {
-    "copilotlsp-nvim/copilot-lsp",
-    config = function()
-      require("configs.copilot-lsp")
-    end,
-  },
-
   -- :help language Japanese
   {
     "vim-jp/vimdoc-ja",
