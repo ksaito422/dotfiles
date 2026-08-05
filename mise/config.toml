@@ -2,7 +2,7 @@
 go = "1.25.1"
 hugo = "0.150.0"
 ruby = { version = "4.0.0", postinstall = "gem install ruby-lsp rubocop" }
-node = { version = "24.3.0", postinstall = "npm install -g typescript-language-server typescript @github/copilot-language-server" }
+node = { version = "24.3.0", postinstall = "npm install -g typescript-language-server typescript" }
 terraform = "latest"
 
 gh = "2.82.1"

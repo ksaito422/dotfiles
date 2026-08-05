@@ -3,6 +3,9 @@ if [[ ( "$SHLVL" -eq 1 && ! -o LOGIN ) && -s "${ZDOTDIR:-$HOME}/.zprofile" ]]; t
   source "${ZDOTDIR:-$HOME}/.zprofile"
 fi
 
+eval "$(/opt/homebrew/bin/brew shellenv)"
+export PATH="/opt/homebrew/opt/postgresql@18/bin:$PATH"
+export PATH="$HOME/.nix-profile/bin:$PATH"
 export PATH=/usr/local/opt/gawk/bin/:$PATH
 export PATH="$HOME/work/script:$PATH"
 export PATH=~/.npm-global/bin:$PATH

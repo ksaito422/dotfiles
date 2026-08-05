@@ -4,7 +4,6 @@
 # export VISUAL="nvim"によるviinsモードではなく、emacsキーバインドを使う
 bindkey -e
 
-eval "$(mise activate zsh)"
 # cd [tab]で以前移動したディレクトリを表示
 setopt auto_pushd
 # 直前と同じコマンドはヒストリに追加しない
@@ -156,6 +155,8 @@ if [ -f "$HOME/google-cloud-sdk/completion.zsh.inc" ]; then . "$HOME/google-clou
 export PATH="$HOME/.local/bin:$PATH"
 export XDG_CONFIG_HOME="$HOME/.config"
 export PATH="$HOME/work/script:$PATH"
+
+eval "$(mise activate zsh)"
 
 if [[ -f ~/work/ghq/github.com/ksaito422/dotfiles/.zshrc.local ]]; then
   source ~/work/ghq/github.com/ksaito422/dotfiles/.zshrc.local

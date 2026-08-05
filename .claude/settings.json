@@ -1,7 +1,4 @@
 {
-  "language": "japanese",
-  "autoUpdatesChannel": "stable",
-  "effortLevel": "high",
   "env": {
     "CLAUDE_CODE_DISABLE_TERMINAL_TITLE": "1"
   },
@@ -39,7 +36,6 @@
     ],
     "defaultMode": "plan"
   },
-  "model": "claude-sonnet-4-6",
   "hooks": {
     "Notification": [
       {
@@ -73,5 +69,6 @@
     "skill-creator@claude-plugins-official": true
   },
   "language": "japanese",
+  "effortLevel": "high",
   "autoUpdatesChannel": "stable"
 }
