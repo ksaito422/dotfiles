@@ -32,6 +32,7 @@
       "zsh-syntax-highlighting"
       "daipeihust/tap/im-select"
       "songmu/tap/blogsync"
+      "postgresql"
     ];
     casks = [
       "1password"
