@@ -24,6 +24,7 @@
     lazygit
     lima
     lua-language-server
+    nb
     neovim
     neovim-remote
     ripgrep
