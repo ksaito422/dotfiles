@@ -3,6 +3,7 @@ local utils = require("utils")
 local wezterm = require("wezterm")
 local act = wezterm.action
 local session = require("session")
+local claude = require("claude")
 
 M.leader = { key = "j", mods = "SUPER" }
 
@@ -166,6 +167,45 @@ M.default_keybinds = {
               else
                 win:set_right_status(" Delete failed: " .. tostring(err) .. " ")
               end
+            end
+          end),
+        }),
+        pane
+      )
+    end),
+  },
+  -- Claude Code sessions: cross-workspace picker (Leader+p)
+  {
+    key = "p",
+    mods = "LEADER",
+    action = wezterm.action_callback(function(window, pane)
+      local sessions = claude.collect_sessions()
+      if #sessions == 0 then
+        window:set_right_status(" No Claude sessions ")
+        return
+      end
+
+      local icons = { running = "🟢", waiting_approval = "🟡", idle = "⚪" }
+      local choices, lookup = {}, {}
+      for i, s in ipairs(sessions) do
+        local id = tostring(i)
+        local cwd_uri = s.pane:get_current_working_dir()
+        local cwd = cwd_uri and cwd_uri.file_path or ""
+        table.insert(choices, {
+          id = id,
+          label = string.format("%s [%s] %s — %s", icons[s.state] or "⚪", s.workspace, s.tab_title, cwd),
+        })
+        lookup[id] = s
+      end
+
+      window:perform_action(
+        act.InputSelector({
+          title = "Claude sessions",
+          fuzzy = true,
+          choices = choices,
+          action = wezterm.action_callback(function(win, pn, id)
+            if id and lookup[id] then
+              claude.focus_session(win, pn, lookup[id])
             end
           end),
         }),

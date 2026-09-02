@@ -43,11 +43,19 @@ end)
 
 wezterm.on("update-status", function(window, _)
   local workspace = window:active_workspace()
-  local total, running = claude.get_summary()
-  local idle = total - running
+  local summary = claude.get_summary()
+  local counts = summary.counts
 
-  local lamp = running > 0 and "🟢" or "⚪"
-  local right = total > 0 and string.format("  %s %d/%d ", lamp, running, total) or " "
+  local lamp = "⚪"
+  if counts.waiting_approval > 0 then
+    lamp = "🟡"
+  elseif counts.running > 0 then
+    lamp = "🟢"
+  end
+
+  local right = summary.total > 0
+    and string.format("  %s 🟢%d 🟡%d /%d ", lamp, counts.running, counts.waiting_approval, summary.total)
+    or " "
   window:set_left_status(" " .. workspace .. right)
 end)
 
