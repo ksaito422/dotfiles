@@ -15,7 +15,6 @@ git clone <url>
 chmod 755 init.sh
 gem install rails ruby-lsp rubocop
 npm install -g typescript-language-server
-npm install -g @github/copilot-language-server
 cargo install selene
 ```
 
