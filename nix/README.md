@@ -23,7 +23,11 @@ nix flake update nix-darwin
 nix flake update
 
 # バージョンの更新
-sudo darwin-rebuild switch
+## 管理者
+sudo darwin-rebuild switch --flake .
+
+## ユーザー権限
+home-manager switch --flake .#{username}
 ```
 
 ## brew管理下の更新

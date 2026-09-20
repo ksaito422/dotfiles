@@ -7,8 +7,8 @@
       AppleICUForce24HourTime = true; # 24時間表示
       NSStatusItemSelectionPadding = 6; # メニューアイコンの余白
       NSStatusItemSpacing = 6; # mメニューアイコンの間隔
-      InitialKeyRepeat = 128; # リピート認識までの時間
-      KeyRepeat = 128; # リピート速度
+      InitialKeyRepeat = 15; # リピート認識までの時間
+      KeyRepeat = 2; # リピート速度
     };
     finder = {
       AppleShowAllExtensions = true; # ファイル拡張子
