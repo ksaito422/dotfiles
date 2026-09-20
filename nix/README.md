@@ -27,7 +27,7 @@ nix flake update
 sudo darwin-rebuild switch --flake .
 
 ## ユーザー権限
-nix run home-manager -- switch --flake "/Users/saito-work/work/ghq/github.com/ksaito422/dotfiles/nix#saito-work"
+nix run home-manager -- switch --flake .#saito-work
 ```
 
 ## brew管理下の更新
