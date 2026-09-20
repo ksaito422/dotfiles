@@ -16,6 +16,9 @@ if [ ! -e ~/.config ]; then
   mkdir -p $HOME/.config
 fi
 
+# miseのインストール
+curl -fsSL https://mise.run | sh
+
 # dotfilesに戻る
 cd $path
 
