@@ -13,7 +13,6 @@
     taps = [
       "adoptopenjdk/openjdk"
       "aws/tap"
-      "daipeihust/tap"
       "heroku/brew"
       "songmu/tap"
     ];
@@ -30,8 +29,6 @@
       "wangle"
       "zsh-autosuggestions"
       "zsh-syntax-highlighting"
-      "daipeihust/tap/im-select"
-      "songmu/tap/blogsync"
       "postgresql"
     ];
     casks = [

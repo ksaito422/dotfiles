@@ -1,8 +1,9 @@
 { pkgs, ... }:
 
 {
-  home.username = "saito";
-  home.homeDirectory = "/Users/saito";
+  # home.username / home.homeDirectory は設定しない。
+  # nix-darwin の users.users.<name>.home から自動導出されるため、
+  # このファイルを saito / fukugyou で共有できる。
   home.stateVersion = "24.11";
 
   home.packages = with pkgs; [

@@ -2,6 +2,11 @@
 
 `home.nix`に追加して、`flake.nix`が存在するディレクトリで`sudo darwin-rebuild switch --flake .`を実行してください。
 
+## ユーザーの追加
+
+`nix-darwin/configuration.nix`に`users.users."<name>".home = "/Users/<name>";`を、
+`nix-darwin/home_manager.nix`に`home-manager.users."<name>" = ../home-manager/home.nix;`を追加してください。
+
 ## 更新
 
 ```
