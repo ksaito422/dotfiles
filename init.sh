@@ -35,6 +35,8 @@ if [ $path ]; then
   ln -s $path/mise $HOME/.config/mise
   # yazi
   ln -s $path/yazi $HOME/.config/yazi
+  # karabiner
+  ln -s $path/karabiner/karabiner $HOME/.config/karabiner/karabiner.json
 fi
 
 # brew install
