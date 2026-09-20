@@ -39,6 +39,7 @@
       "app-cleaner"
       "discord"
       { name = "firefox"; args = { language = "ja"; }; }
+      "font-hack-nerd-font"
       "font-hackgen-nerd"
       "gcc-arm-embedded"
       "google-chrome"
