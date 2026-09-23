@@ -50,9 +50,10 @@ if [ $path ]; then
 fi
 
 # nerdfontのインストール
+cd ~/
 git clone --branch=master --depth 1 https://github.com/ryanoasis/nerd-fonts.git
 cd nerd-fonts
-./install.sh
+./install.sh install Hack
 cd ..
 rm -rf nerd-fonts
 
