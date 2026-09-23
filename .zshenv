@@ -3,6 +3,11 @@ if [[ ( "$SHLVL" -eq 1 && ! -o LOGIN ) && -s "${ZDOTDIR:-$HOME}/.zprofile" ]]; t
   source "${ZDOTDIR:-$HOME}/.zprofile"
 fi
 
+# macOSのシステム全体設定 /etc/zshrc がオプションなしの compinit を無条件に実行し、
+# 複数ローカルアカウント間でのHomebrew共有によるinsecure警告を出してしまうため、
+# /etc/zshrc の読み込み自体をスキップする（history/bindkey/promptは .zshrc 側で独自設定済み）
+export NOSYSZSHRC=1
+
 eval "$(/opt/homebrew/bin/brew shellenv)"
 export PATH="/opt/homebrew/opt/postgresql@18/bin:$PATH"
 export PATH="$HOME/.nix-profile/bin:$PATH"
