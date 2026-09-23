@@ -34,6 +34,7 @@
     stylua
     terraform-ls
     tflint
+    tree-sitter
     typos
     yazi
   ];
