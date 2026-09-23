@@ -3,7 +3,7 @@
 #!/bin/bash -eu
 path=$HOME/work/ghq/github.com/ksaito422/dotfiles
 
-cd ~/
+cd $HOME
 
 # arm Mac以外ならセットアップ終了
 if [ "$(uname)" != "Darwin" ] ; then
@@ -50,10 +50,10 @@ if [ $path ]; then
 fi
 
 # nerdfontのインストール
-cd ~/
+cd $HOME
 git clone --branch=master --depth 1 https://github.com/ryanoasis/nerd-fonts.git
-cd nerd-fonts
+cd $HOME/nerd-fonts
 ./install.sh install Hack
-cd ..
+cd $HOME
 rm -rf nerd-fonts
 
