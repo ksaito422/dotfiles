@@ -65,7 +65,7 @@ then
   source $(brew --prefix)/share/zsh-autosuggestions/zsh-autosuggestions.zsh
   # シンタックスハイライト brew install zsh-syntax-highlighting
   source $(brew --prefix)/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
-  autoload -Uz compinit && compinit
+  autoload -Uz compinit && compinit -u
 fi
 
 # 同時に起動したzshの間でヒストリを共有する

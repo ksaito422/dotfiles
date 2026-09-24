@@ -65,7 +65,7 @@
         "hooks": [
           {
             "type": "command",
-            "command": "printf '\\e]777;notify;Claude Code;承認が必要です\\e\\\\' > /dev/tty; ~/work/ghq/github.com/ksaito422/dotfiles/.claude/wezterm-state.sh Notification"
+            "command": "printf '\\e]777;notify;Claude Code;承認が必要です\\e\\\\' > /dev/tty"
           }
         ]
       }
@@ -76,18 +76,7 @@
         "hooks": [
           {
             "type": "command",
-            "command": "printf '\\e]777;notify;Claude Code;タスクが完了しました\\e\\\\' > /dev/tty; ~/work/ghq/github.com/ksaito422/dotfiles/.claude/wezterm-state.sh Stop"
-          }
-        ]
-      }
-    ],
-    "SessionEnd": [
-      {
-        "matcher": "",
-        "hooks": [
-          {
-            "type": "command",
-            "command": "~/work/ghq/github.com/ksaito422/dotfiles/.claude/wezterm-state.sh SessionEnd"
+            "command": "printf '\\e]777;notify;Claude Code;タスクが完了しました\\e\\\\' > /dev/tty"
           }
         ]
       }
