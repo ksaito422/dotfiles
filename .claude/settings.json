@@ -93,5 +93,6 @@
   "language": "japanese",
   "effortLevel": "high",
   "autoUpdatesChannel": "latest",
-  "model": "opus"
+  "model": "opus",
+  "outputStyle": "Concise"
 }
