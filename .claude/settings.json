@@ -92,5 +92,6 @@
   },
   "language": "japanese",
   "effortLevel": "high",
-  "autoUpdatesChannel": "stable"
+  "autoUpdatesChannel": "latest",
+  "model": "opus"
 }
