@@ -7,3 +7,5 @@
 /lazygit/state.yml
 .luarc.json
 /log
+/.claude/skills/synced/
+/.claude/skills/.trash/
