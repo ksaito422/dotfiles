@@ -26,7 +26,7 @@ description: "PR を作成する手順で、コミット・プッシュ、.githu
 
 ## セルフレビュー
 
-- Claude Code の実装タスクでは、リモートへのプッシュ・PR作成後、 [completion-gate](../../../.claude/skills/completion-gate/SKILL.md) の通過を確認する。未通過なら実行し、通過済みなら再実行しない。
+- Claude Code の実装タスクでは、リモートへのプッシュ・PR作成後、 [completion-gate](../completion-gate/SKILL.md) の通過を確認する。未通過なら実行し、通過済みなら再実行しない。
 - ゲート通過後（適用対象外なら対象変更のコミット後）に `git status` と最終コミットを確認する。ゲートで追加された修正コミットも含めて、再度リモートへプッシュする。このときDraft状態のPRであれば、 `git rebase` を許可する。
 
 ## 完了基準チェックリスト

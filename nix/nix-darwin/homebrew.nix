@@ -33,6 +33,7 @@
     ];
     casks = [
       "1password"
+      "1password-cli"
       "app-cleaner"
       "discord"
       { name = "firefox"; args = { language = "ja"; }; }
