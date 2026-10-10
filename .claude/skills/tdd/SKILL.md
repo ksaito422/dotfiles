@@ -67,13 +67,16 @@ end
 
 ## Git チェックポイント
 
-各ステージごとにコミットを作る。
+各ステージごとにコミットを作る。コミットの手順（ステージの確認・メッセージ形式）は
+[commit](../commit/SKILL.md) に従い、このスキルはステージと type の対応だけを決める。
 
-| ステージ | コミット例 |
-|---------|-----------|
-| RED 確認後 | `test: add reproducer for Crew#full_name` |
-| GREEN 確認後 | `fix: implement Crew#full_name` |
-| Refactor 後 | `refactor: clean up Crew#full_name` |
+| ステージ | type | コミット例 |
+|---------|------|-----------|
+| RED 確認後 | `test` | `test: add reproducer for Crew#full_name` |
+| GREEN 確認後 | `feat` / `fix` | `feat: implement Crew#full_name` |
+| Refactor 後 | `refactor` | `refactor: clean up Crew#full_name` |
+
+リポジトリの直近の履歴がこの形式と違っても、commit スキルの形式を優先する。
 
 > コミットメッセージや squash の方針で迷ったとき、または migration を含むサイクルを進めるとき → [references/git_checkpoints.md](references/git_checkpoints.md)。
 

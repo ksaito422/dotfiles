@@ -13,15 +13,15 @@
 | ステージ | メッセージ例 | 含む変更 |
 |---------|-------------|---------|
 | 🔴 RED | `test: add reproducer for Crew#full_name` | 失敗するテスト 1 つ。実装コードは触らない。 |
-| 🟢 GREEN | `fix: implement Crew#full_name` | テストを通す最小限の実装。テスト自体の追加変更は基本なし。 |
+| 🟢 GREEN | `feat: implement Crew#full_name`（バグ修正なら `fix:`） | テストを通す最小限の実装。テスト自体の追加変更は基本なし。 |
 | 🔧 REFACTOR | `refactor: extract Crew#format_full_name` | 構造改善。テストは緑のまま。挙動を変えない。 |
 
 > Refactor が不要なサイクルでは 2 commit でも OK。
 
 ## コミットメッセージのスタイル
 
-- prefix（`test:` / `fix:` / `feat:` / `refactor:` / `chore:`）+ 対象 + 短い要約
-- 本文に「なぜ」を必要に応じて追記。「何を変えたか」は diff で読めるので不要
+形式（type・タイトルの長さ・言語・本文の書き方）は [commit](../../commit/SKILL.md) に従う。ここでは TDD に固有の注意だけを書く。
+
 - **書かないこと**:
   - 「テストが通った」「動作確認した」「rspec 通過」（自明な事後報告）
   - Claude / AI による生成物であることの注釈（不要）
