@@ -3,7 +3,7 @@
     "CLAUDE_CODE_DISABLE_TERMINAL_TITLE": "1"
   },
   "attribution": {
-    "commit": "🤖 Generated with [Claude Code](https://claude.com/claude-code)",
+    "commit": "",
     "pr": ""
   },
   "permissions": {
@@ -88,7 +88,8 @@
   },
   "enabledPlugins": {
     "code-review@claude-plugins-official": true,
-    "skill-creator@claude-plugins-official": true
+    "skill-creator@claude-plugins-official": true,
+    "typescript-lsp@claude-plugins-official": true
   },
   "outputStyle": "Concise",
   "language": "japanese",
