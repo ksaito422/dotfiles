@@ -5,6 +5,7 @@ input=$(cat)
 
 # Extract information from JSON
 model_name=$(echo "$input" | jq -r '.model.display_name')
+effort_level=$(echo "$input" | jq -r '.effort.level')
 current_dir=$(echo "$input" | jq -r '.workspace.current_dir')
 
 # Get current user and git info
@@ -43,6 +44,6 @@ if [ "$ctx_pct" -ge 90 ]; then bar_color="$red"
 elif [ "$ctx_pct" -ge 70 ]; then bar_color="$yellow"
 else bar_color="$green"; fi
 
-echo "${model_color} ${model_name} ${reset} 🗂️${short_dir} ${git_branch}"
+echo "${model_color} ${model_name} / effort: ${effort_level} ${reset} 🗂️${short_dir} ${git_branch}"
 
 echo "Ctx: ${bar_color}${BAR}${reset} ${ctx_pct}% 💰 \$${cost_display} ${reset}"
