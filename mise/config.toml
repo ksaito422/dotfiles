@@ -1,8 +1,9 @@
 [tools]
-go = "1.25.1"
+deno = "2.9.8"
+go = "1.27.3"
 hugo = "0.150.0"
 ruby = { version = "4.0.0", postinstall = "gem install ruby-lsp rubocop" }
-node = { version = "24.3.0", postinstall = "npm install -g typescript-language-server typescript" }
+node = { version = "24.22.1", postinstall = "npm install -g typescript-language-server typescript" }
 terraform = "latest"
 
 [settings]
